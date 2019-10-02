@@ -1,0 +1,26 @@
+
+# CreateServerInstancesRequest
+
+## Properties
+Name | Type | Description | Notes
+------------ | ------------- | ------------- | -------------
+**serverImageProductCode** | **String** | 서버이미지상품코드 |  [optional]
+**serverProductCode** | **String** | 서버상품코드 |  [optional]
+**memberServerImageNo** | **String** | 회원서버이미지번호 |  [optional]
+**serverName** | **String** | 서버명 |  [optional]
+**serverDescription** | **String** | 서버설명 |  [optional]
+**loginKeyName** | **String** | 로그인키명 |  [optional]
+**isProtectServerTermination** | **Boolean** | 반납보호여부 |  [optional]
+**serverCreateCount** | **Integer** | 서버생성갯수 |  [optional]
+**serverCreateStartNo** | **Integer** | 서버생성시작번호 |  [optional]
+**internetLineTypeCode** | **String** | 인터넷라인구분코드 |  [optional]
+**feeSystemTypeCode** | **String** | 요금제구분코드 |  [optional]
+**userData** | **String** | 사용자데이터 |  [optional]
+**zoneNo** | **String** | ZONE번호 |  [optional]
+**accessControlGroupConfigurationNoList** | **List&lt;String&gt;** | ACG설정번호리스트 |  [optional]
+**raidTypeName** | **String** | RAID구분이름 |  [optional]
+**instanceTagList** | [**List&lt;InstanceTagParameter&gt;**](InstanceTagParameter.md) | 인스턴스태그리스트 |  [optional]
+**responseFormatType** | **String** | responseFormatType {json, xml} |  [optional]
+
+
+
