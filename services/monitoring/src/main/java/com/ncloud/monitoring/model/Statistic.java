@@ -2,7 +2,7 @@
  * monitoring
  * <br/>https://ncloud.apigw.ntruss.com/monitoring/v2
  *
- * OpenAPI spec version: 2018-11-13T06:28:28Z
+ * OpenAPI spec version: 2020-05-13T08:22:44Z
  *
  * 
  *
@@ -25,7 +25,7 @@ import java.util.List;
 public class Statistic {
 	private String instanceNo = null;
 
-	private List<DataPoints> dataPointsList = null;
+	private List<DataPoints> dataPoints = null;
 
 	public Statistic instanceNo(String instanceNo) {
 		this.instanceNo = instanceNo;
@@ -44,29 +44,29 @@ public class Statistic {
 		this.instanceNo = instanceNo;
 	}
 
-	public Statistic dataPointsList(List<DataPoints> dataPointsList) {
-		this.dataPointsList = dataPointsList;
+	public Statistic dataPoints(List<DataPoints> dataPoints) {
+		this.dataPoints = dataPoints;
 		return this;
 	}
 
-	public Statistic addDataPointsListItem(DataPoints dataPointsListItem) {
-		if (this.dataPointsList == null) {
-			this.dataPointsList = new ArrayList<DataPoints>();
+	public Statistic addDataPointsItem(DataPoints dataPointsItem) {
+		if (this.dataPoints == null) {
+			this.dataPoints = new ArrayList<DataPoints>();
 		}
-		this.dataPointsList.add(dataPointsListItem);
+		this.dataPoints.add(dataPointsItem);
 		return this;
 	}
 
 	 /**
-	 * Get dataPointsList
-	 * @return dataPointsList
+	 * Get dataPoints
+	 * @return dataPoints
 	**/
-	public List<DataPoints> getDataPointsList() {
-		return dataPointsList;
+	public List<DataPoints> getDataPoints() {
+		return dataPoints;
 	}
 
-	public void setDataPointsList(List<DataPoints> dataPointsList) {
-		this.dataPointsList = dataPointsList;
+	public void setDataPoints(List<DataPoints> dataPoints) {
+		this.dataPoints = dataPoints;
 	}
 
 
@@ -80,12 +80,12 @@ public class Statistic {
 		}
 		Statistic statistic = (Statistic) o;
 		return Objects.equals(this.instanceNo, statistic.instanceNo) &&
-				Objects.equals(this.dataPointsList, statistic.dataPointsList);
+				Objects.equals(this.dataPoints, statistic.dataPoints);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(instanceNo, dataPointsList);
+		return Objects.hash(instanceNo, dataPoints);
 	}
 
 
@@ -95,7 +95,7 @@ public class Statistic {
 		sb.append("class Statistic {\n");
 		
 		sb.append("		instanceNo: ").append(toIndentedString(instanceNo)).append("\n");
-		sb.append("		dataPointsList: ").append(toIndentedString(dataPointsList)).append("\n");
+		sb.append("		dataPoints: ").append(toIndentedString(dataPoints)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}
