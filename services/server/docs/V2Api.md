@@ -70,6 +70,8 @@ Method | HTTP request | Description
 [**getBlockStorageInstanceListPost**](V2Api.md#getBlockStorageInstanceListPost) | **POST** /getBlockStorageInstanceList | 
 [**getBlockStorageSnapshotInstanceListGet**](V2Api.md#getBlockStorageSnapshotInstanceListGet) | **GET** /getBlockStorageSnapshotInstanceList | 
 [**getBlockStorageSnapshotInstanceListPost**](V2Api.md#getBlockStorageSnapshotInstanceListPost) | **POST** /getBlockStorageSnapshotInstanceList | 
+[**getInitScriptListGet**](V2Api.md#getInitScriptListGet) | **GET** /getInitScriptList | 
+[**getInitScriptListPost**](V2Api.md#getInitScriptListPost) | **POST** /getInitScriptList | 
 [**getInstanceTagListGet**](V2Api.md#getInstanceTagListGet) | **GET** /getInstanceTagList | 
 [**getInstanceTagListPost**](V2Api.md#getInstanceTagListPost) | **POST** /getInstanceTagList | 
 [**getLoginKeyListGet**](V2Api.md#getLoginKeyListGet) | **GET** /getLoginKeyList | 
@@ -113,6 +115,8 @@ Method | HTTP request | Description
 [**recreateServerInstancePost**](V2Api.md#recreateServerInstancePost) | **POST** /recreateServerInstance | 
 [**removeNasVolumeAccessControlGet**](V2Api.md#removeNasVolumeAccessControlGet) | **GET** /removeNasVolumeAccessControl | 
 [**removeNasVolumeAccessControlPost**](V2Api.md#removeNasVolumeAccessControlPost) | **POST** /removeNasVolumeAccessControl | 
+[**replaceServerInstanceAssociatedWithPublicIpGet**](V2Api.md#replaceServerInstanceAssociatedWithPublicIpGet) | **GET** /replaceServerInstanceAssociatedWithPublicIp | 
+[**replaceServerInstanceAssociatedWithPublicIpPost**](V2Api.md#replaceServerInstanceAssociatedWithPublicIpPost) | **POST** /replaceServerInstanceAssociatedWithPublicIp | 
 [**setNasVolumeAccessControlGet**](V2Api.md#setNasVolumeAccessControlGet) | **GET** /setNasVolumeAccessControl | 
 [**setNasVolumeAccessControlPost**](V2Api.md#setNasVolumeAccessControlPost) | **POST** /setNasVolumeAccessControl | 
 [**startServerInstancesGet**](V2Api.md#startServerInstancesGet) | **GET** /startServerInstances | 
@@ -4545,6 +4549,140 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="getInitScriptListGet"></a>
+# **getInitScriptListGet**
+> GetInitScriptListResponse getInitScriptListGet(getInitScriptListRqeust)
+
+
+
+초기화스크립트리스트조회
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetInitScriptListRequest getInitScriptListRqeust = new GetInitScriptListRequest(); // GetInitScriptListRequest | getInitScriptListRqeust
+try {
+	// Handler Successful response
+	ApiResponse<GetInitScriptListResponse> result = apiInstance.getInitScriptListGet(getInitScriptListRqeust);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getInitScriptListRqeust** | [**GetInitScriptListRequest**](GetInitScriptListRequest.md)| getInitScriptListRqeust |
+
+### Return type
+
+[**GetInitScriptListResponse**](GetInitScriptListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getInitScriptListPost"></a>
+# **getInitScriptListPost**
+> GetInitScriptListResponse getInitScriptListPost(getInitScriptListRqeust)
+
+
+
+초기화스크립트리스트조회
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetInitScriptListRequest getInitScriptListRqeust = new GetInitScriptListRequest(); // GetInitScriptListRequest | getInitScriptListRqeust
+try {
+	// Handler Successful response
+	ApiResponse<GetInitScriptListResponse> result = apiInstance.getInitScriptListPost(getInitScriptListRqeust);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getInitScriptListRqeust** | [**GetInitScriptListRequest**](GetInitScriptListRequest.md)| getInitScriptListRqeust |
+
+### Return type
+
+[**GetInitScriptListResponse**](GetInitScriptListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="getInstanceTagListGet"></a>
 # **getInstanceTagListGet**
 > GetInstanceTagListResponse getInstanceTagListGet(getInstanceTagListRequest)
@@ -7416,6 +7554,140 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RemoveNasVolumeAccessControlResponse**](RemoveNasVolumeAccessControlResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="replaceServerInstanceAssociatedWithPublicIpGet"></a>
+# **replaceServerInstanceAssociatedWithPublicIpGet**
+> ReplaceServerInstanceAssociatedWithPublicIpResponse replaceServerInstanceAssociatedWithPublicIpGet(replaceServerInstanceAssociatedWithPublicIpRequest)
+
+
+
+공인IP서버인스턴스교체
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ReplaceServerInstanceAssociatedWithPublicIpRequest replaceServerInstanceAssociatedWithPublicIpRequest = new ReplaceServerInstanceAssociatedWithPublicIpRequest(); // ReplaceServerInstanceAssociatedWithPublicIpRequest | replaceServerInstanceAssociatedWithPublicIpRequest
+try {
+	// Handler Successful response
+	ApiResponse<ReplaceServerInstanceAssociatedWithPublicIpResponse> result = apiInstance.replaceServerInstanceAssociatedWithPublicIpGet(replaceServerInstanceAssociatedWithPublicIpRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **replaceServerInstanceAssociatedWithPublicIpRequest** | [**ReplaceServerInstanceAssociatedWithPublicIpRequest**](ReplaceServerInstanceAssociatedWithPublicIpRequest.md)| replaceServerInstanceAssociatedWithPublicIpRequest |
+
+### Return type
+
+[**ReplaceServerInstanceAssociatedWithPublicIpResponse**](ReplaceServerInstanceAssociatedWithPublicIpResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="replaceServerInstanceAssociatedWithPublicIpPost"></a>
+# **replaceServerInstanceAssociatedWithPublicIpPost**
+> ReplaceServerInstanceAssociatedWithPublicIpResponse replaceServerInstanceAssociatedWithPublicIpPost(replaceServerInstanceAssociatedWithPublicIpRequest)
+
+
+
+공인IP서버인스턴스교체
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ReplaceServerInstanceAssociatedWithPublicIpRequest replaceServerInstanceAssociatedWithPublicIpRequest = new ReplaceServerInstanceAssociatedWithPublicIpRequest(); // ReplaceServerInstanceAssociatedWithPublicIpRequest | replaceServerInstanceAssociatedWithPublicIpRequest
+try {
+	// Handler Successful response
+	ApiResponse<ReplaceServerInstanceAssociatedWithPublicIpResponse> result = apiInstance.replaceServerInstanceAssociatedWithPublicIpPost(replaceServerInstanceAssociatedWithPublicIpRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **replaceServerInstanceAssociatedWithPublicIpRequest** | [**ReplaceServerInstanceAssociatedWithPublicIpRequest**](ReplaceServerInstanceAssociatedWithPublicIpRequest.md)| replaceServerInstanceAssociatedWithPublicIpRequest |
+
+### Return type
+
+[**ReplaceServerInstanceAssociatedWithPublicIpResponse**](ReplaceServerInstanceAssociatedWithPublicIpResponse.md)
 
 ### Authorization
 
