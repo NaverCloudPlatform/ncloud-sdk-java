@@ -2,7 +2,7 @@
  * monitoring
  * <br/>https://ncloud.apigw.ntruss.com/monitoring/v2
  *
- * OpenAPI spec version: 2018-11-13T06:28:28Z
+ * OpenAPI spec version: 2020-05-13T08:22:44Z
  *
  * 
  *
@@ -76,7 +76,7 @@ public class V2Api {
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
-		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, getListMetricsRequest, true, false);
+		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, getListMetricsRequest, true, true);
 		return apiClient.call(apiRequest, GetListMetricsResponse.class);
 	}
 
@@ -114,7 +114,7 @@ public class V2Api {
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
-		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, body, true, true);
 		return apiClient.call(apiRequest, byte[].class);
 	}
 
@@ -154,7 +154,7 @@ public class V2Api {
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
-		ApiRequest apiRequest = new ApiRequest("POST", path, queryParams, formParams, httpHeaders, getListMetricsRequest, true, false);
+		ApiRequest apiRequest = new ApiRequest("POST", path, queryParams, formParams, httpHeaders, getListMetricsRequest, true, true);
 		return apiClient.call(apiRequest, GetListMetricsResponse.class);
 	}
 
@@ -192,7 +192,7 @@ public class V2Api {
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
-		ApiRequest apiRequest = new ApiRequest("POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		ApiRequest apiRequest = new ApiRequest("POST", path, queryParams, formParams, httpHeaders, body, true, true);
 		return apiClient.call(apiRequest, byte[].class);
 	}
 
@@ -232,7 +232,7 @@ public class V2Api {
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
-		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, getMetricStatisticsRequest, true, false);
+		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, getMetricStatisticsRequest, true, true);
 		return apiClient.call(apiRequest, GetMetricStatisticsResponse.class);
 	}
 
@@ -270,7 +270,7 @@ public class V2Api {
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
-		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, body, true, true);
 		return apiClient.call(apiRequest, byte[].class);
 	}
 
@@ -310,7 +310,7 @@ public class V2Api {
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
-		ApiRequest apiRequest = new ApiRequest("POST", path, queryParams, formParams, httpHeaders, getMetricStatisticsRequest, true, false);
+		ApiRequest apiRequest = new ApiRequest("POST", path, queryParams, formParams, httpHeaders, getMetricStatisticsRequest, true, true);
 		return apiClient.call(apiRequest, GetMetricStatisticsResponse.class);
 	}
 
@@ -348,7 +348,7 @@ public class V2Api {
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
-		ApiRequest apiRequest = new ApiRequest("POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		ApiRequest apiRequest = new ApiRequest("POST", path, queryParams, formParams, httpHeaders, body, true, true);
 		return apiClient.call(apiRequest, byte[].class);
 	}
 

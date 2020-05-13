@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **instanceNo** | **String** |  |  [optional]
-**dataPointsList** | [**List&lt;DataPoints&gt;**](DataPoints.md) |  |  [optional]
+**dataPoints** | [**List&lt;DataPoints&gt;**](DataPoints.md) |  |  [optional]
 
 
 

@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>server</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/server-1.0.0.jar
+* target/server-1.0.1.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -169,6 +169,8 @@ Class | Method | HTTP request | Description
 *V2Api* | [**getBlockStorageInstanceListPost**](docs/V2Api.md#getBlockStorageInstanceListPost) | **POST** /getBlockStorageInstanceList | 
 *V2Api* | [**getBlockStorageSnapshotInstanceListGet**](docs/V2Api.md#getBlockStorageSnapshotInstanceListGet) | **GET** /getBlockStorageSnapshotInstanceList | 
 *V2Api* | [**getBlockStorageSnapshotInstanceListPost**](docs/V2Api.md#getBlockStorageSnapshotInstanceListPost) | **POST** /getBlockStorageSnapshotInstanceList | 
+*V2Api* | [**getInitScriptListGet**](docs/V2Api.md#getInitScriptListGet) | **GET** /getInitScriptList | 
+*V2Api* | [**getInitScriptListPost**](docs/V2Api.md#getInitScriptListPost) | **POST** /getInitScriptList | 
 *V2Api* | [**getInstanceTagListGet**](docs/V2Api.md#getInstanceTagListGet) | **GET** /getInstanceTagList | 
 *V2Api* | [**getInstanceTagListPost**](docs/V2Api.md#getInstanceTagListPost) | **POST** /getInstanceTagList | 
 *V2Api* | [**getLoginKeyListGet**](docs/V2Api.md#getLoginKeyListGet) | **GET** /getLoginKeyList | 
@@ -212,6 +214,8 @@ Class | Method | HTTP request | Description
 *V2Api* | [**recreateServerInstancePost**](docs/V2Api.md#recreateServerInstancePost) | **POST** /recreateServerInstance | 
 *V2Api* | [**removeNasVolumeAccessControlGet**](docs/V2Api.md#removeNasVolumeAccessControlGet) | **GET** /removeNasVolumeAccessControl | 
 *V2Api* | [**removeNasVolumeAccessControlPost**](docs/V2Api.md#removeNasVolumeAccessControlPost) | **POST** /removeNasVolumeAccessControl | 
+*V2Api* | [**replaceServerInstanceAssociatedWithPublicIpGet**](docs/V2Api.md#replaceServerInstanceAssociatedWithPublicIpGet) | **GET** /replaceServerInstanceAssociatedWithPublicIp | 
+*V2Api* | [**replaceServerInstanceAssociatedWithPublicIpPost**](docs/V2Api.md#replaceServerInstanceAssociatedWithPublicIpPost) | **POST** /replaceServerInstanceAssociatedWithPublicIp | 
 *V2Api* | [**setNasVolumeAccessControlGet**](docs/V2Api.md#setNasVolumeAccessControlGet) | **GET** /setNasVolumeAccessControl | 
 *V2Api* | [**setNasVolumeAccessControlPost**](docs/V2Api.md#setNasVolumeAccessControlPost) | **POST** /setNasVolumeAccessControl | 
 *V2Api* | [**startServerInstancesGet**](docs/V2Api.md#startServerInstancesGet) | **GET** /startServerInstances | 
@@ -295,6 +299,8 @@ Class | Method | HTTP request | Description
  - [GetBlockStorageInstanceListResponse](docs/GetBlockStorageInstanceListResponse.md)
  - [GetBlockStorageSnapshotInstanceListRequest](docs/GetBlockStorageSnapshotInstanceListRequest.md)
  - [GetBlockStorageSnapshotInstanceListResponse](docs/GetBlockStorageSnapshotInstanceListResponse.md)
+ - [GetInitScriptListRequest](docs/GetInitScriptListRequest.md)
+ - [GetInitScriptListResponse](docs/GetInitScriptListResponse.md)
  - [GetInstanceTagListRequest](docs/GetInstanceTagListRequest.md)
  - [GetInstanceTagListResponse](docs/GetInstanceTagListResponse.md)
  - [GetLoginKeyListRequest](docs/GetLoginKeyListRequest.md)
@@ -333,6 +339,7 @@ Class | Method | HTTP request | Description
  - [GetZoneListResponse](docs/GetZoneListResponse.md)
  - [ImportLoginKeyRequest](docs/ImportLoginKeyRequest.md)
  - [ImportLoginKeyResponse](docs/ImportLoginKeyResponse.md)
+ - [InitScript](docs/InitScript.md)
  - [InstanceTag](docs/InstanceTag.md)
  - [InstanceTagParameter](docs/InstanceTagParameter.md)
  - [LoginKey](docs/LoginKey.md)
@@ -354,6 +361,8 @@ Class | Method | HTTP request | Description
  - [Region](docs/Region.md)
  - [RemoveNasVolumeAccessControlRequest](docs/RemoveNasVolumeAccessControlRequest.md)
  - [RemoveNasVolumeAccessControlResponse](docs/RemoveNasVolumeAccessControlResponse.md)
+ - [ReplaceServerInstanceAssociatedWithPublicIpRequest](docs/ReplaceServerInstanceAssociatedWithPublicIpRequest.md)
+ - [ReplaceServerInstanceAssociatedWithPublicIpResponse](docs/ReplaceServerInstanceAssociatedWithPublicIpResponse.md)
  - [RootPasswordServerInstance](docs/RootPasswordServerInstance.md)
  - [RootPasswordServerInstanceParameter](docs/RootPasswordServerInstanceParameter.md)
  - [ServerInstance](docs/ServerInstance.md)
