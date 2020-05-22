@@ -2,7 +2,7 @@
  * monitoring
  * <br/>https://ncloud.apigw.ntruss.com/monitoring/v2
  *
- * OpenAPI spec version: 2020-05-22T08:18:39Z
+ * OpenAPI spec version: 2020-05-22T09:10:03Z
  *
  * NBP corp.
  *
@@ -76,7 +76,7 @@ public class V2Api {
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
-		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, getListMetricsRequest, false, false);
+		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, getListMetricsRequest, true, false);
 		return apiClient.call(apiRequest, GetListMetricsResponse.class);
 	}
 
@@ -114,13 +114,13 @@ public class V2Api {
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
-		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, body, false, false);
+		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, body, true, false);
 		return apiClient.call(apiRequest, byte[].class);
 	}
 
 	/**
 	 * 
-	 * A.메트릭 통계 조회
+	 * B.메트릭 리스트 조회
 	 * @param getListMetricsRequest getListMetricsRequest (required)
 	 * @return GetListMetricsResponse
 	 * @throws ApiException if fails to make API call
@@ -160,7 +160,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * A.메트릭 통계 조회
+	 * B.메트릭 리스트 조회
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
