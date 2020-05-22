@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>monitoring</artifactId>
-	<version>1.0.1</version>
+	<version>1.0.2</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/monitoring-1.0.1.jar
+* target/monitoring-1.0.2.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -105,20 +105,20 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *V2Api* | [**getListMetricsGet**](docs/V2Api.md#getListMetricsGet) | **GET** /getListMetrics | 
 *V2Api* | [**getListMetricsPost**](docs/V2Api.md#getListMetricsPost) | **POST** /getListMetrics | 
-*V2Api* | [**getMetricStatisticsGet**](docs/V2Api.md#getMetricStatisticsGet) | **GET** /getMetricStatistics | 
-*V2Api* | [**getMetricStatisticsPost**](docs/V2Api.md#getMetricStatisticsPost) | **POST** /getMetricStatistics | 
+*V2Api* | [**getMetricStatisticListGet**](docs/V2Api.md#getMetricStatisticListGet) | **GET** /getMetricStatisticList | 
+*V2Api* | [**getMetricStatisticListPost**](docs/V2Api.md#getMetricStatisticListPost) | **POST** /getMetricStatisticList | 
 
 
 ## Documentation for Models
 
  - [DataPoint](docs/DataPoint.md)
- - [DataPoints](docs/DataPoints.md)
  - [GetListMetricsRequest](docs/GetListMetricsRequest.md)
  - [GetListMetricsResponse](docs/GetListMetricsResponse.md)
- - [GetMetricStatisticsRequest](docs/GetMetricStatisticsRequest.md)
- - [GetMetricStatisticsResponse](docs/GetMetricStatisticsResponse.md)
+ - [GetMetricStatisticListRequest](docs/GetMetricStatisticListRequest.md)
+ - [GetMetricStatisticListResponse](docs/GetMetricStatisticListResponse.md)
  - [Metric](docs/Metric.md)
- - [Statistic](docs/Statistic.md)
+ - [MetricData](docs/MetricData.md)
+ - [MetricStatistic](docs/MetricStatistic.md)
 
 
 ## Recommendation
