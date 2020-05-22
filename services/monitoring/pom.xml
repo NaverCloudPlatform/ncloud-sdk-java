@@ -6,7 +6,7 @@
 	<artifactId>monitoring</artifactId>
 	<packaging>jar</packaging>
 	<name>monitoring</name>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 
 	<build>
 		<plugins>
