@@ -2,7 +2,7 @@
  * monitoring
  * <br/>https://ncloud.apigw.ntruss.com/monitoring/v2
  *
- * OpenAPI spec version: 2020-05-22T08:18:39Z
+ * OpenAPI spec version: 2020-05-22T09:10:03Z
  *
  * NBP corp.
  *
@@ -127,7 +127,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * A.메트릭 통계 조회
+	 * B.메트릭 리스트 조회
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -152,7 +152,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * A.메트릭 통계 조회
+	 * B.메트릭 리스트 조회
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */

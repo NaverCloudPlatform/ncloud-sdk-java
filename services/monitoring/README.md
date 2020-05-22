@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>monitoring</artifactId>
-	<version>1.0.3</version>
+	<version>1.0.4</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/monitoring-1.0.3.jar
+* target/monitoring-1.0.4.jar
 * target/lib/*.jar
 
 ## Getting Started
