@@ -6,8 +6,8 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getListMetricsGet**](V2Api.md#getListMetricsGet) | **GET** /getListMetrics | 
 [**getListMetricsPost**](V2Api.md#getListMetricsPost) | **POST** /getListMetrics | 
-[**getMetricStatisticsGet**](V2Api.md#getMetricStatisticsGet) | **GET** /getMetricStatistics | 
-[**getMetricStatisticsPost**](V2Api.md#getMetricStatisticsPost) | **POST** /getMetricStatistics | 
+[**getMetricStatisticListGet**](V2Api.md#getMetricStatisticListGet) | **GET** /getMetricStatisticList | 
+[**getMetricStatisticListPost**](V2Api.md#getMetricStatisticListPost) | **POST** /getMetricStatisticList | 
 
 
 <a name="getListMetricsGet"></a>
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 
 
-B.메트릭 리스트 조회
+A.메트릭 통계 조회
 
 ### Example
 ```java
@@ -144,9 +144,9 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
-<a name="getMetricStatisticsGet"></a>
-# **getMetricStatisticsGet**
-> GetMetricStatisticsResponse getMetricStatisticsGet(getMetricStatisticsRequest)
+<a name="getMetricStatisticListGet"></a>
+# **getMetricStatisticListGet**
+> GetMetricStatisticListResponse getMetricStatisticListGet(getMetricStatisticListRequest)
 
 
 
@@ -176,10 +176,10 @@ ApiClient apiClient = new ApiClient.ApiClientBuilder()
 	.build();
 
 V2Api apiInstance = new V2Api(apiClient);
-GetMetricStatisticsRequest getMetricStatisticsRequest = new GetMetricStatisticsRequest(); // GetMetricStatisticsRequest | getMetricStatisticsRequest
+GetMetricStatisticListRequest getMetricStatisticListRequest = new GetMetricStatisticListRequest(); // GetMetricStatisticListRequest | getMetricStatisticListRequest
 try {
 	// Handler Successful response
-	ApiResponse<GetMetricStatisticsResponse> result = apiInstance.getMetricStatisticsGet(getMetricStatisticsRequest);
+	ApiResponse<GetMetricStatisticListResponse> result = apiInstance.getMetricStatisticListGet(getMetricStatisticListRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -196,11 +196,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **getMetricStatisticsRequest** | [**GetMetricStatisticsRequest**](GetMetricStatisticsRequest.md)| getMetricStatisticsRequest |
+ **getMetricStatisticListRequest** | [**GetMetricStatisticListRequest**](GetMetricStatisticListRequest.md)| getMetricStatisticListRequest |
 
 ### Return type
 
-[**GetMetricStatisticsResponse**](GetMetricStatisticsResponse.md)
+[**GetMetricStatisticListResponse**](GetMetricStatisticListResponse.md)
 
 ### Authorization
 
@@ -208,12 +208,12 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
-<a name="getMetricStatisticsPost"></a>
-# **getMetricStatisticsPost**
-> GetMetricStatisticsResponse getMetricStatisticsPost(getMetricStatisticsRequest)
+<a name="getMetricStatisticListPost"></a>
+# **getMetricStatisticListPost**
+> GetMetricStatisticListResponse getMetricStatisticListPost(getMetricStatisticListRequest)
 
 
 
@@ -243,10 +243,10 @@ ApiClient apiClient = new ApiClient.ApiClientBuilder()
 	.build();
 
 V2Api apiInstance = new V2Api(apiClient);
-GetMetricStatisticsRequest getMetricStatisticsRequest = new GetMetricStatisticsRequest(); // GetMetricStatisticsRequest | getMetricStatisticsRequest
+GetMetricStatisticListRequest getMetricStatisticListRequest = new GetMetricStatisticListRequest(); // GetMetricStatisticListRequest | getMetricStatisticListRequest
 try {
 	// Handler Successful response
-	ApiResponse<GetMetricStatisticsResponse> result = apiInstance.getMetricStatisticsPost(getMetricStatisticsRequest);
+	ApiResponse<GetMetricStatisticListResponse> result = apiInstance.getMetricStatisticListPost(getMetricStatisticListRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -263,11 +263,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **getMetricStatisticsRequest** | [**GetMetricStatisticsRequest**](GetMetricStatisticsRequest.md)| getMetricStatisticsRequest |
+ **getMetricStatisticListRequest** | [**GetMetricStatisticListRequest**](GetMetricStatisticListRequest.md)| getMetricStatisticListRequest |
 
 ### Return type
 
-[**GetMetricStatisticsResponse**](GetMetricStatisticsResponse.md)
+[**GetMetricStatisticListResponse**](GetMetricStatisticListResponse.md)
 
 ### Authorization
 
@@ -275,6 +275,6 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/x-www-form-urlencoded
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 

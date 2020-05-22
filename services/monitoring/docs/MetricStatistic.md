@@ -1,11 +1,11 @@
 
-# Statistic
+# MetricStatistic
 
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **instanceNo** | **String** |  |  [optional]
-**dataPoints** | [**List&lt;DataPoints&gt;**](DataPoints.md) |  |  [optional]
+**metricDataList** | [**List&lt;MetricData&gt;**](MetricData.md) |  |  [optional]
 
 
 

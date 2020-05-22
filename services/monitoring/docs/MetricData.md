@@ -1,5 +1,5 @@
 
-# DataPoints
+# MetricData
 
 ## Properties
 Name | Type | Description | Notes

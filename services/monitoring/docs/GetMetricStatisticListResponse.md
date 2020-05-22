@@ -1,5 +1,5 @@
 
-# GetMetricStatisticsResponse
+# GetMetricStatisticListResponse
 
 ## Properties
 Name | Type | Description | Notes
@@ -7,7 +7,7 @@ Name | Type | Description | Notes
 **requestId** | **String** |  |  [optional]
 **returnCode** | **String** |  |  [optional]
 **returnMessage** | **String** |  |  [optional]
-**statistics** | [**List&lt;Statistic&gt;**](Statistic.md) |  |  [optional]
+**metricStatisticList** | [**List&lt;MetricStatistic&gt;**](MetricStatistic.md) |  |  [optional]
 
 
 
