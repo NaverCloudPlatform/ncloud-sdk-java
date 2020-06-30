@@ -37,7 +37,7 @@
 
 	<properties>
 		<okhttp-version>3.9.1</okhttp-version>
-		<fasterxml-version>2.9.3</fasterxml-version>
+		<fasterxml-version>2.11.1</fasterxml-version>
 		<common-codec-version>1.11</common-codec-version>
 	</properties>
 
