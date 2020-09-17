@@ -16,5 +16,8 @@
 		<module>services/cdn</module>
 		<module>services/clouddb</module>
 		<module>services/monitoring</module>
+		<module>services/vserver</module>
+		<module>services/vpc</module>
+		<module>services/vnas</module>
 	</modules>
 </project>

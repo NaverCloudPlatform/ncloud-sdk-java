@@ -104,6 +104,9 @@ public class V2ApiExample {
 | _Monitoring_   | [**Monitoring**](services/monitoring/README.md)     |
 | _CDN_          | [**CDN**](services/cdn/README.md)                   |
 | _CloudDB_      | [**CloudDB**](services/clouddb/README.md)           |
+| _Server(VPC)_      | [**CloudDB**](services/vserver/README.md)           |
+| _VPC_      | [**CloudDB**](services/vpc/README.md)           |
+| _Nas(VPC)_      | [**CloudDB**](services/vnas/README.md)           |
 
 ### License
 
