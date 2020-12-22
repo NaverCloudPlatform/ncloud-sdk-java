@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>monitoring</artifactId>
-	<version>1.0.4</version>
+	<version>1.1.0</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/monitoring-1.0.4.jar
+* target/monitoring-1.1.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -58,13 +58,19 @@ secretKey=your-secret-key
 And execute the following Java code:
 
 ```java
+import java.io.InputStream;
+import java.util.List;
+import java.util.Map;
 
-import com.ncloud.monitoring.*;
-import com.ncloud.monitoring.auth.*;
-import com.ncloud.monitoring.marshaller.*;
-import com.ncloud.monitoring.exception.*;
+import com.ncloud.ApiClient;
+import com.ncloud.ApiResponse;
+import com.ncloud.auth.PropertiesFileCredentialsProvider;
+import com.ncloud.exception.ApiException;
+import com.ncloud.exception.SdkException;
+import com.ncloud.marshaller.FormMarshaller;
+import com.ncloud.marshaller.JsonMarshaller;
+import com.ncloud.marshaller.XmlMarshaller;
 import com.ncloud.monitoring.model.*;
-import com.ncloud.monitoring.api.V2Api;
 
 public class V2ApiExample {
 
@@ -73,7 +79,7 @@ public class V2ApiExample {
 			.addMarshaller(JsonMarshaller.getInstance())
 			.addMarshaller(XmlMarshaller.getInstance())
 			.addMarshaller(FormMarshaller.getInstance())
-			.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+			.setCredentialsProvider(new PropertiesFileCredentialsProvider("your-credentials-properties-file"))
 			.setLogging(true)
 			.build();
 

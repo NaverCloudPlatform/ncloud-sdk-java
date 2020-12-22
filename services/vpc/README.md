@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>vpc</artifactId>
-	<version>1.0.1</version>
+	<version>1.1.0</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/vpc-1.0.1.jar
+* target/vpc-1.1.0.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -58,13 +58,19 @@ secretKey=your-secret-key
 And execute the following Java code:
 
 ```java
+import java.io.InputStream;
+import java.util.List;
+import java.util.Map;
 
-import com.ncloud.vpc.*;
-import com.ncloud.vpc.auth.*;
-import com.ncloud.vpc.marshaller.*;
-import com.ncloud.vpc.exception.*;
+import com.ncloud.ApiClient;
+import com.ncloud.ApiResponse;
+import com.ncloud.auth.PropertiesFileCredentialsProvider;
+import com.ncloud.exception.ApiException;
+import com.ncloud.exception.SdkException;
+import com.ncloud.marshaller.FormMarshaller;
+import com.ncloud.marshaller.JsonMarshaller;
+import com.ncloud.marshaller.XmlMarshaller;
 import com.ncloud.vpc.model.*;
-import com.ncloud.vpc.api.V2Api;
 
 public class V2ApiExample {
 
@@ -73,7 +79,7 @@ public class V2ApiExample {
 			.addMarshaller(JsonMarshaller.getInstance())
 			.addMarshaller(XmlMarshaller.getInstance())
 			.addMarshaller(FormMarshaller.getInstance())
-			.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+			.setCredentialsProvider(new PropertiesFileCredentialsProvider("your-credentials-properties-file"))
 			.setLogging(true)
 			.build();
 

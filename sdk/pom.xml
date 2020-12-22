@@ -28,47 +28,47 @@
 		<dependency>
 			<groupId>com.ncloud</groupId>
 			<artifactId>autoscaling</artifactId>
-			<version>1.0.1</version>
+			<version>1.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ncloud</groupId>
 			<artifactId>cdn</artifactId>
-			<version>1.0.0</version>
+			<version>1.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ncloud</groupId>
 			<artifactId>clouddb</artifactId>
-			<version>1.0.0</version>
+			<version>1.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ncloud</groupId>
 			<artifactId>loadbalancer</artifactId>
-			<version>1.0.1</version>
+			<version>1.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ncloud</groupId>
 			<artifactId>monitoring</artifactId>
-			<version>1.0.4</version>
+			<version>1.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ncloud</groupId>
 			<artifactId>server</artifactId>
-			<version>1.0.3</version>
+			<version>1.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ncloud</groupId>
 			<artifactId>vnas</artifactId>
-			<version>1.0.1</version>
+			<version>1.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ncloud</groupId>
 			<artifactId>vpc</artifactId>
-			<version>1.0.1</version>
+			<version>1.1.0</version>
 		</dependency>
 		<dependency>
 			<groupId>com.ncloud</groupId>
 			<artifactId>vserver</artifactId>
-			<version>1.0.1</version>
+			<version>1.1.0</version>
 		</dependency>
 	</dependencies>
 

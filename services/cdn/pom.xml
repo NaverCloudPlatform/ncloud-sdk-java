@@ -6,7 +6,7 @@
 	<artifactId>cdn</artifactId>
 	<packaging>jar</packaging>
 	<name>cdn</name>
-	<version>1.0.0</version>
+	<version>1.1.0</version>
 
 	<build>
 		<plugins>
@@ -35,55 +35,18 @@
 		</plugins>
 	</build>
 
-	<properties>
-		<okhttp-version>3.9.1</okhttp-version>
-		<fasterxml-version>2.9.3</fasterxml-version>
-		<common-codec-version>1.11</common-codec-version>
-	</properties>
-
 	<dependencies>
+		<dependency>
+			<groupId>com.ncloud</groupId>
+			<artifactId>core</artifactId>
+			<version>1.0.0</version>
+		</dependency>
 		<!-- https://mvnrepository.com/artifact/junit/junit -->
 		<dependency>
 			<groupId>junit</groupId>
 			<artifactId>junit</artifactId>
 			<version>4.12</version>
 			<scope>test</scope>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.squareup.okhttp3/okhttp -->
-		<dependency>
-			<groupId>com.squareup.okhttp3</groupId>
-			<artifactId>okhttp</artifactId>
-			<version>${okhttp-version}</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.squareup.okhttp/logging-interceptor -->
-		<dependency>
-			<groupId>com.squareup.okhttp3</groupId>
-			<artifactId>logging-interceptor</artifactId>
-			<version>${okhttp-version}</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
-		<dependency>
-			<groupId>com.fasterxml.jackson.core</groupId>
-			<artifactId>jackson-databind</artifactId>
-			<version>${fasterxml-version}</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.dataformat/jackson-dataformat-xml -->
-		<dependency>
-			<groupId>com.fasterxml.jackson.dataformat</groupId>
-			<artifactId>jackson-dataformat-xml</artifactId>
-			<version>${fasterxml-version}</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/commons-codec/commons-codec -->
-		<dependency>
-			<groupId>commons-codec</groupId>
-			<artifactId>commons-codec</artifactId>
-			<version>${common-codec-version}</version>
-		</dependency>
-		<!-- https://mvnrepository.com/artifact/org.apache.commons/commons-lang3 -->
-		<dependency>
-			<groupId>org.apache.commons</groupId>
-			<artifactId>commons-lang3</artifactId>
-			<version>3.7</version>
 		</dependency>
 	</dependencies>
 </project>
