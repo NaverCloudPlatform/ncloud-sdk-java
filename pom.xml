@@ -9,6 +9,7 @@
 	<version>1.0.0</version>
 
 	<modules>
+		<module>core</module>
 		<module>sdk</module>
 		<module>services/server</module>
 		<module>services/loadbalancer</module>

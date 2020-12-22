@@ -58,9 +58,14 @@ ncloud_secret_access_key=your-secret-key
 And execute the following Java code:
 
 ```java
-import com.ncloud.server.*;
-import com.ncloud.server.marshaller.*;
-import com.ncloud.server.exception.*;
+import java.io.InputStream;
+import java.util.List;
+import java.util.Map;
+
+import com.ncloud.auth.*;
+import com.ncloud.marshaller.*;
+import com.ncloud.exception.*;
+import com.ncloud.server.api.V2Api;
 import com.ncloud.server.model.*;
 
 public class V2ApiExample {
@@ -70,11 +75,11 @@ public class V2ApiExample {
             .addMarshaller(JsonMarshaller.getInstance())
             .addMarshaller(XmlMarshaller.getInstance())
             .addMarshaller(FormMarshaller.getInstance())
-            .setCredentials(new com.ncloud.sdk.NcloudCredentialsProvider().getCredentials())
+            .setCredentials(new NcloudCredentialsProvider().getCredentials())
             .setLogging(true)
             .build();
 
-        com.ncloud.server.api.V2Api apiInstance = new com.ncloud.server.api.V2Api(apiClient);
+        V2Api apiInstance = new V2Api(apiClient);
         AddNasVolumeAccessControlRequest addNasVolumeAccessControlRequest = new AddNasVolumeAccessControlRequest(); // AddNasVolumeAccessControlRequest | addNasVolumeAccessControlRequest
         try {
             // Handler Successful response
@@ -93,6 +98,12 @@ public class V2ApiExample {
 }
 
 ```
+
+If credentials are not specified, the default credential provider chain is used. The default credential provider chain looks for credentials in the following order:
+ 
+1. EnvironmentVariableCredentialsProvider: Use the NCLOUD_ACCESS_KEY_ID (or NCLOUD_ACCESS_KEY) and NCLOUD_SECRET_KEY (or NCLOUD_SECRET_ACCESS_KEY) environment variables. 
+2. NcloudCredentialsProvider: Use configuration file. The path to the configuration file is .ncloud/configure in the HOME directory.
+3. ServerRoleCredentialsProvider: Used on VPC Server instances, and delivered through the ncloud metadata api. Server Role can be set in the NCP Sub Account console.
 
 ## Documentation for individual modules
 
