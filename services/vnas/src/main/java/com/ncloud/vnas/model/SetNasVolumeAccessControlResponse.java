@@ -2,7 +2,7 @@
  * vnas
  * VPC NAS 관련 API<br/>https://ncloud.apigw.ntruss.com/vnas/v2
  *
- * OpenAPI spec version: 2020-09-17T02:28:41Z
+ * OpenAPI spec version: 2020-10-22T12:05:06Z
  *
  * 
  *

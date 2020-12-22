@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>vserver</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/vserver-1.0.0.jar
+* target/vserver-1.0.1.jar
 * target/lib/*.jar
 
 ## Getting Started

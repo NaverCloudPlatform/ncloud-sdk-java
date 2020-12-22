@@ -2,7 +2,7 @@
  * server
  * <br/>https://ncloud.apigw.ntruss.com/server/v2
  *
- * OpenAPI spec version: 2020-09-09T12:03:56Z
+ * OpenAPI spec version: 2020-11-18T09:44:01Z
  *
  * 
  *
@@ -48,6 +48,8 @@ public class Product {
 	private String dbKindCode = null;
 
 	private Long addBlockStorageSize = null;
+
+	private String generationCode = null;
 
 	public Product productCode(String productCode) {
 		this.productCode = productCode;
@@ -287,6 +289,23 @@ public class Product {
 		this.addBlockStorageSize = addBlockStorageSize;
 	}
 
+	public Product generationCode(String generationCode) {
+		this.generationCode = generationCode;
+		return this;
+	}
+
+	 /**
+	 * 세대코드
+	 * @return generationCode
+	**/
+	public String getGenerationCode() {
+		return generationCode;
+	}
+
+	public void setGenerationCode(String generationCode) {
+		this.generationCode = generationCode;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -310,12 +329,13 @@ public class Product {
 				Objects.equals(this.osInformation, product.osInformation) &&
 				Objects.equals(this.diskType, product.diskType) &&
 				Objects.equals(this.dbKindCode, product.dbKindCode) &&
-				Objects.equals(this.addBlockStorageSize, product.addBlockStorageSize);
+				Objects.equals(this.addBlockStorageSize, product.addBlockStorageSize) &&
+				Objects.equals(this.generationCode, product.generationCode);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(productCode, productName, productType, productDescription, infraResourceType, infraResourceDetailType, cpuCount, memorySize, baseBlockStorageSize, platformType, osInformation, diskType, dbKindCode, addBlockStorageSize);
+		return Objects.hash(productCode, productName, productType, productDescription, infraResourceType, infraResourceDetailType, cpuCount, memorySize, baseBlockStorageSize, platformType, osInformation, diskType, dbKindCode, addBlockStorageSize, generationCode);
 	}
 
 
@@ -338,6 +358,7 @@ public class Product {
 		sb.append("		diskType: ").append(toIndentedString(diskType)).append("\n");
 		sb.append("		dbKindCode: ").append(toIndentedString(dbKindCode)).append("\n");
 		sb.append("		addBlockStorageSize: ").append(toIndentedString(addBlockStorageSize)).append("\n");
+		sb.append("		generationCode: ").append(toIndentedString(generationCode)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

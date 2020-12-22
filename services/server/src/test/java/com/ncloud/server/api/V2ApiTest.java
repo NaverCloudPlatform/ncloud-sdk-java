@@ -2,7 +2,7 @@
  * server
  * <br/>https://ncloud.apigw.ntruss.com/server/v2
  *
- * OpenAPI spec version: 2020-09-09T12:03:56Z
+ * OpenAPI spec version: 2020-11-18T09:44:01Z
  *
  * 
  *
@@ -42,6 +42,8 @@ import com.ncloud.server.model.AttachBlockStorageInstanceRequest;
 import com.ncloud.server.model.AttachBlockStorageInstanceResponse;
 import com.ncloud.server.model.AttachNetworkInterfaceRequest;
 import com.ncloud.server.model.AttachNetworkInterfaceResponse;
+import com.ncloud.server.model.ChangeBlockStorageVolumeSizeRequest;
+import com.ncloud.server.model.ChangeBlockStorageVolumeSizeResponse;
 import com.ncloud.server.model.ChangeNasVolumeSizeRequest;
 import com.ncloud.server.model.ChangeNasVolumeSizeResponse;
 import com.ncloud.server.model.ChangeServerInstanceSpecRequest;
@@ -789,6 +791,130 @@ public class V2ApiTest {
 		try {
 			// Handler Successful response
 			ApiResponse<byte[]> response = api.attachNetworkInterfacePost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 블록스토리지볼륨사이즈변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeBlockStorageVolumeSizeGetTest() throws ApiException, SdkException {
+		ChangeBlockStorageVolumeSizeRequest changeBlockStorageVolumeSizeRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ChangeBlockStorageVolumeSizeResponse> response = api.changeBlockStorageVolumeSizeGet(changeBlockStorageVolumeSizeRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 블록스토리지볼륨사이즈변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeBlockStorageVolumeSizeGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.changeBlockStorageVolumeSizeGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 블록스토리지볼륨사이즈변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeBlockStorageVolumeSizePostTest() throws ApiException, SdkException {
+		ChangeBlockStorageVolumeSizeRequest changeBlockStorageVolumeSizeRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ChangeBlockStorageVolumeSizeResponse> response = api.changeBlockStorageVolumeSizePost(changeBlockStorageVolumeSizeRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 블록스토리지볼륨사이즈변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeBlockStorageVolumeSizePostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.changeBlockStorageVolumeSizePost(httpHeaders, queryParams, formParams, requestBody);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -5997,6 +6123,68 @@ public class V2ApiTest {
 		try {
 			// Handler Successful response
 			ApiResponse<byte[]> response = api.getRootPasswordPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 루트패스워드서버인스턴스리스트조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getRootPasswordServerInstanceListGetTest() throws ApiException, SdkException {
+		GetRootPasswordServerInstanceListRequest getRootPasswordServerInstanceListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetRootPasswordServerInstanceListResponse> response = api.getRootPasswordServerInstanceListGet(getRootPasswordServerInstanceListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 루트패스워드서버인스턴스리스트조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getRootPasswordServerInstanceListGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getRootPasswordServerInstanceListGet(httpHeaders, queryParams, formParams, requestBody);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();

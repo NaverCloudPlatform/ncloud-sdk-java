@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>server</artifactId>
-	<version>1.0.2</version>
+	<version>1.0.3</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/server-1.0.2.jar
+* target/server-1.0.3.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -113,6 +113,8 @@ Class | Method | HTTP request | Description
 *V2Api* | [**attachBlockStorageInstancePost**](docs/V2Api.md#attachBlockStorageInstancePost) | **POST** /attachBlockStorageInstance | 
 *V2Api* | [**attachNetworkInterfaceGet**](docs/V2Api.md#attachNetworkInterfaceGet) | **GET** /attachNetworkInterface | 
 *V2Api* | [**attachNetworkInterfacePost**](docs/V2Api.md#attachNetworkInterfacePost) | **POST** /attachNetworkInterface | 
+*V2Api* | [**changeBlockStorageVolumeSizeGet**](docs/V2Api.md#changeBlockStorageVolumeSizeGet) | **GET** /changeBlockStorageVolumeSize | 
+*V2Api* | [**changeBlockStorageVolumeSizePost**](docs/V2Api.md#changeBlockStorageVolumeSizePost) | **POST** /changeBlockStorageVolumeSize | 
 *V2Api* | [**changeNasVolumeSizeGet**](docs/V2Api.md#changeNasVolumeSizeGet) | **GET** /changeNasVolumeSize | 
 *V2Api* | [**changeNasVolumeSizePost**](docs/V2Api.md#changeNasVolumeSizePost) | **POST** /changeNasVolumeSize | 
 *V2Api* | [**changeServerInstanceSpecGet**](docs/V2Api.md#changeServerInstanceSpecGet) | **GET** /changeServerInstanceSpec | 
@@ -197,6 +199,7 @@ Class | Method | HTTP request | Description
 *V2Api* | [**getRegionListPost**](docs/V2Api.md#getRegionListPost) | **POST** /getRegionList | 
 *V2Api* | [**getRootPasswordGet**](docs/V2Api.md#getRootPasswordGet) | **GET** /getRootPassword | 
 *V2Api* | [**getRootPasswordPost**](docs/V2Api.md#getRootPasswordPost) | **POST** /getRootPassword | 
+*V2Api* | [**getRootPasswordServerInstanceListGet**](docs/V2Api.md#getRootPasswordServerInstanceListGet) | **GET** /getRootPasswordServerInstanceList | 
 *V2Api* | [**getRootPasswordServerInstanceListPost**](docs/V2Api.md#getRootPasswordServerInstanceListPost) | **POST** /getRootPasswordServerInstanceList | 
 *V2Api* | [**getServerImageProductListGet**](docs/V2Api.md#getServerImageProductListGet) | **GET** /getServerImageProductList | 
 *V2Api* | [**getServerImageProductListPost**](docs/V2Api.md#getServerImageProductListPost) | **POST** /getServerImageProductList | 
@@ -242,6 +245,8 @@ Class | Method | HTTP request | Description
  - [AttachNetworkInterfaceResponse](docs/AttachNetworkInterfaceResponse.md)
  - [BlockStorageInstance](docs/BlockStorageInstance.md)
  - [BlockStorageSnapshotInstance](docs/BlockStorageSnapshotInstance.md)
+ - [ChangeBlockStorageVolumeSizeRequest](docs/ChangeBlockStorageVolumeSizeRequest.md)
+ - [ChangeBlockStorageVolumeSizeResponse](docs/ChangeBlockStorageVolumeSizeResponse.md)
  - [ChangeNasVolumeSizeRequest](docs/ChangeNasVolumeSizeRequest.md)
  - [ChangeNasVolumeSizeResponse](docs/ChangeNasVolumeSizeResponse.md)
  - [ChangeServerInstanceSpecRequest](docs/ChangeServerInstanceSpecRequest.md)

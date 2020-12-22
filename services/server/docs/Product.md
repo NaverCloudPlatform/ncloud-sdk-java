@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **diskType** | [**CommonCode**](CommonCode.md) | 디스크유형 |  [optional]
 **dbKindCode** | **String** | DB유형코드 |  [optional]
 **addBlockStorageSize** | **Long** | 추가블록스토리지사이즈 |  [optional]
+**generationCode** | **String** | 세대코드 |  [optional]
 
 
 

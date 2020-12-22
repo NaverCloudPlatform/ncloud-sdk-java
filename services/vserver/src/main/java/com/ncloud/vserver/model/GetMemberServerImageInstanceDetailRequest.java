@@ -2,7 +2,7 @@
  * vserver
  * VPC Compute 관련 API<br/>https://ncloud.apigw.ntruss.com/vserver/v2
  *
- * OpenAPI spec version: 2020-09-17T02:28:03Z
+ * OpenAPI spec version: 2020-11-18T09:44:20Z
  *
  * 
  *

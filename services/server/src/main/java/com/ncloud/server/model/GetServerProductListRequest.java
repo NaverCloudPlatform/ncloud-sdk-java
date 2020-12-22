@@ -2,7 +2,7 @@
  * server
  * <br/>https://ncloud.apigw.ntruss.com/server/v2
  *
- * OpenAPI spec version: 2020-09-09T12:03:56Z
+ * OpenAPI spec version: 2020-11-18T09:44:01Z
  *
  * 
  *
@@ -25,6 +25,8 @@ public class GetServerProductListRequest {
 	private String internetLineTypeCode = null;
 
 	private String productCode = null;
+
+	private String generationCode = null;
 
 	private String regionNo = null;
 
@@ -83,6 +85,23 @@ public class GetServerProductListRequest {
 
 	public void setProductCode(String productCode) {
 		this.productCode = productCode;
+	}
+
+	public GetServerProductListRequest generationCode(String generationCode) {
+		this.generationCode = generationCode;
+		return this;
+	}
+
+	 /**
+	 * 세대코드
+	 * @return generationCode
+	**/
+	public String getGenerationCode() {
+		return generationCode;
+	}
+
+	public void setGenerationCode(String generationCode) {
+		this.generationCode = generationCode;
 	}
 
 	public GetServerProductListRequest regionNo(String regionNo) {
@@ -166,6 +185,7 @@ public class GetServerProductListRequest {
 		return Objects.equals(this.exclusionProductCode, getServerProductListRequest.exclusionProductCode) &&
 				Objects.equals(this.internetLineTypeCode, getServerProductListRequest.internetLineTypeCode) &&
 				Objects.equals(this.productCode, getServerProductListRequest.productCode) &&
+				Objects.equals(this.generationCode, getServerProductListRequest.generationCode) &&
 				Objects.equals(this.regionNo, getServerProductListRequest.regionNo) &&
 				Objects.equals(this.serverImageProductCode, getServerProductListRequest.serverImageProductCode) &&
 				Objects.equals(this.zoneNo, getServerProductListRequest.zoneNo) &&
@@ -174,7 +194,7 @@ public class GetServerProductListRequest {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(exclusionProductCode, internetLineTypeCode, productCode, regionNo, serverImageProductCode, zoneNo, responseFormatType);
+		return Objects.hash(exclusionProductCode, internetLineTypeCode, productCode, generationCode, regionNo, serverImageProductCode, zoneNo, responseFormatType);
 	}
 
 
@@ -186,6 +206,7 @@ public class GetServerProductListRequest {
 		sb.append("		exclusionProductCode: ").append(toIndentedString(exclusionProductCode)).append("\n");
 		sb.append("		internetLineTypeCode: ").append(toIndentedString(internetLineTypeCode)).append("\n");
 		sb.append("		productCode: ").append(toIndentedString(productCode)).append("\n");
+		sb.append("		generationCode: ").append(toIndentedString(generationCode)).append("\n");
 		sb.append("		regionNo: ").append(toIndentedString(regionNo)).append("\n");
 		sb.append("		serverImageProductCode: ").append(toIndentedString(serverImageProductCode)).append("\n");
 		sb.append("		zoneNo: ").append(toIndentedString(zoneNo)).append("\n");

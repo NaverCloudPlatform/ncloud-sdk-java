@@ -2,7 +2,7 @@
  * server
  * <br/>https://ncloud.apigw.ntruss.com/server/v2
  *
- * OpenAPI spec version: 2020-09-09T12:03:56Z
+ * OpenAPI spec version: 2020-11-18T09:44:01Z
  *
  * 
  *
@@ -34,6 +34,8 @@ import com.ncloud.server.model.AttachBlockStorageInstanceRequest;
 import com.ncloud.server.model.AttachBlockStorageInstanceResponse;
 import com.ncloud.server.model.AttachNetworkInterfaceRequest;
 import com.ncloud.server.model.AttachNetworkInterfaceResponse;
+import com.ncloud.server.model.ChangeBlockStorageVolumeSizeRequest;
+import com.ncloud.server.model.ChangeBlockStorageVolumeSizeResponse;
 import com.ncloud.server.model.ChangeNasVolumeSizeRequest;
 import com.ncloud.server.model.ChangeNasVolumeSizeResponse;
 import com.ncloud.server.model.ChangeServerInstanceSpecRequest;
@@ -919,6 +921,162 @@ public class V2Api {
 		
 		// path
 		String path = "/attachNetworkInterface";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest("POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지볼륨사이즈변경
+	 * @param changeBlockStorageVolumeSizeRequest changeBlockStorageVolumeSizeRequest (required)
+	 * @return ChangeBlockStorageVolumeSizeResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeBlockStorageVolumeSizeResponse> changeBlockStorageVolumeSizeGet(ChangeBlockStorageVolumeSizeRequest changeBlockStorageVolumeSizeRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/changeBlockStorageVolumeSize";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, changeBlockStorageVolumeSizeRequest, true, false);
+		return apiClient.call(apiRequest, ChangeBlockStorageVolumeSizeResponse.class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지볼륨사이즈변경
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeBlockStorageVolumeSizeRequest changeBlockStorageVolumeSizeRequest (required)
+	 * @return byte[]
+	 *	ChangeBlockStorageVolumeSizeResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> changeBlockStorageVolumeSizeGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/changeBlockStorageVolumeSize";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지볼륨사이즈변경
+	 * @param changeBlockStorageVolumeSizeRequest changeBlockStorageVolumeSizeRequest (required)
+	 * @return ChangeBlockStorageVolumeSizeResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeBlockStorageVolumeSizeResponse> changeBlockStorageVolumeSizePost(ChangeBlockStorageVolumeSizeRequest changeBlockStorageVolumeSizeRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/changeBlockStorageVolumeSize";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest("POST", path, queryParams, formParams, httpHeaders, changeBlockStorageVolumeSizeRequest, true, false);
+		return apiClient.call(apiRequest, ChangeBlockStorageVolumeSizeResponse.class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지볼륨사이즈변경
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeBlockStorageVolumeSizeRequest changeBlockStorageVolumeSizeRequest (required)
+	 * @return byte[]
+	 *	ChangeBlockStorageVolumeSizeResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> changeBlockStorageVolumeSizePost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/changeBlockStorageVolumeSize";
 
 		// accept
 		final String[] accepts = {
@@ -7487,6 +7645,84 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest("POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 루트패스워드서버인스턴스리스트조회
+	 * @param getRootPasswordServerInstanceListRequest getRootPasswordServerInstanceListRequest (required)
+	 * @return GetRootPasswordServerInstanceListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetRootPasswordServerInstanceListResponse> getRootPasswordServerInstanceListGet(GetRootPasswordServerInstanceListRequest getRootPasswordServerInstanceListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getRootPasswordServerInstanceList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, getRootPasswordServerInstanceListRequest, true, false);
+		return apiClient.call(apiRequest, GetRootPasswordServerInstanceListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 루트패스워드서버인스턴스리스트조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getRootPasswordServerInstanceListRequest getRootPasswordServerInstanceListRequest (required)
+	 * @return byte[]
+	 *	GetRootPasswordServerInstanceListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getRootPasswordServerInstanceListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getRootPasswordServerInstanceList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest("GET", path, queryParams, formParams, httpHeaders, body, true, false);
 		return apiClient.call(apiRequest, byte[].class);
 	}
 

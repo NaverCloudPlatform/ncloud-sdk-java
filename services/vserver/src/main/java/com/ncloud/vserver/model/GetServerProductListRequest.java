@@ -2,7 +2,7 @@
  * vserver
  * VPC Compute 관련 API<br/>https://ncloud.apigw.ntruss.com/vserver/v2
  *
- * OpenAPI spec version: 2020-09-17T02:28:03Z
+ * OpenAPI spec version: 2020-11-18T09:44:20Z
  *
  * 
  *
@@ -29,6 +29,8 @@ public class GetServerProductListRequest {
 	private String exclusionProductCode = null;
 
 	private String productCode = null;
+
+	private String generationCode = null;
 
 	private String responseFormatType = null;
 
@@ -117,6 +119,23 @@ public class GetServerProductListRequest {
 		this.productCode = productCode;
 	}
 
+	public GetServerProductListRequest generationCode(String generationCode) {
+		this.generationCode = generationCode;
+		return this;
+	}
+
+	 /**
+	 * 세대코드
+	 * @return generationCode
+	**/
+	public String getGenerationCode() {
+		return generationCode;
+	}
+
+	public void setGenerationCode(String generationCode) {
+		this.generationCode = generationCode;
+	}
+
 	public GetServerProductListRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -149,12 +168,13 @@ public class GetServerProductListRequest {
 				Objects.equals(this.serverImageProductCode, getServerProductListRequest.serverImageProductCode) &&
 				Objects.equals(this.exclusionProductCode, getServerProductListRequest.exclusionProductCode) &&
 				Objects.equals(this.productCode, getServerProductListRequest.productCode) &&
+				Objects.equals(this.generationCode, getServerProductListRequest.generationCode) &&
 				Objects.equals(this.responseFormatType, getServerProductListRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, zoneCode, serverImageProductCode, exclusionProductCode, productCode, responseFormatType);
+		return Objects.hash(regionCode, zoneCode, serverImageProductCode, exclusionProductCode, productCode, generationCode, responseFormatType);
 	}
 
 
@@ -168,6 +188,7 @@ public class GetServerProductListRequest {
 		sb.append("		serverImageProductCode: ").append(toIndentedString(serverImageProductCode)).append("\n");
 		sb.append("		exclusionProductCode: ").append(toIndentedString(exclusionProductCode)).append("\n");
 		sb.append("		productCode: ").append(toIndentedString(productCode)).append("\n");
+		sb.append("		generationCode: ").append(toIndentedString(generationCode)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

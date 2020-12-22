@@ -2,7 +2,7 @@
  * server
  * <br/>https://ncloud.apigw.ntruss.com/server/v2
  *
- * OpenAPI spec version: 2020-09-09T12:03:56Z
+ * OpenAPI spec version: 2020-11-18T09:44:01Z
  *
  * 
  *

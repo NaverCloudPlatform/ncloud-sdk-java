@@ -14,6 +14,8 @@ Method | HTTP request | Description
 [**attachBlockStorageInstancePost**](V2Api.md#attachBlockStorageInstancePost) | **POST** /attachBlockStorageInstance | 
 [**attachNetworkInterfaceGet**](V2Api.md#attachNetworkInterfaceGet) | **GET** /attachNetworkInterface | 
 [**attachNetworkInterfacePost**](V2Api.md#attachNetworkInterfacePost) | **POST** /attachNetworkInterface | 
+[**changeBlockStorageVolumeSizeGet**](V2Api.md#changeBlockStorageVolumeSizeGet) | **GET** /changeBlockStorageVolumeSize | 
+[**changeBlockStorageVolumeSizePost**](V2Api.md#changeBlockStorageVolumeSizePost) | **POST** /changeBlockStorageVolumeSize | 
 [**changeNasVolumeSizeGet**](V2Api.md#changeNasVolumeSizeGet) | **GET** /changeNasVolumeSize | 
 [**changeNasVolumeSizePost**](V2Api.md#changeNasVolumeSizePost) | **POST** /changeNasVolumeSize | 
 [**changeServerInstanceSpecGet**](V2Api.md#changeServerInstanceSpecGet) | **GET** /changeServerInstanceSpec | 
@@ -98,6 +100,7 @@ Method | HTTP request | Description
 [**getRegionListPost**](V2Api.md#getRegionListPost) | **POST** /getRegionList | 
 [**getRootPasswordGet**](V2Api.md#getRootPasswordGet) | **GET** /getRootPassword | 
 [**getRootPasswordPost**](V2Api.md#getRootPasswordPost) | **POST** /getRootPassword | 
+[**getRootPasswordServerInstanceListGet**](V2Api.md#getRootPasswordServerInstanceListGet) | **GET** /getRootPasswordServerInstanceList | 
 [**getRootPasswordServerInstanceListPost**](V2Api.md#getRootPasswordServerInstanceListPost) | **POST** /getRootPasswordServerInstanceList | 
 [**getServerImageProductListGet**](V2Api.md#getServerImageProductListGet) | **GET** /getServerImageProductList | 
 [**getServerImageProductListPost**](V2Api.md#getServerImageProductListPost) | **POST** /getServerImageProductList | 
@@ -787,6 +790,140 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AttachNetworkInterfaceResponse**](AttachNetworkInterfaceResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="changeBlockStorageVolumeSizeGet"></a>
+# **changeBlockStorageVolumeSizeGet**
+> ChangeBlockStorageVolumeSizeResponse changeBlockStorageVolumeSizeGet(changeBlockStorageVolumeSizeRequest)
+
+
+
+블록스토리지볼륨사이즈변경
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ChangeBlockStorageVolumeSizeRequest changeBlockStorageVolumeSizeRequest = new ChangeBlockStorageVolumeSizeRequest(); // ChangeBlockStorageVolumeSizeRequest | changeBlockStorageVolumeSizeRequest
+try {
+	// Handler Successful response
+	ApiResponse<ChangeBlockStorageVolumeSizeResponse> result = apiInstance.changeBlockStorageVolumeSizeGet(changeBlockStorageVolumeSizeRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeBlockStorageVolumeSizeRequest** | [**ChangeBlockStorageVolumeSizeRequest**](ChangeBlockStorageVolumeSizeRequest.md)| changeBlockStorageVolumeSizeRequest |
+
+### Return type
+
+[**ChangeBlockStorageVolumeSizeResponse**](ChangeBlockStorageVolumeSizeResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="changeBlockStorageVolumeSizePost"></a>
+# **changeBlockStorageVolumeSizePost**
+> ChangeBlockStorageVolumeSizeResponse changeBlockStorageVolumeSizePost(changeBlockStorageVolumeSizeRequest)
+
+
+
+블록스토리지볼륨사이즈변경
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ChangeBlockStorageVolumeSizeRequest changeBlockStorageVolumeSizeRequest = new ChangeBlockStorageVolumeSizeRequest(); // ChangeBlockStorageVolumeSizeRequest | changeBlockStorageVolumeSizeRequest
+try {
+	// Handler Successful response
+	ApiResponse<ChangeBlockStorageVolumeSizeResponse> result = apiInstance.changeBlockStorageVolumeSizePost(changeBlockStorageVolumeSizeRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeBlockStorageVolumeSizeRequest** | [**ChangeBlockStorageVolumeSizeRequest**](ChangeBlockStorageVolumeSizeRequest.md)| changeBlockStorageVolumeSizeRequest |
+
+### Return type
+
+[**ChangeBlockStorageVolumeSizeResponse**](ChangeBlockStorageVolumeSizeResponse.md)
 
 ### Authorization
 
@@ -6415,6 +6552,73 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**GetRootPasswordResponse**](GetRootPasswordResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getRootPasswordServerInstanceListGet"></a>
+# **getRootPasswordServerInstanceListGet**
+> GetRootPasswordServerInstanceListResponse getRootPasswordServerInstanceListGet(getRootPasswordServerInstanceListRequest)
+
+
+
+루트패스워드서버인스턴스리스트조회
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetRootPasswordServerInstanceListRequest getRootPasswordServerInstanceListRequest = new GetRootPasswordServerInstanceListRequest(); // GetRootPasswordServerInstanceListRequest | getRootPasswordServerInstanceListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetRootPasswordServerInstanceListResponse> result = apiInstance.getRootPasswordServerInstanceListGet(getRootPasswordServerInstanceListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getRootPasswordServerInstanceListRequest** | [**GetRootPasswordServerInstanceListRequest**](GetRootPasswordServerInstanceListRequest.md)| getRootPasswordServerInstanceListRequest |
+
+### Return type
+
+[**GetRootPasswordServerInstanceListResponse**](GetRootPasswordServerInstanceListResponse.md)
 
 ### Authorization
 

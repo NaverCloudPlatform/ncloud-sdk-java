@@ -2,7 +2,7 @@
  * vpc
  * VPC Network 관련 API<br/>https://ncloud.apigw.ntruss.com/vpc/v2
  *
- * OpenAPI spec version: 2020-09-17T02:27:03Z
+ * OpenAPI spec version: 2020-10-22T13:56:07Z
  *
  * 
  *
