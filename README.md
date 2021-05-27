@@ -118,11 +118,13 @@ If credentials are not specified, the default credential provider chain is used.
 | _Server(VPC)_      | [**Server(VPC)**](services/vserver/README.md)           |
 | _VPC_      | [**VPC**](services/vpc/README.md)           |
 | _Nas(VPC)_      | [**Nas(VPC)**](services/vnas/README.md)           |
+| _Autoscaling(VPC)_      | [**Autoscaling(VPC)**](services/vautoscaling/README.md)           |
+| _Loadbalancer(VPC)_      | [**Loadbalancer(VPC)**](services/vloadbalancer/README.md)           |
 
 ### License
 
 ```
-Copyright (c) 2018 NAVER BUSINESS PLATFORM Corp.
+Copyright (c) 2021 NAVER Cloud Corp.
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

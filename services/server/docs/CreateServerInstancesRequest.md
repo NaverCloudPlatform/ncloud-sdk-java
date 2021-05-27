@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **raidTypeName** | **String** | RAID구분이름 |  [optional]
 **instanceTagList** | [**List&lt;InstanceTagParameter&gt;**](InstanceTagParameter.md) | 인스턴스태그리스트 |  [optional]
 **isVaccineInstall** | **Boolean** | 백신설치여부 |  [optional]
+**blockDevicePartitionList** | [**List&lt;BlockDevicePartition&gt;**](BlockDevicePartition.md) | 블록디바이스파티션리스트 |  [optional]
 **responseFormatType** | **String** | responseFormatType {json, xml} |  [optional]
 
 

@@ -20,5 +20,7 @@
 		<module>services/vserver</module>
 		<module>services/vpc</module>
 		<module>services/vnas</module>
+		<module>services/vautoscaling</module>
+		<module>services/vloadbalancer</module>
 	</modules>
 </project>

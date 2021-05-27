@@ -27,6 +27,7 @@ Name | Type | Description | Notes
 **isEventConfiguration** | **Boolean** | 이벤트설정여부 |  [optional]
 **region** | [**Region**](Region.md) | 리전 |  [optional]
 **zone** | [**Zone**](Zone.md) | ZONE |  [optional]
+**isReturnProtection** | **Boolean** | 반납보호여부 |  [optional]
 **nasVolumeInstanceCustomIpList** | [**List&lt;NasVolumeInstanceCustomIp&gt;**](NasVolumeInstanceCustomIp.md) | NAS볼륨커스텀IP리스트 |  [optional]
 **nasVolumeServerInstanceList** | [**List&lt;ServerInstance&gt;**](ServerInstance.md) | NAS볼륨서버인스턴스리스트 |  [optional]
 

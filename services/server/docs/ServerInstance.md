@@ -36,6 +36,7 @@ Name | Type | Description | Notes
 **userData** | **String** | 사용자데이타 |  [optional]
 **accessControlGroupList** | [**List&lt;AccessControlGroup&gt;**](AccessControlGroup.md) | ACG리스트 |  [optional]
 **instanceTagList** | [**List&lt;InstanceTag&gt;**](InstanceTag.md) | 인스턴스태그리스트 |  [optional]
+**blockDevicePartitionList** | [**List&lt;BlockDevicePartition&gt;**](BlockDevicePartition.md) | 블록디바이스파티션리스트 |  [optional]
 
 
 
