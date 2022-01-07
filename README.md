@@ -29,7 +29,7 @@ Add this dependency to your project's POM:
 ```xml
 <dependency>
 	<groupId>com.ncloud</groupId>
-	<artifactId>ncloud-sdk</artifactId>
+	<artifactId>ncloud-sdk-java</artifactId>
 	<version>1.0.0</version>
 	<scope>compile</scope>
 </dependency>
