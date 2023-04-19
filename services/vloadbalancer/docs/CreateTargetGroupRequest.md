@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **regionCode** | **String** | REGION코드 |  [optional]
 **targetGroupPort** | **Integer** | 타겟그룹포트 |  [optional]
-**targetGroupProtocolTypeCode** | [**CommonCode**](CommonCode.md) | 타겟그룹프로토콜유형코드 | 
+**targetGroupProtocolTypeCode** | **String** | 타겟그룹프로토콜유형코드 | 
 **targetGroupDescription** | **String** | 타겟그룹설명 |  [optional]
 **healthCheckCycle** | **Integer** | 헬스체크주기 |  [optional]
 **healthCheckDownThreshold** | **Integer** | 헬스체크실패임계값 |  [optional]

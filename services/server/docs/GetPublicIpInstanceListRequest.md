@@ -9,7 +9,6 @@ Name | Type | Description | Notes
 **publicIpList** | **List&lt;String&gt;** | 공인IP리스트 |  [optional]
 **searchFilterName** | **String** | 검색할필터명 |  [optional]
 **searchFilterValue** | **String** | 검색할필터값 |  [optional]
-**internetLineTypeCode** | **String** | 인터넷라인구분코드 |  [optional]
 **regionNo** | **String** | 리전번호 |  [optional]
 **zoneNo** | **String** | ZONE번호 |  [optional]
 **pageNo** | **Integer** | 페이지번호 |  [optional]

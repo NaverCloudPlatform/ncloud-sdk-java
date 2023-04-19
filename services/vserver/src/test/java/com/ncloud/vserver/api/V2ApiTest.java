@@ -34,10 +34,14 @@ import com.ncloud.vserver.model.AddAccessControlGroupInboundRuleRequest;
 import com.ncloud.vserver.model.AddAccessControlGroupInboundRuleResponse;
 import com.ncloud.vserver.model.AddAccessControlGroupOutboundRuleRequest;
 import com.ncloud.vserver.model.AddAccessControlGroupOutboundRuleResponse;
+import com.ncloud.vserver.model.AddMemberServerImageSharingPermissionRequest;
+import com.ncloud.vserver.model.AddMemberServerImageSharingPermissionResponse;
 import com.ncloud.vserver.model.AddNetworkInterfaceAccessControlGroupRequest;
 import com.ncloud.vserver.model.AddNetworkInterfaceAccessControlGroupResponse;
 import com.ncloud.vserver.model.AddPlacementGroupServerInstanceRequest;
 import com.ncloud.vserver.model.AddPlacementGroupServerInstanceResponse;
+import com.ncloud.vserver.model.AssignSecondaryIpsRequest;
+import com.ncloud.vserver.model.AssignSecondaryIpsResponse;
 import com.ncloud.vserver.model.AssociatePublicIpWithServerInstanceRequest;
 import com.ncloud.vserver.model.AssociatePublicIpWithServerInstanceResponse;
 import com.ncloud.vserver.model.AttachBlockStorageInstanceRequest;
@@ -130,6 +134,8 @@ import com.ncloud.vserver.model.GetPublicIpInstanceListRequest;
 import com.ncloud.vserver.model.GetPublicIpInstanceListResponse;
 import com.ncloud.vserver.model.GetPublicIpTargetServerInstanceListRequest;
 import com.ncloud.vserver.model.GetPublicIpTargetServerInstanceListResponse;
+import com.ncloud.vserver.model.GetRaidListRequest;
+import com.ncloud.vserver.model.GetRaidListResponse;
 import com.ncloud.vserver.model.GetRegionListRequest;
 import com.ncloud.vserver.model.GetRegionListResponse;
 import com.ncloud.vserver.model.GetRootPasswordRequest;
@@ -148,22 +154,34 @@ import com.ncloud.vserver.model.GetZoneListRequest;
 import com.ncloud.vserver.model.GetZoneListResponse;
 import com.ncloud.vserver.model.ImportLoginKeyRequest;
 import com.ncloud.vserver.model.ImportLoginKeyResponse;
+import com.ncloud.vserver.model.InterruptServerInstanceRequest;
+import com.ncloud.vserver.model.InterruptServerInstanceResponse;
 import com.ncloud.vserver.model.RebootServerInstancesRequest;
 import com.ncloud.vserver.model.RebootServerInstancesResponse;
 import com.ncloud.vserver.model.RemoveAccessControlGroupInboundRuleRequest;
 import com.ncloud.vserver.model.RemoveAccessControlGroupInboundRuleResponse;
 import com.ncloud.vserver.model.RemoveAccessControlGroupOutboundRuleRequest;
 import com.ncloud.vserver.model.RemoveAccessControlGroupOutboundRuleResponse;
+import com.ncloud.vserver.model.RemoveMemberServerImageSharingPermissionRequest;
+import com.ncloud.vserver.model.RemoveMemberServerImageSharingPermissionResponse;
 import com.ncloud.vserver.model.RemoveNetworkInterfaceAccessControlGroupRequest;
 import com.ncloud.vserver.model.RemoveNetworkInterfaceAccessControlGroupResponse;
 import com.ncloud.vserver.model.RemovePlacementGroupServerInstanceRequest;
 import com.ncloud.vserver.model.RemovePlacementGroupServerInstanceResponse;
+import com.ncloud.vserver.model.SetBlockStorageReturnProtectionRequest;
+import com.ncloud.vserver.model.SetBlockStorageReturnProtectionResponse;
+import com.ncloud.vserver.model.SetMemberServerImageSharingPermissionRequest;
+import com.ncloud.vserver.model.SetMemberServerImageSharingPermissionResponse;
+import com.ncloud.vserver.model.SetProtectServerTerminationRequest;
+import com.ncloud.vserver.model.SetProtectServerTerminationResponse;
 import com.ncloud.vserver.model.StartServerInstancesRequest;
 import com.ncloud.vserver.model.StartServerInstancesResponse;
 import com.ncloud.vserver.model.StopServerInstancesRequest;
 import com.ncloud.vserver.model.StopServerInstancesResponse;
 import com.ncloud.vserver.model.TerminateServerInstancesRequest;
 import com.ncloud.vserver.model.TerminateServerInstancesResponse;
+import com.ncloud.vserver.model.UnassignSecondaryIpsRequest;
+import com.ncloud.vserver.model.UnassignSecondaryIpsResponse;
 
 /**
  * API tests for V2Api
@@ -441,6 +459,130 @@ public class V2ApiTest {
 	
 	/**
 	 * 
+	 * 회원서버이미지공유권한추가
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void addMemberServerImageSharingPermissionGetTest() throws ApiException, SdkException {
+		AddMemberServerImageSharingPermissionRequest addMemberServerImageSharingPermissionRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<AddMemberServerImageSharingPermissionResponse> response = api.addMemberServerImageSharingPermissionGet(addMemberServerImageSharingPermissionRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한추가
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void addMemberServerImageSharingPermissionGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.addMemberServerImageSharingPermissionGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 회원서버이미지공유권한추가
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void addMemberServerImageSharingPermissionPostTest() throws ApiException, SdkException {
+		AddMemberServerImageSharingPermissionRequest addMemberServerImageSharingPermissionRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<AddMemberServerImageSharingPermissionResponse> response = api.addMemberServerImageSharingPermissionPost(addMemberServerImageSharingPermissionRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한추가
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void addMemberServerImageSharingPermissionPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.addMemberServerImageSharingPermissionPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
 	 * 네트워크인터페이스의ACG추가
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
@@ -675,6 +817,130 @@ public class V2ApiTest {
 		try {
 			// Handler Successful response
 			ApiResponse<byte[]> response = api.addPlacementGroupServerInstancePost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 보조IP할당
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void assignSecondaryIpsGetTest() throws ApiException, SdkException {
+		AssignSecondaryIpsRequest assignSecondaryIpsRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<AssignSecondaryIpsResponse> response = api.assignSecondaryIpsGet(assignSecondaryIpsRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 보조IP할당
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void assignSecondaryIpsGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.assignSecondaryIpsGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 보조IP할당
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void assignSecondaryIpsPostTest() throws ApiException, SdkException {
+		AssignSecondaryIpsRequest assignSecondaryIpsRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<AssignSecondaryIpsResponse> response = api.assignSecondaryIpsPost(assignSecondaryIpsRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 보조IP할당
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void assignSecondaryIpsPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.assignSecondaryIpsPost(httpHeaders, queryParams, formParams, requestBody);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -6393,6 +6659,130 @@ public class V2ApiTest {
 	
 	/**
 	 * 
+	 * RAID리스트조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getRaidListGetTest() throws ApiException, SdkException {
+		GetRaidListRequest getRaidListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetRaidListResponse> response = api.getRaidListGet(getRaidListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * RAID리스트조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getRaidListGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getRaidListGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * RAID리스트조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getRaidListPostTest() throws ApiException, SdkException {
+		GetRaidListRequest getRaidListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetRaidListResponse> response = api.getRaidListPost(getRaidListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * RAID리스트조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getRaidListPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getRaidListPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
 	 * REGION리스트조회
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
@@ -7509,6 +7899,130 @@ public class V2ApiTest {
 	
 	/**
 	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void interruptServerInstanceGetTest() throws ApiException, SdkException {
+		InterruptServerInstanceRequest interruptServerInstanceRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<InterruptServerInstanceResponse> response = api.interruptServerInstanceGet(interruptServerInstanceRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void interruptServerInstanceGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.interruptServerInstanceGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void interruptServerInstancePostTest() throws ApiException, SdkException {
+		InterruptServerInstanceRequest interruptServerInstanceRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<InterruptServerInstanceResponse> response = api.interruptServerInstancePost(interruptServerInstanceRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void interruptServerInstancePostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.interruptServerInstancePost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
 	 * 서버인스턴스재시작
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
@@ -7881,6 +8395,130 @@ public class V2ApiTest {
 	
 	/**
 	 * 
+	 * 회원서버이미지공유권한제거
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void removeMemberServerImageSharingPermissionGetTest() throws ApiException, SdkException {
+		RemoveMemberServerImageSharingPermissionRequest removeMemberServerImageSharingPermissionRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<RemoveMemberServerImageSharingPermissionResponse> response = api.removeMemberServerImageSharingPermissionGet(removeMemberServerImageSharingPermissionRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한제거
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void removeMemberServerImageSharingPermissionGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.removeMemberServerImageSharingPermissionGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 회원서버이미지공유권한제거
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void removeMemberServerImageSharingPermissionPostTest() throws ApiException, SdkException {
+		RemoveMemberServerImageSharingPermissionRequest removeMemberServerImageSharingPermissionRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<RemoveMemberServerImageSharingPermissionResponse> response = api.removeMemberServerImageSharingPermissionPost(removeMemberServerImageSharingPermissionRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한제거
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void removeMemberServerImageSharingPermissionPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.removeMemberServerImageSharingPermissionPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
 	 * 네트워크인터페이스의ACG제거
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
@@ -8115,6 +8753,378 @@ public class V2ApiTest {
 		try {
 			// Handler Successful response
 			ApiResponse<byte[]> response = api.removePlacementGroupServerInstancePost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 블록스토리지반납보호설정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setBlockStorageReturnProtectionGetTest() throws ApiException, SdkException {
+		SetBlockStorageReturnProtectionRequest setBlockStorageReturnProtectionRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<SetBlockStorageReturnProtectionResponse> response = api.setBlockStorageReturnProtectionGet(setBlockStorageReturnProtectionRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 블록스토리지반납보호설정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setBlockStorageReturnProtectionGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.setBlockStorageReturnProtectionGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 블록스토리지반납보호설정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setBlockStorageReturnProtectionPostTest() throws ApiException, SdkException {
+		SetBlockStorageReturnProtectionRequest setBlockStorageReturnProtectionRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<SetBlockStorageReturnProtectionResponse> response = api.setBlockStorageReturnProtectionPost(setBlockStorageReturnProtectionRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 블록스토리지반납보호설정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setBlockStorageReturnProtectionPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.setBlockStorageReturnProtectionPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 회원서버이미지공유권한설정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setMemberServerImageSharingPermissionGetTest() throws ApiException, SdkException {
+		SetMemberServerImageSharingPermissionRequest setMemberServerImageSharingPermissionRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<SetMemberServerImageSharingPermissionResponse> response = api.setMemberServerImageSharingPermissionGet(setMemberServerImageSharingPermissionRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한설정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setMemberServerImageSharingPermissionGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.setMemberServerImageSharingPermissionGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 회원서버이미지공유권한설정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setMemberServerImageSharingPermissionPostTest() throws ApiException, SdkException {
+		SetMemberServerImageSharingPermissionRequest setMemberServerImageSharingPermissionRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<SetMemberServerImageSharingPermissionResponse> response = api.setMemberServerImageSharingPermissionPost(setMemberServerImageSharingPermissionRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한설정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setMemberServerImageSharingPermissionPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.setMemberServerImageSharingPermissionPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 서버반납보호설정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setProtectServerTerminationGetTest() throws ApiException, SdkException {
+		SetProtectServerTerminationRequest setProtectServerTerminationRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<SetProtectServerTerminationResponse> response = api.setProtectServerTerminationGet(setProtectServerTerminationRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 서버반납보호설정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setProtectServerTerminationGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.setProtectServerTerminationGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 서버반납보호설정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setProtectServerTerminationPostTest() throws ApiException, SdkException {
+		SetProtectServerTerminationRequest setProtectServerTerminationRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<SetProtectServerTerminationResponse> response = api.setProtectServerTerminationPost(setProtectServerTerminationRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 서버반납보호설정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setProtectServerTerminationPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.setProtectServerTerminationPost(httpHeaders, queryParams, formParams, requestBody);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -8487,6 +9497,130 @@ public class V2ApiTest {
 		try {
 			// Handler Successful response
 			ApiResponse<byte[]> response = api.terminateServerInstancesPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 보조IP할당해제
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void unassignSecondaryIpsGetTest() throws ApiException, SdkException {
+		UnassignSecondaryIpsRequest unassignSecondaryIpsRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<UnassignSecondaryIpsResponse> response = api.unassignSecondaryIpsGet(unassignSecondaryIpsRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 보조IP할당해제
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void unassignSecondaryIpsGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.unassignSecondaryIpsGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 보조IP할당해제
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void unassignSecondaryIpsPostTest() throws ApiException, SdkException {
+		UnassignSecondaryIpsRequest unassignSecondaryIpsRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<UnassignSecondaryIpsResponse> response = api.unassignSecondaryIpsPost(unassignSecondaryIpsRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 보조IP할당해제
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void unassignSecondaryIpsPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.unassignSecondaryIpsPost(httpHeaders, queryParams, formParams, requestBody);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();

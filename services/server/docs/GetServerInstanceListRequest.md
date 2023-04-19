@@ -10,7 +10,6 @@ Name | Type | Description | Notes
 **pageNo** | **Integer** | 페이지번호 |  [optional]
 **pageSize** | **Integer** | 페이지사이즈 |  [optional]
 **serverInstanceStatusCode** | **String** | 서버인스턴스상태코드 |  [optional]
-**internetLineTypeCode** | **String** | 인터넷라인구분코드 |  [optional]
 **regionNo** | **String** | 리전번호 |  [optional]
 **zoneNo** | **String** | zone번호 |  [optional]
 **baseBlockStorageDiskTypeCode** | **String** | 서버디스크유형코드 |  [optional]

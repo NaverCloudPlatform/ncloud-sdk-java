@@ -36,6 +36,12 @@ public class CreateNetworkInterfaceRequest {
 
 	private String ip = null;
 
+	private List<String> secondaryIpList = null;
+
+	private Integer secondaryIpCount = null;
+
+	private Boolean isBareMetal = null;
+
 	private String responseFormatType = null;
 
 	public CreateNetworkInterfaceRequest regionCode(String regionCode) {
@@ -179,6 +185,65 @@ public class CreateNetworkInterfaceRequest {
 		this.ip = ip;
 	}
 
+	public CreateNetworkInterfaceRequest secondaryIpList(List<String> secondaryIpList) {
+		this.secondaryIpList = secondaryIpList;
+		return this;
+	}
+
+	public CreateNetworkInterfaceRequest addSecondaryIpListItem(String secondaryIpListItem) {
+		if (this.secondaryIpList == null) {
+			this.secondaryIpList = new ArrayList<String>();
+		}
+		this.secondaryIpList.add(secondaryIpListItem);
+		return this;
+	}
+
+	 /**
+	 * 보조IP리스트
+	 * @return secondaryIpList
+	**/
+	public List<String> getSecondaryIpList() {
+		return secondaryIpList;
+	}
+
+	public void setSecondaryIpList(List<String> secondaryIpList) {
+		this.secondaryIpList = secondaryIpList;
+	}
+
+	public CreateNetworkInterfaceRequest secondaryIpCount(Integer secondaryIpCount) {
+		this.secondaryIpCount = secondaryIpCount;
+		return this;
+	}
+
+	 /**
+	 * 보조IP자동할당개수
+	 * @return secondaryIpCount
+	**/
+	public Integer getSecondaryIpCount() {
+		return secondaryIpCount;
+	}
+
+	public void setSecondaryIpCount(Integer secondaryIpCount) {
+		this.secondaryIpCount = secondaryIpCount;
+	}
+
+	public CreateNetworkInterfaceRequest isBareMetal(Boolean isBareMetal) {
+		this.isBareMetal = isBareMetal;
+		return this;
+	}
+
+	 /**
+	 * 베어메탈여부
+	 * @return isBareMetal
+	**/
+	public Boolean isIsBareMetal() {
+		return isBareMetal;
+	}
+
+	public void setIsBareMetal(Boolean isBareMetal) {
+		this.isBareMetal = isBareMetal;
+	}
+
 	public CreateNetworkInterfaceRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -214,12 +279,15 @@ public class CreateNetworkInterfaceRequest {
 				Objects.equals(this.vpcNo, createNetworkInterfaceRequest.vpcNo) &&
 				Objects.equals(this.serverInstanceNo, createNetworkInterfaceRequest.serverInstanceNo) &&
 				Objects.equals(this.ip, createNetworkInterfaceRequest.ip) &&
+				Objects.equals(this.secondaryIpList, createNetworkInterfaceRequest.secondaryIpList) &&
+				Objects.equals(this.secondaryIpCount, createNetworkInterfaceRequest.secondaryIpCount) &&
+				Objects.equals(this.isBareMetal, createNetworkInterfaceRequest.isBareMetal) &&
 				Objects.equals(this.responseFormatType, createNetworkInterfaceRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, accessControlGroupNoList, networkInterfaceDescription, networkInterfaceName, subnetNo, vpcNo, serverInstanceNo, ip, responseFormatType);
+		return Objects.hash(regionCode, accessControlGroupNoList, networkInterfaceDescription, networkInterfaceName, subnetNo, vpcNo, serverInstanceNo, ip, secondaryIpList, secondaryIpCount, isBareMetal, responseFormatType);
 	}
 
 
@@ -236,6 +304,9 @@ public class CreateNetworkInterfaceRequest {
 		sb.append("		vpcNo: ").append(toIndentedString(vpcNo)).append("\n");
 		sb.append("		serverInstanceNo: ").append(toIndentedString(serverInstanceNo)).append("\n");
 		sb.append("		ip: ").append(toIndentedString(ip)).append("\n");
+		sb.append("		secondaryIpList: ").append(toIndentedString(secondaryIpList)).append("\n");
+		sb.append("		secondaryIpCount: ").append(toIndentedString(secondaryIpCount)).append("\n");
+		sb.append("		isBareMetal: ").append(toIndentedString(isBareMetal)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

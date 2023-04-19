@@ -20,6 +20,7 @@ Name | Type | Description | Notes
 **vpcNo** | **String** | VPC번호 |  [optional]
 **regionCode** | **String** | REGION코드 |  [optional]
 **subnetNoList** | **List&lt;String&gt;** | 서브넷번호리스트 |  [optional]
+**loadBalancerSubnetList** | [**List&lt;LoadBalancerSubnet&gt;**](LoadBalancerSubnet.md) | 로드밸런서서브넷리스트 |  [optional]
 **loadBalancerListenerNoList** | **List&lt;String&gt;** | 로드밸런서리스너번호리스트 |  [optional]
 
 

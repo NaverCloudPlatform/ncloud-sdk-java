@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>vloadbalancer</artifactId>
-	<version>1.0.0</version>
+	<version>1.0.1</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/vloadbalancer-1.0.0.jar
+* target/vloadbalancer-1.0.1.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -58,13 +58,19 @@ secretKey=your-secret-key
 And execute the following Java code:
 
 ```java
+import java.io.InputStream;
+import java.util.List;
+import java.util.Map;
 
-import com.ncloud.vloadbalancer.*;
-import com.ncloud.vloadbalancer.auth.*;
-import com.ncloud.vloadbalancer.marshaller.*;
-import com.ncloud.vloadbalancer.exception.*;
+import com.ncloud.ApiClient;
+import com.ncloud.ApiResponse;
+import com.ncloud.auth.PropertiesFileCredentialsProvider;
+import com.ncloud.exception.ApiException;
+import com.ncloud.exception.SdkException;
+import com.ncloud.marshaller.FormMarshaller;
+import com.ncloud.marshaller.JsonMarshaller;
+import com.ncloud.marshaller.XmlMarshaller;
 import com.ncloud.vloadbalancer.model.*;
-import com.ncloud.vloadbalancer.api.V2Api;
 
 public class V2ApiExample {
 
@@ -73,15 +79,15 @@ public class V2ApiExample {
 			.addMarshaller(JsonMarshaller.getInstance())
 			.addMarshaller(XmlMarshaller.getInstance())
 			.addMarshaller(FormMarshaller.getInstance())
-			.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+			.setCredentialsProvider(new PropertiesFileCredentialsProvider("your-credentials-properties-file"))
 			.setLogging(true)
 			.build();
 
 		V2Api apiInstance = new V2Api(apiClient);
-		AddTargetRequest addTargetRequest = new AddTargetRequest(); // AddTargetRequest | addTargetRequest
+		AddLoadBalancerListenerCertificateRequest addLoadBalancerListenerCertificateRequest = new AddLoadBalancerListenerCertificateRequest(); // AddLoadBalancerListenerCertificateRequest | addLoadBalancerListenerCertificateRequest
 		try {
 			// Handler Successful response
-			ApiResponse<AddTargetResponse> result = apiInstance.addTargetGet(addTargetRequest);
+			ApiResponse<AddLoadBalancerListenerCertificateResponse> result = apiInstance.addLoadBalancerListenerCertificateGet(addLoadBalancerListenerCertificateRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -103,6 +109,8 @@ All URIs are relative to *https://ncloud.apigw.ntruss.com/vloadbalancer/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*V2Api* | [**addLoadBalancerListenerCertificateGet**](docs/V2Api.md#addLoadBalancerListenerCertificateGet) | **GET** /addLoadBalancerListenerCertificate | 
+*V2Api* | [**addLoadBalancerListenerCertificatePost**](docs/V2Api.md#addLoadBalancerListenerCertificatePost) | **POST** /addLoadBalancerListenerCertificate | 
 *V2Api* | [**addTargetGet**](docs/V2Api.md#addTargetGet) | **GET** /addTarget | 
 *V2Api* | [**addTargetPost**](docs/V2Api.md#addTargetPost) | **POST** /addTarget | 
 *V2Api* | [**changeLoadBalancerInstanceConfigurationGet**](docs/V2Api.md#changeLoadBalancerInstanceConfigurationGet) | **GET** /changeLoadBalancerInstanceConfiguration | 
@@ -129,6 +137,8 @@ Class | Method | HTTP request | Description
 *V2Api* | [**getLoadBalancerInstanceDetailPost**](docs/V2Api.md#getLoadBalancerInstanceDetailPost) | **POST** /getLoadBalancerInstanceDetail | 
 *V2Api* | [**getLoadBalancerInstanceListGet**](docs/V2Api.md#getLoadBalancerInstanceListGet) | **GET** /getLoadBalancerInstanceList | 
 *V2Api* | [**getLoadBalancerInstanceListPost**](docs/V2Api.md#getLoadBalancerInstanceListPost) | **POST** /getLoadBalancerInstanceList | 
+*V2Api* | [**getLoadBalancerListenerCertificateListGet**](docs/V2Api.md#getLoadBalancerListenerCertificateListGet) | **GET** /getLoadBalancerListenerCertificateList | 
+*V2Api* | [**getLoadBalancerListenerCertificateListPost**](docs/V2Api.md#getLoadBalancerListenerCertificateListPost) | **POST** /getLoadBalancerListenerCertificateList | 
 *V2Api* | [**getLoadBalancerListenerListGet**](docs/V2Api.md#getLoadBalancerListenerListGet) | **GET** /getLoadBalancerListenerList | 
 *V2Api* | [**getLoadBalancerListenerListPost**](docs/V2Api.md#getLoadBalancerListenerListPost) | **POST** /getLoadBalancerListenerList | 
 *V2Api* | [**getLoadBalancerRuleListGet**](docs/V2Api.md#getLoadBalancerRuleListGet) | **GET** /getLoadBalancerRuleList | 
@@ -139,6 +149,8 @@ Class | Method | HTTP request | Description
 *V2Api* | [**getTargetGroupListPost**](docs/V2Api.md#getTargetGroupListPost) | **POST** /getTargetGroupList | 
 *V2Api* | [**getTargetListGet**](docs/V2Api.md#getTargetListGet) | **GET** /getTargetList | 
 *V2Api* | [**getTargetListPost**](docs/V2Api.md#getTargetListPost) | **POST** /getTargetList | 
+*V2Api* | [**removeLoadBalancerListenerCertificateGet**](docs/V2Api.md#removeLoadBalancerListenerCertificateGet) | **GET** /removeLoadBalancerListenerCertificate | 
+*V2Api* | [**removeLoadBalancerListenerCertificatePost**](docs/V2Api.md#removeLoadBalancerListenerCertificatePost) | **POST** /removeLoadBalancerListenerCertificate | 
 *V2Api* | [**removeTargetGet**](docs/V2Api.md#removeTargetGet) | **GET** /removeTarget | 
 *V2Api* | [**removeTargetPost**](docs/V2Api.md#removeTargetPost) | **POST** /removeTarget | 
 *V2Api* | [**setLoadBalancerDescriptionGet**](docs/V2Api.md#setLoadBalancerDescriptionGet) | **GET** /setLoadBalancerDescription | 
@@ -153,6 +165,8 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [AddLoadBalancerListenerCertificateRequest](docs/AddLoadBalancerListenerCertificateRequest.md)
+ - [AddLoadBalancerListenerCertificateResponse](docs/AddLoadBalancerListenerCertificateResponse.md)
  - [AddTargetRequest](docs/AddTargetRequest.md)
  - [AddTargetResponse](docs/AddTargetResponse.md)
  - [ChangeLoadBalancerInstanceConfigurationRequest](docs/ChangeLoadBalancerInstanceConfigurationRequest.md)
@@ -180,6 +194,8 @@ Class | Method | HTTP request | Description
  - [GetLoadBalancerInstanceDetailResponse](docs/GetLoadBalancerInstanceDetailResponse.md)
  - [GetLoadBalancerInstanceListRequest](docs/GetLoadBalancerInstanceListRequest.md)
  - [GetLoadBalancerInstanceListResponse](docs/GetLoadBalancerInstanceListResponse.md)
+ - [GetLoadBalancerListenerCertificateListRequest](docs/GetLoadBalancerListenerCertificateListRequest.md)
+ - [GetLoadBalancerListenerCertificateListResponse](docs/GetLoadBalancerListenerCertificateListResponse.md)
  - [GetLoadBalancerListenerListRequest](docs/GetLoadBalancerListenerListRequest.md)
  - [GetLoadBalancerListenerListResponse](docs/GetLoadBalancerListenerListResponse.md)
  - [GetLoadBalancerRuleListRequest](docs/GetLoadBalancerRuleListRequest.md)
@@ -193,12 +209,17 @@ Class | Method | HTTP request | Description
  - [HostHeaderCondition](docs/HostHeaderCondition.md)
  - [LoadBalancerInstance](docs/LoadBalancerInstance.md)
  - [LoadBalancerListener](docs/LoadBalancerListener.md)
+ - [LoadBalancerListenerCertificate](docs/LoadBalancerListenerCertificate.md)
  - [LoadBalancerListenerParameter](docs/LoadBalancerListenerParameter.md)
  - [LoadBalancerRule](docs/LoadBalancerRule.md)
  - [LoadBalancerRuleAction](docs/LoadBalancerRuleAction.md)
  - [LoadBalancerRuleCondition](docs/LoadBalancerRuleCondition.md)
+ - [LoadBalancerSubnet](docs/LoadBalancerSubnet.md)
+ - [LoadBalancerSubnetParameter](docs/LoadBalancerSubnetParameter.md)
  - [PathPatternCondition](docs/PathPatternCondition.md)
  - [RedirectionAction](docs/RedirectionAction.md)
+ - [RemoveLoadBalancerListenerCertificateRequest](docs/RemoveLoadBalancerListenerCertificateRequest.md)
+ - [RemoveLoadBalancerListenerCertificateResponse](docs/RemoveLoadBalancerListenerCertificateResponse.md)
  - [RemoveTargetRequest](docs/RemoveTargetRequest.md)
  - [RemoveTargetResponse](docs/RemoveTargetResponse.md)
  - [SetLoadBalancerDescriptionRequest](docs/SetLoadBalancerDescriptionRequest.md)

@@ -14,8 +14,10 @@ Name | Type | Description | Notes
 **instanceType** | [**CommonCode**](CommonCode.md) | 인스턴스유형 |  [optional]
 **instanceNo** | **String** | 인스턴스번호 |  [optional]
 **ip** | **String** | IP주소 |  [optional]
+**macAddress** | **String** | MAC주소 |  [optional]
 **accessControlGroupNoList** | **List&lt;String&gt;** | ACG번호리스트 |  [optional]
 **networkInterfaceDescription** | **String** | 네트워크인터페이스설명 |  [optional]
+**secondaryIpList** | **List&lt;String&gt;** | 보조IP리스트 |  [optional]
 
 
 

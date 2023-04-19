@@ -13,7 +13,10 @@ Name | Type | Description | Notes
 **cifsUserName** | **String** | CIFS유저이름 |  [optional]
 **cifsUserPassword** | **String** | CIFS유저비밀번호 |  [optional]
 **isEncryptedVolume** | **Boolean** | 볼륨암호화여부 |  [optional]
+**isReturnProtection** | **Boolean** | 반납보호여부 |  [optional]
 **nasVolumeDescription** | **String** | NAS볼륨설명 |  [optional]
+**accessControlRuleList** | [**List&lt;AccessControlRuleParameter&gt;**](AccessControlRuleParameter.md) | 접근제어Rule리스트 |  [optional]
+**isAsync** | **Boolean** | Async여부 |  [optional]
 **responseFormatType** | **String** | responseFormatType {json, xml} |  [optional]
 
 

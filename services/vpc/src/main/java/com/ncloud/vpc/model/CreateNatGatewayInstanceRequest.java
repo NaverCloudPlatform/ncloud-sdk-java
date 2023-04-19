@@ -28,6 +28,12 @@ public class CreateNatGatewayInstanceRequest {
 
 	private String zoneCode = null;
 
+	private String subnetNo = null;
+
+	private String publicIpInstanceNo = null;
+
+	private String privateIp = null;
+
 	private String responseFormatType = null;
 
 	public CreateNatGatewayInstanceRequest regionCode(String regionCode) {
@@ -115,6 +121,57 @@ public class CreateNatGatewayInstanceRequest {
 		this.zoneCode = zoneCode;
 	}
 
+	public CreateNatGatewayInstanceRequest subnetNo(String subnetNo) {
+		this.subnetNo = subnetNo;
+		return this;
+	}
+
+	 /**
+	 * Subnet번호
+	 * @return subnetNo
+	**/
+	public String getSubnetNo() {
+		return subnetNo;
+	}
+
+	public void setSubnetNo(String subnetNo) {
+		this.subnetNo = subnetNo;
+	}
+
+	public CreateNatGatewayInstanceRequest publicIpInstanceNo(String publicIpInstanceNo) {
+		this.publicIpInstanceNo = publicIpInstanceNo;
+		return this;
+	}
+
+	 /**
+	 * 공인아이피인스턴스번호
+	 * @return publicIpInstanceNo
+	**/
+	public String getPublicIpInstanceNo() {
+		return publicIpInstanceNo;
+	}
+
+	public void setPublicIpInstanceNo(String publicIpInstanceNo) {
+		this.publicIpInstanceNo = publicIpInstanceNo;
+	}
+
+	public CreateNatGatewayInstanceRequest privateIp(String privateIp) {
+		this.privateIp = privateIp;
+		return this;
+	}
+
+	 /**
+	 * 사설IP주소
+	 * @return privateIp
+	**/
+	public String getPrivateIp() {
+		return privateIp;
+	}
+
+	public void setPrivateIp(String privateIp) {
+		this.privateIp = privateIp;
+	}
+
 	public CreateNatGatewayInstanceRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -147,12 +204,15 @@ public class CreateNatGatewayInstanceRequest {
 				Objects.equals(this.natGatewayName, createNatGatewayInstanceRequest.natGatewayName) &&
 				Objects.equals(this.vpcNo, createNatGatewayInstanceRequest.vpcNo) &&
 				Objects.equals(this.zoneCode, createNatGatewayInstanceRequest.zoneCode) &&
+				Objects.equals(this.subnetNo, createNatGatewayInstanceRequest.subnetNo) &&
+				Objects.equals(this.publicIpInstanceNo, createNatGatewayInstanceRequest.publicIpInstanceNo) &&
+				Objects.equals(this.privateIp, createNatGatewayInstanceRequest.privateIp) &&
 				Objects.equals(this.responseFormatType, createNatGatewayInstanceRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, natGatewayDescription, natGatewayName, vpcNo, zoneCode, responseFormatType);
+		return Objects.hash(regionCode, natGatewayDescription, natGatewayName, vpcNo, zoneCode, subnetNo, publicIpInstanceNo, privateIp, responseFormatType);
 	}
 
 
@@ -166,6 +226,9 @@ public class CreateNatGatewayInstanceRequest {
 		sb.append("		natGatewayName: ").append(toIndentedString(natGatewayName)).append("\n");
 		sb.append("		vpcNo: ").append(toIndentedString(vpcNo)).append("\n");
 		sb.append("		zoneCode: ").append(toIndentedString(zoneCode)).append("\n");
+		sb.append("		subnetNo: ").append(toIndentedString(subnetNo)).append("\n");
+		sb.append("		publicIpInstanceNo: ").append(toIndentedString(publicIpInstanceNo)).append("\n");
+		sb.append("		privateIp: ").append(toIndentedString(privateIp)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

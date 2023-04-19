@@ -14,6 +14,7 @@ package com.ncloud.vnas.model;
 
 import java.util.Objects;
 import com.ncloud.vnas.model.CommonCode;
+import com.ncloud.vnas.model.NasVolumeInstanceCustomIp;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -43,21 +44,15 @@ public class NasVolumeInstance {
 
 	private Long volumeSize = null;
 
-	private Long volumeUseSize = null;
-
-	private Float volumeUseRatio = null;
-
 	private Float snapshotVolumeConfigurationRatio = null;
 
 	private CommonCode snapshotVolumeConfigPeriodType = null;
 
+	private CommonCode snapshotVolumeConfigDayOfWeekType = null;
+
 	private Integer snapshotVolumeConfigTime = null;
 
 	private Long snapshotVolumeSize = null;
-
-	private Long snapshotVolumeUseSize = null;
-
-	private Float snapshotVolumeUseRatio = null;
 
 	private Boolean isSnapshotConfiguration = null;
 
@@ -72,6 +67,10 @@ public class NasVolumeInstance {
 	private List<String> nasVolumeServerInstanceNoList = null;
 
 	private Boolean isEncryptedVolume = null;
+
+	private List<NasVolumeInstanceCustomIp> nasVolumeInstanceCustomIpList = null;
+
+	private Boolean isReturnProtection = null;
 
 	public NasVolumeInstance nasVolumeInstanceNo(String nasVolumeInstanceNo) {
 		this.nasVolumeInstanceNo = nasVolumeInstanceNo;
@@ -260,40 +259,6 @@ public class NasVolumeInstance {
 		this.volumeSize = volumeSize;
 	}
 
-	public NasVolumeInstance volumeUseSize(Long volumeUseSize) {
-		this.volumeUseSize = volumeUseSize;
-		return this;
-	}
-
-	 /**
-	 * 볼륨사용사이즈
-	 * @return volumeUseSize
-	**/
-	public Long getVolumeUseSize() {
-		return volumeUseSize;
-	}
-
-	public void setVolumeUseSize(Long volumeUseSize) {
-		this.volumeUseSize = volumeUseSize;
-	}
-
-	public NasVolumeInstance volumeUseRatio(Float volumeUseRatio) {
-		this.volumeUseRatio = volumeUseRatio;
-		return this;
-	}
-
-	 /**
-	 * 볼륨사용사이즈비율
-	 * @return volumeUseRatio
-	**/
-	public Float getVolumeUseRatio() {
-		return volumeUseRatio;
-	}
-
-	public void setVolumeUseRatio(Float volumeUseRatio) {
-		this.volumeUseRatio = volumeUseRatio;
-	}
-
 	public NasVolumeInstance snapshotVolumeConfigurationRatio(Float snapshotVolumeConfigurationRatio) {
 		this.snapshotVolumeConfigurationRatio = snapshotVolumeConfigurationRatio;
 		return this;
@@ -328,6 +293,23 @@ public class NasVolumeInstance {
 		this.snapshotVolumeConfigPeriodType = snapshotVolumeConfigPeriodType;
 	}
 
+	public NasVolumeInstance snapshotVolumeConfigDayOfWeekType(CommonCode snapshotVolumeConfigDayOfWeekType) {
+		this.snapshotVolumeConfigDayOfWeekType = snapshotVolumeConfigDayOfWeekType;
+		return this;
+	}
+
+	 /**
+	 * 스냅샷자동생성주기요일유형
+	 * @return snapshotVolumeConfigDayOfWeekType
+	**/
+	public CommonCode getSnapshotVolumeConfigDayOfWeekType() {
+		return snapshotVolumeConfigDayOfWeekType;
+	}
+
+	public void setSnapshotVolumeConfigDayOfWeekType(CommonCode snapshotVolumeConfigDayOfWeekType) {
+		this.snapshotVolumeConfigDayOfWeekType = snapshotVolumeConfigDayOfWeekType;
+	}
+
 	public NasVolumeInstance snapshotVolumeConfigTime(Integer snapshotVolumeConfigTime) {
 		this.snapshotVolumeConfigTime = snapshotVolumeConfigTime;
 		return this;
@@ -360,40 +342,6 @@ public class NasVolumeInstance {
 
 	public void setSnapshotVolumeSize(Long snapshotVolumeSize) {
 		this.snapshotVolumeSize = snapshotVolumeSize;
-	}
-
-	public NasVolumeInstance snapshotVolumeUseSize(Long snapshotVolumeUseSize) {
-		this.snapshotVolumeUseSize = snapshotVolumeUseSize;
-		return this;
-	}
-
-	 /**
-	 * 스냅샷볼륨사용사이즈
-	 * @return snapshotVolumeUseSize
-	**/
-	public Long getSnapshotVolumeUseSize() {
-		return snapshotVolumeUseSize;
-	}
-
-	public void setSnapshotVolumeUseSize(Long snapshotVolumeUseSize) {
-		this.snapshotVolumeUseSize = snapshotVolumeUseSize;
-	}
-
-	public NasVolumeInstance snapshotVolumeUseRatio(Float snapshotVolumeUseRatio) {
-		this.snapshotVolumeUseRatio = snapshotVolumeUseRatio;
-		return this;
-	}
-
-	 /**
-	 * 스냅샷볼륨사용비율
-	 * @return snapshotVolumeUseRatio
-	**/
-	public Float getSnapshotVolumeUseRatio() {
-		return snapshotVolumeUseRatio;
-	}
-
-	public void setSnapshotVolumeUseRatio(Float snapshotVolumeUseRatio) {
-		this.snapshotVolumeUseRatio = snapshotVolumeUseRatio;
 	}
 
 	public NasVolumeInstance isSnapshotConfiguration(Boolean isSnapshotConfiguration) {
@@ -523,6 +471,48 @@ public class NasVolumeInstance {
 		this.isEncryptedVolume = isEncryptedVolume;
 	}
 
+	public NasVolumeInstance nasVolumeInstanceCustomIpList(List<NasVolumeInstanceCustomIp> nasVolumeInstanceCustomIpList) {
+		this.nasVolumeInstanceCustomIpList = nasVolumeInstanceCustomIpList;
+		return this;
+	}
+
+	public NasVolumeInstance addNasVolumeInstanceCustomIpListItem(NasVolumeInstanceCustomIp nasVolumeInstanceCustomIpListItem) {
+		if (this.nasVolumeInstanceCustomIpList == null) {
+			this.nasVolumeInstanceCustomIpList = new ArrayList<NasVolumeInstanceCustomIp>();
+		}
+		this.nasVolumeInstanceCustomIpList.add(nasVolumeInstanceCustomIpListItem);
+		return this;
+	}
+
+	 /**
+	 * Get nasVolumeInstanceCustomIpList
+	 * @return nasVolumeInstanceCustomIpList
+	**/
+	public List<NasVolumeInstanceCustomIp> getNasVolumeInstanceCustomIpList() {
+		return nasVolumeInstanceCustomIpList;
+	}
+
+	public void setNasVolumeInstanceCustomIpList(List<NasVolumeInstanceCustomIp> nasVolumeInstanceCustomIpList) {
+		this.nasVolumeInstanceCustomIpList = nasVolumeInstanceCustomIpList;
+	}
+
+	public NasVolumeInstance isReturnProtection(Boolean isReturnProtection) {
+		this.isReturnProtection = isReturnProtection;
+		return this;
+	}
+
+	 /**
+	 * 반납보호여부
+	 * @return isReturnProtection
+	**/
+	public Boolean isIsReturnProtection() {
+		return isReturnProtection;
+	}
+
+	public void setIsReturnProtection(Boolean isReturnProtection) {
+		this.isReturnProtection = isReturnProtection;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -544,26 +534,25 @@ public class NasVolumeInstance {
 				Objects.equals(this.volumeName, nasVolumeInstance.volumeName) &&
 				Objects.equals(this.volumeTotalSize, nasVolumeInstance.volumeTotalSize) &&
 				Objects.equals(this.volumeSize, nasVolumeInstance.volumeSize) &&
-				Objects.equals(this.volumeUseSize, nasVolumeInstance.volumeUseSize) &&
-				Objects.equals(this.volumeUseRatio, nasVolumeInstance.volumeUseRatio) &&
 				Objects.equals(this.snapshotVolumeConfigurationRatio, nasVolumeInstance.snapshotVolumeConfigurationRatio) &&
 				Objects.equals(this.snapshotVolumeConfigPeriodType, nasVolumeInstance.snapshotVolumeConfigPeriodType) &&
+				Objects.equals(this.snapshotVolumeConfigDayOfWeekType, nasVolumeInstance.snapshotVolumeConfigDayOfWeekType) &&
 				Objects.equals(this.snapshotVolumeConfigTime, nasVolumeInstance.snapshotVolumeConfigTime) &&
 				Objects.equals(this.snapshotVolumeSize, nasVolumeInstance.snapshotVolumeSize) &&
-				Objects.equals(this.snapshotVolumeUseSize, nasVolumeInstance.snapshotVolumeUseSize) &&
-				Objects.equals(this.snapshotVolumeUseRatio, nasVolumeInstance.snapshotVolumeUseRatio) &&
 				Objects.equals(this.isSnapshotConfiguration, nasVolumeInstance.isSnapshotConfiguration) &&
 				Objects.equals(this.isEventConfiguration, nasVolumeInstance.isEventConfiguration) &&
 				Objects.equals(this.regionCode, nasVolumeInstance.regionCode) &&
 				Objects.equals(this.zoneCode, nasVolumeInstance.zoneCode) &&
 				Objects.equals(this.initScriptNo, nasVolumeInstance.initScriptNo) &&
 				Objects.equals(this.nasVolumeServerInstanceNoList, nasVolumeInstance.nasVolumeServerInstanceNoList) &&
-				Objects.equals(this.isEncryptedVolume, nasVolumeInstance.isEncryptedVolume);
+				Objects.equals(this.isEncryptedVolume, nasVolumeInstance.isEncryptedVolume) &&
+				Objects.equals(this.nasVolumeInstanceCustomIpList, nasVolumeInstance.nasVolumeInstanceCustomIpList) &&
+				Objects.equals(this.isReturnProtection, nasVolumeInstance.isReturnProtection);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(nasVolumeInstanceNo, nasVolumeInstanceStatus, nasVolumeInstanceOperation, nasVolumeInstanceStatusName, createDate, nasVolumeDescription, mountInformation, volumeAllotmentProtocolType, volumeName, volumeTotalSize, volumeSize, volumeUseSize, volumeUseRatio, snapshotVolumeConfigurationRatio, snapshotVolumeConfigPeriodType, snapshotVolumeConfigTime, snapshotVolumeSize, snapshotVolumeUseSize, snapshotVolumeUseRatio, isSnapshotConfiguration, isEventConfiguration, regionCode, zoneCode, initScriptNo, nasVolumeServerInstanceNoList, isEncryptedVolume);
+		return Objects.hash(nasVolumeInstanceNo, nasVolumeInstanceStatus, nasVolumeInstanceOperation, nasVolumeInstanceStatusName, createDate, nasVolumeDescription, mountInformation, volumeAllotmentProtocolType, volumeName, volumeTotalSize, volumeSize, snapshotVolumeConfigurationRatio, snapshotVolumeConfigPeriodType, snapshotVolumeConfigDayOfWeekType, snapshotVolumeConfigTime, snapshotVolumeSize, isSnapshotConfiguration, isEventConfiguration, regionCode, zoneCode, initScriptNo, nasVolumeServerInstanceNoList, isEncryptedVolume, nasVolumeInstanceCustomIpList, isReturnProtection);
 	}
 
 
@@ -583,14 +572,11 @@ public class NasVolumeInstance {
 		sb.append("		volumeName: ").append(toIndentedString(volumeName)).append("\n");
 		sb.append("		volumeTotalSize: ").append(toIndentedString(volumeTotalSize)).append("\n");
 		sb.append("		volumeSize: ").append(toIndentedString(volumeSize)).append("\n");
-		sb.append("		volumeUseSize: ").append(toIndentedString(volumeUseSize)).append("\n");
-		sb.append("		volumeUseRatio: ").append(toIndentedString(volumeUseRatio)).append("\n");
 		sb.append("		snapshotVolumeConfigurationRatio: ").append(toIndentedString(snapshotVolumeConfigurationRatio)).append("\n");
 		sb.append("		snapshotVolumeConfigPeriodType: ").append(toIndentedString(snapshotVolumeConfigPeriodType)).append("\n");
+		sb.append("		snapshotVolumeConfigDayOfWeekType: ").append(toIndentedString(snapshotVolumeConfigDayOfWeekType)).append("\n");
 		sb.append("		snapshotVolumeConfigTime: ").append(toIndentedString(snapshotVolumeConfigTime)).append("\n");
 		sb.append("		snapshotVolumeSize: ").append(toIndentedString(snapshotVolumeSize)).append("\n");
-		sb.append("		snapshotVolumeUseSize: ").append(toIndentedString(snapshotVolumeUseSize)).append("\n");
-		sb.append("		snapshotVolumeUseRatio: ").append(toIndentedString(snapshotVolumeUseRatio)).append("\n");
 		sb.append("		isSnapshotConfiguration: ").append(toIndentedString(isSnapshotConfiguration)).append("\n");
 		sb.append("		isEventConfiguration: ").append(toIndentedString(isEventConfiguration)).append("\n");
 		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
@@ -598,6 +584,8 @@ public class NasVolumeInstance {
 		sb.append("		initScriptNo: ").append(toIndentedString(initScriptNo)).append("\n");
 		sb.append("		nasVolumeServerInstanceNoList: ").append(toIndentedString(nasVolumeServerInstanceNoList)).append("\n");
 		sb.append("		isEncryptedVolume: ").append(toIndentedString(isEncryptedVolume)).append("\n");
+		sb.append("		nasVolumeInstanceCustomIpList: ").append(toIndentedString(nasVolumeInstanceCustomIpList)).append("\n");
+		sb.append("		isReturnProtection: ").append(toIndentedString(isReturnProtection)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

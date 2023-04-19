@@ -32,6 +32,14 @@ public class GetNetworkInterfaceListRequest {
 
 	private String subnetName = null;
 
+	private List<String> secondaryIpList = null;
+
+	private String instanceNo = null;
+
+	private Boolean isDefault = null;
+
+	private String deviceName = null;
+
 	private Integer pageNo = null;
 
 	private Integer pageSize = null;
@@ -148,6 +156,82 @@ public class GetNetworkInterfaceListRequest {
 		this.subnetName = subnetName;
 	}
 
+	public GetNetworkInterfaceListRequest secondaryIpList(List<String> secondaryIpList) {
+		this.secondaryIpList = secondaryIpList;
+		return this;
+	}
+
+	public GetNetworkInterfaceListRequest addSecondaryIpListItem(String secondaryIpListItem) {
+		if (this.secondaryIpList == null) {
+			this.secondaryIpList = new ArrayList<String>();
+		}
+		this.secondaryIpList.add(secondaryIpListItem);
+		return this;
+	}
+
+	 /**
+	 * 보조IP리스트
+	 * @return secondaryIpList
+	**/
+	public List<String> getSecondaryIpList() {
+		return secondaryIpList;
+	}
+
+	public void setSecondaryIpList(List<String> secondaryIpList) {
+		this.secondaryIpList = secondaryIpList;
+	}
+
+	public GetNetworkInterfaceListRequest instanceNo(String instanceNo) {
+		this.instanceNo = instanceNo;
+		return this;
+	}
+
+	 /**
+	 * 인스턴스번호
+	 * @return instanceNo
+	**/
+	public String getInstanceNo() {
+		return instanceNo;
+	}
+
+	public void setInstanceNo(String instanceNo) {
+		this.instanceNo = instanceNo;
+	}
+
+	public GetNetworkInterfaceListRequest isDefault(Boolean isDefault) {
+		this.isDefault = isDefault;
+		return this;
+	}
+
+	 /**
+	 * Default여부
+	 * @return isDefault
+	**/
+	public Boolean isIsDefault() {
+		return isDefault;
+	}
+
+	public void setIsDefault(Boolean isDefault) {
+		this.isDefault = isDefault;
+	}
+
+	public GetNetworkInterfaceListRequest deviceName(String deviceName) {
+		this.deviceName = deviceName;
+		return this;
+	}
+
+	 /**
+	 * 디바이스이름
+	 * @return deviceName
+	**/
+	public String getDeviceName() {
+		return deviceName;
+	}
+
+	public void setDeviceName(String deviceName) {
+		this.deviceName = deviceName;
+	}
+
 	public GetNetworkInterfaceListRequest pageNo(Integer pageNo) {
 		this.pageNo = pageNo;
 		return this;
@@ -215,6 +299,10 @@ public class GetNetworkInterfaceListRequest {
 				Objects.equals(this.networkInterfaceName, getNetworkInterfaceListRequest.networkInterfaceName) &&
 				Objects.equals(this.serverName, getNetworkInterfaceListRequest.serverName) &&
 				Objects.equals(this.subnetName, getNetworkInterfaceListRequest.subnetName) &&
+				Objects.equals(this.secondaryIpList, getNetworkInterfaceListRequest.secondaryIpList) &&
+				Objects.equals(this.instanceNo, getNetworkInterfaceListRequest.instanceNo) &&
+				Objects.equals(this.isDefault, getNetworkInterfaceListRequest.isDefault) &&
+				Objects.equals(this.deviceName, getNetworkInterfaceListRequest.deviceName) &&
 				Objects.equals(this.pageNo, getNetworkInterfaceListRequest.pageNo) &&
 				Objects.equals(this.pageSize, getNetworkInterfaceListRequest.pageSize) &&
 				Objects.equals(this.responseFormatType, getNetworkInterfaceListRequest.responseFormatType);
@@ -222,7 +310,7 @@ public class GetNetworkInterfaceListRequest {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, networkInterfaceNoList, ip, networkInterfaceName, serverName, subnetName, pageNo, pageSize, responseFormatType);
+		return Objects.hash(regionCode, networkInterfaceNoList, ip, networkInterfaceName, serverName, subnetName, secondaryIpList, instanceNo, isDefault, deviceName, pageNo, pageSize, responseFormatType);
 	}
 
 
@@ -237,6 +325,10 @@ public class GetNetworkInterfaceListRequest {
 		sb.append("		networkInterfaceName: ").append(toIndentedString(networkInterfaceName)).append("\n");
 		sb.append("		serverName: ").append(toIndentedString(serverName)).append("\n");
 		sb.append("		subnetName: ").append(toIndentedString(subnetName)).append("\n");
+		sb.append("		secondaryIpList: ").append(toIndentedString(secondaryIpList)).append("\n");
+		sb.append("		instanceNo: ").append(toIndentedString(instanceNo)).append("\n");
+		sb.append("		isDefault: ").append(toIndentedString(isDefault)).append("\n");
+		sb.append("		deviceName: ").append(toIndentedString(deviceName)).append("\n");
 		sb.append("		pageNo: ").append(toIndentedString(pageNo)).append("\n");
 		sb.append("		pageSize: ").append(toIndentedString(pageSize)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");

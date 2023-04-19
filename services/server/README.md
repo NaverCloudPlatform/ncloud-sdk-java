@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>server</artifactId>
-	<version>1.1.1</version>
+	<version>1.1.2</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/server-1.1.1.jar
+* target/server-1.1.2.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -58,13 +58,19 @@ secretKey=your-secret-key
 And execute the following Java code:
 
 ```java
+import java.io.InputStream;
+import java.util.List;
+import java.util.Map;
 
-import com.ncloud.server.*;
-import com.ncloud.server.auth.*;
-import com.ncloud.server.marshaller.*;
-import com.ncloud.server.exception.*;
+import com.ncloud.ApiClient;
+import com.ncloud.ApiResponse;
+import com.ncloud.auth.PropertiesFileCredentialsProvider;
+import com.ncloud.exception.ApiException;
+import com.ncloud.exception.SdkException;
+import com.ncloud.marshaller.FormMarshaller;
+import com.ncloud.marshaller.JsonMarshaller;
+import com.ncloud.marshaller.XmlMarshaller;
 import com.ncloud.server.model.*;
-import com.ncloud.server.api.V2Api;
 
 public class V2ApiExample {
 
@@ -73,15 +79,15 @@ public class V2ApiExample {
 			.addMarshaller(JsonMarshaller.getInstance())
 			.addMarshaller(XmlMarshaller.getInstance())
 			.addMarshaller(FormMarshaller.getInstance())
-			.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+			.setCredentialsProvider(new PropertiesFileCredentialsProvider("your-credentials-properties-file"))
 			.setLogging(true)
 			.build();
 
 		V2Api apiInstance = new V2Api(apiClient);
-		AddNasVolumeAccessControlRequest addNasVolumeAccessControlRequest = new AddNasVolumeAccessControlRequest(); // AddNasVolumeAccessControlRequest | addNasVolumeAccessControlRequest
+		AddMemberServerImageSharingPermissionRequest addMemberServerImageSharingPermissionRequest = new AddMemberServerImageSharingPermissionRequest(); // AddMemberServerImageSharingPermissionRequest | addMemberServerImageSharingPermissionRequest
 		try {
 			// Handler Successful response
-			ApiResponse<AddNasVolumeAccessControlResponse> result = apiInstance.addNasVolumeAccessControlGet(addNasVolumeAccessControlRequest);
+			ApiResponse<AddMemberServerImageSharingPermissionResponse> result = apiInstance.addMemberServerImageSharingPermissionGet(addMemberServerImageSharingPermissionRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -103,6 +109,8 @@ All URIs are relative to *https://ncloud.apigw.ntruss.com/server/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*V2Api* | [**addMemberServerImageSharingPermissionGet**](docs/V2Api.md#addMemberServerImageSharingPermissionGet) | **GET** /addMemberServerImageSharingPermission | 
+*V2Api* | [**addMemberServerImageSharingPermissionPost**](docs/V2Api.md#addMemberServerImageSharingPermissionPost) | **POST** /addMemberServerImageSharingPermission | 
 *V2Api* | [**addNasVolumeAccessControlGet**](docs/V2Api.md#addNasVolumeAccessControlGet) | **GET** /addNasVolumeAccessControl | 
 *V2Api* | [**addNasVolumeAccessControlPost**](docs/V2Api.md#addNasVolumeAccessControlPost) | **POST** /addNasVolumeAccessControl | 
 *V2Api* | [**addPortForwardingRulesGet**](docs/V2Api.md#addPortForwardingRulesGet) | **GET** /addPortForwardingRules | 
@@ -117,6 +125,8 @@ Class | Method | HTTP request | Description
 *V2Api* | [**changeBlockStorageVolumeSizePost**](docs/V2Api.md#changeBlockStorageVolumeSizePost) | **POST** /changeBlockStorageVolumeSize | 
 *V2Api* | [**changeNasVolumeSizeGet**](docs/V2Api.md#changeNasVolumeSizeGet) | **GET** /changeNasVolumeSize | 
 *V2Api* | [**changeNasVolumeSizePost**](docs/V2Api.md#changeNasVolumeSizePost) | **POST** /changeNasVolumeSize | 
+*V2Api* | [**changeNasVolumeSnapshotConfigurationGet**](docs/V2Api.md#changeNasVolumeSnapshotConfigurationGet) | **GET** /changeNasVolumeSnapshotConfiguration | 
+*V2Api* | [**changeNasVolumeSnapshotConfigurationPost**](docs/V2Api.md#changeNasVolumeSnapshotConfigurationPost) | **POST** /changeNasVolumeSnapshotConfiguration | 
 *V2Api* | [**changeServerInstanceSpecGet**](docs/V2Api.md#changeServerInstanceSpecGet) | **GET** /changeServerInstanceSpec | 
 *V2Api* | [**changeServerInstanceSpecPost**](docs/V2Api.md#changeServerInstanceSpecPost) | **POST** /changeServerInstanceSpec | 
 *V2Api* | [**createBlockStorageInstanceGet**](docs/V2Api.md#createBlockStorageInstanceGet) | **GET** /createBlockStorageInstance | 
@@ -131,6 +141,8 @@ Class | Method | HTTP request | Description
 *V2Api* | [**createMemberServerImagePost**](docs/V2Api.md#createMemberServerImagePost) | **POST** /createMemberServerImage | 
 *V2Api* | [**createNasVolumeInstanceGet**](docs/V2Api.md#createNasVolumeInstanceGet) | **GET** /createNasVolumeInstance | 
 *V2Api* | [**createNasVolumeInstancePost**](docs/V2Api.md#createNasVolumeInstancePost) | **POST** /createNasVolumeInstance | 
+*V2Api* | [**createNasVolumeSnapshotGet**](docs/V2Api.md#createNasVolumeSnapshotGet) | **GET** /createNasVolumeSnapshot | 
+*V2Api* | [**createNasVolumeSnapshotPost**](docs/V2Api.md#createNasVolumeSnapshotPost) | **POST** /createNasVolumeSnapshot | 
 *V2Api* | [**createNetworkInterfaceGet**](docs/V2Api.md#createNetworkInterfaceGet) | **GET** /createNetworkInterface | 
 *V2Api* | [**createNetworkInterfacePost**](docs/V2Api.md#createNetworkInterfacePost) | **POST** /createNetworkInterface | 
 *V2Api* | [**createPublicIpInstanceGet**](docs/V2Api.md#createPublicIpInstanceGet) | **GET** /createPublicIpInstance | 
@@ -149,6 +161,8 @@ Class | Method | HTTP request | Description
 *V2Api* | [**deleteMemberServerImagesPost**](docs/V2Api.md#deleteMemberServerImagesPost) | **POST** /deleteMemberServerImages | 
 *V2Api* | [**deleteNasVolumeInstanceGet**](docs/V2Api.md#deleteNasVolumeInstanceGet) | **GET** /deleteNasVolumeInstance | 
 *V2Api* | [**deleteNasVolumeInstancePost**](docs/V2Api.md#deleteNasVolumeInstancePost) | **POST** /deleteNasVolumeInstance | 
+*V2Api* | [**deleteNasVolumeSnapshotGet**](docs/V2Api.md#deleteNasVolumeSnapshotGet) | **GET** /deleteNasVolumeSnapshot | 
+*V2Api* | [**deleteNasVolumeSnapshotPost**](docs/V2Api.md#deleteNasVolumeSnapshotPost) | **POST** /deleteNasVolumeSnapshot | 
 *V2Api* | [**deleteNetworkInterfaceGet**](docs/V2Api.md#deleteNetworkInterfaceGet) | **GET** /deleteNetworkInterface | 
 *V2Api* | [**deleteNetworkInterfacePost**](docs/V2Api.md#deleteNetworkInterfacePost) | **POST** /deleteNetworkInterface | 
 *V2Api* | [**deletePortForwardingRulesGet**](docs/V2Api.md#deletePortForwardingRulesGet) | **GET** /deletePortForwardingRules | 
@@ -179,12 +193,20 @@ Class | Method | HTTP request | Description
 *V2Api* | [**getLoginKeyListPost**](docs/V2Api.md#getLoginKeyListPost) | **POST** /getLoginKeyList | 
 *V2Api* | [**getMemberServerImageListGet**](docs/V2Api.md#getMemberServerImageListGet) | **GET** /getMemberServerImageList | 
 *V2Api* | [**getMemberServerImageListPost**](docs/V2Api.md#getMemberServerImageListPost) | **POST** /getMemberServerImageList | 
+*V2Api* | [**getNasVolumeAccessControlRuleListGet**](docs/V2Api.md#getNasVolumeAccessControlRuleListGet) | **GET** /getNasVolumeAccessControlRuleList | 
+*V2Api* | [**getNasVolumeAccessControlRuleListPost**](docs/V2Api.md#getNasVolumeAccessControlRuleListPost) | **POST** /getNasVolumeAccessControlRuleList | 
 *V2Api* | [**getNasVolumeInstanceListGet**](docs/V2Api.md#getNasVolumeInstanceListGet) | **GET** /getNasVolumeInstanceList | 
 *V2Api* | [**getNasVolumeInstanceListPost**](docs/V2Api.md#getNasVolumeInstanceListPost) | **POST** /getNasVolumeInstanceList | 
 *V2Api* | [**getNasVolumeInstanceRatingListGet**](docs/V2Api.md#getNasVolumeInstanceRatingListGet) | **GET** /getNasVolumeInstanceRatingList | 
 *V2Api* | [**getNasVolumeInstanceRatingListPost**](docs/V2Api.md#getNasVolumeInstanceRatingListPost) | **POST** /getNasVolumeInstanceRatingList | 
+*V2Api* | [**getNasVolumeSnapshotConfigurationHistoryListGet**](docs/V2Api.md#getNasVolumeSnapshotConfigurationHistoryListGet) | **GET** /getNasVolumeSnapshotConfigurationHistoryList | 
+*V2Api* | [**getNasVolumeSnapshotConfigurationHistoryListPost**](docs/V2Api.md#getNasVolumeSnapshotConfigurationHistoryListPost) | **POST** /getNasVolumeSnapshotConfigurationHistoryList | 
+*V2Api* | [**getNasVolumeSnapshotListGet**](docs/V2Api.md#getNasVolumeSnapshotListGet) | **GET** /getNasVolumeSnapshotList | 
+*V2Api* | [**getNasVolumeSnapshotListPost**](docs/V2Api.md#getNasVolumeSnapshotListPost) | **POST** /getNasVolumeSnapshotList | 
 *V2Api* | [**getNetworkInterfaceListGet**](docs/V2Api.md#getNetworkInterfaceListGet) | **GET** /getNetworkInterfaceList | 
 *V2Api* | [**getNetworkInterfaceListPost**](docs/V2Api.md#getNetworkInterfaceListPost) | **POST** /getNetworkInterfaceList | 
+*V2Api* | [**getPortForwardingConfigurationListGet**](docs/V2Api.md#getPortForwardingConfigurationListGet) | **GET** /getPortForwardingConfigurationList | 
+*V2Api* | [**getPortForwardingConfigurationListPost**](docs/V2Api.md#getPortForwardingConfigurationListPost) | **POST** /getPortForwardingConfigurationList | 
 *V2Api* | [**getPortForwardingRuleListGet**](docs/V2Api.md#getPortForwardingRuleListGet) | **GET** /getPortForwardingRuleList | 
 *V2Api* | [**getPortForwardingRuleListPost**](docs/V2Api.md#getPortForwardingRuleListPost) | **POST** /getPortForwardingRuleList | 
 *V2Api* | [**getPrivateSubnetInstanceListGet**](docs/V2Api.md#getPrivateSubnetInstanceListGet) | **GET** /getPrivateSubnetInstanceList | 
@@ -211,16 +233,28 @@ Class | Method | HTTP request | Description
 *V2Api* | [**getZoneListPost**](docs/V2Api.md#getZoneListPost) | **POST** /getZoneList | 
 *V2Api* | [**importLoginKeyGet**](docs/V2Api.md#importLoginKeyGet) | **GET** /importLoginKey | 
 *V2Api* | [**importLoginKeyPost**](docs/V2Api.md#importLoginKeyPost) | **POST** /importLoginKey | 
+*V2Api* | [**interruptServerInstanceGet**](docs/V2Api.md#interruptServerInstanceGet) | **GET** /interruptServerInstance | 
+*V2Api* | [**interruptServerInstancePost**](docs/V2Api.md#interruptServerInstancePost) | **POST** /interruptServerInstance | 
 *V2Api* | [**rebootServerInstancesGet**](docs/V2Api.md#rebootServerInstancesGet) | **GET** /rebootServerInstances | 
 *V2Api* | [**rebootServerInstancesPost**](docs/V2Api.md#rebootServerInstancesPost) | **POST** /rebootServerInstances | 
 *V2Api* | [**recreateServerInstanceGet**](docs/V2Api.md#recreateServerInstanceGet) | **GET** /recreateServerInstance | 
 *V2Api* | [**recreateServerInstancePost**](docs/V2Api.md#recreateServerInstancePost) | **POST** /recreateServerInstance | 
+*V2Api* | [**removeMemberServerImageSharingPermissionGet**](docs/V2Api.md#removeMemberServerImageSharingPermissionGet) | **GET** /removeMemberServerImageSharingPermission | 
+*V2Api* | [**removeMemberServerImageSharingPermissionPost**](docs/V2Api.md#removeMemberServerImageSharingPermissionPost) | **POST** /removeMemberServerImageSharingPermission | 
 *V2Api* | [**removeNasVolumeAccessControlGet**](docs/V2Api.md#removeNasVolumeAccessControlGet) | **GET** /removeNasVolumeAccessControl | 
 *V2Api* | [**removeNasVolumeAccessControlPost**](docs/V2Api.md#removeNasVolumeAccessControlPost) | **POST** /removeNasVolumeAccessControl | 
 *V2Api* | [**replaceServerInstanceAssociatedWithPublicIpGet**](docs/V2Api.md#replaceServerInstanceAssociatedWithPublicIpGet) | **GET** /replaceServerInstanceAssociatedWithPublicIp | 
 *V2Api* | [**replaceServerInstanceAssociatedWithPublicIpPost**](docs/V2Api.md#replaceServerInstanceAssociatedWithPublicIpPost) | **POST** /replaceServerInstanceAssociatedWithPublicIp | 
+*V2Api* | [**restoreNasVolumeWithSnapshotGet**](docs/V2Api.md#restoreNasVolumeWithSnapshotGet) | **GET** /restoreNasVolumeWithSnapshot | 
+*V2Api* | [**restoreNasVolumeWithSnapshotPost**](docs/V2Api.md#restoreNasVolumeWithSnapshotPost) | **POST** /restoreNasVolumeWithSnapshot | 
+*V2Api* | [**setMemberServerImageSharingPermissionGet**](docs/V2Api.md#setMemberServerImageSharingPermissionGet) | **GET** /setMemberServerImageSharingPermission | 
+*V2Api* | [**setMemberServerImageSharingPermissionPost**](docs/V2Api.md#setMemberServerImageSharingPermissionPost) | **POST** /setMemberServerImageSharingPermission | 
 *V2Api* | [**setNasVolumeAccessControlGet**](docs/V2Api.md#setNasVolumeAccessControlGet) | **GET** /setNasVolumeAccessControl | 
 *V2Api* | [**setNasVolumeAccessControlPost**](docs/V2Api.md#setNasVolumeAccessControlPost) | **POST** /setNasVolumeAccessControl | 
+*V2Api* | [**setNasVolumeReturnProtectionGet**](docs/V2Api.md#setNasVolumeReturnProtectionGet) | **GET** /setNasVolumeReturnProtection | 
+*V2Api* | [**setNasVolumeReturnProtectionPost**](docs/V2Api.md#setNasVolumeReturnProtectionPost) | **POST** /setNasVolumeReturnProtection | 
+*V2Api* | [**setProtectServerTerminationGet**](docs/V2Api.md#setProtectServerTerminationGet) | **GET** /setProtectServerTermination | 
+*V2Api* | [**setProtectServerTerminationPost**](docs/V2Api.md#setProtectServerTerminationPost) | **POST** /setProtectServerTermination | 
 *V2Api* | [**startServerInstancesGet**](docs/V2Api.md#startServerInstancesGet) | **GET** /startServerInstances | 
 *V2Api* | [**startServerInstancesPost**](docs/V2Api.md#startServerInstancesPost) | **POST** /startServerInstances | 
 *V2Api* | [**stopServerInstancesGet**](docs/V2Api.md#stopServerInstancesGet) | **GET** /stopServerInstances | 
@@ -233,6 +267,9 @@ Class | Method | HTTP request | Description
 
  - [AccessControlGroup](docs/AccessControlGroup.md)
  - [AccessControlRule](docs/AccessControlRule.md)
+ - [AccessControlRuleParameter](docs/AccessControlRuleParameter.md)
+ - [AddMemberServerImageSharingPermissionRequest](docs/AddMemberServerImageSharingPermissionRequest.md)
+ - [AddMemberServerImageSharingPermissionResponse](docs/AddMemberServerImageSharingPermissionResponse.md)
  - [AddNasVolumeAccessControlRequest](docs/AddNasVolumeAccessControlRequest.md)
  - [AddNasVolumeAccessControlResponse](docs/AddNasVolumeAccessControlResponse.md)
  - [AddPortForwardingRulesRequest](docs/AddPortForwardingRulesRequest.md)
@@ -250,6 +287,8 @@ Class | Method | HTTP request | Description
  - [ChangeBlockStorageVolumeSizeResponse](docs/ChangeBlockStorageVolumeSizeResponse.md)
  - [ChangeNasVolumeSizeRequest](docs/ChangeNasVolumeSizeRequest.md)
  - [ChangeNasVolumeSizeResponse](docs/ChangeNasVolumeSizeResponse.md)
+ - [ChangeNasVolumeSnapshotConfigurationRequest](docs/ChangeNasVolumeSnapshotConfigurationRequest.md)
+ - [ChangeNasVolumeSnapshotConfigurationResponse](docs/ChangeNasVolumeSnapshotConfigurationResponse.md)
  - [ChangeServerInstanceSpecRequest](docs/ChangeServerInstanceSpecRequest.md)
  - [ChangeServerInstanceSpecResponse](docs/ChangeServerInstanceSpecResponse.md)
  - [CommonCode](docs/CommonCode.md)
@@ -265,6 +304,8 @@ Class | Method | HTTP request | Description
  - [CreateMemberServerImageResponse](docs/CreateMemberServerImageResponse.md)
  - [CreateNasVolumeInstanceRequest](docs/CreateNasVolumeInstanceRequest.md)
  - [CreateNasVolumeInstanceResponse](docs/CreateNasVolumeInstanceResponse.md)
+ - [CreateNasVolumeSnapshotRequest](docs/CreateNasVolumeSnapshotRequest.md)
+ - [CreateNasVolumeSnapshotResponse](docs/CreateNasVolumeSnapshotResponse.md)
  - [CreateNetworkInterfaceRequest](docs/CreateNetworkInterfaceRequest.md)
  - [CreateNetworkInterfaceResponse](docs/CreateNetworkInterfaceResponse.md)
  - [CreatePublicIpInstanceRequest](docs/CreatePublicIpInstanceRequest.md)
@@ -283,6 +324,8 @@ Class | Method | HTTP request | Description
  - [DeleteMemberServerImagesResponse](docs/DeleteMemberServerImagesResponse.md)
  - [DeleteNasVolumeInstanceRequest](docs/DeleteNasVolumeInstanceRequest.md)
  - [DeleteNasVolumeInstanceResponse](docs/DeleteNasVolumeInstanceResponse.md)
+ - [DeleteNasVolumeSnapshotRequest](docs/DeleteNasVolumeSnapshotRequest.md)
+ - [DeleteNasVolumeSnapshotResponse](docs/DeleteNasVolumeSnapshotResponse.md)
  - [DeleteNetworkInterfaceRequest](docs/DeleteNetworkInterfaceRequest.md)
  - [DeleteNetworkInterfaceResponse](docs/DeleteNetworkInterfaceResponse.md)
  - [DeletePortForwardingRulesRequest](docs/DeletePortForwardingRulesRequest.md)
@@ -313,12 +356,20 @@ Class | Method | HTTP request | Description
  - [GetLoginKeyListResponse](docs/GetLoginKeyListResponse.md)
  - [GetMemberServerImageListRequest](docs/GetMemberServerImageListRequest.md)
  - [GetMemberServerImageListResponse](docs/GetMemberServerImageListResponse.md)
+ - [GetNasVolumeAccessControlRuleListRequest](docs/GetNasVolumeAccessControlRuleListRequest.md)
+ - [GetNasVolumeAccessControlRuleListResponse](docs/GetNasVolumeAccessControlRuleListResponse.md)
  - [GetNasVolumeInstanceListRequest](docs/GetNasVolumeInstanceListRequest.md)
  - [GetNasVolumeInstanceListResponse](docs/GetNasVolumeInstanceListResponse.md)
  - [GetNasVolumeInstanceRatingListRequest](docs/GetNasVolumeInstanceRatingListRequest.md)
  - [GetNasVolumeInstanceRatingListResponse](docs/GetNasVolumeInstanceRatingListResponse.md)
+ - [GetNasVolumeSnapshotConfigurationHistoryListRequest](docs/GetNasVolumeSnapshotConfigurationHistoryListRequest.md)
+ - [GetNasVolumeSnapshotConfigurationHistoryListResponse](docs/GetNasVolumeSnapshotConfigurationHistoryListResponse.md)
+ - [GetNasVolumeSnapshotListRequest](docs/GetNasVolumeSnapshotListRequest.md)
+ - [GetNasVolumeSnapshotListResponse](docs/GetNasVolumeSnapshotListResponse.md)
  - [GetNetworkInterfaceListRequest](docs/GetNetworkInterfaceListRequest.md)
  - [GetNetworkInterfaceListResponse](docs/GetNetworkInterfaceListResponse.md)
+ - [GetPortForwardingConfigurationListRequest](docs/GetPortForwardingConfigurationListRequest.md)
+ - [GetPortForwardingConfigurationListResponse](docs/GetPortForwardingConfigurationListResponse.md)
  - [GetPortForwardingRuleListRequest](docs/GetPortForwardingRuleListRequest.md)
  - [GetPortForwardingRuleListResponse](docs/GetPortForwardingRuleListResponse.md)
  - [GetPrivateSubnetInstanceListRequest](docs/GetPrivateSubnetInstanceListRequest.md)
@@ -348,12 +399,18 @@ Class | Method | HTTP request | Description
  - [InitScript](docs/InitScript.md)
  - [InstanceTag](docs/InstanceTag.md)
  - [InstanceTagParameter](docs/InstanceTagParameter.md)
+ - [InterruptServerInstanceRequest](docs/InterruptServerInstanceRequest.md)
+ - [InterruptServerInstanceResponse](docs/InterruptServerInstanceResponse.md)
  - [LoginKey](docs/LoginKey.md)
  - [MemberServerImage](docs/MemberServerImage.md)
+ - [NasVolumeAccessControlRule](docs/NasVolumeAccessControlRule.md)
  - [NasVolumeInstance](docs/NasVolumeInstance.md)
  - [NasVolumeInstanceCustomIp](docs/NasVolumeInstanceCustomIp.md)
  - [NasVolumeInstanceRating](docs/NasVolumeInstanceRating.md)
+ - [NasVolumeSnapshot](docs/NasVolumeSnapshot.md)
+ - [NasVolumeSnapshotConfigurationHistory](docs/NasVolumeSnapshotConfigurationHistory.md)
  - [NetworkInterface](docs/NetworkInterface.md)
+ - [PortForwardingConfiguration](docs/PortForwardingConfiguration.md)
  - [PortForwardingRule](docs/PortForwardingRule.md)
  - [PortForwardingRuleParameter](docs/PortForwardingRuleParameter.md)
  - [PrivateSubnetInstance](docs/PrivateSubnetInstance.md)
@@ -365,15 +422,25 @@ Class | Method | HTTP request | Description
  - [RecreateServerInstanceRequest](docs/RecreateServerInstanceRequest.md)
  - [RecreateServerInstanceResponse](docs/RecreateServerInstanceResponse.md)
  - [Region](docs/Region.md)
+ - [RemoveMemberServerImageSharingPermissionRequest](docs/RemoveMemberServerImageSharingPermissionRequest.md)
+ - [RemoveMemberServerImageSharingPermissionResponse](docs/RemoveMemberServerImageSharingPermissionResponse.md)
  - [RemoveNasVolumeAccessControlRequest](docs/RemoveNasVolumeAccessControlRequest.md)
  - [RemoveNasVolumeAccessControlResponse](docs/RemoveNasVolumeAccessControlResponse.md)
  - [ReplaceServerInstanceAssociatedWithPublicIpRequest](docs/ReplaceServerInstanceAssociatedWithPublicIpRequest.md)
  - [ReplaceServerInstanceAssociatedWithPublicIpResponse](docs/ReplaceServerInstanceAssociatedWithPublicIpResponse.md)
+ - [RestoreNasVolumeWithSnapshotRequest](docs/RestoreNasVolumeWithSnapshotRequest.md)
+ - [RestoreNasVolumeWithSnapshotResponse](docs/RestoreNasVolumeWithSnapshotResponse.md)
  - [RootPasswordServerInstance](docs/RootPasswordServerInstance.md)
  - [RootPasswordServerInstanceParameter](docs/RootPasswordServerInstanceParameter.md)
  - [ServerInstance](docs/ServerInstance.md)
+ - [SetMemberServerImageSharingPermissionRequest](docs/SetMemberServerImageSharingPermissionRequest.md)
+ - [SetMemberServerImageSharingPermissionResponse](docs/SetMemberServerImageSharingPermissionResponse.md)
  - [SetNasVolumeAccessControlRequest](docs/SetNasVolumeAccessControlRequest.md)
  - [SetNasVolumeAccessControlResponse](docs/SetNasVolumeAccessControlResponse.md)
+ - [SetNasVolumeReturnProtectionRequest](docs/SetNasVolumeReturnProtectionRequest.md)
+ - [SetNasVolumeReturnProtectionResponse](docs/SetNasVolumeReturnProtectionResponse.md)
+ - [SetProtectServerTerminationRequest](docs/SetProtectServerTerminationRequest.md)
+ - [SetProtectServerTerminationResponse](docs/SetProtectServerTerminationResponse.md)
  - [StartServerInstancesRequest](docs/StartServerInstancesRequest.md)
  - [StartServerInstancesResponse](docs/StartServerInstancesResponse.md)
  - [StopServerInstancesRequest](docs/StopServerInstancesRequest.md)

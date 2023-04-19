@@ -8,10 +8,14 @@ Method | HTTP request | Description
 [**addAccessControlGroupInboundRulePost**](V2Api.md#addAccessControlGroupInboundRulePost) | **POST** /addAccessControlGroupInboundRule | 
 [**addAccessControlGroupOutboundRuleGet**](V2Api.md#addAccessControlGroupOutboundRuleGet) | **GET** /addAccessControlGroupOutboundRule | 
 [**addAccessControlGroupOutboundRulePost**](V2Api.md#addAccessControlGroupOutboundRulePost) | **POST** /addAccessControlGroupOutboundRule | 
+[**addMemberServerImageSharingPermissionGet**](V2Api.md#addMemberServerImageSharingPermissionGet) | **GET** /addMemberServerImageSharingPermission | 
+[**addMemberServerImageSharingPermissionPost**](V2Api.md#addMemberServerImageSharingPermissionPost) | **POST** /addMemberServerImageSharingPermission | 
 [**addNetworkInterfaceAccessControlGroupGet**](V2Api.md#addNetworkInterfaceAccessControlGroupGet) | **GET** /addNetworkInterfaceAccessControlGroup | 
 [**addNetworkInterfaceAccessControlGroupPost**](V2Api.md#addNetworkInterfaceAccessControlGroupPost) | **POST** /addNetworkInterfaceAccessControlGroup | 
 [**addPlacementGroupServerInstanceGet**](V2Api.md#addPlacementGroupServerInstanceGet) | **GET** /addPlacementGroupServerInstance | 
 [**addPlacementGroupServerInstancePost**](V2Api.md#addPlacementGroupServerInstancePost) | **POST** /addPlacementGroupServerInstance | 
+[**assignSecondaryIpsGet**](V2Api.md#assignSecondaryIpsGet) | **GET** /assignSecondaryIps | 
+[**assignSecondaryIpsPost**](V2Api.md#assignSecondaryIpsPost) | **POST** /assignSecondaryIps | 
 [**associatePublicIpWithServerInstanceGet**](V2Api.md#associatePublicIpWithServerInstanceGet) | **GET** /associatePublicIpWithServerInstance | 
 [**associatePublicIpWithServerInstancePost**](V2Api.md#associatePublicIpWithServerInstancePost) | **POST** /associatePublicIpWithServerInstance | 
 [**attachBlockStorageInstanceGet**](V2Api.md#attachBlockStorageInstanceGet) | **GET** /attachBlockStorageInstance | 
@@ -104,6 +108,8 @@ Method | HTTP request | Description
 [**getPublicIpInstanceListPost**](V2Api.md#getPublicIpInstanceListPost) | **POST** /getPublicIpInstanceList | 
 [**getPublicIpTargetServerInstanceListGet**](V2Api.md#getPublicIpTargetServerInstanceListGet) | **GET** /getPublicIpTargetServerInstanceList | 
 [**getPublicIpTargetServerInstanceListPost**](V2Api.md#getPublicIpTargetServerInstanceListPost) | **POST** /getPublicIpTargetServerInstanceList | 
+[**getRaidListGet**](V2Api.md#getRaidListGet) | **GET** /getRaidList | 
+[**getRaidListPost**](V2Api.md#getRaidListPost) | **POST** /getRaidList | 
 [**getRegionListGet**](V2Api.md#getRegionListGet) | **GET** /getRegionList | 
 [**getRegionListPost**](V2Api.md#getRegionListPost) | **POST** /getRegionList | 
 [**getRootPasswordGet**](V2Api.md#getRootPasswordGet) | **GET** /getRootPassword | 
@@ -122,22 +128,34 @@ Method | HTTP request | Description
 [**getZoneListPost**](V2Api.md#getZoneListPost) | **POST** /getZoneList | 
 [**importLoginKeyGet**](V2Api.md#importLoginKeyGet) | **GET** /importLoginKey | 
 [**importLoginKeyPost**](V2Api.md#importLoginKeyPost) | **POST** /importLoginKey | 
+[**interruptServerInstanceGet**](V2Api.md#interruptServerInstanceGet) | **GET** /interruptServerInstance | 
+[**interruptServerInstancePost**](V2Api.md#interruptServerInstancePost) | **POST** /interruptServerInstance | 
 [**rebootServerInstancesGet**](V2Api.md#rebootServerInstancesGet) | **GET** /rebootServerInstances | 
 [**rebootServerInstancesPost**](V2Api.md#rebootServerInstancesPost) | **POST** /rebootServerInstances | 
 [**removeAccessControlGroupInboundRuleGet**](V2Api.md#removeAccessControlGroupInboundRuleGet) | **GET** /removeAccessControlGroupInboundRule | 
 [**removeAccessControlGroupInboundRulePost**](V2Api.md#removeAccessControlGroupInboundRulePost) | **POST** /removeAccessControlGroupInboundRule | 
 [**removeAccessControlGroupOutboundRuleGet**](V2Api.md#removeAccessControlGroupOutboundRuleGet) | **GET** /removeAccessControlGroupOutboundRule | 
 [**removeAccessControlGroupOutboundRulePost**](V2Api.md#removeAccessControlGroupOutboundRulePost) | **POST** /removeAccessControlGroupOutboundRule | 
+[**removeMemberServerImageSharingPermissionGet**](V2Api.md#removeMemberServerImageSharingPermissionGet) | **GET** /removeMemberServerImageSharingPermission | 
+[**removeMemberServerImageSharingPermissionPost**](V2Api.md#removeMemberServerImageSharingPermissionPost) | **POST** /removeMemberServerImageSharingPermission | 
 [**removeNetworkInterfaceAccessControlGroupGet**](V2Api.md#removeNetworkInterfaceAccessControlGroupGet) | **GET** /removeNetworkInterfaceAccessControlGroup | 
 [**removeNetworkInterfaceAccessControlGroupPost**](V2Api.md#removeNetworkInterfaceAccessControlGroupPost) | **POST** /removeNetworkInterfaceAccessControlGroup | 
 [**removePlacementGroupServerInstanceGet**](V2Api.md#removePlacementGroupServerInstanceGet) | **GET** /removePlacementGroupServerInstance | 
 [**removePlacementGroupServerInstancePost**](V2Api.md#removePlacementGroupServerInstancePost) | **POST** /removePlacementGroupServerInstance | 
+[**setBlockStorageReturnProtectionGet**](V2Api.md#setBlockStorageReturnProtectionGet) | **GET** /setBlockStorageReturnProtection | 
+[**setBlockStorageReturnProtectionPost**](V2Api.md#setBlockStorageReturnProtectionPost) | **POST** /setBlockStorageReturnProtection | 
+[**setMemberServerImageSharingPermissionGet**](V2Api.md#setMemberServerImageSharingPermissionGet) | **GET** /setMemberServerImageSharingPermission | 
+[**setMemberServerImageSharingPermissionPost**](V2Api.md#setMemberServerImageSharingPermissionPost) | **POST** /setMemberServerImageSharingPermission | 
+[**setProtectServerTerminationGet**](V2Api.md#setProtectServerTerminationGet) | **GET** /setProtectServerTermination | 
+[**setProtectServerTerminationPost**](V2Api.md#setProtectServerTerminationPost) | **POST** /setProtectServerTermination | 
 [**startServerInstancesGet**](V2Api.md#startServerInstancesGet) | **GET** /startServerInstances | 
 [**startServerInstancesPost**](V2Api.md#startServerInstancesPost) | **POST** /startServerInstances | 
 [**stopServerInstancesGet**](V2Api.md#stopServerInstancesGet) | **GET** /stopServerInstances | 
 [**stopServerInstancesPost**](V2Api.md#stopServerInstancesPost) | **POST** /stopServerInstances | 
 [**terminateServerInstancesGet**](V2Api.md#terminateServerInstancesGet) | **GET** /terminateServerInstances | 
 [**terminateServerInstancesPost**](V2Api.md#terminateServerInstancesPost) | **POST** /terminateServerInstances | 
+[**unassignSecondaryIpsGet**](V2Api.md#unassignSecondaryIpsGet) | **GET** /unassignSecondaryIps | 
+[**unassignSecondaryIpsPost**](V2Api.md#unassignSecondaryIpsPost) | **POST** /unassignSecondaryIps | 
 
 
 <a name="addAccessControlGroupInboundRuleGet"></a>
@@ -408,6 +426,140 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="addMemberServerImageSharingPermissionGet"></a>
+# **addMemberServerImageSharingPermissionGet**
+> AddMemberServerImageSharingPermissionResponse addMemberServerImageSharingPermissionGet(addMemberServerImageSharingPermissionRequest)
+
+
+
+회원서버이미지공유권한추가
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+AddMemberServerImageSharingPermissionRequest addMemberServerImageSharingPermissionRequest = new AddMemberServerImageSharingPermissionRequest(); // AddMemberServerImageSharingPermissionRequest | addMemberServerImageSharingPermissionRequest
+try {
+	// Handler Successful response
+	ApiResponse<AddMemberServerImageSharingPermissionResponse> result = apiInstance.addMemberServerImageSharingPermissionGet(addMemberServerImageSharingPermissionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **addMemberServerImageSharingPermissionRequest** | [**AddMemberServerImageSharingPermissionRequest**](AddMemberServerImageSharingPermissionRequest.md)| addMemberServerImageSharingPermissionRequest |
+
+### Return type
+
+[**AddMemberServerImageSharingPermissionResponse**](AddMemberServerImageSharingPermissionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="addMemberServerImageSharingPermissionPost"></a>
+# **addMemberServerImageSharingPermissionPost**
+> AddMemberServerImageSharingPermissionResponse addMemberServerImageSharingPermissionPost(addMemberServerImageSharingPermissionRequest)
+
+
+
+회원서버이미지공유권한추가
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+AddMemberServerImageSharingPermissionRequest addMemberServerImageSharingPermissionRequest = new AddMemberServerImageSharingPermissionRequest(); // AddMemberServerImageSharingPermissionRequest | addMemberServerImageSharingPermissionRequest
+try {
+	// Handler Successful response
+	ApiResponse<AddMemberServerImageSharingPermissionResponse> result = apiInstance.addMemberServerImageSharingPermissionPost(addMemberServerImageSharingPermissionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **addMemberServerImageSharingPermissionRequest** | [**AddMemberServerImageSharingPermissionRequest**](AddMemberServerImageSharingPermissionRequest.md)| addMemberServerImageSharingPermissionRequest |
+
+### Return type
+
+[**AddMemberServerImageSharingPermissionResponse**](AddMemberServerImageSharingPermissionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="addNetworkInterfaceAccessControlGroupGet"></a>
 # **addNetworkInterfaceAccessControlGroupGet**
 > AddNetworkInterfaceAccessControlGroupResponse addNetworkInterfaceAccessControlGroupGet(addNetworkInterfaceAccessControlGroupRequest)
@@ -666,6 +818,140 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**AddPlacementGroupServerInstanceResponse**](AddPlacementGroupServerInstanceResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="assignSecondaryIpsGet"></a>
+# **assignSecondaryIpsGet**
+> AssignSecondaryIpsResponse assignSecondaryIpsGet(assignSecondaryIpsRequest)
+
+
+
+보조IP할당
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+AssignSecondaryIpsRequest assignSecondaryIpsRequest = new AssignSecondaryIpsRequest(); // AssignSecondaryIpsRequest | assignSecondaryIpsRequest
+try {
+	// Handler Successful response
+	ApiResponse<AssignSecondaryIpsResponse> result = apiInstance.assignSecondaryIpsGet(assignSecondaryIpsRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **assignSecondaryIpsRequest** | [**AssignSecondaryIpsRequest**](AssignSecondaryIpsRequest.md)| assignSecondaryIpsRequest |
+
+### Return type
+
+[**AssignSecondaryIpsResponse**](AssignSecondaryIpsResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="assignSecondaryIpsPost"></a>
+# **assignSecondaryIpsPost**
+> AssignSecondaryIpsResponse assignSecondaryIpsPost(assignSecondaryIpsRequest)
+
+
+
+보조IP할당
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+AssignSecondaryIpsRequest assignSecondaryIpsRequest = new AssignSecondaryIpsRequest(); // AssignSecondaryIpsRequest | assignSecondaryIpsRequest
+try {
+	// Handler Successful response
+	ApiResponse<AssignSecondaryIpsResponse> result = apiInstance.assignSecondaryIpsPost(assignSecondaryIpsRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **assignSecondaryIpsRequest** | [**AssignSecondaryIpsRequest**](AssignSecondaryIpsRequest.md)| assignSecondaryIpsRequest |
+
+### Return type
+
+[**AssignSecondaryIpsResponse**](AssignSecondaryIpsResponse.md)
 
 ### Authorization
 
@@ -6840,6 +7126,140 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="getRaidListGet"></a>
+# **getRaidListGet**
+> GetRaidListResponse getRaidListGet(getRaidListRequest)
+
+
+
+RAID리스트조회
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetRaidListRequest getRaidListRequest = new GetRaidListRequest(); // GetRaidListRequest | getRaidListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetRaidListResponse> result = apiInstance.getRaidListGet(getRaidListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getRaidListRequest** | [**GetRaidListRequest**](GetRaidListRequest.md)| getRaidListRequest |
+
+### Return type
+
+[**GetRaidListResponse**](GetRaidListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getRaidListPost"></a>
+# **getRaidListPost**
+> GetRaidListResponse getRaidListPost(getRaidListRequest)
+
+
+
+RAID리스트조회
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetRaidListRequest getRaidListRequest = new GetRaidListRequest(); // GetRaidListRequest | getRaidListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetRaidListResponse> result = apiInstance.getRaidListPost(getRaidListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getRaidListRequest** | [**GetRaidListRequest**](GetRaidListRequest.md)| getRaidListRequest |
+
+### Return type
+
+[**GetRaidListResponse**](GetRaidListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="getRegionListGet"></a>
 # **getRegionListGet**
 > GetRegionListResponse getRegionListGet(getRegionListRequest)
@@ -8046,6 +8466,140 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="interruptServerInstanceGet"></a>
+# **interruptServerInstanceGet**
+> InterruptServerInstanceResponse interruptServerInstanceGet(interruptServerInstanceRequest)
+
+
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+InterruptServerInstanceRequest interruptServerInstanceRequest = new InterruptServerInstanceRequest(); // InterruptServerInstanceRequest | 
+try {
+	// Handler Successful response
+	ApiResponse<InterruptServerInstanceResponse> result = apiInstance.interruptServerInstanceGet(interruptServerInstanceRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **interruptServerInstanceRequest** | [**InterruptServerInstanceRequest**](InterruptServerInstanceRequest.md)|  |
+
+### Return type
+
+[**InterruptServerInstanceResponse**](InterruptServerInstanceResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="interruptServerInstancePost"></a>
+# **interruptServerInstancePost**
+> InterruptServerInstanceResponse interruptServerInstancePost(interruptServerInstanceRequest)
+
+
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+InterruptServerInstanceRequest interruptServerInstanceRequest = new InterruptServerInstanceRequest(); // InterruptServerInstanceRequest | 
+try {
+	// Handler Successful response
+	ApiResponse<InterruptServerInstanceResponse> result = apiInstance.interruptServerInstancePost(interruptServerInstanceRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **interruptServerInstanceRequest** | [**InterruptServerInstanceRequest**](InterruptServerInstanceRequest.md)|  |
+
+### Return type
+
+[**InterruptServerInstanceResponse**](InterruptServerInstanceResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="rebootServerInstancesGet"></a>
 # **rebootServerInstancesGet**
 > RebootServerInstancesResponse rebootServerInstancesGet(rebootServerInstancesRequest)
@@ -8448,6 +9002,140 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="removeMemberServerImageSharingPermissionGet"></a>
+# **removeMemberServerImageSharingPermissionGet**
+> RemoveMemberServerImageSharingPermissionResponse removeMemberServerImageSharingPermissionGet(removeMemberServerImageSharingPermissionRequest)
+
+
+
+회원서버이미지공유권한제거
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+RemoveMemberServerImageSharingPermissionRequest removeMemberServerImageSharingPermissionRequest = new RemoveMemberServerImageSharingPermissionRequest(); // RemoveMemberServerImageSharingPermissionRequest | removeMemberServerImageSharingPermissionRequest
+try {
+	// Handler Successful response
+	ApiResponse<RemoveMemberServerImageSharingPermissionResponse> result = apiInstance.removeMemberServerImageSharingPermissionGet(removeMemberServerImageSharingPermissionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **removeMemberServerImageSharingPermissionRequest** | [**RemoveMemberServerImageSharingPermissionRequest**](RemoveMemberServerImageSharingPermissionRequest.md)| removeMemberServerImageSharingPermissionRequest |
+
+### Return type
+
+[**RemoveMemberServerImageSharingPermissionResponse**](RemoveMemberServerImageSharingPermissionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="removeMemberServerImageSharingPermissionPost"></a>
+# **removeMemberServerImageSharingPermissionPost**
+> RemoveMemberServerImageSharingPermissionResponse removeMemberServerImageSharingPermissionPost(removeMemberServerImageSharingPermissionRequest)
+
+
+
+회원서버이미지공유권한제거
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+RemoveMemberServerImageSharingPermissionRequest removeMemberServerImageSharingPermissionRequest = new RemoveMemberServerImageSharingPermissionRequest(); // RemoveMemberServerImageSharingPermissionRequest | removeMemberServerImageSharingPermissionRequest
+try {
+	// Handler Successful response
+	ApiResponse<RemoveMemberServerImageSharingPermissionResponse> result = apiInstance.removeMemberServerImageSharingPermissionPost(removeMemberServerImageSharingPermissionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **removeMemberServerImageSharingPermissionRequest** | [**RemoveMemberServerImageSharingPermissionRequest**](RemoveMemberServerImageSharingPermissionRequest.md)| removeMemberServerImageSharingPermissionRequest |
+
+### Return type
+
+[**RemoveMemberServerImageSharingPermissionResponse**](RemoveMemberServerImageSharingPermissionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="removeNetworkInterfaceAccessControlGroupGet"></a>
 # **removeNetworkInterfaceAccessControlGroupGet**
 > RemoveNetworkInterfaceAccessControlGroupResponse removeNetworkInterfaceAccessControlGroupGet(removeNetworkInterfaceAccessControlGroupRequest)
@@ -8706,6 +9394,408 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**RemovePlacementGroupServerInstanceResponse**](RemovePlacementGroupServerInstanceResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="setBlockStorageReturnProtectionGet"></a>
+# **setBlockStorageReturnProtectionGet**
+> SetBlockStorageReturnProtectionResponse setBlockStorageReturnProtectionGet(setBlockStorageReturnProtectionRequest)
+
+
+
+블록스토리지반납보호설정
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+SetBlockStorageReturnProtectionRequest setBlockStorageReturnProtectionRequest = new SetBlockStorageReturnProtectionRequest(); // SetBlockStorageReturnProtectionRequest | setBlockStorageReturnProtectionRequest
+try {
+	// Handler Successful response
+	ApiResponse<SetBlockStorageReturnProtectionResponse> result = apiInstance.setBlockStorageReturnProtectionGet(setBlockStorageReturnProtectionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setBlockStorageReturnProtectionRequest** | [**SetBlockStorageReturnProtectionRequest**](SetBlockStorageReturnProtectionRequest.md)| setBlockStorageReturnProtectionRequest |
+
+### Return type
+
+[**SetBlockStorageReturnProtectionResponse**](SetBlockStorageReturnProtectionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="setBlockStorageReturnProtectionPost"></a>
+# **setBlockStorageReturnProtectionPost**
+> SetBlockStorageReturnProtectionResponse setBlockStorageReturnProtectionPost(setBlockStorageReturnProtectionRequest)
+
+
+
+블록스토리지반납보호설정
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+SetBlockStorageReturnProtectionRequest setBlockStorageReturnProtectionRequest = new SetBlockStorageReturnProtectionRequest(); // SetBlockStorageReturnProtectionRequest | setBlockStorageReturnProtectionRequest
+try {
+	// Handler Successful response
+	ApiResponse<SetBlockStorageReturnProtectionResponse> result = apiInstance.setBlockStorageReturnProtectionPost(setBlockStorageReturnProtectionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setBlockStorageReturnProtectionRequest** | [**SetBlockStorageReturnProtectionRequest**](SetBlockStorageReturnProtectionRequest.md)| setBlockStorageReturnProtectionRequest |
+
+### Return type
+
+[**SetBlockStorageReturnProtectionResponse**](SetBlockStorageReturnProtectionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="setMemberServerImageSharingPermissionGet"></a>
+# **setMemberServerImageSharingPermissionGet**
+> SetMemberServerImageSharingPermissionResponse setMemberServerImageSharingPermissionGet(setMemberServerImageSharingPermissionRequest)
+
+
+
+회원서버이미지공유권한설정
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+SetMemberServerImageSharingPermissionRequest setMemberServerImageSharingPermissionRequest = new SetMemberServerImageSharingPermissionRequest(); // SetMemberServerImageSharingPermissionRequest | setMemberServerImageSharingPermissionRequest
+try {
+	// Handler Successful response
+	ApiResponse<SetMemberServerImageSharingPermissionResponse> result = apiInstance.setMemberServerImageSharingPermissionGet(setMemberServerImageSharingPermissionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setMemberServerImageSharingPermissionRequest** | [**SetMemberServerImageSharingPermissionRequest**](SetMemberServerImageSharingPermissionRequest.md)| setMemberServerImageSharingPermissionRequest |
+
+### Return type
+
+[**SetMemberServerImageSharingPermissionResponse**](SetMemberServerImageSharingPermissionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="setMemberServerImageSharingPermissionPost"></a>
+# **setMemberServerImageSharingPermissionPost**
+> SetMemberServerImageSharingPermissionResponse setMemberServerImageSharingPermissionPost(setMemberServerImageSharingPermissionRequest)
+
+
+
+회원서버이미지공유권한설정
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+SetMemberServerImageSharingPermissionRequest setMemberServerImageSharingPermissionRequest = new SetMemberServerImageSharingPermissionRequest(); // SetMemberServerImageSharingPermissionRequest | setMemberServerImageSharingPermissionRequest
+try {
+	// Handler Successful response
+	ApiResponse<SetMemberServerImageSharingPermissionResponse> result = apiInstance.setMemberServerImageSharingPermissionPost(setMemberServerImageSharingPermissionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setMemberServerImageSharingPermissionRequest** | [**SetMemberServerImageSharingPermissionRequest**](SetMemberServerImageSharingPermissionRequest.md)| setMemberServerImageSharingPermissionRequest |
+
+### Return type
+
+[**SetMemberServerImageSharingPermissionResponse**](SetMemberServerImageSharingPermissionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="setProtectServerTerminationGet"></a>
+# **setProtectServerTerminationGet**
+> SetProtectServerTerminationResponse setProtectServerTerminationGet(setProtectServerTerminationRequest)
+
+
+
+서버반납보호설정
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+SetProtectServerTerminationRequest setProtectServerTerminationRequest = new SetProtectServerTerminationRequest(); // SetProtectServerTerminationRequest | setProtectServerTerminationRequest
+try {
+	// Handler Successful response
+	ApiResponse<SetProtectServerTerminationResponse> result = apiInstance.setProtectServerTerminationGet(setProtectServerTerminationRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setProtectServerTerminationRequest** | [**SetProtectServerTerminationRequest**](SetProtectServerTerminationRequest.md)| setProtectServerTerminationRequest |
+
+### Return type
+
+[**SetProtectServerTerminationResponse**](SetProtectServerTerminationResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="setProtectServerTerminationPost"></a>
+# **setProtectServerTerminationPost**
+> SetProtectServerTerminationResponse setProtectServerTerminationPost(setProtectServerTerminationRequest)
+
+
+
+서버반납보호설정
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+SetProtectServerTerminationRequest setProtectServerTerminationRequest = new SetProtectServerTerminationRequest(); // SetProtectServerTerminationRequest | setProtectServerTerminationRequest
+try {
+	// Handler Successful response
+	ApiResponse<SetProtectServerTerminationResponse> result = apiInstance.setProtectServerTerminationPost(setProtectServerTerminationRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setProtectServerTerminationRequest** | [**SetProtectServerTerminationRequest**](SetProtectServerTerminationRequest.md)| setProtectServerTerminationRequest |
+
+### Return type
+
+[**SetProtectServerTerminationResponse**](SetProtectServerTerminationResponse.md)
 
 ### Authorization
 
@@ -9108,6 +10198,140 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**TerminateServerInstancesResponse**](TerminateServerInstancesResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="unassignSecondaryIpsGet"></a>
+# **unassignSecondaryIpsGet**
+> UnassignSecondaryIpsResponse unassignSecondaryIpsGet(unassignSecondaryIpsRequest)
+
+
+
+보조IP할당해제
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+UnassignSecondaryIpsRequest unassignSecondaryIpsRequest = new UnassignSecondaryIpsRequest(); // UnassignSecondaryIpsRequest | unassignSecondaryIpsRequest
+try {
+	// Handler Successful response
+	ApiResponse<UnassignSecondaryIpsResponse> result = apiInstance.unassignSecondaryIpsGet(unassignSecondaryIpsRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **unassignSecondaryIpsRequest** | [**UnassignSecondaryIpsRequest**](UnassignSecondaryIpsRequest.md)| unassignSecondaryIpsRequest |
+
+### Return type
+
+[**UnassignSecondaryIpsResponse**](UnassignSecondaryIpsResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="unassignSecondaryIpsPost"></a>
+# **unassignSecondaryIpsPost**
+> UnassignSecondaryIpsResponse unassignSecondaryIpsPost(unassignSecondaryIpsRequest)
+
+
+
+보조IP할당해제
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+UnassignSecondaryIpsRequest unassignSecondaryIpsRequest = new UnassignSecondaryIpsRequest(); // UnassignSecondaryIpsRequest | unassignSecondaryIpsRequest
+try {
+	// Handler Successful response
+	ApiResponse<UnassignSecondaryIpsResponse> result = apiInstance.unassignSecondaryIpsPost(unassignSecondaryIpsRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **unassignSecondaryIpsRequest** | [**UnassignSecondaryIpsRequest**](UnassignSecondaryIpsRequest.md)| unassignSecondaryIpsRequest |
+
+### Return type
+
+[**UnassignSecondaryIpsResponse**](UnassignSecondaryIpsResponse.md)
 
 ### Authorization
 

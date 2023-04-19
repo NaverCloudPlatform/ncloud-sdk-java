@@ -4,6 +4,8 @@ All URIs are relative to *https://ncloud.apigw.ntruss.com/server/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**addMemberServerImageSharingPermissionGet**](V2Api.md#addMemberServerImageSharingPermissionGet) | **GET** /addMemberServerImageSharingPermission | 
+[**addMemberServerImageSharingPermissionPost**](V2Api.md#addMemberServerImageSharingPermissionPost) | **POST** /addMemberServerImageSharingPermission | 
 [**addNasVolumeAccessControlGet**](V2Api.md#addNasVolumeAccessControlGet) | **GET** /addNasVolumeAccessControl | 
 [**addNasVolumeAccessControlPost**](V2Api.md#addNasVolumeAccessControlPost) | **POST** /addNasVolumeAccessControl | 
 [**addPortForwardingRulesGet**](V2Api.md#addPortForwardingRulesGet) | **GET** /addPortForwardingRules | 
@@ -18,6 +20,8 @@ Method | HTTP request | Description
 [**changeBlockStorageVolumeSizePost**](V2Api.md#changeBlockStorageVolumeSizePost) | **POST** /changeBlockStorageVolumeSize | 
 [**changeNasVolumeSizeGet**](V2Api.md#changeNasVolumeSizeGet) | **GET** /changeNasVolumeSize | 
 [**changeNasVolumeSizePost**](V2Api.md#changeNasVolumeSizePost) | **POST** /changeNasVolumeSize | 
+[**changeNasVolumeSnapshotConfigurationGet**](V2Api.md#changeNasVolumeSnapshotConfigurationGet) | **GET** /changeNasVolumeSnapshotConfiguration | 
+[**changeNasVolumeSnapshotConfigurationPost**](V2Api.md#changeNasVolumeSnapshotConfigurationPost) | **POST** /changeNasVolumeSnapshotConfiguration | 
 [**changeServerInstanceSpecGet**](V2Api.md#changeServerInstanceSpecGet) | **GET** /changeServerInstanceSpec | 
 [**changeServerInstanceSpecPost**](V2Api.md#changeServerInstanceSpecPost) | **POST** /changeServerInstanceSpec | 
 [**createBlockStorageInstanceGet**](V2Api.md#createBlockStorageInstanceGet) | **GET** /createBlockStorageInstance | 
@@ -32,6 +36,8 @@ Method | HTTP request | Description
 [**createMemberServerImagePost**](V2Api.md#createMemberServerImagePost) | **POST** /createMemberServerImage | 
 [**createNasVolumeInstanceGet**](V2Api.md#createNasVolumeInstanceGet) | **GET** /createNasVolumeInstance | 
 [**createNasVolumeInstancePost**](V2Api.md#createNasVolumeInstancePost) | **POST** /createNasVolumeInstance | 
+[**createNasVolumeSnapshotGet**](V2Api.md#createNasVolumeSnapshotGet) | **GET** /createNasVolumeSnapshot | 
+[**createNasVolumeSnapshotPost**](V2Api.md#createNasVolumeSnapshotPost) | **POST** /createNasVolumeSnapshot | 
 [**createNetworkInterfaceGet**](V2Api.md#createNetworkInterfaceGet) | **GET** /createNetworkInterface | 
 [**createNetworkInterfacePost**](V2Api.md#createNetworkInterfacePost) | **POST** /createNetworkInterface | 
 [**createPublicIpInstanceGet**](V2Api.md#createPublicIpInstanceGet) | **GET** /createPublicIpInstance | 
@@ -50,6 +56,8 @@ Method | HTTP request | Description
 [**deleteMemberServerImagesPost**](V2Api.md#deleteMemberServerImagesPost) | **POST** /deleteMemberServerImages | 
 [**deleteNasVolumeInstanceGet**](V2Api.md#deleteNasVolumeInstanceGet) | **GET** /deleteNasVolumeInstance | 
 [**deleteNasVolumeInstancePost**](V2Api.md#deleteNasVolumeInstancePost) | **POST** /deleteNasVolumeInstance | 
+[**deleteNasVolumeSnapshotGet**](V2Api.md#deleteNasVolumeSnapshotGet) | **GET** /deleteNasVolumeSnapshot | 
+[**deleteNasVolumeSnapshotPost**](V2Api.md#deleteNasVolumeSnapshotPost) | **POST** /deleteNasVolumeSnapshot | 
 [**deleteNetworkInterfaceGet**](V2Api.md#deleteNetworkInterfaceGet) | **GET** /deleteNetworkInterface | 
 [**deleteNetworkInterfacePost**](V2Api.md#deleteNetworkInterfacePost) | **POST** /deleteNetworkInterface | 
 [**deletePortForwardingRulesGet**](V2Api.md#deletePortForwardingRulesGet) | **GET** /deletePortForwardingRules | 
@@ -80,12 +88,20 @@ Method | HTTP request | Description
 [**getLoginKeyListPost**](V2Api.md#getLoginKeyListPost) | **POST** /getLoginKeyList | 
 [**getMemberServerImageListGet**](V2Api.md#getMemberServerImageListGet) | **GET** /getMemberServerImageList | 
 [**getMemberServerImageListPost**](V2Api.md#getMemberServerImageListPost) | **POST** /getMemberServerImageList | 
+[**getNasVolumeAccessControlRuleListGet**](V2Api.md#getNasVolumeAccessControlRuleListGet) | **GET** /getNasVolumeAccessControlRuleList | 
+[**getNasVolumeAccessControlRuleListPost**](V2Api.md#getNasVolumeAccessControlRuleListPost) | **POST** /getNasVolumeAccessControlRuleList | 
 [**getNasVolumeInstanceListGet**](V2Api.md#getNasVolumeInstanceListGet) | **GET** /getNasVolumeInstanceList | 
 [**getNasVolumeInstanceListPost**](V2Api.md#getNasVolumeInstanceListPost) | **POST** /getNasVolumeInstanceList | 
 [**getNasVolumeInstanceRatingListGet**](V2Api.md#getNasVolumeInstanceRatingListGet) | **GET** /getNasVolumeInstanceRatingList | 
 [**getNasVolumeInstanceRatingListPost**](V2Api.md#getNasVolumeInstanceRatingListPost) | **POST** /getNasVolumeInstanceRatingList | 
+[**getNasVolumeSnapshotConfigurationHistoryListGet**](V2Api.md#getNasVolumeSnapshotConfigurationHistoryListGet) | **GET** /getNasVolumeSnapshotConfigurationHistoryList | 
+[**getNasVolumeSnapshotConfigurationHistoryListPost**](V2Api.md#getNasVolumeSnapshotConfigurationHistoryListPost) | **POST** /getNasVolumeSnapshotConfigurationHistoryList | 
+[**getNasVolumeSnapshotListGet**](V2Api.md#getNasVolumeSnapshotListGet) | **GET** /getNasVolumeSnapshotList | 
+[**getNasVolumeSnapshotListPost**](V2Api.md#getNasVolumeSnapshotListPost) | **POST** /getNasVolumeSnapshotList | 
 [**getNetworkInterfaceListGet**](V2Api.md#getNetworkInterfaceListGet) | **GET** /getNetworkInterfaceList | 
 [**getNetworkInterfaceListPost**](V2Api.md#getNetworkInterfaceListPost) | **POST** /getNetworkInterfaceList | 
+[**getPortForwardingConfigurationListGet**](V2Api.md#getPortForwardingConfigurationListGet) | **GET** /getPortForwardingConfigurationList | 
+[**getPortForwardingConfigurationListPost**](V2Api.md#getPortForwardingConfigurationListPost) | **POST** /getPortForwardingConfigurationList | 
 [**getPortForwardingRuleListGet**](V2Api.md#getPortForwardingRuleListGet) | **GET** /getPortForwardingRuleList | 
 [**getPortForwardingRuleListPost**](V2Api.md#getPortForwardingRuleListPost) | **POST** /getPortForwardingRuleList | 
 [**getPrivateSubnetInstanceListGet**](V2Api.md#getPrivateSubnetInstanceListGet) | **GET** /getPrivateSubnetInstanceList | 
@@ -112,16 +128,28 @@ Method | HTTP request | Description
 [**getZoneListPost**](V2Api.md#getZoneListPost) | **POST** /getZoneList | 
 [**importLoginKeyGet**](V2Api.md#importLoginKeyGet) | **GET** /importLoginKey | 
 [**importLoginKeyPost**](V2Api.md#importLoginKeyPost) | **POST** /importLoginKey | 
+[**interruptServerInstanceGet**](V2Api.md#interruptServerInstanceGet) | **GET** /interruptServerInstance | 
+[**interruptServerInstancePost**](V2Api.md#interruptServerInstancePost) | **POST** /interruptServerInstance | 
 [**rebootServerInstancesGet**](V2Api.md#rebootServerInstancesGet) | **GET** /rebootServerInstances | 
 [**rebootServerInstancesPost**](V2Api.md#rebootServerInstancesPost) | **POST** /rebootServerInstances | 
 [**recreateServerInstanceGet**](V2Api.md#recreateServerInstanceGet) | **GET** /recreateServerInstance | 
 [**recreateServerInstancePost**](V2Api.md#recreateServerInstancePost) | **POST** /recreateServerInstance | 
+[**removeMemberServerImageSharingPermissionGet**](V2Api.md#removeMemberServerImageSharingPermissionGet) | **GET** /removeMemberServerImageSharingPermission | 
+[**removeMemberServerImageSharingPermissionPost**](V2Api.md#removeMemberServerImageSharingPermissionPost) | **POST** /removeMemberServerImageSharingPermission | 
 [**removeNasVolumeAccessControlGet**](V2Api.md#removeNasVolumeAccessControlGet) | **GET** /removeNasVolumeAccessControl | 
 [**removeNasVolumeAccessControlPost**](V2Api.md#removeNasVolumeAccessControlPost) | **POST** /removeNasVolumeAccessControl | 
 [**replaceServerInstanceAssociatedWithPublicIpGet**](V2Api.md#replaceServerInstanceAssociatedWithPublicIpGet) | **GET** /replaceServerInstanceAssociatedWithPublicIp | 
 [**replaceServerInstanceAssociatedWithPublicIpPost**](V2Api.md#replaceServerInstanceAssociatedWithPublicIpPost) | **POST** /replaceServerInstanceAssociatedWithPublicIp | 
+[**restoreNasVolumeWithSnapshotGet**](V2Api.md#restoreNasVolumeWithSnapshotGet) | **GET** /restoreNasVolumeWithSnapshot | 
+[**restoreNasVolumeWithSnapshotPost**](V2Api.md#restoreNasVolumeWithSnapshotPost) | **POST** /restoreNasVolumeWithSnapshot | 
+[**setMemberServerImageSharingPermissionGet**](V2Api.md#setMemberServerImageSharingPermissionGet) | **GET** /setMemberServerImageSharingPermission | 
+[**setMemberServerImageSharingPermissionPost**](V2Api.md#setMemberServerImageSharingPermissionPost) | **POST** /setMemberServerImageSharingPermission | 
 [**setNasVolumeAccessControlGet**](V2Api.md#setNasVolumeAccessControlGet) | **GET** /setNasVolumeAccessControl | 
 [**setNasVolumeAccessControlPost**](V2Api.md#setNasVolumeAccessControlPost) | **POST** /setNasVolumeAccessControl | 
+[**setNasVolumeReturnProtectionGet**](V2Api.md#setNasVolumeReturnProtectionGet) | **GET** /setNasVolumeReturnProtection | 
+[**setNasVolumeReturnProtectionPost**](V2Api.md#setNasVolumeReturnProtectionPost) | **POST** /setNasVolumeReturnProtection | 
+[**setProtectServerTerminationGet**](V2Api.md#setProtectServerTerminationGet) | **GET** /setProtectServerTermination | 
+[**setProtectServerTerminationPost**](V2Api.md#setProtectServerTerminationPost) | **POST** /setProtectServerTermination | 
 [**startServerInstancesGet**](V2Api.md#startServerInstancesGet) | **GET** /startServerInstances | 
 [**startServerInstancesPost**](V2Api.md#startServerInstancesPost) | **POST** /startServerInstances | 
 [**stopServerInstancesGet**](V2Api.md#stopServerInstancesGet) | **GET** /stopServerInstances | 
@@ -130,13 +158,141 @@ Method | HTTP request | Description
 [**terminateServerInstancesPost**](V2Api.md#terminateServerInstancesPost) | **POST** /terminateServerInstances | 
 
 
+<a name="addMemberServerImageSharingPermissionGet"></a>
+# **addMemberServerImageSharingPermissionGet**
+> AddMemberServerImageSharingPermissionResponse addMemberServerImageSharingPermissionGet(addMemberServerImageSharingPermissionRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+AddMemberServerImageSharingPermissionRequest addMemberServerImageSharingPermissionRequest = new AddMemberServerImageSharingPermissionRequest(); // AddMemberServerImageSharingPermissionRequest | addMemberServerImageSharingPermissionRequest
+try {
+	// Handler Successful response
+	ApiResponse<AddMemberServerImageSharingPermissionResponse> result = apiInstance.addMemberServerImageSharingPermissionGet(addMemberServerImageSharingPermissionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **addMemberServerImageSharingPermissionRequest** | [**AddMemberServerImageSharingPermissionRequest**](AddMemberServerImageSharingPermissionRequest.md)| addMemberServerImageSharingPermissionRequest |
+
+### Return type
+
+[**AddMemberServerImageSharingPermissionResponse**](AddMemberServerImageSharingPermissionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="addMemberServerImageSharingPermissionPost"></a>
+# **addMemberServerImageSharingPermissionPost**
+> AddMemberServerImageSharingPermissionResponse addMemberServerImageSharingPermissionPost(addMemberServerImageSharingPermissionRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+AddMemberServerImageSharingPermissionRequest addMemberServerImageSharingPermissionRequest = new AddMemberServerImageSharingPermissionRequest(); // AddMemberServerImageSharingPermissionRequest | addMemberServerImageSharingPermissionRequest
+try {
+	// Handler Successful response
+	ApiResponse<AddMemberServerImageSharingPermissionResponse> result = apiInstance.addMemberServerImageSharingPermissionPost(addMemberServerImageSharingPermissionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **addMemberServerImageSharingPermissionRequest** | [**AddMemberServerImageSharingPermissionRequest**](AddMemberServerImageSharingPermissionRequest.md)| addMemberServerImageSharingPermissionRequest |
+
+### Return type
+
+[**AddMemberServerImageSharingPermissionResponse**](AddMemberServerImageSharingPermissionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="addNasVolumeAccessControlGet"></a>
 # **addNasVolumeAccessControlGet**
 > AddNasVolumeAccessControlResponse addNasVolumeAccessControlGet(addNasVolumeAccessControlRequest)
 
 
-
-NAS볼륨인스턴스접근제어추가
 
 ### Example
 ```java
@@ -203,8 +359,6 @@ Name | Type | Description  | Notes
 
 
 
-NAS볼륨인스턴스접근제어추가
-
 ### Example
 ```java
 // Import classes:
@@ -269,8 +423,6 @@ Name | Type | Description  | Notes
 > AddPortForwardingRulesResponse addPortForwardingRulesGet(addPortForwardingRulesRequest)
 
 
-
-포트포워딩Rule추가
 
 ### Example
 ```java
@@ -337,8 +489,6 @@ Name | Type | Description  | Notes
 
 
 
-포트포워딩Rule추가
-
 ### Example
 ```java
 // Import classes:
@@ -403,8 +553,6 @@ Name | Type | Description  | Notes
 > AssociatePublicIpWithServerInstanceResponse associatePublicIpWithServerInstanceGet(associatePublicIpWithServerInstanceRequest)
 
 
-
-공인IP를서버인스턴스에할당
 
 ### Example
 ```java
@@ -471,8 +619,6 @@ Name | Type | Description  | Notes
 
 
 
-공인IP를서버인스턴스에할당
-
 ### Example
 ```java
 // Import classes:
@@ -537,8 +683,6 @@ Name | Type | Description  | Notes
 > AttachBlockStorageInstanceResponse attachBlockStorageInstanceGet(attachBlockStorageInstanceRequest)
 
 
-
-블록스토리지인스턴스할당
 
 ### Example
 ```java
@@ -605,8 +749,6 @@ Name | Type | Description  | Notes
 
 
 
-블록스토리지인스턴스할당
-
 ### Example
 ```java
 // Import classes:
@@ -671,8 +813,6 @@ Name | Type | Description  | Notes
 > AttachNetworkInterfaceResponse attachNetworkInterfaceGet(attachNetworkInterfaceRequest)
 
 
-
-Network Interface Attach
 
 ### Example
 ```java
@@ -739,8 +879,6 @@ Name | Type | Description  | Notes
 
 
 
-Network Interface Attach
-
 ### Example
 ```java
 // Import classes:
@@ -805,8 +943,6 @@ Name | Type | Description  | Notes
 > ChangeBlockStorageVolumeSizeResponse changeBlockStorageVolumeSizeGet(changeBlockStorageVolumeSizeRequest)
 
 
-
-블록스토리지볼륨사이즈변경
 
 ### Example
 ```java
@@ -873,8 +1009,6 @@ Name | Type | Description  | Notes
 
 
 
-블록스토리지볼륨사이즈변경
-
 ### Example
 ```java
 // Import classes:
@@ -939,8 +1073,6 @@ Name | Type | Description  | Notes
 > ChangeNasVolumeSizeResponse changeNasVolumeSizeGet(changeNasVolumeSizeRequest)
 
 
-
-NAS볼륨사이즈변경
 
 ### Example
 ```java
@@ -1007,8 +1139,6 @@ Name | Type | Description  | Notes
 
 
 
-NAS볼륨사이즈변경
-
 ### Example
 ```java
 // Import classes:
@@ -1068,13 +1198,141 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="changeNasVolumeSnapshotConfigurationGet"></a>
+# **changeNasVolumeSnapshotConfigurationGet**
+> ChangeNasVolumeSnapshotConfigurationResponse changeNasVolumeSnapshotConfigurationGet(changeNasVolumeSnapshotConfigurationRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ChangeNasVolumeSnapshotConfigurationRequest changeNasVolumeSnapshotConfigurationRequest = new ChangeNasVolumeSnapshotConfigurationRequest(); // ChangeNasVolumeSnapshotConfigurationRequest | changeNasVolumeSnapshotConfigurationRequest
+try {
+	// Handler Successful response
+	ApiResponse<ChangeNasVolumeSnapshotConfigurationResponse> result = apiInstance.changeNasVolumeSnapshotConfigurationGet(changeNasVolumeSnapshotConfigurationRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeNasVolumeSnapshotConfigurationRequest** | [**ChangeNasVolumeSnapshotConfigurationRequest**](ChangeNasVolumeSnapshotConfigurationRequest.md)| changeNasVolumeSnapshotConfigurationRequest |
+
+### Return type
+
+[**ChangeNasVolumeSnapshotConfigurationResponse**](ChangeNasVolumeSnapshotConfigurationResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="changeNasVolumeSnapshotConfigurationPost"></a>
+# **changeNasVolumeSnapshotConfigurationPost**
+> ChangeNasVolumeSnapshotConfigurationResponse changeNasVolumeSnapshotConfigurationPost(changeNasVolumeSnapshotConfigurationRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ChangeNasVolumeSnapshotConfigurationRequest changeNasVolumeSnapshotConfigurationRequest = new ChangeNasVolumeSnapshotConfigurationRequest(); // ChangeNasVolumeSnapshotConfigurationRequest | changeNasVolumeSnapshotConfigurationRequest
+try {
+	// Handler Successful response
+	ApiResponse<ChangeNasVolumeSnapshotConfigurationResponse> result = apiInstance.changeNasVolumeSnapshotConfigurationPost(changeNasVolumeSnapshotConfigurationRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeNasVolumeSnapshotConfigurationRequest** | [**ChangeNasVolumeSnapshotConfigurationRequest**](ChangeNasVolumeSnapshotConfigurationRequest.md)| changeNasVolumeSnapshotConfigurationRequest |
+
+### Return type
+
+[**ChangeNasVolumeSnapshotConfigurationResponse**](ChangeNasVolumeSnapshotConfigurationResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="changeServerInstanceSpecGet"></a>
 # **changeServerInstanceSpecGet**
 > ChangeServerInstanceSpecResponse changeServerInstanceSpecGet(changeServerInstanceSpecRequest)
 
 
-
-서버인스턴스스팩변경
 
 ### Example
 ```java
@@ -1141,8 +1399,6 @@ Name | Type | Description  | Notes
 
 
 
-서버인스턴스스팩변경
-
 ### Example
 ```java
 // Import classes:
@@ -1207,8 +1463,6 @@ Name | Type | Description  | Notes
 > CreateBlockStorageInstanceResponse createBlockStorageInstanceGet(createBlockStorageInstanceRequest)
 
 
-
-블록스토리지인스턴스생성
 
 ### Example
 ```java
@@ -1275,8 +1529,6 @@ Name | Type | Description  | Notes
 
 
 
-블록스토리지인스턴스생성
-
 ### Example
 ```java
 // Import classes:
@@ -1341,8 +1593,6 @@ Name | Type | Description  | Notes
 > CreateBlockStorageSnapshotInstanceResponse createBlockStorageSnapshotInstanceGet(createBlockStorageSnapshotInstanceRequest)
 
 
-
-블록스토리지스냅샷인스턴스생성
 
 ### Example
 ```java
@@ -1409,8 +1659,6 @@ Name | Type | Description  | Notes
 
 
 
-블록스토리지스냅샷인스턴스생성
-
 ### Example
 ```java
 // Import classes:
@@ -1475,8 +1723,6 @@ Name | Type | Description  | Notes
 > CreateInstanceTagsResponse createInstanceTagsGet(createInstanceTagsRequest)
 
 
-
-인스턴스태그생성
 
 ### Example
 ```java
@@ -1543,8 +1789,6 @@ Name | Type | Description  | Notes
 
 
 
-인스턴스태그생성
-
 ### Example
 ```java
 // Import classes:
@@ -1609,8 +1853,6 @@ Name | Type | Description  | Notes
 > CreateLoginKeyResponse createLoginKeyGet(createLoginKeyRequest)
 
 
-
-로그인키생성
 
 ### Example
 ```java
@@ -1677,8 +1919,6 @@ Name | Type | Description  | Notes
 
 
 
-로그인키생성
-
 ### Example
 ```java
 // Import classes:
@@ -1743,8 +1983,6 @@ Name | Type | Description  | Notes
 > CreateMemberServerImageResponse createMemberServerImageGet(createMemberServerImageRequest)
 
 
-
-회원서버이미지생성
 
 ### Example
 ```java
@@ -1811,8 +2049,6 @@ Name | Type | Description  | Notes
 
 
 
-회원서버이미지생성
-
 ### Example
 ```java
 // Import classes:
@@ -1877,8 +2113,6 @@ Name | Type | Description  | Notes
 > CreateNasVolumeInstanceResponse createNasVolumeInstanceGet(createNasVolumeInstanceRequest)
 
 
-
-NAS볼륨인스턴스생성
 
 ### Example
 ```java
@@ -1945,8 +2179,6 @@ Name | Type | Description  | Notes
 
 
 
-NAS볼륨인스턴스생성
-
 ### Example
 ```java
 // Import classes:
@@ -2006,13 +2238,141 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="createNasVolumeSnapshotGet"></a>
+# **createNasVolumeSnapshotGet**
+> CreateNasVolumeSnapshotResponse createNasVolumeSnapshotGet(createNasVolumeSnapshotRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+CreateNasVolumeSnapshotRequest createNasVolumeSnapshotRequest = new CreateNasVolumeSnapshotRequest(); // CreateNasVolumeSnapshotRequest | createNasVolumeSnapshotRequest
+try {
+	// Handler Successful response
+	ApiResponse<CreateNasVolumeSnapshotResponse> result = apiInstance.createNasVolumeSnapshotGet(createNasVolumeSnapshotRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createNasVolumeSnapshotRequest** | [**CreateNasVolumeSnapshotRequest**](CreateNasVolumeSnapshotRequest.md)| createNasVolumeSnapshotRequest |
+
+### Return type
+
+[**CreateNasVolumeSnapshotResponse**](CreateNasVolumeSnapshotResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="createNasVolumeSnapshotPost"></a>
+# **createNasVolumeSnapshotPost**
+> CreateNasVolumeSnapshotResponse createNasVolumeSnapshotPost(createNasVolumeSnapshotRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+CreateNasVolumeSnapshotRequest createNasVolumeSnapshotRequest = new CreateNasVolumeSnapshotRequest(); // CreateNasVolumeSnapshotRequest | createNasVolumeSnapshotRequest
+try {
+	// Handler Successful response
+	ApiResponse<CreateNasVolumeSnapshotResponse> result = apiInstance.createNasVolumeSnapshotPost(createNasVolumeSnapshotRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createNasVolumeSnapshotRequest** | [**CreateNasVolumeSnapshotRequest**](CreateNasVolumeSnapshotRequest.md)| createNasVolumeSnapshotRequest |
+
+### Return type
+
+[**CreateNasVolumeSnapshotResponse**](CreateNasVolumeSnapshotResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="createNetworkInterfaceGet"></a>
 # **createNetworkInterfaceGet**
 > CreateNetworkInterfaceResponse createNetworkInterfaceGet(createNetworkInterfaceRequest)
 
 
-
-Network Interface 생성
 
 ### Example
 ```java
@@ -2079,8 +2439,6 @@ Name | Type | Description  | Notes
 
 
 
-Network Interface 생성
-
 ### Example
 ```java
 // Import classes:
@@ -2145,8 +2503,6 @@ Name | Type | Description  | Notes
 > CreatePublicIpInstanceResponse createPublicIpInstanceGet(createPublicIpInstanceRequest)
 
 
-
-공인IP인스턴스생성
 
 ### Example
 ```java
@@ -2213,8 +2569,6 @@ Name | Type | Description  | Notes
 
 
 
-공인IP인스턴스생성
-
 ### Example
 ```java
 // Import classes:
@@ -2279,8 +2633,6 @@ Name | Type | Description  | Notes
 > CreateServerInstancesResponse createServerInstancesGet(createServerInstancesRequest)
 
 
-
-서버인스턴스생성
 
 ### Example
 ```java
@@ -2347,8 +2699,6 @@ Name | Type | Description  | Notes
 
 
 
-서버인스턴스생성
-
 ### Example
 ```java
 // Import classes:
@@ -2413,8 +2763,6 @@ Name | Type | Description  | Notes
 > DeleteBlockStorageInstancesResponse deleteBlockStorageInstancesGet(deleteBlockStorageInstancesRequest)
 
 
-
-블록스토리지인스턴스삭제
 
 ### Example
 ```java
@@ -2481,8 +2829,6 @@ Name | Type | Description  | Notes
 
 
 
-블록스토리지인스턴스삭제
-
 ### Example
 ```java
 // Import classes:
@@ -2547,8 +2893,6 @@ Name | Type | Description  | Notes
 > DeleteBlockStorageSnapshotInstancesResponse deleteBlockStorageSnapshotInstancesGet(deleteBlockStorageSnapshotInstancesRequest)
 
 
-
-블록스토리지스냅샷인스턴스삭제
 
 ### Example
 ```java
@@ -2615,8 +2959,6 @@ Name | Type | Description  | Notes
 
 
 
-블록스토리지스냅샷인스턴스삭제
-
 ### Example
 ```java
 // Import classes:
@@ -2681,8 +3023,6 @@ Name | Type | Description  | Notes
 > DeleteInstanceTagsResponse deleteInstanceTagsGet(deleteInstanceTagsRequest)
 
 
-
-인스턴스태그삭제
 
 ### Example
 ```java
@@ -2749,8 +3089,6 @@ Name | Type | Description  | Notes
 
 
 
-인스턴스태그삭제
-
 ### Example
 ```java
 // Import classes:
@@ -2815,8 +3153,6 @@ Name | Type | Description  | Notes
 > DeleteLoginKeyResponse deleteLoginKeyGet(deleteLoginKeyRequest)
 
 
-
-로그인키삭제
 
 ### Example
 ```java
@@ -2883,8 +3219,6 @@ Name | Type | Description  | Notes
 
 
 
-로그인키삭제
-
 ### Example
 ```java
 // Import classes:
@@ -2949,8 +3283,6 @@ Name | Type | Description  | Notes
 > DeleteMemberServerImagesResponse deleteMemberServerImagesGet(deleteMemberServerImagesRequest)
 
 
-
-회원서버이미지삭제
 
 ### Example
 ```java
@@ -3017,8 +3349,6 @@ Name | Type | Description  | Notes
 
 
 
-회원서버이미지삭제
-
 ### Example
 ```java
 // Import classes:
@@ -3083,8 +3413,6 @@ Name | Type | Description  | Notes
 > DeleteNasVolumeInstanceResponse deleteNasVolumeInstanceGet(deleteNasVolumeInstanceRequest)
 
 
-
-NAS볼륨인스턴스삭제
 
 ### Example
 ```java
@@ -3151,8 +3479,6 @@ Name | Type | Description  | Notes
 
 
 
-NAS볼륨인스턴스삭제
-
 ### Example
 ```java
 // Import classes:
@@ -3212,13 +3538,141 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="deleteNasVolumeSnapshotGet"></a>
+# **deleteNasVolumeSnapshotGet**
+> DeleteNasVolumeSnapshotResponse deleteNasVolumeSnapshotGet(deleteNasVolumeSnapshotRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+DeleteNasVolumeSnapshotRequest deleteNasVolumeSnapshotRequest = new DeleteNasVolumeSnapshotRequest(); // DeleteNasVolumeSnapshotRequest | deleteNasVolumeSnapshotRequest
+try {
+	// Handler Successful response
+	ApiResponse<DeleteNasVolumeSnapshotResponse> result = apiInstance.deleteNasVolumeSnapshotGet(deleteNasVolumeSnapshotRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteNasVolumeSnapshotRequest** | [**DeleteNasVolumeSnapshotRequest**](DeleteNasVolumeSnapshotRequest.md)| deleteNasVolumeSnapshotRequest |
+
+### Return type
+
+[**DeleteNasVolumeSnapshotResponse**](DeleteNasVolumeSnapshotResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="deleteNasVolumeSnapshotPost"></a>
+# **deleteNasVolumeSnapshotPost**
+> DeleteNasVolumeSnapshotResponse deleteNasVolumeSnapshotPost(deleteNasVolumeSnapshotRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+DeleteNasVolumeSnapshotRequest deleteNasVolumeSnapshotRequest = new DeleteNasVolumeSnapshotRequest(); // DeleteNasVolumeSnapshotRequest | deleteNasVolumeSnapshotRequest
+try {
+	// Handler Successful response
+	ApiResponse<DeleteNasVolumeSnapshotResponse> result = apiInstance.deleteNasVolumeSnapshotPost(deleteNasVolumeSnapshotRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteNasVolumeSnapshotRequest** | [**DeleteNasVolumeSnapshotRequest**](DeleteNasVolumeSnapshotRequest.md)| deleteNasVolumeSnapshotRequest |
+
+### Return type
+
+[**DeleteNasVolumeSnapshotResponse**](DeleteNasVolumeSnapshotResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="deleteNetworkInterfaceGet"></a>
 # **deleteNetworkInterfaceGet**
 > DeleteNetworkInterfaceResponse deleteNetworkInterfaceGet(deleteNetworkInterfaceRequest)
 
 
-
-Network Interface 삭제
 
 ### Example
 ```java
@@ -3285,8 +3739,6 @@ Name | Type | Description  | Notes
 
 
 
-Network Interface 삭제
-
 ### Example
 ```java
 // Import classes:
@@ -3351,8 +3803,6 @@ Name | Type | Description  | Notes
 > DeletePortForwardingRulesResponse deletePortForwardingRulesGet(deletePortForwardingRulesRequest)
 
 
-
-포트포워딩Rule삭제
 
 ### Example
 ```java
@@ -3419,8 +3869,6 @@ Name | Type | Description  | Notes
 
 
 
-포트포워딩Rule삭제
-
 ### Example
 ```java
 // Import classes:
@@ -3485,8 +3933,6 @@ Name | Type | Description  | Notes
 > DeletePublicIpInstancesResponse deletePublicIpInstancesGet(deletePublicIpInstancesRequest)
 
 
-
-공인IP인스턴스삭제
 
 ### Example
 ```java
@@ -3553,8 +3999,6 @@ Name | Type | Description  | Notes
 
 
 
-공인IP인스턴스삭제
-
 ### Example
 ```java
 // Import classes:
@@ -3619,8 +4063,6 @@ Name | Type | Description  | Notes
 > DetachBlockStorageInstancesResponse detachBlockStorageInstancesGet(detachBlockStorageInstancesRequest)
 
 
-
-블록스토리지인스턴스할당해제
 
 ### Example
 ```java
@@ -3687,8 +4129,6 @@ Name | Type | Description  | Notes
 
 
 
-블록스토리지인스턴스할당해제
-
 ### Example
 ```java
 // Import classes:
@@ -3753,8 +4193,6 @@ Name | Type | Description  | Notes
 > DetachNetworkInterfaceResponse detachNetworkInterfaceGet(detachNetworkInterfaceRequest)
 
 
-
-Network Interface Detach
 
 ### Example
 ```java
@@ -3821,8 +4259,6 @@ Name | Type | Description  | Notes
 
 
 
-Network Interface Detach
-
 ### Example
 ```java
 // Import classes:
@@ -3887,8 +4323,6 @@ Name | Type | Description  | Notes
 > DisassociatePublicIpFromServerInstanceResponse disassociatePublicIpFromServerInstanceGet(disassociatePublicIpFromServerInstanceRequest)
 
 
-
-공인IP를서버인스턴스에할당해제
 
 ### Example
 ```java
@@ -3955,8 +4389,6 @@ Name | Type | Description  | Notes
 
 
 
-공인IP를서버인스턴스에할당해제
-
 ### Example
 ```java
 // Import classes:
@@ -4021,8 +4453,6 @@ Name | Type | Description  | Notes
 > GetAccessControlGroupListResponse getAccessControlGroupListGet(getAccessControlGroupListRequest)
 
 
-
-접근제어그룹리스트조회
 
 ### Example
 ```java
@@ -4089,8 +4519,6 @@ Name | Type | Description  | Notes
 
 
 
-접근제어그룹리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -4155,8 +4583,6 @@ Name | Type | Description  | Notes
 > GetAccessControlGroupServerInstanceListResponse getAccessControlGroupServerInstanceListGet(getAccessControlGroupServerInstanceListRequest)
 
 
-
-접근제어그룹적용된서버인스턴스리스트조회
 
 ### Example
 ```java
@@ -4223,8 +4649,6 @@ Name | Type | Description  | Notes
 
 
 
-접근제어그룹적용된서버인스턴스리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -4289,8 +4713,6 @@ Name | Type | Description  | Notes
 > GetAccessControlRuleListResponse getAccessControlRuleListGet(getAccessControlRuleListRequest)
 
 
-
-접근제어규칙리스트조회
 
 ### Example
 ```java
@@ -4357,8 +4779,6 @@ Name | Type | Description  | Notes
 
 
 
-접근제어규칙리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -4423,8 +4843,6 @@ Name | Type | Description  | Notes
 > GetBlockStorageInstanceListResponse getBlockStorageInstanceListGet(getBlockStorageInstanceListRequest)
 
 
-
-블록스토리지인스턴스리스트조회
 
 ### Example
 ```java
@@ -4491,8 +4909,6 @@ Name | Type | Description  | Notes
 
 
 
-블록스토리지인스턴스리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -4557,8 +4973,6 @@ Name | Type | Description  | Notes
 > GetBlockStorageSnapshotInstanceListResponse getBlockStorageSnapshotInstanceListGet(getBlockStorageSnapshotInstanceListRequest)
 
 
-
-블록스토리지스냅샷인스턴스리스트조회
 
 ### Example
 ```java
@@ -4625,8 +5039,6 @@ Name | Type | Description  | Notes
 
 
 
-블록스토리지스냅샷인스턴스리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -4691,8 +5103,6 @@ Name | Type | Description  | Notes
 > GetInitScriptListResponse getInitScriptListGet(getInitScriptListRqeust)
 
 
-
-초기화스크립트리스트조회
 
 ### Example
 ```java
@@ -4759,8 +5169,6 @@ Name | Type | Description  | Notes
 
 
 
-초기화스크립트리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -4825,8 +5233,6 @@ Name | Type | Description  | Notes
 > GetInstanceTagListResponse getInstanceTagListGet(getInstanceTagListRequest)
 
 
-
-태그인스턴스리스트조회
 
 ### Example
 ```java
@@ -4893,8 +5299,6 @@ Name | Type | Description  | Notes
 
 
 
-인스턴스태그리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -4959,8 +5363,6 @@ Name | Type | Description  | Notes
 > GetLoginKeyListResponse getLoginKeyListGet(getLoginKeyListRequest)
 
 
-
-로그인키리스트조회
 
 ### Example
 ```java
@@ -5027,8 +5429,6 @@ Name | Type | Description  | Notes
 
 
 
-로그인키리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -5093,8 +5493,6 @@ Name | Type | Description  | Notes
 > GetMemberServerImageListResponse getMemberServerImageListGet(getMemberServerImageListRequest)
 
 
-
-회원서버이미지리스트조회
 
 ### Example
 ```java
@@ -5161,8 +5559,6 @@ Name | Type | Description  | Notes
 
 
 
-회원서버이미지리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -5222,13 +5618,141 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="getNasVolumeAccessControlRuleListGet"></a>
+# **getNasVolumeAccessControlRuleListGet**
+> GetNasVolumeAccessControlRuleListResponse getNasVolumeAccessControlRuleListGet(getNasVolumeAccessControlRuleListRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetNasVolumeAccessControlRuleListRequest getNasVolumeAccessControlRuleListRequest = new GetNasVolumeAccessControlRuleListRequest(); // GetNasVolumeAccessControlRuleListRequest | getNasVolumeAccessControlRuleListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetNasVolumeAccessControlRuleListResponse> result = apiInstance.getNasVolumeAccessControlRuleListGet(getNasVolumeAccessControlRuleListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getNasVolumeAccessControlRuleListRequest** | [**GetNasVolumeAccessControlRuleListRequest**](GetNasVolumeAccessControlRuleListRequest.md)| getNasVolumeAccessControlRuleListRequest |
+
+### Return type
+
+[**GetNasVolumeAccessControlRuleListResponse**](GetNasVolumeAccessControlRuleListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getNasVolumeAccessControlRuleListPost"></a>
+# **getNasVolumeAccessControlRuleListPost**
+> GetNasVolumeAccessControlRuleListResponse getNasVolumeAccessControlRuleListPost(getNasVolumeAccessControlRuleListRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetNasVolumeAccessControlRuleListRequest getNasVolumeAccessControlRuleListRequest = new GetNasVolumeAccessControlRuleListRequest(); // GetNasVolumeAccessControlRuleListRequest | getNasVolumeAccessControlRuleListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetNasVolumeAccessControlRuleListResponse> result = apiInstance.getNasVolumeAccessControlRuleListPost(getNasVolumeAccessControlRuleListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getNasVolumeAccessControlRuleListRequest** | [**GetNasVolumeAccessControlRuleListRequest**](GetNasVolumeAccessControlRuleListRequest.md)| getNasVolumeAccessControlRuleListRequest |
+
+### Return type
+
+[**GetNasVolumeAccessControlRuleListResponse**](GetNasVolumeAccessControlRuleListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="getNasVolumeInstanceListGet"></a>
 # **getNasVolumeInstanceListGet**
 > GetNasVolumeInstanceListResponse getNasVolumeInstanceListGet(getNasVolumeInstanceListRequest)
 
 
-
-NAS볼륨인스턴스리스트조회
 
 ### Example
 ```java
@@ -5295,8 +5819,6 @@ Name | Type | Description  | Notes
 
 
 
-NAS볼륨인스턴스리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -5361,8 +5883,6 @@ Name | Type | Description  | Notes
 > GetNasVolumeInstanceRatingListResponse getNasVolumeInstanceRatingListGet(getNasVolumeInstanceRatingListRequest)
 
 
-
-NAS볼륨인스턴스측정리스트조회
 
 ### Example
 ```java
@@ -5429,8 +5949,6 @@ Name | Type | Description  | Notes
 
 
 
-NAS볼륨인스턴스측정리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -5490,13 +6008,271 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="getNasVolumeSnapshotConfigurationHistoryListGet"></a>
+# **getNasVolumeSnapshotConfigurationHistoryListGet**
+> GetNasVolumeSnapshotConfigurationHistoryListResponse getNasVolumeSnapshotConfigurationHistoryListGet(getNasVolumeSnapshotConfigurationHistoryListRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetNasVolumeSnapshotConfigurationHistoryListRequest getNasVolumeSnapshotConfigurationHistoryListRequest = new GetNasVolumeSnapshotConfigurationHistoryListRequest(); // GetNasVolumeSnapshotConfigurationHistoryListRequest | getNasVolumeSnapshotConfigurationHistoryListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetNasVolumeSnapshotConfigurationHistoryListResponse> result = apiInstance.getNasVolumeSnapshotConfigurationHistoryListGet(getNasVolumeSnapshotConfigurationHistoryListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getNasVolumeSnapshotConfigurationHistoryListRequest** | [**GetNasVolumeSnapshotConfigurationHistoryListRequest**](GetNasVolumeSnapshotConfigurationHistoryListRequest.md)| getNasVolumeSnapshotConfigurationHistoryListRequest |
+
+### Return type
+
+[**GetNasVolumeSnapshotConfigurationHistoryListResponse**](GetNasVolumeSnapshotConfigurationHistoryListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getNasVolumeSnapshotConfigurationHistoryListPost"></a>
+# **getNasVolumeSnapshotConfigurationHistoryListPost**
+> GetNasVolumeSnapshotConfigurationHistoryListResponse getNasVolumeSnapshotConfigurationHistoryListPost(getNasVolumeSnapshotConfigurationHistoryListRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetNasVolumeSnapshotConfigurationHistoryListRequest getNasVolumeSnapshotConfigurationHistoryListRequest = new GetNasVolumeSnapshotConfigurationHistoryListRequest(); // GetNasVolumeSnapshotConfigurationHistoryListRequest | getNasVolumeSnapshotConfigurationHistoryListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetNasVolumeSnapshotConfigurationHistoryListResponse> result = apiInstance.getNasVolumeSnapshotConfigurationHistoryListPost(getNasVolumeSnapshotConfigurationHistoryListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getNasVolumeSnapshotConfigurationHistoryListRequest** | [**GetNasVolumeSnapshotConfigurationHistoryListRequest**](GetNasVolumeSnapshotConfigurationHistoryListRequest.md)| getNasVolumeSnapshotConfigurationHistoryListRequest |
+
+### Return type
+
+[**GetNasVolumeSnapshotConfigurationHistoryListResponse**](GetNasVolumeSnapshotConfigurationHistoryListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getNasVolumeSnapshotListGet"></a>
+# **getNasVolumeSnapshotListGet**
+> GetNasVolumeSnapshotListResponse getNasVolumeSnapshotListGet(getNasVolumeSnapshotListRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetNasVolumeSnapshotListRequest getNasVolumeSnapshotListRequest = new GetNasVolumeSnapshotListRequest(); // GetNasVolumeSnapshotListRequest | getNasVolumeSnapshotListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetNasVolumeSnapshotListResponse> result = apiInstance.getNasVolumeSnapshotListGet(getNasVolumeSnapshotListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getNasVolumeSnapshotListRequest** | [**GetNasVolumeSnapshotListRequest**](GetNasVolumeSnapshotListRequest.md)| getNasVolumeSnapshotListRequest |
+
+### Return type
+
+[**GetNasVolumeSnapshotListResponse**](GetNasVolumeSnapshotListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getNasVolumeSnapshotListPost"></a>
+# **getNasVolumeSnapshotListPost**
+> GetNasVolumeSnapshotListResponse getNasVolumeSnapshotListPost(getNasVolumeSnapshotListRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetNasVolumeSnapshotListRequest getNasVolumeSnapshotListRequest = new GetNasVolumeSnapshotListRequest(); // GetNasVolumeSnapshotListRequest | getNasVolumeSnapshotListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetNasVolumeSnapshotListResponse> result = apiInstance.getNasVolumeSnapshotListPost(getNasVolumeSnapshotListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getNasVolumeSnapshotListRequest** | [**GetNasVolumeSnapshotListRequest**](GetNasVolumeSnapshotListRequest.md)| getNasVolumeSnapshotListRequest |
+
+### Return type
+
+[**GetNasVolumeSnapshotListResponse**](GetNasVolumeSnapshotListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="getNetworkInterfaceListGet"></a>
 # **getNetworkInterfaceListGet**
 > GetNetworkInterfaceListResponse getNetworkInterfaceListGet(getNetworkInterfaceListRequest)
 
 
-
-Network Interface 리스트조회
 
 ### Example
 ```java
@@ -5563,8 +6339,6 @@ Name | Type | Description  | Notes
 
 
 
-Network Interface 리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -5624,13 +6398,141 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="getPortForwardingConfigurationListGet"></a>
+# **getPortForwardingConfigurationListGet**
+> GetPortForwardingConfigurationListResponse getPortForwardingConfigurationListGet(getPortForwardingConfigurationListRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetPortForwardingConfigurationListRequest getPortForwardingConfigurationListRequest = new GetPortForwardingConfigurationListRequest(); // GetPortForwardingConfigurationListRequest | getPortForwardingConfigurationListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetPortForwardingConfigurationListResponse> result = apiInstance.getPortForwardingConfigurationListGet(getPortForwardingConfigurationListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getPortForwardingConfigurationListRequest** | [**GetPortForwardingConfigurationListRequest**](GetPortForwardingConfigurationListRequest.md)| getPortForwardingConfigurationListRequest |
+
+### Return type
+
+[**GetPortForwardingConfigurationListResponse**](GetPortForwardingConfigurationListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getPortForwardingConfigurationListPost"></a>
+# **getPortForwardingConfigurationListPost**
+> GetPortForwardingConfigurationListResponse getPortForwardingConfigurationListPost(getPortForwardingConfigurationListRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetPortForwardingConfigurationListRequest getPortForwardingConfigurationListRequest = new GetPortForwardingConfigurationListRequest(); // GetPortForwardingConfigurationListRequest | getPortForwardingConfigurationListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetPortForwardingConfigurationListResponse> result = apiInstance.getPortForwardingConfigurationListPost(getPortForwardingConfigurationListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getPortForwardingConfigurationListRequest** | [**GetPortForwardingConfigurationListRequest**](GetPortForwardingConfigurationListRequest.md)| getPortForwardingConfigurationListRequest |
+
+### Return type
+
+[**GetPortForwardingConfigurationListResponse**](GetPortForwardingConfigurationListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="getPortForwardingRuleListGet"></a>
 # **getPortForwardingRuleListGet**
 > GetPortForwardingRuleListResponse getPortForwardingRuleListGet(getPortForwardingRuleListRequest)
 
 
-
-포트포워딩Rule리스트조회
 
 ### Example
 ```java
@@ -5697,8 +6599,6 @@ Name | Type | Description  | Notes
 
 
 
-포트포워딩Rule리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -5763,8 +6663,6 @@ Name | Type | Description  | Notes
 > GetPrivateSubnetInstanceListResponse getPrivateSubnetInstanceListGet(getPrivateSubnetInstanceListRequest)
 
 
-
-Private Subnet 인스턴스리스트조회
 
 ### Example
 ```java
@@ -5831,8 +6729,6 @@ Name | Type | Description  | Notes
 
 
 
-Private Subnet 인스턴스리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -5897,8 +6793,6 @@ Name | Type | Description  | Notes
 > GetPublicIpInstanceListResponse getPublicIpInstanceListGet(getPublicIpInstanceListRequest)
 
 
-
-공인IP인스턴스리스트조회
 
 ### Example
 ```java
@@ -5965,8 +6859,6 @@ Name | Type | Description  | Notes
 
 
 
-공인IP인스턴스리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -6031,8 +6923,6 @@ Name | Type | Description  | Notes
 > GetPublicIpTargetServerInstanceListResponse getPublicIpTargetServerInstanceListGet(getPublicIpTargetServerInstanceListRequest)
 
 
-
-공인IP할당(가능)서버인스턴스리스트조회
 
 ### Example
 ```java
@@ -6099,8 +6989,6 @@ Name | Type | Description  | Notes
 
 
 
-공인IP할당(가능)서버인스턴스리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -6165,8 +7053,6 @@ Name | Type | Description  | Notes
 > GetRaidListResponse getRaidListGet(getRaidListRequest)
 
 
-
-RAID리스트조회
 
 ### Example
 ```java
@@ -6233,8 +7119,6 @@ Name | Type | Description  | Notes
 
 
 
-RAID리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -6299,8 +7183,6 @@ Name | Type | Description  | Notes
 > GetRegionListResponse getRegionListGet(getRegionListRequest)
 
 
-
-REGION리스트조회
 
 ### Example
 ```java
@@ -6367,8 +7249,6 @@ Name | Type | Description  | Notes
 
 
 
-REGION리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -6433,8 +7313,6 @@ Name | Type | Description  | Notes
 > GetRootPasswordResponse getRootPasswordGet(getRootPasswordRequest)
 
 
-
-루트패스워드조회
 
 ### Example
 ```java
@@ -6501,8 +7379,6 @@ Name | Type | Description  | Notes
 
 
 
-루트패스워드조회
-
 ### Example
 ```java
 // Import classes:
@@ -6567,8 +7443,6 @@ Name | Type | Description  | Notes
 > GetRootPasswordServerInstanceListResponse getRootPasswordServerInstanceListGet(getRootPasswordServerInstanceListRequest)
 
 
-
-루트패스워드서버인스턴스리스트조회
 
 ### Example
 ```java
@@ -6635,8 +7509,6 @@ Name | Type | Description  | Notes
 
 
 
-루트패스워드서버인스턴스리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -6701,8 +7573,6 @@ Name | Type | Description  | Notes
 > GetServerImageProductListResponse getServerImageProductListGet(getServerImageProductListRequest)
 
 
-
-서버이미지상품리스트조회
 
 ### Example
 ```java
@@ -6769,8 +7639,6 @@ Name | Type | Description  | Notes
 
 
 
-서버이미지상품리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -6835,8 +7703,6 @@ Name | Type | Description  | Notes
 > GetServerInstanceListResponse getServerInstanceListGet(getServerInstanceListRequest)
 
 
-
-서버인스턴스리스트조회
 
 ### Example
 ```java
@@ -6903,8 +7769,6 @@ Name | Type | Description  | Notes
 
 
 
-서버인스턴스리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -6969,8 +7833,6 @@ Name | Type | Description  | Notes
 > GetServerProductListResponse getServerProductListGet(getServerProductListRequest)
 
 
-
-서버상품리스트조회
 
 ### Example
 ```java
@@ -7037,8 +7899,6 @@ Name | Type | Description  | Notes
 
 
 
-서버상품리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -7103,8 +7963,6 @@ Name | Type | Description  | Notes
 > GetZoneListResponse getZoneListGet(getZoneListRequest)
 
 
-
-ZONE리스트조회
 
 ### Example
 ```java
@@ -7171,8 +8029,6 @@ Name | Type | Description  | Notes
 
 
 
-ZONE리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -7237,8 +8093,6 @@ Name | Type | Description  | Notes
 > ImportLoginKeyResponse importLoginKeyGet(importLoginKeyRequest)
 
 
-
-로그인키IMPORT
 
 ### Example
 ```java
@@ -7305,8 +8159,6 @@ Name | Type | Description  | Notes
 
 
 
-로그인키IMPORT
-
 ### Example
 ```java
 // Import classes:
@@ -7366,13 +8218,141 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="interruptServerInstanceGet"></a>
+# **interruptServerInstanceGet**
+> InterruptServerInstanceResponse interruptServerInstanceGet(interruptServerInstanceRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+InterruptServerInstanceRequest interruptServerInstanceRequest = new InterruptServerInstanceRequest(); // InterruptServerInstanceRequest | 
+try {
+	// Handler Successful response
+	ApiResponse<InterruptServerInstanceResponse> result = apiInstance.interruptServerInstanceGet(interruptServerInstanceRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **interruptServerInstanceRequest** | [**InterruptServerInstanceRequest**](InterruptServerInstanceRequest.md)|  |
+
+### Return type
+
+[**InterruptServerInstanceResponse**](InterruptServerInstanceResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="interruptServerInstancePost"></a>
+# **interruptServerInstancePost**
+> InterruptServerInstanceResponse interruptServerInstancePost(interruptServerInstanceRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+InterruptServerInstanceRequest interruptServerInstanceRequest = new InterruptServerInstanceRequest(); // InterruptServerInstanceRequest | 
+try {
+	// Handler Successful response
+	ApiResponse<InterruptServerInstanceResponse> result = apiInstance.interruptServerInstancePost(interruptServerInstanceRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **interruptServerInstanceRequest** | [**InterruptServerInstanceRequest**](InterruptServerInstanceRequest.md)|  |
+
+### Return type
+
+[**InterruptServerInstanceResponse**](InterruptServerInstanceResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 <a name="rebootServerInstancesGet"></a>
 # **rebootServerInstancesGet**
 > RebootServerInstancesResponse rebootServerInstancesGet(rebootServerInstancesRequest)
 
 
-
-서버인스턴스재시작
 
 ### Example
 ```java
@@ -7439,8 +8419,6 @@ Name | Type | Description  | Notes
 
 
 
-서버인스턴스재시작
-
 ### Example
 ```java
 // Import classes:
@@ -7505,8 +8483,6 @@ Name | Type | Description  | Notes
 > RecreateServerInstanceResponse recreateServerInstanceGet(recreateServerInstanceRequest)
 
 
-
-서버인스턴스재생성
 
 ### Example
 ```java
@@ -7573,8 +8549,6 @@ Name | Type | Description  | Notes
 
 
 
-서버인스턴스재생성
-
 ### Example
 ```java
 // Import classes:
@@ -7634,13 +8608,141 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="removeMemberServerImageSharingPermissionGet"></a>
+# **removeMemberServerImageSharingPermissionGet**
+> RemoveMemberServerImageSharingPermissionResponse removeMemberServerImageSharingPermissionGet(removeMemberServerImageSharingPermissionRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+RemoveMemberServerImageSharingPermissionRequest removeMemberServerImageSharingPermissionRequest = new RemoveMemberServerImageSharingPermissionRequest(); // RemoveMemberServerImageSharingPermissionRequest | removeMemberServerImageSharingPermissionRequest
+try {
+	// Handler Successful response
+	ApiResponse<RemoveMemberServerImageSharingPermissionResponse> result = apiInstance.removeMemberServerImageSharingPermissionGet(removeMemberServerImageSharingPermissionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **removeMemberServerImageSharingPermissionRequest** | [**RemoveMemberServerImageSharingPermissionRequest**](RemoveMemberServerImageSharingPermissionRequest.md)| removeMemberServerImageSharingPermissionRequest |
+
+### Return type
+
+[**RemoveMemberServerImageSharingPermissionResponse**](RemoveMemberServerImageSharingPermissionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="removeMemberServerImageSharingPermissionPost"></a>
+# **removeMemberServerImageSharingPermissionPost**
+> RemoveMemberServerImageSharingPermissionResponse removeMemberServerImageSharingPermissionPost(removeMemberServerImageSharingPermissionRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+RemoveMemberServerImageSharingPermissionRequest removeMemberServerImageSharingPermissionRequest = new RemoveMemberServerImageSharingPermissionRequest(); // RemoveMemberServerImageSharingPermissionRequest | removeMemberServerImageSharingPermissionRequest
+try {
+	// Handler Successful response
+	ApiResponse<RemoveMemberServerImageSharingPermissionResponse> result = apiInstance.removeMemberServerImageSharingPermissionPost(removeMemberServerImageSharingPermissionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **removeMemberServerImageSharingPermissionRequest** | [**RemoveMemberServerImageSharingPermissionRequest**](RemoveMemberServerImageSharingPermissionRequest.md)| removeMemberServerImageSharingPermissionRequest |
+
+### Return type
+
+[**RemoveMemberServerImageSharingPermissionResponse**](RemoveMemberServerImageSharingPermissionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="removeNasVolumeAccessControlGet"></a>
 # **removeNasVolumeAccessControlGet**
 > RemoveNasVolumeAccessControlResponse removeNasVolumeAccessControlGet(removeNasVolumeAccessControlRequest)
 
 
-
-NAS볼륨인스턴스접근제어제거
 
 ### Example
 ```java
@@ -7707,8 +8809,6 @@ Name | Type | Description  | Notes
 
 
 
-NAS볼륨인스턴스접근제어제거
-
 ### Example
 ```java
 // Import classes:
@@ -7773,8 +8873,6 @@ Name | Type | Description  | Notes
 > ReplaceServerInstanceAssociatedWithPublicIpResponse replaceServerInstanceAssociatedWithPublicIpGet(replaceServerInstanceAssociatedWithPublicIpRequest)
 
 
-
-공인IP서버인스턴스교체
 
 ### Example
 ```java
@@ -7841,8 +8939,6 @@ Name | Type | Description  | Notes
 
 
 
-공인IP서버인스턴스교체
-
 ### Example
 ```java
 // Import classes:
@@ -7902,13 +8998,271 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="restoreNasVolumeWithSnapshotGet"></a>
+# **restoreNasVolumeWithSnapshotGet**
+> RestoreNasVolumeWithSnapshotResponse restoreNasVolumeWithSnapshotGet(restoreNasVolumeWithSnapshotRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+RestoreNasVolumeWithSnapshotRequest restoreNasVolumeWithSnapshotRequest = new RestoreNasVolumeWithSnapshotRequest(); // RestoreNasVolumeWithSnapshotRequest | restoreNasVolumeWithSnapshotRequest
+try {
+	// Handler Successful response
+	ApiResponse<RestoreNasVolumeWithSnapshotResponse> result = apiInstance.restoreNasVolumeWithSnapshotGet(restoreNasVolumeWithSnapshotRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **restoreNasVolumeWithSnapshotRequest** | [**RestoreNasVolumeWithSnapshotRequest**](RestoreNasVolumeWithSnapshotRequest.md)| restoreNasVolumeWithSnapshotRequest |
+
+### Return type
+
+[**RestoreNasVolumeWithSnapshotResponse**](RestoreNasVolumeWithSnapshotResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="restoreNasVolumeWithSnapshotPost"></a>
+# **restoreNasVolumeWithSnapshotPost**
+> RestoreNasVolumeWithSnapshotResponse restoreNasVolumeWithSnapshotPost(restoreNasVolumeWithSnapshotRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+RestoreNasVolumeWithSnapshotRequest restoreNasVolumeWithSnapshotRequest = new RestoreNasVolumeWithSnapshotRequest(); // RestoreNasVolumeWithSnapshotRequest | restoreNasVolumeWithSnapshotRequest
+try {
+	// Handler Successful response
+	ApiResponse<RestoreNasVolumeWithSnapshotResponse> result = apiInstance.restoreNasVolumeWithSnapshotPost(restoreNasVolumeWithSnapshotRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **restoreNasVolumeWithSnapshotRequest** | [**RestoreNasVolumeWithSnapshotRequest**](RestoreNasVolumeWithSnapshotRequest.md)| restoreNasVolumeWithSnapshotRequest |
+
+### Return type
+
+[**RestoreNasVolumeWithSnapshotResponse**](RestoreNasVolumeWithSnapshotResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="setMemberServerImageSharingPermissionGet"></a>
+# **setMemberServerImageSharingPermissionGet**
+> SetMemberServerImageSharingPermissionResponse setMemberServerImageSharingPermissionGet(setMemberServerImageSharingPermissionRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+SetMemberServerImageSharingPermissionRequest setMemberServerImageSharingPermissionRequest = new SetMemberServerImageSharingPermissionRequest(); // SetMemberServerImageSharingPermissionRequest | setMemberServerImageSharingPermissionRequest
+try {
+	// Handler Successful response
+	ApiResponse<SetMemberServerImageSharingPermissionResponse> result = apiInstance.setMemberServerImageSharingPermissionGet(setMemberServerImageSharingPermissionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setMemberServerImageSharingPermissionRequest** | [**SetMemberServerImageSharingPermissionRequest**](SetMemberServerImageSharingPermissionRequest.md)| setMemberServerImageSharingPermissionRequest |
+
+### Return type
+
+[**SetMemberServerImageSharingPermissionResponse**](SetMemberServerImageSharingPermissionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="setMemberServerImageSharingPermissionPost"></a>
+# **setMemberServerImageSharingPermissionPost**
+> SetMemberServerImageSharingPermissionResponse setMemberServerImageSharingPermissionPost(setMemberServerImageSharingPermissionRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+SetMemberServerImageSharingPermissionRequest setMemberServerImageSharingPermissionRequest = new SetMemberServerImageSharingPermissionRequest(); // SetMemberServerImageSharingPermissionRequest | setMemberServerImageSharingPermissionRequest
+try {
+	// Handler Successful response
+	ApiResponse<SetMemberServerImageSharingPermissionResponse> result = apiInstance.setMemberServerImageSharingPermissionPost(setMemberServerImageSharingPermissionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setMemberServerImageSharingPermissionRequest** | [**SetMemberServerImageSharingPermissionRequest**](SetMemberServerImageSharingPermissionRequest.md)| setMemberServerImageSharingPermissionRequest |
+
+### Return type
+
+[**SetMemberServerImageSharingPermissionResponse**](SetMemberServerImageSharingPermissionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="setNasVolumeAccessControlGet"></a>
 # **setNasVolumeAccessControlGet**
 > SetNasVolumeAccessControlResponse setNasVolumeAccessControlGet(setNasVolumeAccessControlRequest)
 
 
-
-NAS볼륨인스턴스접근제어설정
 
 ### Example
 ```java
@@ -7975,8 +9329,6 @@ Name | Type | Description  | Notes
 
 
 
-NAS볼륨인스턴스접근제어설정
-
 ### Example
 ```java
 // Import classes:
@@ -8036,13 +9388,271 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="setNasVolumeReturnProtectionGet"></a>
+# **setNasVolumeReturnProtectionGet**
+> SetNasVolumeReturnProtectionResponse setNasVolumeReturnProtectionGet(setNasVolumeReturnProtectionRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+SetNasVolumeReturnProtectionRequest setNasVolumeReturnProtectionRequest = new SetNasVolumeReturnProtectionRequest(); // SetNasVolumeReturnProtectionRequest | setNasVolumeReturnProtectionRequest
+try {
+	// Handler Successful response
+	ApiResponse<SetNasVolumeReturnProtectionResponse> result = apiInstance.setNasVolumeReturnProtectionGet(setNasVolumeReturnProtectionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setNasVolumeReturnProtectionRequest** | [**SetNasVolumeReturnProtectionRequest**](SetNasVolumeReturnProtectionRequest.md)| setNasVolumeReturnProtectionRequest |
+
+### Return type
+
+[**SetNasVolumeReturnProtectionResponse**](SetNasVolumeReturnProtectionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="setNasVolumeReturnProtectionPost"></a>
+# **setNasVolumeReturnProtectionPost**
+> SetNasVolumeReturnProtectionResponse setNasVolumeReturnProtectionPost(setNasVolumeReturnProtectionRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+SetNasVolumeReturnProtectionRequest setNasVolumeReturnProtectionRequest = new SetNasVolumeReturnProtectionRequest(); // SetNasVolumeReturnProtectionRequest | setNasVolumeReturnProtectionRequest
+try {
+	// Handler Successful response
+	ApiResponse<SetNasVolumeReturnProtectionResponse> result = apiInstance.setNasVolumeReturnProtectionPost(setNasVolumeReturnProtectionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setNasVolumeReturnProtectionRequest** | [**SetNasVolumeReturnProtectionRequest**](SetNasVolumeReturnProtectionRequest.md)| setNasVolumeReturnProtectionRequest |
+
+### Return type
+
+[**SetNasVolumeReturnProtectionResponse**](SetNasVolumeReturnProtectionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="setProtectServerTerminationGet"></a>
+# **setProtectServerTerminationGet**
+> SetProtectServerTerminationResponse setProtectServerTerminationGet(setProtectServerTerminationRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+SetProtectServerTerminationRequest setProtectServerTerminationRequest = new SetProtectServerTerminationRequest(); // SetProtectServerTerminationRequest | setProtectServerTerminationRequest
+try {
+	// Handler Successful response
+	ApiResponse<SetProtectServerTerminationResponse> result = apiInstance.setProtectServerTerminationGet(setProtectServerTerminationRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setProtectServerTerminationRequest** | [**SetProtectServerTerminationRequest**](SetProtectServerTerminationRequest.md)| setProtectServerTerminationRequest |
+
+### Return type
+
+[**SetProtectServerTerminationResponse**](SetProtectServerTerminationResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="setProtectServerTerminationPost"></a>
+# **setProtectServerTerminationPost**
+> SetProtectServerTerminationResponse setProtectServerTerminationPost(setProtectServerTerminationRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.server.ApiClient;
+// import com.ncloud.server.ApiResponse;
+// import com.ncloud.server.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.server.marshaller.JsonMarshaller;
+// import com.ncloud.server.marshaller.XmlMarshaller;
+// import com.ncloud.server.marshaller.FormMarshaller;
+// import com.ncloud.server.exception.ApiException;
+// import com.ncloud.server.exception.SdkException;
+// import com.ncloud.server.model.*;
+
+// import com.ncloud.server.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+SetProtectServerTerminationRequest setProtectServerTerminationRequest = new SetProtectServerTerminationRequest(); // SetProtectServerTerminationRequest | setProtectServerTerminationRequest
+try {
+	// Handler Successful response
+	ApiResponse<SetProtectServerTerminationResponse> result = apiInstance.setProtectServerTerminationPost(setProtectServerTerminationRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **setProtectServerTerminationRequest** | [**SetProtectServerTerminationRequest**](SetProtectServerTerminationRequest.md)| setProtectServerTerminationRequest |
+
+### Return type
+
+[**SetProtectServerTerminationResponse**](SetProtectServerTerminationResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="startServerInstancesGet"></a>
 # **startServerInstancesGet**
 > StartServerInstancesResponse startServerInstancesGet(startServerInstancesRequest)
 
 
-
-서버인스턴스시작
 
 ### Example
 ```java
@@ -8109,8 +9719,6 @@ Name | Type | Description  | Notes
 
 
 
-서버인스턴스시작
-
 ### Example
 ```java
 // Import classes:
@@ -8175,8 +9783,6 @@ Name | Type | Description  | Notes
 > StopServerInstancesResponse stopServerInstancesGet(stopServerInstancesRequest)
 
 
-
-서버인스턴스종료
 
 ### Example
 ```java
@@ -8243,8 +9849,6 @@ Name | Type | Description  | Notes
 
 
 
-서버인스턴스종료
-
 ### Example
 ```java
 // Import classes:
@@ -8310,8 +9914,6 @@ Name | Type | Description  | Notes
 
 
 
-서버인스턴스반납
-
 ### Example
 ```java
 // Import classes:
@@ -8376,8 +9978,6 @@ Name | Type | Description  | Notes
 > TerminateServerInstancesResponse terminateServerInstancesPost(terminateServerInstancesRequest)
 
 
-
-서버인스턴스반납
 
 ### Example
 ```java

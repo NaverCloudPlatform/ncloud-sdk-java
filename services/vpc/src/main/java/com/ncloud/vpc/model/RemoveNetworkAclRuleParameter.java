@@ -20,6 +20,8 @@ import java.util.Objects;
 public class RemoveNetworkAclRuleParameter {
 	private String ipBlock = null;
 
+	private String denyAllowGroupNo = null;
+
 	private String ruleActionCode = null;
 
 	private String portRange = null;
@@ -43,6 +45,23 @@ public class RemoveNetworkAclRuleParameter {
 
 	public void setIpBlock(String ipBlock) {
 		this.ipBlock = ipBlock;
+	}
+
+	public RemoveNetworkAclRuleParameter denyAllowGroupNo(String denyAllowGroupNo) {
+		this.denyAllowGroupNo = denyAllowGroupNo;
+		return this;
+	}
+
+	 /**
+	 * 허용차단그룹번호
+	 * @return denyAllowGroupNo
+	**/
+	public String getDenyAllowGroupNo() {
+		return denyAllowGroupNo;
+	}
+
+	public void setDenyAllowGroupNo(String denyAllowGroupNo) {
+		this.denyAllowGroupNo = denyAllowGroupNo;
 	}
 
 	public RemoveNetworkAclRuleParameter ruleActionCode(String ruleActionCode) {
@@ -124,6 +143,7 @@ public class RemoveNetworkAclRuleParameter {
 		}
 		RemoveNetworkAclRuleParameter removeNetworkAclRuleParameter = (RemoveNetworkAclRuleParameter) o;
 		return Objects.equals(this.ipBlock, removeNetworkAclRuleParameter.ipBlock) &&
+				Objects.equals(this.denyAllowGroupNo, removeNetworkAclRuleParameter.denyAllowGroupNo) &&
 				Objects.equals(this.ruleActionCode, removeNetworkAclRuleParameter.ruleActionCode) &&
 				Objects.equals(this.portRange, removeNetworkAclRuleParameter.portRange) &&
 				Objects.equals(this.priority, removeNetworkAclRuleParameter.priority) &&
@@ -132,7 +152,7 @@ public class RemoveNetworkAclRuleParameter {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(ipBlock, ruleActionCode, portRange, priority, protocolTypeCode);
+		return Objects.hash(ipBlock, denyAllowGroupNo, ruleActionCode, portRange, priority, protocolTypeCode);
 	}
 
 
@@ -142,6 +162,7 @@ public class RemoveNetworkAclRuleParameter {
 		sb.append("class RemoveNetworkAclRuleParameter {\n");
 		
 		sb.append("		ipBlock: ").append(toIndentedString(ipBlock)).append("\n");
+		sb.append("		denyAllowGroupNo: ").append(toIndentedString(denyAllowGroupNo)).append("\n");
 		sb.append("		ruleActionCode: ").append(toIndentedString(ruleActionCode)).append("\n");
 		sb.append("		portRange: ").append(toIndentedString(portRange)).append("\n");
 		sb.append("		priority: ").append(toIndentedString(priority)).append("\n");

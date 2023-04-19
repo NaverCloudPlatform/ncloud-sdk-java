@@ -34,6 +34,14 @@ public class GetNatGatewayInstanceListRequest {
 
 	private String natGatewayInstanceStatusCode = null;
 
+	private String natGatewayTypeCode = null;
+
+	private String subnetNo = null;
+
+	private String subnetName = null;
+
+	private String privateIp = null;
+
 	private Integer pageNo = null;
 
 	private Integer pageSize = null;
@@ -167,6 +175,74 @@ public class GetNatGatewayInstanceListRequest {
 		this.natGatewayInstanceStatusCode = natGatewayInstanceStatusCode;
 	}
 
+	public GetNatGatewayInstanceListRequest natGatewayTypeCode(String natGatewayTypeCode) {
+		this.natGatewayTypeCode = natGatewayTypeCode;
+		return this;
+	}
+
+	 /**
+	 * NATGateway유형 (PRVT / PBLIP)
+	 * @return natGatewayTypeCode
+	**/
+	public String getNatGatewayTypeCode() {
+		return natGatewayTypeCode;
+	}
+
+	public void setNatGatewayTypeCode(String natGatewayTypeCode) {
+		this.natGatewayTypeCode = natGatewayTypeCode;
+	}
+
+	public GetNatGatewayInstanceListRequest subnetNo(String subnetNo) {
+		this.subnetNo = subnetNo;
+		return this;
+	}
+
+	 /**
+	 * Subnet번호
+	 * @return subnetNo
+	**/
+	public String getSubnetNo() {
+		return subnetNo;
+	}
+
+	public void setSubnetNo(String subnetNo) {
+		this.subnetNo = subnetNo;
+	}
+
+	public GetNatGatewayInstanceListRequest subnetName(String subnetName) {
+		this.subnetName = subnetName;
+		return this;
+	}
+
+	 /**
+	 * Subnet이름
+	 * @return subnetName
+	**/
+	public String getSubnetName() {
+		return subnetName;
+	}
+
+	public void setSubnetName(String subnetName) {
+		this.subnetName = subnetName;
+	}
+
+	public GetNatGatewayInstanceListRequest privateIp(String privateIp) {
+		this.privateIp = privateIp;
+		return this;
+	}
+
+	 /**
+	 * 사설IP주소
+	 * @return privateIp
+	**/
+	public String getPrivateIp() {
+		return privateIp;
+	}
+
+	public void setPrivateIp(String privateIp) {
+		this.privateIp = privateIp;
+	}
+
 	public GetNatGatewayInstanceListRequest pageNo(Integer pageNo) {
 		this.pageNo = pageNo;
 		return this;
@@ -235,6 +311,10 @@ public class GetNatGatewayInstanceListRequest {
 				Objects.equals(this.vpcName, getNatGatewayInstanceListRequest.vpcName) &&
 				Objects.equals(this.natGatewayName, getNatGatewayInstanceListRequest.natGatewayName) &&
 				Objects.equals(this.natGatewayInstanceStatusCode, getNatGatewayInstanceListRequest.natGatewayInstanceStatusCode) &&
+				Objects.equals(this.natGatewayTypeCode, getNatGatewayInstanceListRequest.natGatewayTypeCode) &&
+				Objects.equals(this.subnetNo, getNatGatewayInstanceListRequest.subnetNo) &&
+				Objects.equals(this.subnetName, getNatGatewayInstanceListRequest.subnetName) &&
+				Objects.equals(this.privateIp, getNatGatewayInstanceListRequest.privateIp) &&
 				Objects.equals(this.pageNo, getNatGatewayInstanceListRequest.pageNo) &&
 				Objects.equals(this.pageSize, getNatGatewayInstanceListRequest.pageSize) &&
 				Objects.equals(this.responseFormatType, getNatGatewayInstanceListRequest.responseFormatType);
@@ -242,7 +322,7 @@ public class GetNatGatewayInstanceListRequest {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, zoneCode, natGatewayInstanceNoList, publicIp, vpcName, natGatewayName, natGatewayInstanceStatusCode, pageNo, pageSize, responseFormatType);
+		return Objects.hash(regionCode, zoneCode, natGatewayInstanceNoList, publicIp, vpcName, natGatewayName, natGatewayInstanceStatusCode, natGatewayTypeCode, subnetNo, subnetName, privateIp, pageNo, pageSize, responseFormatType);
 	}
 
 
@@ -258,6 +338,10 @@ public class GetNatGatewayInstanceListRequest {
 		sb.append("		vpcName: ").append(toIndentedString(vpcName)).append("\n");
 		sb.append("		natGatewayName: ").append(toIndentedString(natGatewayName)).append("\n");
 		sb.append("		natGatewayInstanceStatusCode: ").append(toIndentedString(natGatewayInstanceStatusCode)).append("\n");
+		sb.append("		natGatewayTypeCode: ").append(toIndentedString(natGatewayTypeCode)).append("\n");
+		sb.append("		subnetNo: ").append(toIndentedString(subnetNo)).append("\n");
+		sb.append("		subnetName: ").append(toIndentedString(subnetName)).append("\n");
+		sb.append("		privateIp: ").append(toIndentedString(privateIp)).append("\n");
 		sb.append("		pageNo: ").append(toIndentedString(pageNo)).append("\n");
 		sb.append("		pageSize: ").append(toIndentedString(pageSize)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");

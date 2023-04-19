@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **serverInstanceNo** | **String** | 서버인스턴스번호 | 
 **blockStorageSnapshotInstanceNo** | **String** | 블록스토리지스냅샷인스턴스번호 |  [optional]
 **zoneCode** | **String** | ZONE코드 |  [optional]
+**isReturnProtection** | **Boolean** | 반납보호여부 |  [optional]
 **responseFormatType** | **String** | responseFormatType {json, xml} |  [optional]
 
 

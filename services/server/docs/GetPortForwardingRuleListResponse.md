@@ -4,10 +4,9 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**portForwardingConfigurationNo** | **String** | 포트포워딩설정번호 |  [optional]
-**portForwardingPublicIp** | **String** | 포트포워딩공인IP |  [optional]
-**zone** | [**Zone**](Zone.md) | ZONE객체 |  [optional]
-**internetLineType** | [**CommonCode**](CommonCode.md) | 인터넷라인구분 |  [optional]
+**requestId** | **String** |  |  [optional]
+**returnCode** | **String** |  |  [optional]
+**returnMessage** | **String** |  |  [optional]
 **totalRows** | **Integer** |  |  [optional]
 **portForwardingRuleList** | [**List&lt;PortForwardingRule&gt;**](PortForwardingRule.md) |  |  [optional]
 

@@ -24,7 +24,7 @@ public class RemoveNasVolumeAccessControlRequest {
 
 	private String nasVolumeInstanceNo = null;
 
-	private List<String> serverInstanceNoList = new ArrayList<String>();
+	private List<String> serverInstanceNoList = null;
 
 	private String responseFormatType = null;
 
@@ -68,6 +68,9 @@ public class RemoveNasVolumeAccessControlRequest {
 	}
 
 	public RemoveNasVolumeAccessControlRequest addServerInstanceNoListItem(String serverInstanceNoListItem) {
+		if (this.serverInstanceNoList == null) {
+			this.serverInstanceNoList = new ArrayList<String>();
+		}
 		this.serverInstanceNoList.add(serverInstanceNoListItem);
 		return this;
 	}

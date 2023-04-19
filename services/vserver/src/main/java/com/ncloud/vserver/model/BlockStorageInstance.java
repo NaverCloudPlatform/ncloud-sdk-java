@@ -55,6 +55,8 @@ public class BlockStorageInstance {
 
 	private String regionCode = null;
 
+	private Boolean isReturnProtection = null;
+
 	public BlockStorageInstance blockStorageInstanceNo(String blockStorageInstanceNo) {
 		this.blockStorageInstanceNo = blockStorageInstanceNo;
 		return this;
@@ -361,6 +363,23 @@ public class BlockStorageInstance {
 		this.regionCode = regionCode;
 	}
 
+	public BlockStorageInstance isReturnProtection(Boolean isReturnProtection) {
+		this.isReturnProtection = isReturnProtection;
+		return this;
+	}
+
+	 /**
+	 * 반납보호여부
+	 * @return isReturnProtection
+	**/
+	public Boolean isIsReturnProtection() {
+		return isReturnProtection;
+	}
+
+	public void setIsReturnProtection(Boolean isReturnProtection) {
+		this.isReturnProtection = isReturnProtection;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -388,12 +407,13 @@ public class BlockStorageInstance {
 				Objects.equals(this.maxIopsThroughput, blockStorageInstance.maxIopsThroughput) &&
 				Objects.equals(this.isEncryptedVolume, blockStorageInstance.isEncryptedVolume) &&
 				Objects.equals(this.zoneCode, blockStorageInstance.zoneCode) &&
-				Objects.equals(this.regionCode, blockStorageInstance.regionCode);
+				Objects.equals(this.regionCode, blockStorageInstance.regionCode) &&
+				Objects.equals(this.isReturnProtection, blockStorageInstance.isReturnProtection);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(blockStorageInstanceNo, serverInstanceNo, blockStorageName, blockStorageType, blockStorageSize, deviceName, blockStorageProductCode, blockStorageInstanceStatus, blockStorageInstanceOperation, blockStorageInstanceStatusName, createDate, blockStorageDescription, blockStorageDiskType, blockStorageDiskDetailType, maxIopsThroughput, isEncryptedVolume, zoneCode, regionCode);
+		return Objects.hash(blockStorageInstanceNo, serverInstanceNo, blockStorageName, blockStorageType, blockStorageSize, deviceName, blockStorageProductCode, blockStorageInstanceStatus, blockStorageInstanceOperation, blockStorageInstanceStatusName, createDate, blockStorageDescription, blockStorageDiskType, blockStorageDiskDetailType, maxIopsThroughput, isEncryptedVolume, zoneCode, regionCode, isReturnProtection);
 	}
 
 
@@ -420,6 +440,7 @@ public class BlockStorageInstance {
 		sb.append("		isEncryptedVolume: ").append(toIndentedString(isEncryptedVolume)).append("\n");
 		sb.append("		zoneCode: ").append(toIndentedString(zoneCode)).append("\n");
 		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
+		sb.append("		isReturnProtection: ").append(toIndentedString(isReturnProtection)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

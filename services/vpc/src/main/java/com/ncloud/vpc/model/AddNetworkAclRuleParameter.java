@@ -22,6 +22,8 @@ public class AddNetworkAclRuleParameter {
 
 	private String ipBlock = null;
 
+	private String denyAllowGroupNo = null;
+
 	private String ruleActionCode = null;
 
 	private String portRange = null;
@@ -62,6 +64,23 @@ public class AddNetworkAclRuleParameter {
 
 	public void setIpBlock(String ipBlock) {
 		this.ipBlock = ipBlock;
+	}
+
+	public AddNetworkAclRuleParameter denyAllowGroupNo(String denyAllowGroupNo) {
+		this.denyAllowGroupNo = denyAllowGroupNo;
+		return this;
+	}
+
+	 /**
+	 * 허용차단그룹번호
+	 * @return denyAllowGroupNo
+	**/
+	public String getDenyAllowGroupNo() {
+		return denyAllowGroupNo;
+	}
+
+	public void setDenyAllowGroupNo(String denyAllowGroupNo) {
+		this.denyAllowGroupNo = denyAllowGroupNo;
 	}
 
 	public AddNetworkAclRuleParameter ruleActionCode(String ruleActionCode) {
@@ -144,6 +163,7 @@ public class AddNetworkAclRuleParameter {
 		AddNetworkAclRuleParameter addNetworkAclRuleParameter = (AddNetworkAclRuleParameter) o;
 		return Objects.equals(this.networkAclRuleDescription, addNetworkAclRuleParameter.networkAclRuleDescription) &&
 				Objects.equals(this.ipBlock, addNetworkAclRuleParameter.ipBlock) &&
+				Objects.equals(this.denyAllowGroupNo, addNetworkAclRuleParameter.denyAllowGroupNo) &&
 				Objects.equals(this.ruleActionCode, addNetworkAclRuleParameter.ruleActionCode) &&
 				Objects.equals(this.portRange, addNetworkAclRuleParameter.portRange) &&
 				Objects.equals(this.priority, addNetworkAclRuleParameter.priority) &&
@@ -152,7 +172,7 @@ public class AddNetworkAclRuleParameter {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(networkAclRuleDescription, ipBlock, ruleActionCode, portRange, priority, protocolTypeCode);
+		return Objects.hash(networkAclRuleDescription, ipBlock, denyAllowGroupNo, ruleActionCode, portRange, priority, protocolTypeCode);
 	}
 
 
@@ -163,6 +183,7 @@ public class AddNetworkAclRuleParameter {
 		
 		sb.append("		networkAclRuleDescription: ").append(toIndentedString(networkAclRuleDescription)).append("\n");
 		sb.append("		ipBlock: ").append(toIndentedString(ipBlock)).append("\n");
+		sb.append("		denyAllowGroupNo: ").append(toIndentedString(denyAllowGroupNo)).append("\n");
 		sb.append("		ruleActionCode: ").append(toIndentedString(ruleActionCode)).append("\n");
 		sb.append("		portRange: ").append(toIndentedString(portRange)).append("\n");
 		sb.append("		priority: ").append(toIndentedString(priority)).append("\n");

@@ -13,7 +13,6 @@ Name | Type | Description | Notes
 **isProtectServerTermination** | **Boolean** | 반납보호여부 |  [optional]
 **serverCreateCount** | **Integer** | 서버생성갯수 |  [optional]
 **serverCreateStartNo** | **Integer** | 서버생성시작번호 |  [optional]
-**internetLineTypeCode** | **String** | 인터넷라인구분코드 |  [optional]
 **feeSystemTypeCode** | **String** | 요금제구분코드 |  [optional]
 **userData** | **String** | 사용자데이터 |  [optional]
 **initScriptNo** | **String** | 초기화스크립트번호 |  [optional]

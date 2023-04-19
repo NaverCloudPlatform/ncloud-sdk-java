@@ -39,6 +39,12 @@ public class BlockStorageSnapshotInstance {
 
 	private String blockStorageSnapshotDescription = null;
 
+	private CommonCode snapshotType = null;
+
+	private String baseSnapshotInstanceNo = null;
+
+	private Integer snapshotChainDepth = null;
+
 	public BlockStorageSnapshotInstance blockStorageSnapshotInstanceNo(String blockStorageSnapshotInstanceNo) {
 		this.blockStorageSnapshotInstanceNo = blockStorageSnapshotInstanceNo;
 		return this;
@@ -209,6 +215,57 @@ public class BlockStorageSnapshotInstance {
 		this.blockStorageSnapshotDescription = blockStorageSnapshotDescription;
 	}
 
+	public BlockStorageSnapshotInstance snapshotType(CommonCode snapshotType) {
+		this.snapshotType = snapshotType;
+		return this;
+	}
+
+	 /**
+	 * 스냅샷유형
+	 * @return snapshotType
+	**/
+	public CommonCode getSnapshotType() {
+		return snapshotType;
+	}
+
+	public void setSnapshotType(CommonCode snapshotType) {
+		this.snapshotType = snapshotType;
+	}
+
+	public BlockStorageSnapshotInstance baseSnapshotInstanceNo(String baseSnapshotInstanceNo) {
+		this.baseSnapshotInstanceNo = baseSnapshotInstanceNo;
+		return this;
+	}
+
+	 /**
+	 * 베이스스냅샷인스턴스번호
+	 * @return baseSnapshotInstanceNo
+	**/
+	public String getBaseSnapshotInstanceNo() {
+		return baseSnapshotInstanceNo;
+	}
+
+	public void setBaseSnapshotInstanceNo(String baseSnapshotInstanceNo) {
+		this.baseSnapshotInstanceNo = baseSnapshotInstanceNo;
+	}
+
+	public BlockStorageSnapshotInstance snapshotChainDepth(Integer snapshotChainDepth) {
+		this.snapshotChainDepth = snapshotChainDepth;
+		return this;
+	}
+
+	 /**
+	 * 스냅샷일련Depth
+	 * @return snapshotChainDepth
+	**/
+	public Integer getSnapshotChainDepth() {
+		return snapshotChainDepth;
+	}
+
+	public void setSnapshotChainDepth(Integer snapshotChainDepth) {
+		this.snapshotChainDepth = snapshotChainDepth;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -228,12 +285,15 @@ public class BlockStorageSnapshotInstance {
 				Objects.equals(this.blockStorageSnapshotInstanceStatusName, blockStorageSnapshotInstance.blockStorageSnapshotInstanceStatusName) &&
 				Objects.equals(this.createDate, blockStorageSnapshotInstance.createDate) &&
 				Objects.equals(this.isEncryptedOriginalBlockStorageVolume, blockStorageSnapshotInstance.isEncryptedOriginalBlockStorageVolume) &&
-				Objects.equals(this.blockStorageSnapshotDescription, blockStorageSnapshotInstance.blockStorageSnapshotDescription);
+				Objects.equals(this.blockStorageSnapshotDescription, blockStorageSnapshotInstance.blockStorageSnapshotDescription) &&
+				Objects.equals(this.snapshotType, blockStorageSnapshotInstance.snapshotType) &&
+				Objects.equals(this.baseSnapshotInstanceNo, blockStorageSnapshotInstance.baseSnapshotInstanceNo) &&
+				Objects.equals(this.snapshotChainDepth, blockStorageSnapshotInstance.snapshotChainDepth);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(blockStorageSnapshotInstanceNo, blockStorageSnapshotName, blockStorageSnapshotVolumeSize, originalBlockStorageInstanceNo, blockStorageSnapshotInstanceStatus, blockStorageSnapshotInstanceOperation, blockStorageSnapshotInstanceStatusName, createDate, isEncryptedOriginalBlockStorageVolume, blockStorageSnapshotDescription);
+		return Objects.hash(blockStorageSnapshotInstanceNo, blockStorageSnapshotName, blockStorageSnapshotVolumeSize, originalBlockStorageInstanceNo, blockStorageSnapshotInstanceStatus, blockStorageSnapshotInstanceOperation, blockStorageSnapshotInstanceStatusName, createDate, isEncryptedOriginalBlockStorageVolume, blockStorageSnapshotDescription, snapshotType, baseSnapshotInstanceNo, snapshotChainDepth);
 	}
 
 
@@ -252,6 +312,9 @@ public class BlockStorageSnapshotInstance {
 		sb.append("		createDate: ").append(toIndentedString(createDate)).append("\n");
 		sb.append("		isEncryptedOriginalBlockStorageVolume: ").append(toIndentedString(isEncryptedOriginalBlockStorageVolume)).append("\n");
 		sb.append("		blockStorageSnapshotDescription: ").append(toIndentedString(blockStorageSnapshotDescription)).append("\n");
+		sb.append("		snapshotType: ").append(toIndentedString(snapshotType)).append("\n");
+		sb.append("		baseSnapshotInstanceNo: ").append(toIndentedString(baseSnapshotInstanceNo)).append("\n");
+		sb.append("		snapshotChainDepth: ").append(toIndentedString(snapshotChainDepth)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

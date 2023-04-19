@@ -13,6 +13,7 @@
 package com.ncloud.vnas.model;
 
 import java.util.Objects;
+import com.ncloud.vnas.model.AccessControlRuleParameter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -24,7 +25,9 @@ public class AddNasVolumeAccessControlRequest {
 
 	private String nasVolumeInstanceNo = null;
 
-	private List<String> serverInstanceNoList = new ArrayList<String>();
+	private List<String> serverInstanceNoList = null;
+
+	private List<AccessControlRuleParameter> accessControlRuleList = null;
 
 	private String responseFormatType = null;
 
@@ -68,6 +71,9 @@ public class AddNasVolumeAccessControlRequest {
 	}
 
 	public AddNasVolumeAccessControlRequest addServerInstanceNoListItem(String serverInstanceNoListItem) {
+		if (this.serverInstanceNoList == null) {
+			this.serverInstanceNoList = new ArrayList<String>();
+		}
 		this.serverInstanceNoList.add(serverInstanceNoListItem);
 		return this;
 	}
@@ -82,6 +88,31 @@ public class AddNasVolumeAccessControlRequest {
 
 	public void setServerInstanceNoList(List<String> serverInstanceNoList) {
 		this.serverInstanceNoList = serverInstanceNoList;
+	}
+
+	public AddNasVolumeAccessControlRequest accessControlRuleList(List<AccessControlRuleParameter> accessControlRuleList) {
+		this.accessControlRuleList = accessControlRuleList;
+		return this;
+	}
+
+	public AddNasVolumeAccessControlRequest addAccessControlRuleListItem(AccessControlRuleParameter accessControlRuleListItem) {
+		if (this.accessControlRuleList == null) {
+			this.accessControlRuleList = new ArrayList<AccessControlRuleParameter>();
+		}
+		this.accessControlRuleList.add(accessControlRuleListItem);
+		return this;
+	}
+
+	 /**
+	 * 접근제어Rule리스트
+	 * @return accessControlRuleList
+	**/
+	public List<AccessControlRuleParameter> getAccessControlRuleList() {
+		return accessControlRuleList;
+	}
+
+	public void setAccessControlRuleList(List<AccessControlRuleParameter> accessControlRuleList) {
+		this.accessControlRuleList = accessControlRuleList;
 	}
 
 	public AddNasVolumeAccessControlRequest responseFormatType(String responseFormatType) {
@@ -114,12 +145,13 @@ public class AddNasVolumeAccessControlRequest {
 		return Objects.equals(this.regionCode, addNasVolumeAccessControlRequest.regionCode) &&
 				Objects.equals(this.nasVolumeInstanceNo, addNasVolumeAccessControlRequest.nasVolumeInstanceNo) &&
 				Objects.equals(this.serverInstanceNoList, addNasVolumeAccessControlRequest.serverInstanceNoList) &&
+				Objects.equals(this.accessControlRuleList, addNasVolumeAccessControlRequest.accessControlRuleList) &&
 				Objects.equals(this.responseFormatType, addNasVolumeAccessControlRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, nasVolumeInstanceNo, serverInstanceNoList, responseFormatType);
+		return Objects.hash(regionCode, nasVolumeInstanceNo, serverInstanceNoList, accessControlRuleList, responseFormatType);
 	}
 
 
@@ -131,6 +163,7 @@ public class AddNasVolumeAccessControlRequest {
 		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		nasVolumeInstanceNo: ").append(toIndentedString(nasVolumeInstanceNo)).append("\n");
 		sb.append("		serverInstanceNoList: ").append(toIndentedString(serverInstanceNoList)).append("\n");
+		sb.append("		accessControlRuleList: ").append(toIndentedString(accessControlRuleList)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

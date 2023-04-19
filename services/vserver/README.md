@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>vserver</artifactId>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/vserver-1.1.0.jar
+* target/vserver-1.1.1.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -113,10 +113,14 @@ Class | Method | HTTP request | Description
 *V2Api* | [**addAccessControlGroupInboundRulePost**](docs/V2Api.md#addAccessControlGroupInboundRulePost) | **POST** /addAccessControlGroupInboundRule | 
 *V2Api* | [**addAccessControlGroupOutboundRuleGet**](docs/V2Api.md#addAccessControlGroupOutboundRuleGet) | **GET** /addAccessControlGroupOutboundRule | 
 *V2Api* | [**addAccessControlGroupOutboundRulePost**](docs/V2Api.md#addAccessControlGroupOutboundRulePost) | **POST** /addAccessControlGroupOutboundRule | 
+*V2Api* | [**addMemberServerImageSharingPermissionGet**](docs/V2Api.md#addMemberServerImageSharingPermissionGet) | **GET** /addMemberServerImageSharingPermission | 
+*V2Api* | [**addMemberServerImageSharingPermissionPost**](docs/V2Api.md#addMemberServerImageSharingPermissionPost) | **POST** /addMemberServerImageSharingPermission | 
 *V2Api* | [**addNetworkInterfaceAccessControlGroupGet**](docs/V2Api.md#addNetworkInterfaceAccessControlGroupGet) | **GET** /addNetworkInterfaceAccessControlGroup | 
 *V2Api* | [**addNetworkInterfaceAccessControlGroupPost**](docs/V2Api.md#addNetworkInterfaceAccessControlGroupPost) | **POST** /addNetworkInterfaceAccessControlGroup | 
 *V2Api* | [**addPlacementGroupServerInstanceGet**](docs/V2Api.md#addPlacementGroupServerInstanceGet) | **GET** /addPlacementGroupServerInstance | 
 *V2Api* | [**addPlacementGroupServerInstancePost**](docs/V2Api.md#addPlacementGroupServerInstancePost) | **POST** /addPlacementGroupServerInstance | 
+*V2Api* | [**assignSecondaryIpsGet**](docs/V2Api.md#assignSecondaryIpsGet) | **GET** /assignSecondaryIps | 
+*V2Api* | [**assignSecondaryIpsPost**](docs/V2Api.md#assignSecondaryIpsPost) | **POST** /assignSecondaryIps | 
 *V2Api* | [**associatePublicIpWithServerInstanceGet**](docs/V2Api.md#associatePublicIpWithServerInstanceGet) | **GET** /associatePublicIpWithServerInstance | 
 *V2Api* | [**associatePublicIpWithServerInstancePost**](docs/V2Api.md#associatePublicIpWithServerInstancePost) | **POST** /associatePublicIpWithServerInstance | 
 *V2Api* | [**attachBlockStorageInstanceGet**](docs/V2Api.md#attachBlockStorageInstanceGet) | **GET** /attachBlockStorageInstance | 
@@ -209,6 +213,8 @@ Class | Method | HTTP request | Description
 *V2Api* | [**getPublicIpInstanceListPost**](docs/V2Api.md#getPublicIpInstanceListPost) | **POST** /getPublicIpInstanceList | 
 *V2Api* | [**getPublicIpTargetServerInstanceListGet**](docs/V2Api.md#getPublicIpTargetServerInstanceListGet) | **GET** /getPublicIpTargetServerInstanceList | 
 *V2Api* | [**getPublicIpTargetServerInstanceListPost**](docs/V2Api.md#getPublicIpTargetServerInstanceListPost) | **POST** /getPublicIpTargetServerInstanceList | 
+*V2Api* | [**getRaidListGet**](docs/V2Api.md#getRaidListGet) | **GET** /getRaidList | 
+*V2Api* | [**getRaidListPost**](docs/V2Api.md#getRaidListPost) | **POST** /getRaidList | 
 *V2Api* | [**getRegionListGet**](docs/V2Api.md#getRegionListGet) | **GET** /getRegionList | 
 *V2Api* | [**getRegionListPost**](docs/V2Api.md#getRegionListPost) | **POST** /getRegionList | 
 *V2Api* | [**getRootPasswordGet**](docs/V2Api.md#getRootPasswordGet) | **GET** /getRootPassword | 
@@ -227,22 +233,34 @@ Class | Method | HTTP request | Description
 *V2Api* | [**getZoneListPost**](docs/V2Api.md#getZoneListPost) | **POST** /getZoneList | 
 *V2Api* | [**importLoginKeyGet**](docs/V2Api.md#importLoginKeyGet) | **GET** /importLoginKey | 
 *V2Api* | [**importLoginKeyPost**](docs/V2Api.md#importLoginKeyPost) | **POST** /importLoginKey | 
+*V2Api* | [**interruptServerInstanceGet**](docs/V2Api.md#interruptServerInstanceGet) | **GET** /interruptServerInstance | 
+*V2Api* | [**interruptServerInstancePost**](docs/V2Api.md#interruptServerInstancePost) | **POST** /interruptServerInstance | 
 *V2Api* | [**rebootServerInstancesGet**](docs/V2Api.md#rebootServerInstancesGet) | **GET** /rebootServerInstances | 
 *V2Api* | [**rebootServerInstancesPost**](docs/V2Api.md#rebootServerInstancesPost) | **POST** /rebootServerInstances | 
 *V2Api* | [**removeAccessControlGroupInboundRuleGet**](docs/V2Api.md#removeAccessControlGroupInboundRuleGet) | **GET** /removeAccessControlGroupInboundRule | 
 *V2Api* | [**removeAccessControlGroupInboundRulePost**](docs/V2Api.md#removeAccessControlGroupInboundRulePost) | **POST** /removeAccessControlGroupInboundRule | 
 *V2Api* | [**removeAccessControlGroupOutboundRuleGet**](docs/V2Api.md#removeAccessControlGroupOutboundRuleGet) | **GET** /removeAccessControlGroupOutboundRule | 
 *V2Api* | [**removeAccessControlGroupOutboundRulePost**](docs/V2Api.md#removeAccessControlGroupOutboundRulePost) | **POST** /removeAccessControlGroupOutboundRule | 
+*V2Api* | [**removeMemberServerImageSharingPermissionGet**](docs/V2Api.md#removeMemberServerImageSharingPermissionGet) | **GET** /removeMemberServerImageSharingPermission | 
+*V2Api* | [**removeMemberServerImageSharingPermissionPost**](docs/V2Api.md#removeMemberServerImageSharingPermissionPost) | **POST** /removeMemberServerImageSharingPermission | 
 *V2Api* | [**removeNetworkInterfaceAccessControlGroupGet**](docs/V2Api.md#removeNetworkInterfaceAccessControlGroupGet) | **GET** /removeNetworkInterfaceAccessControlGroup | 
 *V2Api* | [**removeNetworkInterfaceAccessControlGroupPost**](docs/V2Api.md#removeNetworkInterfaceAccessControlGroupPost) | **POST** /removeNetworkInterfaceAccessControlGroup | 
 *V2Api* | [**removePlacementGroupServerInstanceGet**](docs/V2Api.md#removePlacementGroupServerInstanceGet) | **GET** /removePlacementGroupServerInstance | 
 *V2Api* | [**removePlacementGroupServerInstancePost**](docs/V2Api.md#removePlacementGroupServerInstancePost) | **POST** /removePlacementGroupServerInstance | 
+*V2Api* | [**setBlockStorageReturnProtectionGet**](docs/V2Api.md#setBlockStorageReturnProtectionGet) | **GET** /setBlockStorageReturnProtection | 
+*V2Api* | [**setBlockStorageReturnProtectionPost**](docs/V2Api.md#setBlockStorageReturnProtectionPost) | **POST** /setBlockStorageReturnProtection | 
+*V2Api* | [**setMemberServerImageSharingPermissionGet**](docs/V2Api.md#setMemberServerImageSharingPermissionGet) | **GET** /setMemberServerImageSharingPermission | 
+*V2Api* | [**setMemberServerImageSharingPermissionPost**](docs/V2Api.md#setMemberServerImageSharingPermissionPost) | **POST** /setMemberServerImageSharingPermission | 
+*V2Api* | [**setProtectServerTerminationGet**](docs/V2Api.md#setProtectServerTerminationGet) | **GET** /setProtectServerTermination | 
+*V2Api* | [**setProtectServerTerminationPost**](docs/V2Api.md#setProtectServerTerminationPost) | **POST** /setProtectServerTermination | 
 *V2Api* | [**startServerInstancesGet**](docs/V2Api.md#startServerInstancesGet) | **GET** /startServerInstances | 
 *V2Api* | [**startServerInstancesPost**](docs/V2Api.md#startServerInstancesPost) | **POST** /startServerInstances | 
 *V2Api* | [**stopServerInstancesGet**](docs/V2Api.md#stopServerInstancesGet) | **GET** /stopServerInstances | 
 *V2Api* | [**stopServerInstancesPost**](docs/V2Api.md#stopServerInstancesPost) | **POST** /stopServerInstances | 
 *V2Api* | [**terminateServerInstancesGet**](docs/V2Api.md#terminateServerInstancesGet) | **GET** /terminateServerInstances | 
 *V2Api* | [**terminateServerInstancesPost**](docs/V2Api.md#terminateServerInstancesPost) | **POST** /terminateServerInstances | 
+*V2Api* | [**unassignSecondaryIpsGet**](docs/V2Api.md#unassignSecondaryIpsGet) | **GET** /unassignSecondaryIps | 
+*V2Api* | [**unassignSecondaryIpsPost**](docs/V2Api.md#unassignSecondaryIpsPost) | **POST** /unassignSecondaryIps | 
 
 
 ## Documentation for Models
@@ -254,16 +272,21 @@ Class | Method | HTTP request | Description
  - [AddAccessControlGroupOutboundRuleRequest](docs/AddAccessControlGroupOutboundRuleRequest.md)
  - [AddAccessControlGroupOutboundRuleResponse](docs/AddAccessControlGroupOutboundRuleResponse.md)
  - [AddAccessControlGroupRuleParameter](docs/AddAccessControlGroupRuleParameter.md)
+ - [AddMemberServerImageSharingPermissionRequest](docs/AddMemberServerImageSharingPermissionRequest.md)
+ - [AddMemberServerImageSharingPermissionResponse](docs/AddMemberServerImageSharingPermissionResponse.md)
  - [AddNetworkInterfaceAccessControlGroupRequest](docs/AddNetworkInterfaceAccessControlGroupRequest.md)
  - [AddNetworkInterfaceAccessControlGroupResponse](docs/AddNetworkInterfaceAccessControlGroupResponse.md)
  - [AddPlacementGroupServerInstanceRequest](docs/AddPlacementGroupServerInstanceRequest.md)
  - [AddPlacementGroupServerInstanceResponse](docs/AddPlacementGroupServerInstanceResponse.md)
+ - [AssignSecondaryIpsRequest](docs/AssignSecondaryIpsRequest.md)
+ - [AssignSecondaryIpsResponse](docs/AssignSecondaryIpsResponse.md)
  - [AssociatePublicIpWithServerInstanceRequest](docs/AssociatePublicIpWithServerInstanceRequest.md)
  - [AssociatePublicIpWithServerInstanceResponse](docs/AssociatePublicIpWithServerInstanceResponse.md)
  - [AttachBlockStorageInstanceRequest](docs/AttachBlockStorageInstanceRequest.md)
  - [AttachBlockStorageInstanceResponse](docs/AttachBlockStorageInstanceResponse.md)
  - [AttachNetworkInterfaceRequest](docs/AttachNetworkInterfaceRequest.md)
  - [AttachNetworkInterfaceResponse](docs/AttachNetworkInterfaceResponse.md)
+ - [BlockDevicePartition](docs/BlockDevicePartition.md)
  - [BlockStorageInstance](docs/BlockStorageInstance.md)
  - [BlockStorageSnapshotInstance](docs/BlockStorageSnapshotInstance.md)
  - [ChangeBlockStorageVolumeSizeRequest](docs/ChangeBlockStorageVolumeSizeRequest.md)
@@ -353,6 +376,8 @@ Class | Method | HTTP request | Description
  - [GetPublicIpInstanceListResponse](docs/GetPublicIpInstanceListResponse.md)
  - [GetPublicIpTargetServerInstanceListRequest](docs/GetPublicIpTargetServerInstanceListRequest.md)
  - [GetPublicIpTargetServerInstanceListResponse](docs/GetPublicIpTargetServerInstanceListResponse.md)
+ - [GetRaidListRequest](docs/GetRaidListRequest.md)
+ - [GetRaidListResponse](docs/GetRaidListResponse.md)
  - [GetRegionListRequest](docs/GetRegionListRequest.md)
  - [GetRegionListResponse](docs/GetRegionListResponse.md)
  - [GetRootPasswordRequest](docs/GetRootPasswordRequest.md)
@@ -372,6 +397,8 @@ Class | Method | HTTP request | Description
  - [ImportLoginKeyRequest](docs/ImportLoginKeyRequest.md)
  - [ImportLoginKeyResponse](docs/ImportLoginKeyResponse.md)
  - [InitScript](docs/InitScript.md)
+ - [InterruptServerInstanceRequest](docs/InterruptServerInstanceRequest.md)
+ - [InterruptServerInstanceResponse](docs/InterruptServerInstanceResponse.md)
  - [LoginKey](docs/LoginKey.md)
  - [MemberServerImageInstance](docs/MemberServerImageInstance.md)
  - [NetworkInterface](docs/NetworkInterface.md)
@@ -379,6 +406,7 @@ Class | Method | HTTP request | Description
  - [PlacementGroup](docs/PlacementGroup.md)
  - [Product](docs/Product.md)
  - [PublicIpInstance](docs/PublicIpInstance.md)
+ - [Raid](docs/Raid.md)
  - [RebootServerInstancesRequest](docs/RebootServerInstancesRequest.md)
  - [RebootServerInstancesResponse](docs/RebootServerInstancesResponse.md)
  - [Region](docs/Region.md)
@@ -387,6 +415,8 @@ Class | Method | HTTP request | Description
  - [RemoveAccessControlGroupOutboundRuleRequest](docs/RemoveAccessControlGroupOutboundRuleRequest.md)
  - [RemoveAccessControlGroupOutboundRuleResponse](docs/RemoveAccessControlGroupOutboundRuleResponse.md)
  - [RemoveAccessControlGroupRuleParameter](docs/RemoveAccessControlGroupRuleParameter.md)
+ - [RemoveMemberServerImageSharingPermissionRequest](docs/RemoveMemberServerImageSharingPermissionRequest.md)
+ - [RemoveMemberServerImageSharingPermissionResponse](docs/RemoveMemberServerImageSharingPermissionResponse.md)
  - [RemoveNetworkInterfaceAccessControlGroupRequest](docs/RemoveNetworkInterfaceAccessControlGroupRequest.md)
  - [RemoveNetworkInterfaceAccessControlGroupResponse](docs/RemoveNetworkInterfaceAccessControlGroupResponse.md)
  - [RemovePlacementGroupServerInstanceRequest](docs/RemovePlacementGroupServerInstanceRequest.md)
@@ -394,12 +424,20 @@ Class | Method | HTTP request | Description
  - [RootPasswordServerInstance](docs/RootPasswordServerInstance.md)
  - [RootPasswordServerInstanceParameter](docs/RootPasswordServerInstanceParameter.md)
  - [ServerInstance](docs/ServerInstance.md)
+ - [SetBlockStorageReturnProtectionRequest](docs/SetBlockStorageReturnProtectionRequest.md)
+ - [SetBlockStorageReturnProtectionResponse](docs/SetBlockStorageReturnProtectionResponse.md)
+ - [SetMemberServerImageSharingPermissionRequest](docs/SetMemberServerImageSharingPermissionRequest.md)
+ - [SetMemberServerImageSharingPermissionResponse](docs/SetMemberServerImageSharingPermissionResponse.md)
+ - [SetProtectServerTerminationRequest](docs/SetProtectServerTerminationRequest.md)
+ - [SetProtectServerTerminationResponse](docs/SetProtectServerTerminationResponse.md)
  - [StartServerInstancesRequest](docs/StartServerInstancesRequest.md)
  - [StartServerInstancesResponse](docs/StartServerInstancesResponse.md)
  - [StopServerInstancesRequest](docs/StopServerInstancesRequest.md)
  - [StopServerInstancesResponse](docs/StopServerInstancesResponse.md)
  - [TerminateServerInstancesRequest](docs/TerminateServerInstancesRequest.md)
  - [TerminateServerInstancesResponse](docs/TerminateServerInstancesResponse.md)
+ - [UnassignSecondaryIpsRequest](docs/UnassignSecondaryIpsRequest.md)
+ - [UnassignSecondaryIpsResponse](docs/UnassignSecondaryIpsResponse.md)
  - [Zone](docs/Zone.md)
 
 

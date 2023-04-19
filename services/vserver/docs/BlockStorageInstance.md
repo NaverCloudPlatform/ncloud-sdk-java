@@ -22,6 +22,7 @@ Name | Type | Description | Notes
 **isEncryptedVolume** | **Boolean** | 볼륨암호화여부 |  [optional]
 **zoneCode** | **String** | ZONE코드 |  [optional]
 **regionCode** | **String** | REGION코드 |  [optional]
+**isReturnProtection** | **Boolean** | 반납보호여부 |  [optional]
 
 
 

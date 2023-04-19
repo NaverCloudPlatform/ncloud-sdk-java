@@ -32,6 +32,8 @@ import com.ncloud.vpc.model.AddRouteTableSubnetRequest;
 import com.ncloud.vpc.model.AddRouteTableSubnetResponse;
 import com.ncloud.vpc.model.CreateNatGatewayInstanceRequest;
 import com.ncloud.vpc.model.CreateNatGatewayInstanceResponse;
+import com.ncloud.vpc.model.CreateNetworkAclDenyAllowGroupRequest;
+import com.ncloud.vpc.model.CreateNetworkAclDenyAllowGroupResponse;
 import com.ncloud.vpc.model.CreateNetworkAclRequest;
 import com.ncloud.vpc.model.CreateNetworkAclResponse;
 import com.ncloud.vpc.model.CreateRouteTableRequest;
@@ -44,6 +46,8 @@ import com.ncloud.vpc.model.CreateVpcRequest;
 import com.ncloud.vpc.model.CreateVpcResponse;
 import com.ncloud.vpc.model.DeleteNatGatewayInstanceRequest;
 import com.ncloud.vpc.model.DeleteNatGatewayInstanceResponse;
+import com.ncloud.vpc.model.DeleteNetworkAclDenyAllowGroupRequest;
+import com.ncloud.vpc.model.DeleteNetworkAclDenyAllowGroupResponse;
 import com.ncloud.vpc.model.DeleteNetworkAclRequest;
 import com.ncloud.vpc.model.DeleteNetworkAclResponse;
 import com.ncloud.vpc.model.DeleteRouteTableRequest;
@@ -58,6 +62,10 @@ import com.ncloud.vpc.model.GetNatGatewayInstanceDetailRequest;
 import com.ncloud.vpc.model.GetNatGatewayInstanceDetailResponse;
 import com.ncloud.vpc.model.GetNatGatewayInstanceListRequest;
 import com.ncloud.vpc.model.GetNatGatewayInstanceListResponse;
+import com.ncloud.vpc.model.GetNetworkAclDenyAllowGroupDetailRequest;
+import com.ncloud.vpc.model.GetNetworkAclDenyAllowGroupDetailResponse;
+import com.ncloud.vpc.model.GetNetworkAclDenyAllowGroupListRequest;
+import com.ncloud.vpc.model.GetNetworkAclDenyAllowGroupListResponse;
 import com.ncloud.vpc.model.GetNetworkAclDetailRequest;
 import com.ncloud.vpc.model.GetNetworkAclDetailResponse;
 import com.ncloud.vpc.model.GetNetworkAclListRequest;
@@ -94,6 +102,10 @@ import com.ncloud.vpc.model.RemoveRouteTableSubnetRequest;
 import com.ncloud.vpc.model.RemoveRouteTableSubnetResponse;
 import com.ncloud.vpc.model.SetNatGatewayDescriptionRequest;
 import com.ncloud.vpc.model.SetNatGatewayDescriptionResponse;
+import com.ncloud.vpc.model.SetNetworkAclDenyAllowGroupDescriptionRequest;
+import com.ncloud.vpc.model.SetNetworkAclDenyAllowGroupDescriptionResponse;
+import com.ncloud.vpc.model.SetNetworkAclDenyAllowGroupIpListRequest;
+import com.ncloud.vpc.model.SetNetworkAclDenyAllowGroupIpListResponse;
 import com.ncloud.vpc.model.SetNetworkAclDescriptionRequest;
 import com.ncloud.vpc.model.SetNetworkAclDescriptionResponse;
 import com.ncloud.vpc.model.SetRouteTableDescriptionRequest;
@@ -119,7 +131,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering요청수락거절
+	 * 
 	 * @param acceptOrRejectVpcPeeringRequest acceptOrRejectVpcPeeringRequest (required)
 	 * @return AcceptOrRejectVpcPeeringResponse
 	 * @throws ApiException if fails to make API call
@@ -159,7 +171,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering요청수락거절
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -197,7 +209,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering요청수락거절
+	 * 
 	 * @param acceptOrRejectVpcPeeringRequest acceptOrRejectVpcPeeringRequest (required)
 	 * @return AcceptOrRejectVpcPeeringResponse
 	 * @throws ApiException if fails to make API call
@@ -237,7 +249,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering요청수락거절
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -275,7 +287,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLInboundRule추가
+	 * 
 	 * @param addNetworkAclInboundRuleRequest addNetworkAclInboundRuleRequest (required)
 	 * @return AddNetworkAclInboundRuleResponse
 	 * @throws ApiException if fails to make API call
@@ -315,7 +327,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLInboundRule추가
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -353,7 +365,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLInboundRule추가
+	 * 
 	 * @param addNetworkAclInboundRuleRequest addNetworkAclInboundRuleRequest (required)
 	 * @return AddNetworkAclInboundRuleResponse
 	 * @throws ApiException if fails to make API call
@@ -393,7 +405,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLInboundRule추가
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -431,7 +443,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule추가
+	 * 
 	 * @param addNetworkAclOutboundRuleRequest addNetworkAclOutboundRuleRequest (required)
 	 * @return AddNetworkAclOutboundRuleResponse
 	 * @throws ApiException if fails to make API call
@@ -471,7 +483,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule추가
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -509,7 +521,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule추가
+	 * 
 	 * @param addNetworkAclOutboundRuleRequest addNetworkAclOutboundRuleRequest (required)
 	 * @return AddNetworkAclOutboundRuleResponse
 	 * @throws ApiException if fails to make API call
@@ -549,7 +561,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule추가
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -587,7 +599,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트추가
+	 * 
 	 * @param addRouteRequest addRouteRequest (required)
 	 * @return AddRouteResponse
 	 * @throws ApiException if fails to make API call
@@ -627,7 +639,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트추가
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -665,7 +677,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트추가
+	 * 
 	 * @param addRouteRequest addRouteRequest (required)
 	 * @return AddRouteResponse
 	 * @throws ApiException if fails to make API call
@@ -705,7 +717,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트추가
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -743,7 +755,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷추가
+	 * 
 	 * @param addRouteTableSubnetRequest addRouteTableSubnetRequest (required)
 	 * @return AddRouteTableSubnetResponse
 	 * @throws ApiException if fails to make API call
@@ -783,7 +795,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷추가
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -821,7 +833,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷추가
+	 * 
 	 * @param addRouteTableSubnetRequest addRouteTableSubnetRequest (required)
 	 * @return AddRouteTableSubnetResponse
 	 * @throws ApiException if fails to make API call
@@ -861,7 +873,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷추가
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -899,7 +911,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스생성
+	 * 
 	 * @param createNatGatewayInstanceRequest createNatGatewayInstanceRequest (required)
 	 * @return CreateNatGatewayInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -939,7 +951,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -977,7 +989,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스생성
+	 * 
 	 * @param createNatGatewayInstanceRequest createNatGatewayInstanceRequest (required)
 	 * @return CreateNatGatewayInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -1017,7 +1029,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1055,7 +1067,163 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL생성
+	 * 
+	 * @param createNetworkAclDenyAllowGroupRequest createNetworkAclDenyAllowGroupRequest (required)
+	 * @return CreateNetworkAclDenyAllowGroupResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<CreateNetworkAclDenyAllowGroupResponse> createNetworkAclDenyAllowGroupGet(CreateNetworkAclDenyAllowGroupRequest createNetworkAclDenyAllowGroupRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/createNetworkAclDenyAllowGroup";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, createNetworkAclDenyAllowGroupRequest, true, false);
+		return apiClient.call(apiRequest, CreateNetworkAclDenyAllowGroupResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	createNetworkAclDenyAllowGroupRequest createNetworkAclDenyAllowGroupRequest (required)
+	 * @return byte[]
+	 *	CreateNetworkAclDenyAllowGroupResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> createNetworkAclDenyAllowGroupGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/createNetworkAclDenyAllowGroup";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param createNetworkAclDenyAllowGroupRequest createNetworkAclDenyAllowGroupRequest (required)
+	 * @return CreateNetworkAclDenyAllowGroupResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<CreateNetworkAclDenyAllowGroupResponse> createNetworkAclDenyAllowGroupPost(CreateNetworkAclDenyAllowGroupRequest createNetworkAclDenyAllowGroupRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/createNetworkAclDenyAllowGroup";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, createNetworkAclDenyAllowGroupRequest, true, false);
+		return apiClient.call(apiRequest, CreateNetworkAclDenyAllowGroupResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	createNetworkAclDenyAllowGroupRequest createNetworkAclDenyAllowGroupRequest (required)
+	 * @return byte[]
+	 *	CreateNetworkAclDenyAllowGroupResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> createNetworkAclDenyAllowGroupPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/createNetworkAclDenyAllowGroup";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
 	 * @param createNetworkAclRequest createNetworkAclRequest (required)
 	 * @return CreateNetworkAclResponse
 	 * @throws ApiException if fails to make API call
@@ -1095,7 +1263,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1133,7 +1301,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL생성
+	 * 
 	 * @param createNetworkAclRequest createNetworkAclRequest (required)
 	 * @return CreateNetworkAclResponse
 	 * @throws ApiException if fails to make API call
@@ -1173,7 +1341,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1211,7 +1379,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블생성
+	 * 
 	 * @param createRouteTableRequest createRouteTableRequest (required)
 	 * @return CreateRouteTableResponse
 	 * @throws ApiException if fails to make API call
@@ -1251,7 +1419,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1289,7 +1457,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블생성
+	 * 
 	 * @param createRouteTableRequest createRouteTableRequest (required)
 	 * @return CreateRouteTableResponse
 	 * @throws ApiException if fails to make API call
@@ -1329,7 +1497,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1367,7 +1535,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷생성
+	 * 
 	 * @param createSubnetRequest createSubnetRequest (required)
 	 * @return CreateSubnetResponse
 	 * @throws ApiException if fails to make API call
@@ -1407,7 +1575,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1445,7 +1613,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷생성
+	 * 
 	 * @param createSubnetRequest createSubnetRequest (required)
 	 * @return CreateSubnetResponse
 	 * @throws ApiException if fails to make API call
@@ -1485,7 +1653,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1523,7 +1691,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC생성
+	 * 
 	 * @param createVpcRequest createVpcRequest (required)
 	 * @return CreateVpcResponse
 	 * @throws ApiException if fails to make API call
@@ -1563,7 +1731,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1601,7 +1769,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스생성
+	 * 
 	 * @param createVpcPeeringInstanceRequest createVpcPeeringInstanceRequest (required)
 	 * @return CreateVpcPeeringInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -1641,7 +1809,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1679,7 +1847,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스생성
+	 * 
 	 * @param createVpcPeeringInstanceRequest createVpcPeeringInstanceRequest (required)
 	 * @return CreateVpcPeeringInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -1719,7 +1887,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1757,7 +1925,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC생성
+	 * 
 	 * @param createVpcRequest createVpcRequest (required)
 	 * @return CreateVpcResponse
 	 * @throws ApiException if fails to make API call
@@ -1797,7 +1965,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1835,7 +2003,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스삭제
+	 * 
 	 * @param deleteNatGatewayInstanceRequest deleteNatGatewayInstanceRequest (required)
 	 * @return DeleteNatGatewayInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -1875,7 +2043,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1913,7 +2081,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스삭제
+	 * 
 	 * @param deleteNatGatewayInstanceRequest deleteNatGatewayInstanceRequest (required)
 	 * @return DeleteNatGatewayInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -1953,7 +2121,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1991,7 +2159,163 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL삭제
+	 * 
+	 * @param deleteNetworkAclDenyAllowGroupRequest deleteNetworkAclDenyAllowGroupRequest (required)
+	 * @return DeleteNetworkAclDenyAllowGroupResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<DeleteNetworkAclDenyAllowGroupResponse> deleteNetworkAclDenyAllowGroupGet(DeleteNetworkAclDenyAllowGroupRequest deleteNetworkAclDenyAllowGroupRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/deleteNetworkAclDenyAllowGroup";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, deleteNetworkAclDenyAllowGroupRequest, true, false);
+		return apiClient.call(apiRequest, DeleteNetworkAclDenyAllowGroupResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	deleteNetworkAclDenyAllowGroupRequest deleteNetworkAclDenyAllowGroupRequest (required)
+	 * @return byte[]
+	 *	DeleteNetworkAclDenyAllowGroupResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> deleteNetworkAclDenyAllowGroupGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/deleteNetworkAclDenyAllowGroup";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param deleteNetworkAclDenyAllowGroupRequest deleteNetworkAclDenyAllowGroupRequest (required)
+	 * @return DeleteNetworkAclDenyAllowGroupResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<DeleteNetworkAclDenyAllowGroupResponse> deleteNetworkAclDenyAllowGroupPost(DeleteNetworkAclDenyAllowGroupRequest deleteNetworkAclDenyAllowGroupRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/deleteNetworkAclDenyAllowGroup";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, deleteNetworkAclDenyAllowGroupRequest, true, false);
+		return apiClient.call(apiRequest, DeleteNetworkAclDenyAllowGroupResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	deleteNetworkAclDenyAllowGroupRequest deleteNetworkAclDenyAllowGroupRequest (required)
+	 * @return byte[]
+	 *	DeleteNetworkAclDenyAllowGroupResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> deleteNetworkAclDenyAllowGroupPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/deleteNetworkAclDenyAllowGroup";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
 	 * @param deleteNetworkAclRequest deleteNetworkAclRequest (required)
 	 * @return DeleteNetworkAclResponse
 	 * @throws ApiException if fails to make API call
@@ -2031,7 +2355,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2069,7 +2393,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL삭제
+	 * 
 	 * @param deleteNetworkAclRequest deleteNetworkAclRequest (required)
 	 * @return DeleteNetworkAclResponse
 	 * @throws ApiException if fails to make API call
@@ -2109,7 +2433,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2147,7 +2471,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블삭제
+	 * 
 	 * @param deleteRouteTableRequest deleteRouteTableRequest (required)
 	 * @return DeleteRouteTableResponse
 	 * @throws ApiException if fails to make API call
@@ -2187,7 +2511,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2225,7 +2549,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블삭제
+	 * 
 	 * @param deleteRouteTableRequest deleteRouteTableRequest (required)
 	 * @return DeleteRouteTableResponse
 	 * @throws ApiException if fails to make API call
@@ -2265,7 +2589,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2303,7 +2627,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷삭제
+	 * 
 	 * @param deleteSubnetRequest deleteSubnetRequest (required)
 	 * @return DeleteSubnetResponse
 	 * @throws ApiException if fails to make API call
@@ -2343,7 +2667,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2381,7 +2705,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷삭제
+	 * 
 	 * @param deleteSubnetRequest deleteSubnetRequest (required)
 	 * @return DeleteSubnetResponse
 	 * @throws ApiException if fails to make API call
@@ -2421,7 +2745,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2459,7 +2783,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC삭제
+	 * 
 	 * @param deleteVpcRequest deleteVpcRequest (required)
 	 * @return DeleteVpcResponse
 	 * @throws ApiException if fails to make API call
@@ -2499,7 +2823,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2537,7 +2861,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스삭제
+	 * 
 	 * @param deleteVpcPeeringInstanceRequest deleteVpcPeeringInstanceRequest (required)
 	 * @return DeleteVpcPeeringInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -2577,7 +2901,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2615,7 +2939,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스삭제
+	 * 
 	 * @param deleteVpcPeeringInstanceRequest deleteVpcPeeringInstanceRequest (required)
 	 * @return DeleteVpcPeeringInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -2655,7 +2979,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2693,7 +3017,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC삭제
+	 * 
 	 * @param deleteVpcRequest deleteVpcRequest (required)
 	 * @return DeleteVpcResponse
 	 * @throws ApiException if fails to make API call
@@ -2733,7 +3057,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2771,7 +3095,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스상세조회
+	 * 
 	 * @param getNatGatewayInstanceDetailRequest getNatGatewayInstanceDetailRequest (required)
 	 * @return GetNatGatewayInstanceDetailResponse
 	 * @throws ApiException if fails to make API call
@@ -2811,7 +3135,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스상세조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2849,7 +3173,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스상세조회
+	 * 
 	 * @param getNatGatewayInstanceDetailRequest getNatGatewayInstanceDetailRequest (required)
 	 * @return GetNatGatewayInstanceDetailResponse
 	 * @throws ApiException if fails to make API call
@@ -2889,7 +3213,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스상세조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2927,7 +3251,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스리스트조회
+	 * 
 	 * @param getNatGatewayInstanceListRequest getNatGatewayInstanceListRequest (required)
 	 * @return GetNatGatewayInstanceListResponse
 	 * @throws ApiException if fails to make API call
@@ -2967,7 +3291,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -3005,7 +3329,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스리스트조회
+	 * 
 	 * @param getNatGatewayInstanceListRequest getNatGatewayInstanceListRequest (required)
 	 * @return GetNatGatewayInstanceListResponse
 	 * @throws ApiException if fails to make API call
@@ -3045,7 +3369,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway인스턴스리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -3083,7 +3407,319 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL상세조회
+	 * 
+	 * @param getNetworkAclDenyAllowGroupDetailRequest getNetworkAclDenyAllowGroupDetailRequest (required)
+	 * @return GetNetworkAclDenyAllowGroupDetailResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetNetworkAclDenyAllowGroupDetailResponse> getNetworkAclDenyAllowGroupDetailGet(GetNetworkAclDenyAllowGroupDetailRequest getNetworkAclDenyAllowGroupDetailRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getNetworkAclDenyAllowGroupDetail";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getNetworkAclDenyAllowGroupDetailRequest, true, false);
+		return apiClient.call(apiRequest, GetNetworkAclDenyAllowGroupDetailResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getNetworkAclDenyAllowGroupDetailRequest getNetworkAclDenyAllowGroupDetailRequest (required)
+	 * @return byte[]
+	 *	GetNetworkAclDenyAllowGroupDetailResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getNetworkAclDenyAllowGroupDetailGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getNetworkAclDenyAllowGroupDetail";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param getNetworkAclDenyAllowGroupDetailRequest getNetworkAclDenyAllowGroupDetailRequest (required)
+	 * @return GetNetworkAclDenyAllowGroupDetailResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetNetworkAclDenyAllowGroupDetailResponse> getNetworkAclDenyAllowGroupDetailPost(GetNetworkAclDenyAllowGroupDetailRequest getNetworkAclDenyAllowGroupDetailRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getNetworkAclDenyAllowGroupDetail";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getNetworkAclDenyAllowGroupDetailRequest, true, false);
+		return apiClient.call(apiRequest, GetNetworkAclDenyAllowGroupDetailResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getNetworkAclDenyAllowGroupDetailRequest getNetworkAclDenyAllowGroupDetailRequest (required)
+	 * @return byte[]
+	 *	GetNetworkAclDenyAllowGroupDetailResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getNetworkAclDenyAllowGroupDetailPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getNetworkAclDenyAllowGroupDetail";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param getNetworkAclDenyAllowGroupListRequest getNetworkAclDenyAllowGroupListRequest (required)
+	 * @return GetNetworkAclDenyAllowGroupListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetNetworkAclDenyAllowGroupListResponse> getNetworkAclDenyAllowGroupListGet(GetNetworkAclDenyAllowGroupListRequest getNetworkAclDenyAllowGroupListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getNetworkAclDenyAllowGroupList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getNetworkAclDenyAllowGroupListRequest, true, false);
+		return apiClient.call(apiRequest, GetNetworkAclDenyAllowGroupListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getNetworkAclDenyAllowGroupListRequest getNetworkAclDenyAllowGroupListRequest (required)
+	 * @return byte[]
+	 *	GetNetworkAclDenyAllowGroupListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getNetworkAclDenyAllowGroupListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getNetworkAclDenyAllowGroupList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param getNetworkAclDenyAllowGroupListRequest getNetworkAclDenyAllowGroupListRequest (required)
+	 * @return GetNetworkAclDenyAllowGroupListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetNetworkAclDenyAllowGroupListResponse> getNetworkAclDenyAllowGroupListPost(GetNetworkAclDenyAllowGroupListRequest getNetworkAclDenyAllowGroupListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getNetworkAclDenyAllowGroupList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getNetworkAclDenyAllowGroupListRequest, true, false);
+		return apiClient.call(apiRequest, GetNetworkAclDenyAllowGroupListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getNetworkAclDenyAllowGroupListRequest getNetworkAclDenyAllowGroupListRequest (required)
+	 * @return byte[]
+	 *	GetNetworkAclDenyAllowGroupListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getNetworkAclDenyAllowGroupListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getNetworkAclDenyAllowGroupList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
 	 * @param getNetworkAclDetailRequest getNetworkAclDetailRequest (required)
 	 * @return GetNetworkAclDetailResponse
 	 * @throws ApiException if fails to make API call
@@ -3123,7 +3759,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL상세조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -3161,7 +3797,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL상세조회
+	 * 
 	 * @param getNetworkAclDetailRequest getNetworkAclDetailRequest (required)
 	 * @return GetNetworkAclDetailResponse
 	 * @throws ApiException if fails to make API call
@@ -3201,7 +3837,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL상세조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -3239,7 +3875,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL리스트조회
+	 * 
 	 * @param getNetworkAclListRequest getNetworkAclListRequest (required)
 	 * @return GetNetworkAclListResponse
 	 * @throws ApiException if fails to make API call
@@ -3279,7 +3915,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -3317,7 +3953,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL리스트조회
+	 * 
 	 * @param getNetworkAclListRequest getNetworkAclListRequest (required)
 	 * @return GetNetworkAclListResponse
 	 * @throws ApiException if fails to make API call
@@ -3357,7 +3993,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -3395,7 +4031,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLRule리스트조회
+	 * 
 	 * @param getNetworkAclRuleListRequest getNetworkAclRuleListRequest (required)
 	 * @return GetNetworkAclRuleListResponse
 	 * @throws ApiException if fails to make API call
@@ -3435,7 +4071,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLRule리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -3473,7 +4109,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLRule리스트조회
+	 * 
 	 * @param getNetworkAclRuleListRequest getNetworkAclRuleListRequest (required)
 	 * @return GetNetworkAclRuleListResponse
 	 * @throws ApiException if fails to make API call
@@ -3513,7 +4149,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLRule리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -3551,7 +4187,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트리스트조회
+	 * 
 	 * @param getRouteListRequest getRouteListRequest (required)
 	 * @return GetRouteListResponse
 	 * @throws ApiException if fails to make API call
@@ -3591,7 +4227,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -3629,7 +4265,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트리스트조회
+	 * 
 	 * @param getRouteListRequest getRouteListRequest (required)
 	 * @return GetRouteListResponse
 	 * @throws ApiException if fails to make API call
@@ -3669,7 +4305,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -3707,7 +4343,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블상세조회
+	 * 
 	 * @param getRouteTableDetailRequest getRouteTableDetailRequest (required)
 	 * @return GetRouteTableDetailResponse
 	 * @throws ApiException if fails to make API call
@@ -3747,7 +4383,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블상세조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -3785,7 +4421,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블상세조회
+	 * 
 	 * @param getRouteTableDetailRequest getRouteTableDetailRequest (required)
 	 * @return GetRouteTableDetailResponse
 	 * @throws ApiException if fails to make API call
@@ -3825,7 +4461,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블상세조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -3863,7 +4499,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블리스트조회
+	 * 
 	 * @param getRouteTableListRequest getRouteTableListRequest (required)
 	 * @return GetRouteTableListResponse
 	 * @throws ApiException if fails to make API call
@@ -3903,7 +4539,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -3941,7 +4577,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블리스트조회
+	 * 
 	 * @param getRouteTableListRequest getRouteTableListRequest (required)
 	 * @return GetRouteTableListResponse
 	 * @throws ApiException if fails to make API call
@@ -3981,7 +4617,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -4019,7 +4655,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블에연관된서브넷리스트조회
+	 * 
 	 * @param getRouteTableSubnetListRequest getRouteTableSubnetListRequest (required)
 	 * @return GetRouteTableSubnetListResponse
 	 * @throws ApiException if fails to make API call
@@ -4059,7 +4695,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블에연관된서브넷리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -4097,7 +4733,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블에연관된서브넷리스트조회
+	 * 
 	 * @param getRouteTableSubnetListRequest getRouteTableSubnetListRequest (required)
 	 * @return GetRouteTableSubnetListResponse
 	 * @throws ApiException if fails to make API call
@@ -4137,7 +4773,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블에연관된서브넷리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -4175,7 +4811,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷상세조회
+	 * 
 	 * @param getSubnetDetailRequest getSubnetDetailRequest (required)
 	 * @return GetSubnetDetailResponse
 	 * @throws ApiException if fails to make API call
@@ -4215,7 +4851,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷상세조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -4253,7 +4889,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷상세조회
+	 * 
 	 * @param getSubnetDetailRequest getSubnetDetailRequest (required)
 	 * @return GetSubnetDetailResponse
 	 * @throws ApiException if fails to make API call
@@ -4293,7 +4929,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷상세조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -4331,7 +4967,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷리스트조회
+	 * 
 	 * @param getSubnetListRequest getSubnetListRequest (required)
 	 * @return GetSubnetListResponse
 	 * @throws ApiException if fails to make API call
@@ -4371,7 +5007,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -4409,7 +5045,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷리스트조회
+	 * 
 	 * @param getSubnetListRequest getSubnetListRequest (required)
 	 * @return GetSubnetListResponse
 	 * @throws ApiException if fails to make API call
@@ -4449,7 +5085,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -4487,7 +5123,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC상세조회
+	 * 
 	 * @param getVpcDetailRequest getVpcDetailRequest (required)
 	 * @return GetVpcDetailResponse
 	 * @throws ApiException if fails to make API call
@@ -4527,7 +5163,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC상세조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -4565,7 +5201,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC상세조회
+	 * 
 	 * @param getVpcDetailRequest getVpcDetailRequest (required)
 	 * @return GetVpcDetailResponse
 	 * @throws ApiException if fails to make API call
@@ -4605,7 +5241,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC상세조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -4643,7 +5279,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC리스트조회
+	 * 
 	 * @param getVpcListRequest getVpcListRequest (required)
 	 * @return GetVpcListResponse
 	 * @throws ApiException if fails to make API call
@@ -4683,7 +5319,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -4721,7 +5357,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC리스트조회
+	 * 
 	 * @param getVpcListRequest getVpcListRequest (required)
 	 * @return GetVpcListResponse
 	 * @throws ApiException if fails to make API call
@@ -4761,7 +5397,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPC리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -4799,7 +5435,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스상세조회
+	 * 
 	 * @param getVpcPeeringInstanceDetailRequest getVpcPeeringInstanceDetailRequest (required)
 	 * @return GetVpcPeeringInstanceDetailResponse
 	 * @throws ApiException if fails to make API call
@@ -4839,7 +5475,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스상세조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -4877,7 +5513,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스상세조회
+	 * 
 	 * @param getVpcPeeringInstanceDetailRequest getVpcPeeringInstanceDetailRequest (required)
 	 * @return GetVpcPeeringInstanceDetailResponse
 	 * @throws ApiException if fails to make API call
@@ -4917,7 +5553,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스상세조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -4955,7 +5591,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스리스트조회
+	 * 
 	 * @param getVpcPeeringInstanceListRequest getVpcPeeringInstanceListRequest (required)
 	 * @return GetVpcPeeringInstanceListResponse
 	 * @throws ApiException if fails to make API call
@@ -4995,7 +5631,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -5033,7 +5669,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스리스트조회
+	 * 
 	 * @param getVpcPeeringInstanceListRequest getVpcPeeringInstanceListRequest (required)
 	 * @return GetVpcPeeringInstanceListResponse
 	 * @throws ApiException if fails to make API call
@@ -5073,7 +5709,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -5111,7 +5747,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLInboundRule제거
+	 * 
 	 * @param removeNetworkAclInboundRuleRequest removeNetworkAclInboundRuleRequest (required)
 	 * @return RemoveNetworkAclInboundRuleResponse
 	 * @throws ApiException if fails to make API call
@@ -5151,7 +5787,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLInboundRule제거
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -5189,7 +5825,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLInboundRule제거
+	 * 
 	 * @param removeNetworkAclInboundRuleRequest removeNetworkAclInboundRuleRequest (required)
 	 * @return RemoveNetworkAclInboundRuleResponse
 	 * @throws ApiException if fails to make API call
@@ -5229,7 +5865,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLInboundRule제거
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -5267,7 +5903,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule제거
+	 * 
 	 * @param removeNetworkAclOutboundRuleRequest removeNetworkAclOutboundRuleRequest (required)
 	 * @return RemoveNetworkAclOutboundRuleResponse
 	 * @throws ApiException if fails to make API call
@@ -5307,7 +5943,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule제거
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -5345,7 +5981,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule제거
+	 * 
 	 * @param removeNetworkAclOutboundRuleRequest removeNetworkAclOutboundRuleRequest (required)
 	 * @return RemoveNetworkAclOutboundRuleResponse
 	 * @throws ApiException if fails to make API call
@@ -5385,7 +6021,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule제거
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -5423,7 +6059,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트제거
+	 * 
 	 * @param removeRouteRequest removeRouteRequest (required)
 	 * @return RemoveRouteResponse
 	 * @throws ApiException if fails to make API call
@@ -5463,7 +6099,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트제거
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -5501,7 +6137,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트제거
+	 * 
 	 * @param removeRouteRequest removeRouteRequest (required)
 	 * @return RemoveRouteResponse
 	 * @throws ApiException if fails to make API call
@@ -5541,7 +6177,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트제거
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -5579,7 +6215,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷제거
+	 * 
 	 * @param removeRouteTableSubnetRequest removeRouteTableSubnetRequest (required)
 	 * @return RemoveRouteTableSubnetResponse
 	 * @throws ApiException if fails to make API call
@@ -5619,7 +6255,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷제거
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -5657,7 +6293,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷제거
+	 * 
 	 * @param removeRouteTableSubnetRequest removeRouteTableSubnetRequest (required)
 	 * @return RemoveRouteTableSubnetResponse
 	 * @throws ApiException if fails to make API call
@@ -5697,7 +6333,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷제거
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -5735,7 +6371,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway설명설정
+	 * 
 	 * @param setNatGatewayDescriptionRequest setNatGatewayDescriptionRequest (required)
 	 * @return SetNatGatewayDescriptionResponse
 	 * @throws ApiException if fails to make API call
@@ -5775,7 +6411,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway설명설정
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -5813,7 +6449,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway설명설정
+	 * 
 	 * @param setNatGatewayDescriptionRequest setNatGatewayDescriptionRequest (required)
 	 * @return SetNatGatewayDescriptionResponse
 	 * @throws ApiException if fails to make API call
@@ -5853,7 +6489,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NATGateway설명설정
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -5891,7 +6527,319 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL설명설정
+	 * 
+	 * @param setNetworkAclDenyAllowGroupDescriptionRequest setNetworkAclDenyAllowGroupDescriptionRequest (required)
+	 * @return SetNetworkAclDenyAllowGroupDescriptionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<SetNetworkAclDenyAllowGroupDescriptionResponse> setNetworkAclDenyAllowGroupDescriptionGet(SetNetworkAclDenyAllowGroupDescriptionRequest setNetworkAclDenyAllowGroupDescriptionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/setNetworkAclDenyAllowGroupDescription";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, setNetworkAclDenyAllowGroupDescriptionRequest, true, false);
+		return apiClient.call(apiRequest, SetNetworkAclDenyAllowGroupDescriptionResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	setNetworkAclDenyAllowGroupDescriptionRequest setNetworkAclDenyAllowGroupDescriptionRequest (required)
+	 * @return byte[]
+	 *	SetNetworkAclDenyAllowGroupDescriptionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> setNetworkAclDenyAllowGroupDescriptionGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/setNetworkAclDenyAllowGroupDescription";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param setNetworkAclDenyAllowGroupDescriptionRequest setNetworkAclDenyAllowGroupDescriptionRequest (required)
+	 * @return SetNetworkAclDenyAllowGroupDescriptionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<SetNetworkAclDenyAllowGroupDescriptionResponse> setNetworkAclDenyAllowGroupDescriptionPost(SetNetworkAclDenyAllowGroupDescriptionRequest setNetworkAclDenyAllowGroupDescriptionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/setNetworkAclDenyAllowGroupDescription";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, setNetworkAclDenyAllowGroupDescriptionRequest, true, false);
+		return apiClient.call(apiRequest, SetNetworkAclDenyAllowGroupDescriptionResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	setNetworkAclDenyAllowGroupDescriptionRequest setNetworkAclDenyAllowGroupDescriptionRequest (required)
+	 * @return byte[]
+	 *	SetNetworkAclDenyAllowGroupDescriptionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> setNetworkAclDenyAllowGroupDescriptionPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/setNetworkAclDenyAllowGroupDescription";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param setNetworkAclDenyAllowGroupIpListRequest setNetworkAclDenyAllowGroupIpListRequest (required)
+	 * @return SetNetworkAclDenyAllowGroupIpListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<SetNetworkAclDenyAllowGroupIpListResponse> setNetworkAclDenyAllowGroupIpListGet(SetNetworkAclDenyAllowGroupIpListRequest setNetworkAclDenyAllowGroupIpListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/setNetworkAclDenyAllowGroupIpList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, setNetworkAclDenyAllowGroupIpListRequest, true, false);
+		return apiClient.call(apiRequest, SetNetworkAclDenyAllowGroupIpListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	setNetworkAclDenyAllowGroupIpListRequest setNetworkAclDenyAllowGroupIpListRequest (required)
+	 * @return byte[]
+	 *	SetNetworkAclDenyAllowGroupIpListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> setNetworkAclDenyAllowGroupIpListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/setNetworkAclDenyAllowGroupIpList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param setNetworkAclDenyAllowGroupIpListRequest setNetworkAclDenyAllowGroupIpListRequest (required)
+	 * @return SetNetworkAclDenyAllowGroupIpListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<SetNetworkAclDenyAllowGroupIpListResponse> setNetworkAclDenyAllowGroupIpListPost(SetNetworkAclDenyAllowGroupIpListRequest setNetworkAclDenyAllowGroupIpListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/setNetworkAclDenyAllowGroupIpList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, setNetworkAclDenyAllowGroupIpListRequest, true, false);
+		return apiClient.call(apiRequest, SetNetworkAclDenyAllowGroupIpListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	setNetworkAclDenyAllowGroupIpListRequest setNetworkAclDenyAllowGroupIpListRequest (required)
+	 * @return byte[]
+	 *	SetNetworkAclDenyAllowGroupIpListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> setNetworkAclDenyAllowGroupIpListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/setNetworkAclDenyAllowGroupIpList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
 	 * @param setNetworkAclDescriptionRequest setNetworkAclDescriptionRequest (required)
 	 * @return SetNetworkAclDescriptionResponse
 	 * @throws ApiException if fails to make API call
@@ -5931,7 +6879,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL설명설정
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -5969,7 +6917,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL설명설정
+	 * 
 	 * @param setNetworkAclDescriptionRequest setNetworkAclDescriptionRequest (required)
 	 * @return SetNetworkAclDescriptionResponse
 	 * @throws ApiException if fails to make API call
@@ -6009,7 +6957,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 네트워크ACL설명설정
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -6047,7 +6995,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블설명설정
+	 * 
 	 * @param setRouteTableDescriptionRequest setRouteTableDescriptionRequest (required)
 	 * @return SetRouteTableDescriptionResponse
 	 * @throws ApiException if fails to make API call
@@ -6087,7 +7035,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블설명설정
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -6125,7 +7073,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블설명설정
+	 * 
 	 * @param setRouteTableDescriptionRequest setRouteTableDescriptionRequest (required)
 	 * @return SetRouteTableDescriptionResponse
 	 * @throws ApiException if fails to make API call
@@ -6165,7 +7113,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 라우트테이블설명설정
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -6203,7 +7151,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷의네트워크ACL설정
+	 * 
 	 * @param setSubnetNetworkAclRequest setSubnetNetworkAclRequest (required)
 	 * @return SetSubnetNetworkAclResponse
 	 * @throws ApiException if fails to make API call
@@ -6243,7 +7191,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷의네트워크ACL설정
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -6281,7 +7229,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷의네트워크ACL설정
+	 * 
 	 * @param setSubnetNetworkAclRequest setSubnetNetworkAclRequest (required)
 	 * @return SetSubnetNetworkAclResponse
 	 * @throws ApiException if fails to make API call
@@ -6321,7 +7269,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 서브넷의네트워크ACL설정
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -6359,7 +7307,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering설명설정
+	 * 
 	 * @param setVpcPeeringDescriptionRequest setVpcPeeringDescriptionRequest (required)
 	 * @return SetVpcPeeringDescriptionResponse
 	 * @throws ApiException if fails to make API call
@@ -6399,7 +7347,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering설명설정
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -6437,7 +7385,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering설명설정
+	 * 
 	 * @param setVpcPeeringDescriptionRequest setVpcPeeringDescriptionRequest (required)
 	 * @return SetVpcPeeringDescriptionResponse
 	 * @throws ApiException if fails to make API call
@@ -6477,7 +7425,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * VPCPeering설명설정
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
