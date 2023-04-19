@@ -41,9 +41,13 @@ public class NetworkInterface {
 
 	private String ip = null;
 
+	private String macAddress = null;
+
 	private List<String> accessControlGroupNoList = null;
 
 	private String networkInterfaceDescription = null;
+
+	private List<String> secondaryIpList = null;
 
 	public NetworkInterface networkInterfaceNo(String networkInterfaceNo) {
 		this.networkInterfaceNo = networkInterfaceNo;
@@ -215,6 +219,23 @@ public class NetworkInterface {
 		this.ip = ip;
 	}
 
+	public NetworkInterface macAddress(String macAddress) {
+		this.macAddress = macAddress;
+		return this;
+	}
+
+	 /**
+	 * MAC주소
+	 * @return macAddress
+	**/
+	public String getMacAddress() {
+		return macAddress;
+	}
+
+	public void setMacAddress(String macAddress) {
+		this.macAddress = macAddress;
+	}
+
 	public NetworkInterface accessControlGroupNoList(List<String> accessControlGroupNoList) {
 		this.accessControlGroupNoList = accessControlGroupNoList;
 		return this;
@@ -257,6 +278,31 @@ public class NetworkInterface {
 		this.networkInterfaceDescription = networkInterfaceDescription;
 	}
 
+	public NetworkInterface secondaryIpList(List<String> secondaryIpList) {
+		this.secondaryIpList = secondaryIpList;
+		return this;
+	}
+
+	public NetworkInterface addSecondaryIpListItem(String secondaryIpListItem) {
+		if (this.secondaryIpList == null) {
+			this.secondaryIpList = new ArrayList<String>();
+		}
+		this.secondaryIpList.add(secondaryIpListItem);
+		return this;
+	}
+
+	 /**
+	 * 보조IP리스트
+	 * @return secondaryIpList
+	**/
+	public List<String> getSecondaryIpList() {
+		return secondaryIpList;
+	}
+
+	public void setSecondaryIpList(List<String> secondaryIpList) {
+		this.secondaryIpList = secondaryIpList;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -277,13 +323,15 @@ public class NetworkInterface {
 				Objects.equals(this.instanceType, networkInterface.instanceType) &&
 				Objects.equals(this.instanceNo, networkInterface.instanceNo) &&
 				Objects.equals(this.ip, networkInterface.ip) &&
+				Objects.equals(this.macAddress, networkInterface.macAddress) &&
 				Objects.equals(this.accessControlGroupNoList, networkInterface.accessControlGroupNoList) &&
-				Objects.equals(this.networkInterfaceDescription, networkInterface.networkInterfaceDescription);
+				Objects.equals(this.networkInterfaceDescription, networkInterface.networkInterfaceDescription) &&
+				Objects.equals(this.secondaryIpList, networkInterface.secondaryIpList);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(networkInterfaceNo, networkInterfaceName, subnetNo, deleteOnTermination, isDefault, deviceName, networkInterfaceStatus, instanceType, instanceNo, ip, accessControlGroupNoList, networkInterfaceDescription);
+		return Objects.hash(networkInterfaceNo, networkInterfaceName, subnetNo, deleteOnTermination, isDefault, deviceName, networkInterfaceStatus, instanceType, instanceNo, ip, macAddress, accessControlGroupNoList, networkInterfaceDescription, secondaryIpList);
 	}
 
 
@@ -302,8 +350,10 @@ public class NetworkInterface {
 		sb.append("		instanceType: ").append(toIndentedString(instanceType)).append("\n");
 		sb.append("		instanceNo: ").append(toIndentedString(instanceNo)).append("\n");
 		sb.append("		ip: ").append(toIndentedString(ip)).append("\n");
+		sb.append("		macAddress: ").append(toIndentedString(macAddress)).append("\n");
 		sb.append("		accessControlGroupNoList: ").append(toIndentedString(accessControlGroupNoList)).append("\n");
 		sb.append("		networkInterfaceDescription: ").append(toIndentedString(networkInterfaceDescription)).append("\n");
+		sb.append("		secondaryIpList: ").append(toIndentedString(secondaryIpList)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

@@ -31,7 +31,6 @@ Name | Type | Description | Notes
 **region** | [**Region**](Region.md) | 리전 |  [optional]
 **baseBlockStorageDiskType** | [**CommonCode**](CommonCode.md) | 기본블록스토리지디스크유형 |  [optional]
 **baseBlockStorageDiskDetailType** | [**CommonCode**](CommonCode.md) | 기본블록스토리지디스크상세유형 |  [optional]
-**internetLineType** | [**CommonCode**](CommonCode.md) | 인터넷라인구분 |  [optional]
 **serverInstanceType** | [**CommonCode**](CommonCode.md) | 서버인스턴스구분 |  [optional]
 **userData** | **String** | 사용자데이타 |  [optional]
 **accessControlGroupList** | [**List&lt;AccessControlGroup&gt;**](AccessControlGroup.md) | ACG리스트 |  [optional]

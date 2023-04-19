@@ -33,6 +33,8 @@ public class NetworkAclRule {
 
 	private String ipBlock = null;
 
+	private String denyAllowGroupNo = null;
+
 	private CommonCode networkAclRuleType = null;
 
 	private String networkAclRuleDescription = null;
@@ -156,6 +158,23 @@ public class NetworkAclRule {
 		this.ipBlock = ipBlock;
 	}
 
+	public NetworkAclRule denyAllowGroupNo(String denyAllowGroupNo) {
+		this.denyAllowGroupNo = denyAllowGroupNo;
+		return this;
+	}
+
+	 /**
+	 * 허용차단그룹번호
+	 * @return denyAllowGroupNo
+	**/
+	public String getDenyAllowGroupNo() {
+		return denyAllowGroupNo;
+	}
+
+	public void setDenyAllowGroupNo(String denyAllowGroupNo) {
+		this.denyAllowGroupNo = denyAllowGroupNo;
+	}
+
 	public NetworkAclRule networkAclRuleType(CommonCode networkAclRuleType) {
 		this.networkAclRuleType = networkAclRuleType;
 		return this;
@@ -207,13 +226,14 @@ public class NetworkAclRule {
 				Objects.equals(this.ruleAction, networkAclRule.ruleAction) &&
 				Objects.equals(this.createDate, networkAclRule.createDate) &&
 				Objects.equals(this.ipBlock, networkAclRule.ipBlock) &&
+				Objects.equals(this.denyAllowGroupNo, networkAclRule.denyAllowGroupNo) &&
 				Objects.equals(this.networkAclRuleType, networkAclRule.networkAclRuleType) &&
 				Objects.equals(this.networkAclRuleDescription, networkAclRule.networkAclRuleDescription);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(networkAclNo, priority, protocolType, portRange, ruleAction, createDate, ipBlock, networkAclRuleType, networkAclRuleDescription);
+		return Objects.hash(networkAclNo, priority, protocolType, portRange, ruleAction, createDate, ipBlock, denyAllowGroupNo, networkAclRuleType, networkAclRuleDescription);
 	}
 
 
@@ -229,6 +249,7 @@ public class NetworkAclRule {
 		sb.append("		ruleAction: ").append(toIndentedString(ruleAction)).append("\n");
 		sb.append("		createDate: ").append(toIndentedString(createDate)).append("\n");
 		sb.append("		ipBlock: ").append(toIndentedString(ipBlock)).append("\n");
+		sb.append("		denyAllowGroupNo: ").append(toIndentedString(denyAllowGroupNo)).append("\n");
 		sb.append("		networkAclRuleType: ").append(toIndentedString(networkAclRuleType)).append("\n");
 		sb.append("		networkAclRuleDescription: ").append(toIndentedString(networkAclRuleDescription)).append("\n");
 		sb.append("}");

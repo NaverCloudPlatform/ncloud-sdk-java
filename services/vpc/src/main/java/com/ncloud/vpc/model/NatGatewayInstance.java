@@ -41,6 +41,16 @@ public class NatGatewayInstance {
 
 	private String zoneCode = null;
 
+	private CommonCode natGatewayType = null;
+
+	private String subnetNo = null;
+
+	private String subnetName = null;
+
+	private String publicIpInstanceNo = null;
+
+	private String privateIp = null;
+
 	public NatGatewayInstance vpcNo(String vpcNo) {
 		this.vpcNo = vpcNo;
 		return this;
@@ -228,6 +238,91 @@ public class NatGatewayInstance {
 		this.zoneCode = zoneCode;
 	}
 
+	public NatGatewayInstance natGatewayType(CommonCode natGatewayType) {
+		this.natGatewayType = natGatewayType;
+		return this;
+	}
+
+	 /**
+	 * NATGateay 유형
+	 * @return natGatewayType
+	**/
+	public CommonCode getNatGatewayType() {
+		return natGatewayType;
+	}
+
+	public void setNatGatewayType(CommonCode natGatewayType) {
+		this.natGatewayType = natGatewayType;
+	}
+
+	public NatGatewayInstance subnetNo(String subnetNo) {
+		this.subnetNo = subnetNo;
+		return this;
+	}
+
+	 /**
+	 * Subnet번호
+	 * @return subnetNo
+	**/
+	public String getSubnetNo() {
+		return subnetNo;
+	}
+
+	public void setSubnetNo(String subnetNo) {
+		this.subnetNo = subnetNo;
+	}
+
+	public NatGatewayInstance subnetName(String subnetName) {
+		this.subnetName = subnetName;
+		return this;
+	}
+
+	 /**
+	 * Subnet이름
+	 * @return subnetName
+	**/
+	public String getSubnetName() {
+		return subnetName;
+	}
+
+	public void setSubnetName(String subnetName) {
+		this.subnetName = subnetName;
+	}
+
+	public NatGatewayInstance publicIpInstanceNo(String publicIpInstanceNo) {
+		this.publicIpInstanceNo = publicIpInstanceNo;
+		return this;
+	}
+
+	 /**
+	 * 공인아이피인스턴스번호
+	 * @return publicIpInstanceNo
+	**/
+	public String getPublicIpInstanceNo() {
+		return publicIpInstanceNo;
+	}
+
+	public void setPublicIpInstanceNo(String publicIpInstanceNo) {
+		this.publicIpInstanceNo = publicIpInstanceNo;
+	}
+
+	public NatGatewayInstance privateIp(String privateIp) {
+		this.privateIp = privateIp;
+		return this;
+	}
+
+	 /**
+	 * 사설IP주소
+	 * @return privateIp
+	**/
+	public String getPrivateIp() {
+		return privateIp;
+	}
+
+	public void setPrivateIp(String privateIp) {
+		this.privateIp = privateIp;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -248,12 +343,17 @@ public class NatGatewayInstance {
 				Objects.equals(this.natGatewayInstanceOperation, natGatewayInstance.natGatewayInstanceOperation) &&
 				Objects.equals(this.createDate, natGatewayInstance.createDate) &&
 				Objects.equals(this.natGatewayDescription, natGatewayInstance.natGatewayDescription) &&
-				Objects.equals(this.zoneCode, natGatewayInstance.zoneCode);
+				Objects.equals(this.zoneCode, natGatewayInstance.zoneCode) &&
+				Objects.equals(this.natGatewayType, natGatewayInstance.natGatewayType) &&
+				Objects.equals(this.subnetNo, natGatewayInstance.subnetNo) &&
+				Objects.equals(this.subnetName, natGatewayInstance.subnetName) &&
+				Objects.equals(this.publicIpInstanceNo, natGatewayInstance.publicIpInstanceNo) &&
+				Objects.equals(this.privateIp, natGatewayInstance.privateIp);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(vpcNo, vpcName, natGatewayInstanceNo, natGatewayName, publicIp, natGatewayInstanceStatus, natGatewayInstanceStatusName, natGatewayInstanceOperation, createDate, natGatewayDescription, zoneCode);
+		return Objects.hash(vpcNo, vpcName, natGatewayInstanceNo, natGatewayName, publicIp, natGatewayInstanceStatus, natGatewayInstanceStatusName, natGatewayInstanceOperation, createDate, natGatewayDescription, zoneCode, natGatewayType, subnetNo, subnetName, publicIpInstanceNo, privateIp);
 	}
 
 
@@ -273,6 +373,11 @@ public class NatGatewayInstance {
 		sb.append("		createDate: ").append(toIndentedString(createDate)).append("\n");
 		sb.append("		natGatewayDescription: ").append(toIndentedString(natGatewayDescription)).append("\n");
 		sb.append("		zoneCode: ").append(toIndentedString(zoneCode)).append("\n");
+		sb.append("		natGatewayType: ").append(toIndentedString(natGatewayType)).append("\n");
+		sb.append("		subnetNo: ").append(toIndentedString(subnetNo)).append("\n");
+		sb.append("		subnetName: ").append(toIndentedString(subnetName)).append("\n");
+		sb.append("		publicIpInstanceNo: ").append(toIndentedString(publicIpInstanceNo)).append("\n");
+		sb.append("		privateIp: ").append(toIndentedString(privateIp)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

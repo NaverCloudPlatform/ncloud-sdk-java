@@ -24,10 +24,14 @@ import com.ncloud.vserver.model.AddAccessControlGroupInboundRuleRequest;
 import com.ncloud.vserver.model.AddAccessControlGroupInboundRuleResponse;
 import com.ncloud.vserver.model.AddAccessControlGroupOutboundRuleRequest;
 import com.ncloud.vserver.model.AddAccessControlGroupOutboundRuleResponse;
+import com.ncloud.vserver.model.AddMemberServerImageSharingPermissionRequest;
+import com.ncloud.vserver.model.AddMemberServerImageSharingPermissionResponse;
 import com.ncloud.vserver.model.AddNetworkInterfaceAccessControlGroupRequest;
 import com.ncloud.vserver.model.AddNetworkInterfaceAccessControlGroupResponse;
 import com.ncloud.vserver.model.AddPlacementGroupServerInstanceRequest;
 import com.ncloud.vserver.model.AddPlacementGroupServerInstanceResponse;
+import com.ncloud.vserver.model.AssignSecondaryIpsRequest;
+import com.ncloud.vserver.model.AssignSecondaryIpsResponse;
 import com.ncloud.vserver.model.AssociatePublicIpWithServerInstanceRequest;
 import com.ncloud.vserver.model.AssociatePublicIpWithServerInstanceResponse;
 import com.ncloud.vserver.model.AttachBlockStorageInstanceRequest;
@@ -120,6 +124,8 @@ import com.ncloud.vserver.model.GetPublicIpInstanceListRequest;
 import com.ncloud.vserver.model.GetPublicIpInstanceListResponse;
 import com.ncloud.vserver.model.GetPublicIpTargetServerInstanceListRequest;
 import com.ncloud.vserver.model.GetPublicIpTargetServerInstanceListResponse;
+import com.ncloud.vserver.model.GetRaidListRequest;
+import com.ncloud.vserver.model.GetRaidListResponse;
 import com.ncloud.vserver.model.GetRegionListRequest;
 import com.ncloud.vserver.model.GetRegionListResponse;
 import com.ncloud.vserver.model.GetRootPasswordRequest;
@@ -138,22 +144,34 @@ import com.ncloud.vserver.model.GetZoneListRequest;
 import com.ncloud.vserver.model.GetZoneListResponse;
 import com.ncloud.vserver.model.ImportLoginKeyRequest;
 import com.ncloud.vserver.model.ImportLoginKeyResponse;
+import com.ncloud.vserver.model.InterruptServerInstanceRequest;
+import com.ncloud.vserver.model.InterruptServerInstanceResponse;
 import com.ncloud.vserver.model.RebootServerInstancesRequest;
 import com.ncloud.vserver.model.RebootServerInstancesResponse;
 import com.ncloud.vserver.model.RemoveAccessControlGroupInboundRuleRequest;
 import com.ncloud.vserver.model.RemoveAccessControlGroupInboundRuleResponse;
 import com.ncloud.vserver.model.RemoveAccessControlGroupOutboundRuleRequest;
 import com.ncloud.vserver.model.RemoveAccessControlGroupOutboundRuleResponse;
+import com.ncloud.vserver.model.RemoveMemberServerImageSharingPermissionRequest;
+import com.ncloud.vserver.model.RemoveMemberServerImageSharingPermissionResponse;
 import com.ncloud.vserver.model.RemoveNetworkInterfaceAccessControlGroupRequest;
 import com.ncloud.vserver.model.RemoveNetworkInterfaceAccessControlGroupResponse;
 import com.ncloud.vserver.model.RemovePlacementGroupServerInstanceRequest;
 import com.ncloud.vserver.model.RemovePlacementGroupServerInstanceResponse;
+import com.ncloud.vserver.model.SetBlockStorageReturnProtectionRequest;
+import com.ncloud.vserver.model.SetBlockStorageReturnProtectionResponse;
+import com.ncloud.vserver.model.SetMemberServerImageSharingPermissionRequest;
+import com.ncloud.vserver.model.SetMemberServerImageSharingPermissionResponse;
+import com.ncloud.vserver.model.SetProtectServerTerminationRequest;
+import com.ncloud.vserver.model.SetProtectServerTerminationResponse;
 import com.ncloud.vserver.model.StartServerInstancesRequest;
 import com.ncloud.vserver.model.StartServerInstancesResponse;
 import com.ncloud.vserver.model.StopServerInstancesRequest;
 import com.ncloud.vserver.model.StopServerInstancesResponse;
 import com.ncloud.vserver.model.TerminateServerInstancesRequest;
 import com.ncloud.vserver.model.TerminateServerInstancesResponse;
+import com.ncloud.vserver.model.UnassignSecondaryIpsRequest;
+import com.ncloud.vserver.model.UnassignSecondaryIpsResponse;
 
 public class V2Api {
 
@@ -483,6 +501,162 @@ public class V2Api {
 
 	/**
 	 * 
+	 * 회원서버이미지공유권한추가
+	 * @param addMemberServerImageSharingPermissionRequest addMemberServerImageSharingPermissionRequest (required)
+	 * @return AddMemberServerImageSharingPermissionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<AddMemberServerImageSharingPermissionResponse> addMemberServerImageSharingPermissionGet(AddMemberServerImageSharingPermissionRequest addMemberServerImageSharingPermissionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/addMemberServerImageSharingPermission";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, addMemberServerImageSharingPermissionRequest, true, false);
+		return apiClient.call(apiRequest, AddMemberServerImageSharingPermissionResponse.class);
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한추가
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	addMemberServerImageSharingPermissionRequest addMemberServerImageSharingPermissionRequest (required)
+	 * @return byte[]
+	 *	AddMemberServerImageSharingPermissionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> addMemberServerImageSharingPermissionGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/addMemberServerImageSharingPermission";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한추가
+	 * @param addMemberServerImageSharingPermissionRequest addMemberServerImageSharingPermissionRequest (required)
+	 * @return AddMemberServerImageSharingPermissionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<AddMemberServerImageSharingPermissionResponse> addMemberServerImageSharingPermissionPost(AddMemberServerImageSharingPermissionRequest addMemberServerImageSharingPermissionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/addMemberServerImageSharingPermission";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, addMemberServerImageSharingPermissionRequest, true, false);
+		return apiClient.call(apiRequest, AddMemberServerImageSharingPermissionResponse.class);
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한추가
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	addMemberServerImageSharingPermissionRequest addMemberServerImageSharingPermissionRequest (required)
+	 * @return byte[]
+	 *	AddMemberServerImageSharingPermissionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> addMemberServerImageSharingPermissionPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/addMemberServerImageSharingPermission";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
 	 * 네트워크인터페이스의ACG추가
 	 * @param addNetworkInterfaceAccessControlGroupRequest addNetworkInterfaceAccessControlGroupRequest (required)
 	 * @return AddNetworkInterfaceAccessControlGroupResponse
@@ -774,6 +948,162 @@ public class V2Api {
 		
 		// path
 		String path = "/addPlacementGroupServerInstance";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 보조IP할당
+	 * @param assignSecondaryIpsRequest assignSecondaryIpsRequest (required)
+	 * @return AssignSecondaryIpsResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<AssignSecondaryIpsResponse> assignSecondaryIpsGet(AssignSecondaryIpsRequest assignSecondaryIpsRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/assignSecondaryIps";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, assignSecondaryIpsRequest, true, false);
+		return apiClient.call(apiRequest, AssignSecondaryIpsResponse.class);
+	}
+
+	/**
+	 * 
+	 * 보조IP할당
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	assignSecondaryIpsRequest assignSecondaryIpsRequest (required)
+	 * @return byte[]
+	 *	AssignSecondaryIpsResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> assignSecondaryIpsGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/assignSecondaryIps";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 보조IP할당
+	 * @param assignSecondaryIpsRequest assignSecondaryIpsRequest (required)
+	 * @return AssignSecondaryIpsResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<AssignSecondaryIpsResponse> assignSecondaryIpsPost(AssignSecondaryIpsRequest assignSecondaryIpsRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/assignSecondaryIps";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, assignSecondaryIpsRequest, true, false);
+		return apiClient.call(apiRequest, AssignSecondaryIpsResponse.class);
+	}
+
+	/**
+	 * 
+	 * 보조IP할당
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	assignSecondaryIpsRequest assignSecondaryIpsRequest (required)
+	 * @return byte[]
+	 *	AssignSecondaryIpsResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> assignSecondaryIpsPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/assignSecondaryIps";
 
 		// accept
 		final String[] accepts = {
@@ -7971,6 +8301,162 @@ public class V2Api {
 
 	/**
 	 * 
+	 * RAID리스트조회
+	 * @param getRaidListRequest getRaidListRequest (required)
+	 * @return GetRaidListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetRaidListResponse> getRaidListGet(GetRaidListRequest getRaidListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getRaidList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getRaidListRequest, true, false);
+		return apiClient.call(apiRequest, GetRaidListResponse.class);
+	}
+
+	/**
+	 * 
+	 * RAID리스트조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getRaidListRequest getRaidListRequest (required)
+	 * @return byte[]
+	 *	GetRaidListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getRaidListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getRaidList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * RAID리스트조회
+	 * @param getRaidListRequest getRaidListRequest (required)
+	 * @return GetRaidListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetRaidListResponse> getRaidListPost(GetRaidListRequest getRaidListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getRaidList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getRaidListRequest, true, false);
+		return apiClient.call(apiRequest, GetRaidListResponse.class);
+	}
+
+	/**
+	 * 
+	 * RAID리스트조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getRaidListRequest getRaidListRequest (required)
+	 * @return byte[]
+	 *	GetRaidListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getRaidListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getRaidList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
 	 * REGION리스트조회
 	 * @param getRegionListRequest getRegionListRequest (required)
 	 * @return GetRegionListResponse
@@ -9375,6 +9861,162 @@ public class V2Api {
 
 	/**
 	 * 
+	 * 
+	 * @param interruptServerInstanceRequest  (required)
+	 * @return InterruptServerInstanceResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<InterruptServerInstanceResponse> interruptServerInstanceGet(InterruptServerInstanceRequest interruptServerInstanceRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/interruptServerInstance";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, interruptServerInstanceRequest, true, false);
+		return apiClient.call(apiRequest, InterruptServerInstanceResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	interruptServerInstanceRequest  (required)
+	 * @return byte[]
+	 *	InterruptServerInstanceResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> interruptServerInstanceGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/interruptServerInstance";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param interruptServerInstanceRequest  (required)
+	 * @return InterruptServerInstanceResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<InterruptServerInstanceResponse> interruptServerInstancePost(InterruptServerInstanceRequest interruptServerInstanceRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/interruptServerInstance";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, interruptServerInstanceRequest, true, false);
+		return apiClient.call(apiRequest, InterruptServerInstanceResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	interruptServerInstanceRequest  (required)
+	 * @return byte[]
+	 *	InterruptServerInstanceResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> interruptServerInstancePost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/interruptServerInstance";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
 	 * 서버인스턴스재시작
 	 * @param rebootServerInstancesRequest rebootServerInstancesRequest (required)
 	 * @return RebootServerInstancesResponse
@@ -9843,6 +10485,162 @@ public class V2Api {
 
 	/**
 	 * 
+	 * 회원서버이미지공유권한제거
+	 * @param removeMemberServerImageSharingPermissionRequest removeMemberServerImageSharingPermissionRequest (required)
+	 * @return RemoveMemberServerImageSharingPermissionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<RemoveMemberServerImageSharingPermissionResponse> removeMemberServerImageSharingPermissionGet(RemoveMemberServerImageSharingPermissionRequest removeMemberServerImageSharingPermissionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/removeMemberServerImageSharingPermission";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, removeMemberServerImageSharingPermissionRequest, true, false);
+		return apiClient.call(apiRequest, RemoveMemberServerImageSharingPermissionResponse.class);
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한제거
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	removeMemberServerImageSharingPermissionRequest removeMemberServerImageSharingPermissionRequest (required)
+	 * @return byte[]
+	 *	RemoveMemberServerImageSharingPermissionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> removeMemberServerImageSharingPermissionGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/removeMemberServerImageSharingPermission";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한제거
+	 * @param removeMemberServerImageSharingPermissionRequest removeMemberServerImageSharingPermissionRequest (required)
+	 * @return RemoveMemberServerImageSharingPermissionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<RemoveMemberServerImageSharingPermissionResponse> removeMemberServerImageSharingPermissionPost(RemoveMemberServerImageSharingPermissionRequest removeMemberServerImageSharingPermissionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/removeMemberServerImageSharingPermission";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, removeMemberServerImageSharingPermissionRequest, true, false);
+		return apiClient.call(apiRequest, RemoveMemberServerImageSharingPermissionResponse.class);
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한제거
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	removeMemberServerImageSharingPermissionRequest removeMemberServerImageSharingPermissionRequest (required)
+	 * @return byte[]
+	 *	RemoveMemberServerImageSharingPermissionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> removeMemberServerImageSharingPermissionPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/removeMemberServerImageSharingPermission";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
 	 * 네트워크인터페이스의ACG제거
 	 * @param removeNetworkInterfaceAccessControlGroupRequest removeNetworkInterfaceAccessControlGroupRequest (required)
 	 * @return RemoveNetworkInterfaceAccessControlGroupResponse
@@ -10134,6 +10932,474 @@ public class V2Api {
 		
 		// path
 		String path = "/removePlacementGroupServerInstance";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지반납보호설정
+	 * @param setBlockStorageReturnProtectionRequest setBlockStorageReturnProtectionRequest (required)
+	 * @return SetBlockStorageReturnProtectionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<SetBlockStorageReturnProtectionResponse> setBlockStorageReturnProtectionGet(SetBlockStorageReturnProtectionRequest setBlockStorageReturnProtectionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/setBlockStorageReturnProtection";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, setBlockStorageReturnProtectionRequest, true, false);
+		return apiClient.call(apiRequest, SetBlockStorageReturnProtectionResponse.class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지반납보호설정
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	setBlockStorageReturnProtectionRequest setBlockStorageReturnProtectionRequest (required)
+	 * @return byte[]
+	 *	SetBlockStorageReturnProtectionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> setBlockStorageReturnProtectionGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/setBlockStorageReturnProtection";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지반납보호설정
+	 * @param setBlockStorageReturnProtectionRequest setBlockStorageReturnProtectionRequest (required)
+	 * @return SetBlockStorageReturnProtectionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<SetBlockStorageReturnProtectionResponse> setBlockStorageReturnProtectionPost(SetBlockStorageReturnProtectionRequest setBlockStorageReturnProtectionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/setBlockStorageReturnProtection";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, setBlockStorageReturnProtectionRequest, true, false);
+		return apiClient.call(apiRequest, SetBlockStorageReturnProtectionResponse.class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지반납보호설정
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	setBlockStorageReturnProtectionRequest setBlockStorageReturnProtectionRequest (required)
+	 * @return byte[]
+	 *	SetBlockStorageReturnProtectionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> setBlockStorageReturnProtectionPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/setBlockStorageReturnProtection";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한설정
+	 * @param setMemberServerImageSharingPermissionRequest setMemberServerImageSharingPermissionRequest (required)
+	 * @return SetMemberServerImageSharingPermissionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<SetMemberServerImageSharingPermissionResponse> setMemberServerImageSharingPermissionGet(SetMemberServerImageSharingPermissionRequest setMemberServerImageSharingPermissionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/setMemberServerImageSharingPermission";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, setMemberServerImageSharingPermissionRequest, true, false);
+		return apiClient.call(apiRequest, SetMemberServerImageSharingPermissionResponse.class);
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한설정
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	setMemberServerImageSharingPermissionRequest setMemberServerImageSharingPermissionRequest (required)
+	 * @return byte[]
+	 *	SetMemberServerImageSharingPermissionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> setMemberServerImageSharingPermissionGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/setMemberServerImageSharingPermission";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한설정
+	 * @param setMemberServerImageSharingPermissionRequest setMemberServerImageSharingPermissionRequest (required)
+	 * @return SetMemberServerImageSharingPermissionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<SetMemberServerImageSharingPermissionResponse> setMemberServerImageSharingPermissionPost(SetMemberServerImageSharingPermissionRequest setMemberServerImageSharingPermissionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/setMemberServerImageSharingPermission";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, setMemberServerImageSharingPermissionRequest, true, false);
+		return apiClient.call(apiRequest, SetMemberServerImageSharingPermissionResponse.class);
+	}
+
+	/**
+	 * 
+	 * 회원서버이미지공유권한설정
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	setMemberServerImageSharingPermissionRequest setMemberServerImageSharingPermissionRequest (required)
+	 * @return byte[]
+	 *	SetMemberServerImageSharingPermissionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> setMemberServerImageSharingPermissionPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/setMemberServerImageSharingPermission";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 서버반납보호설정
+	 * @param setProtectServerTerminationRequest setProtectServerTerminationRequest (required)
+	 * @return SetProtectServerTerminationResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<SetProtectServerTerminationResponse> setProtectServerTerminationGet(SetProtectServerTerminationRequest setProtectServerTerminationRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/setProtectServerTermination";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, setProtectServerTerminationRequest, true, false);
+		return apiClient.call(apiRequest, SetProtectServerTerminationResponse.class);
+	}
+
+	/**
+	 * 
+	 * 서버반납보호설정
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	setProtectServerTerminationRequest setProtectServerTerminationRequest (required)
+	 * @return byte[]
+	 *	SetProtectServerTerminationResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> setProtectServerTerminationGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/setProtectServerTermination";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 서버반납보호설정
+	 * @param setProtectServerTerminationRequest setProtectServerTerminationRequest (required)
+	 * @return SetProtectServerTerminationResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<SetProtectServerTerminationResponse> setProtectServerTerminationPost(SetProtectServerTerminationRequest setProtectServerTerminationRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/setProtectServerTermination";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, setProtectServerTerminationRequest, true, false);
+		return apiClient.call(apiRequest, SetProtectServerTerminationResponse.class);
+	}
+
+	/**
+	 * 
+	 * 서버반납보호설정
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	setProtectServerTerminationRequest setProtectServerTerminationRequest (required)
+	 * @return byte[]
+	 *	SetProtectServerTerminationResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> setProtectServerTerminationPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/setProtectServerTermination";
 
 		// accept
 		final String[] accepts = {
@@ -10602,6 +11868,162 @@ public class V2Api {
 		
 		// path
 		String path = "/terminateServerInstances";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 보조IP할당해제
+	 * @param unassignSecondaryIpsRequest unassignSecondaryIpsRequest (required)
+	 * @return UnassignSecondaryIpsResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<UnassignSecondaryIpsResponse> unassignSecondaryIpsGet(UnassignSecondaryIpsRequest unassignSecondaryIpsRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/unassignSecondaryIps";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, unassignSecondaryIpsRequest, true, false);
+		return apiClient.call(apiRequest, UnassignSecondaryIpsResponse.class);
+	}
+
+	/**
+	 * 
+	 * 보조IP할당해제
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	unassignSecondaryIpsRequest unassignSecondaryIpsRequest (required)
+	 * @return byte[]
+	 *	UnassignSecondaryIpsResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> unassignSecondaryIpsGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/unassignSecondaryIps";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 보조IP할당해제
+	 * @param unassignSecondaryIpsRequest unassignSecondaryIpsRequest (required)
+	 * @return UnassignSecondaryIpsResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<UnassignSecondaryIpsResponse> unassignSecondaryIpsPost(UnassignSecondaryIpsRequest unassignSecondaryIpsRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/unassignSecondaryIps";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, unassignSecondaryIpsRequest, true, false);
+		return apiClient.call(apiRequest, UnassignSecondaryIpsResponse.class);
+	}
+
+	/**
+	 * 
+	 * 보조IP할당해제
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	unassignSecondaryIpsRequest unassignSecondaryIpsRequest (required)
+	 * @return byte[]
+	 *	UnassignSecondaryIpsResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> unassignSecondaryIpsPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/unassignSecondaryIps";
 
 		// accept
 		final String[] accepts = {

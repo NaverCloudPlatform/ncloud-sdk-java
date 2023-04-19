@@ -34,18 +34,36 @@ import com.ncloud.vnas.model.AddNasVolumeAccessControlRequest;
 import com.ncloud.vnas.model.AddNasVolumeAccessControlResponse;
 import com.ncloud.vnas.model.ChangeNasVolumeSizeRequest;
 import com.ncloud.vnas.model.ChangeNasVolumeSizeResponse;
+import com.ncloud.vnas.model.ChangeNasVolumeSnapshotConfigurationRequest;
+import com.ncloud.vnas.model.ChangeNasVolumeSnapshotConfigurationResponse;
 import com.ncloud.vnas.model.CreateNasVolumeInstanceRequest;
 import com.ncloud.vnas.model.CreateNasVolumeInstanceResponse;
+import com.ncloud.vnas.model.CreateNasVolumeSnapshotRequest;
+import com.ncloud.vnas.model.CreateNasVolumeSnapshotResponse;
 import com.ncloud.vnas.model.DeleteNasVolumeInstancesRequest;
 import com.ncloud.vnas.model.DeleteNasVolumeInstancesResponse;
+import com.ncloud.vnas.model.DeleteNasVolumeSnapshotRequest;
+import com.ncloud.vnas.model.DeleteNasVolumeSnapshotResponse;
+import com.ncloud.vnas.model.GetNasVolumeAccessControlRuleListRequest;
+import com.ncloud.vnas.model.GetNasVolumeAccessControlRuleListResponse;
 import com.ncloud.vnas.model.GetNasVolumeInstanceDetailRequest;
 import com.ncloud.vnas.model.GetNasVolumeInstanceDetailResponse;
 import com.ncloud.vnas.model.GetNasVolumeInstanceListRequest;
 import com.ncloud.vnas.model.GetNasVolumeInstanceListResponse;
+import com.ncloud.vnas.model.GetNasVolumeInstanceRatingListRequest;
+import com.ncloud.vnas.model.GetNasVolumeInstanceRatingListResponse;
+import com.ncloud.vnas.model.GetNasVolumeSnapshotConfigurationHistoryListRequest;
+import com.ncloud.vnas.model.GetNasVolumeSnapshotConfigurationHistoryListResponse;
+import com.ncloud.vnas.model.GetNasVolumeSnapshotListRequest;
+import com.ncloud.vnas.model.GetNasVolumeSnapshotListResponse;
 import com.ncloud.vnas.model.RemoveNasVolumeAccessControlRequest;
 import com.ncloud.vnas.model.RemoveNasVolumeAccessControlResponse;
+import com.ncloud.vnas.model.RestoreNasVolumeWithSnapshotRequest;
+import com.ncloud.vnas.model.RestoreNasVolumeWithSnapshotResponse;
 import com.ncloud.vnas.model.SetNasVolumeAccessControlRequest;
 import com.ncloud.vnas.model.SetNasVolumeAccessControlResponse;
+import com.ncloud.vnas.model.SetNasVolumeReturnProtectionRequest;
+import com.ncloud.vnas.model.SetNasVolumeReturnProtectionResponse;
 
 /**
  * API tests for V2Api
@@ -75,7 +93,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨접근제어추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -100,7 +118,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -137,7 +155,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨접근제어추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -162,7 +180,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -199,7 +217,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨사이즈변경
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -224,7 +242,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨사이즈변경
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -261,7 +279,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨사이즈변경
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -286,7 +304,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨사이즈변경
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -323,7 +341,131 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨인스턴스생성
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeNasVolumeSnapshotConfigurationGetTest() throws ApiException, SdkException {
+		ChangeNasVolumeSnapshotConfigurationRequest changeNasVolumeSnapshotConfigurationRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ChangeNasVolumeSnapshotConfigurationResponse> response = api.changeNasVolumeSnapshotConfigurationGet(changeNasVolumeSnapshotConfigurationRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeNasVolumeSnapshotConfigurationGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.changeNasVolumeSnapshotConfigurationGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeNasVolumeSnapshotConfigurationPostTest() throws ApiException, SdkException {
+		ChangeNasVolumeSnapshotConfigurationRequest changeNasVolumeSnapshotConfigurationRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ChangeNasVolumeSnapshotConfigurationResponse> response = api.changeNasVolumeSnapshotConfigurationPost(changeNasVolumeSnapshotConfigurationRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeNasVolumeSnapshotConfigurationPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.changeNasVolumeSnapshotConfigurationPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -348,7 +490,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -385,7 +527,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -410,7 +552,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -447,7 +589,131 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨인스턴스제거
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void createNasVolumeSnapshotGetTest() throws ApiException, SdkException {
+		CreateNasVolumeSnapshotRequest createNasVolumeSnapshotRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<CreateNasVolumeSnapshotResponse> response = api.createNasVolumeSnapshotGet(createNasVolumeSnapshotRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void createNasVolumeSnapshotGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.createNasVolumeSnapshotGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void createNasVolumeSnapshotPostTest() throws ApiException, SdkException {
+		CreateNasVolumeSnapshotRequest createNasVolumeSnapshotRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<CreateNasVolumeSnapshotResponse> response = api.createNasVolumeSnapshotPost(createNasVolumeSnapshotRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void createNasVolumeSnapshotPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.createNasVolumeSnapshotPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -472,7 +738,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -509,7 +775,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨인스턴스제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -534,7 +800,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -571,7 +837,255 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨인스턴스상세조회
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteNasVolumeSnapshotGetTest() throws ApiException, SdkException {
+		DeleteNasVolumeSnapshotRequest deleteNasVolumeSnapshotRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<DeleteNasVolumeSnapshotResponse> response = api.deleteNasVolumeSnapshotGet(deleteNasVolumeSnapshotRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteNasVolumeSnapshotGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.deleteNasVolumeSnapshotGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteNasVolumeSnapshotPostTest() throws ApiException, SdkException {
+		DeleteNasVolumeSnapshotRequest deleteNasVolumeSnapshotRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<DeleteNasVolumeSnapshotResponse> response = api.deleteNasVolumeSnapshotPost(deleteNasVolumeSnapshotRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteNasVolumeSnapshotPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.deleteNasVolumeSnapshotPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeAccessControlRuleListGetTest() throws ApiException, SdkException {
+		GetNasVolumeAccessControlRuleListRequest getNasVolumeAccessControlRuleListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetNasVolumeAccessControlRuleListResponse> response = api.getNasVolumeAccessControlRuleListGet(getNasVolumeAccessControlRuleListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeAccessControlRuleListGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getNasVolumeAccessControlRuleListGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeAccessControlRuleListPostTest() throws ApiException, SdkException {
+		GetNasVolumeAccessControlRuleListRequest getNasVolumeAccessControlRuleListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetNasVolumeAccessControlRuleListResponse> response = api.getNasVolumeAccessControlRuleListPost(getNasVolumeAccessControlRuleListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeAccessControlRuleListPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getNasVolumeAccessControlRuleListPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -596,7 +1110,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -633,7 +1147,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨인스턴스상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -658,7 +1172,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -695,7 +1209,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -720,7 +1234,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -757,7 +1271,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -782,7 +1296,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -819,7 +1333,379 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨접근제어삭제
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeInstanceRatingListGetTest() throws ApiException, SdkException {
+		GetNasVolumeInstanceRatingListRequest getNasVolumeInstanceRatingListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetNasVolumeInstanceRatingListResponse> response = api.getNasVolumeInstanceRatingListGet(getNasVolumeInstanceRatingListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeInstanceRatingListGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getNasVolumeInstanceRatingListGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeInstanceRatingListPostTest() throws ApiException, SdkException {
+		GetNasVolumeInstanceRatingListRequest getNasVolumeInstanceRatingListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetNasVolumeInstanceRatingListResponse> response = api.getNasVolumeInstanceRatingListPost(getNasVolumeInstanceRatingListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeInstanceRatingListPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getNasVolumeInstanceRatingListPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeSnapshotConfigurationHistoryListGetTest() throws ApiException, SdkException {
+		GetNasVolumeSnapshotConfigurationHistoryListRequest getNasVolumeSnapshotConfigurationHistoryListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetNasVolumeSnapshotConfigurationHistoryListResponse> response = api.getNasVolumeSnapshotConfigurationHistoryListGet(getNasVolumeSnapshotConfigurationHistoryListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeSnapshotConfigurationHistoryListGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getNasVolumeSnapshotConfigurationHistoryListGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeSnapshotConfigurationHistoryListPostTest() throws ApiException, SdkException {
+		GetNasVolumeSnapshotConfigurationHistoryListRequest getNasVolumeSnapshotConfigurationHistoryListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetNasVolumeSnapshotConfigurationHistoryListResponse> response = api.getNasVolumeSnapshotConfigurationHistoryListPost(getNasVolumeSnapshotConfigurationHistoryListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeSnapshotConfigurationHistoryListPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getNasVolumeSnapshotConfigurationHistoryListPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeSnapshotListGetTest() throws ApiException, SdkException {
+		GetNasVolumeSnapshotListRequest getNasVolumeSnapshotListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetNasVolumeSnapshotListResponse> response = api.getNasVolumeSnapshotListGet(getNasVolumeSnapshotListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeSnapshotListGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getNasVolumeSnapshotListGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeSnapshotListPostTest() throws ApiException, SdkException {
+		GetNasVolumeSnapshotListRequest getNasVolumeSnapshotListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetNasVolumeSnapshotListResponse> response = api.getNasVolumeSnapshotListPost(getNasVolumeSnapshotListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNasVolumeSnapshotListPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getNasVolumeSnapshotListPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -844,7 +1730,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -881,7 +1767,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨접근제어삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -906,7 +1792,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -943,7 +1829,131 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨접근제어설정
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void restoreNasVolumeWithSnapshotGetTest() throws ApiException, SdkException {
+		RestoreNasVolumeWithSnapshotRequest restoreNasVolumeWithSnapshotRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<RestoreNasVolumeWithSnapshotResponse> response = api.restoreNasVolumeWithSnapshotGet(restoreNasVolumeWithSnapshotRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void restoreNasVolumeWithSnapshotGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.restoreNasVolumeWithSnapshotGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void restoreNasVolumeWithSnapshotPostTest() throws ApiException, SdkException {
+		RestoreNasVolumeWithSnapshotRequest restoreNasVolumeWithSnapshotRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<RestoreNasVolumeWithSnapshotResponse> response = api.restoreNasVolumeWithSnapshotPost(restoreNasVolumeWithSnapshotRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void restoreNasVolumeWithSnapshotPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.restoreNasVolumeWithSnapshotPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -968,7 +1978,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1005,7 +2015,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NAS볼륨접근제어설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1030,7 +2040,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1053,6 +2063,130 @@ public class V2ApiTest {
 		try {
 			// Handler Successful response
 			ApiResponse<byte[]> response = api.setNasVolumeAccessControlPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setNasVolumeReturnProtectionGetTest() throws ApiException, SdkException {
+		SetNasVolumeReturnProtectionRequest setNasVolumeReturnProtectionRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<SetNasVolumeReturnProtectionResponse> response = api.setNasVolumeReturnProtectionGet(setNasVolumeReturnProtectionRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setNasVolumeReturnProtectionGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.setNasVolumeReturnProtectionGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setNasVolumeReturnProtectionPostTest() throws ApiException, SdkException {
+		SetNasVolumeReturnProtectionRequest setNasVolumeReturnProtectionRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<SetNasVolumeReturnProtectionResponse> response = api.setNasVolumeReturnProtectionPost(setNasVolumeReturnProtectionRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setNasVolumeReturnProtectionPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.setNasVolumeReturnProtectionPost(httpHeaders, queryParams, formParams, requestBody);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();

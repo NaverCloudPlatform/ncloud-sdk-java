@@ -23,6 +23,8 @@ Name | Type | Description | Notes
 **createDate** | **String** | 생성일시 |  [optional]
 **memberServerImageBlockStorageTotalRows** | **Integer** | 회원서버이미지블록스토리지인스턴스총 개수 |  [optional]
 **memberServerImageBlockStorageTotalSize** | **Long** | 회원서버이미지총사이즈 |  [optional]
+**shareStatus** | [**CommonCode**](CommonCode.md) | 공유상태 |  [optional]
+**sharedLoginIdList** | **List&lt;String&gt;** | 공유받는로그인ID리스트 |  [optional]
 
 
 

@@ -13,6 +13,7 @@
 package com.ncloud.vserver.model;
 
 import java.util.Objects;
+import com.ncloud.vserver.model.BlockDevicePartition;
 import com.ncloud.vserver.model.NetworkInterfaceParameter;
 import java.util.ArrayList;
 import java.util.List;
@@ -54,6 +55,12 @@ public class CreateServerInstancesRequest {
 	private String placementGroupNo = null;
 
 	private Boolean isEncryptedBaseBlockStorageVolume = null;
+
+	private Boolean associateWithPublicIp = null;
+
+	private String raidTypeName = null;
+
+	private List<BlockDevicePartition> blockDevicePartitionList = null;
 
 	private String responseFormatType = null;
 
@@ -351,6 +358,65 @@ public class CreateServerInstancesRequest {
 		this.isEncryptedBaseBlockStorageVolume = isEncryptedBaseBlockStorageVolume;
 	}
 
+	public CreateServerInstancesRequest associateWithPublicIp(Boolean associateWithPublicIp) {
+		this.associateWithPublicIp = associateWithPublicIp;
+		return this;
+	}
+
+	 /**
+	 * 서버생성시공인IP할당여부
+	 * @return associateWithPublicIp
+	**/
+	public Boolean isAssociateWithPublicIp() {
+		return associateWithPublicIp;
+	}
+
+	public void setAssociateWithPublicIp(Boolean associateWithPublicIp) {
+		this.associateWithPublicIp = associateWithPublicIp;
+	}
+
+	public CreateServerInstancesRequest raidTypeName(String raidTypeName) {
+		this.raidTypeName = raidTypeName;
+		return this;
+	}
+
+	 /**
+	 * RAID유형이름
+	 * @return raidTypeName
+	**/
+	public String getRaidTypeName() {
+		return raidTypeName;
+	}
+
+	public void setRaidTypeName(String raidTypeName) {
+		this.raidTypeName = raidTypeName;
+	}
+
+	public CreateServerInstancesRequest blockDevicePartitionList(List<BlockDevicePartition> blockDevicePartitionList) {
+		this.blockDevicePartitionList = blockDevicePartitionList;
+		return this;
+	}
+
+	public CreateServerInstancesRequest addBlockDevicePartitionListItem(BlockDevicePartition blockDevicePartitionListItem) {
+		if (this.blockDevicePartitionList == null) {
+			this.blockDevicePartitionList = new ArrayList<BlockDevicePartition>();
+		}
+		this.blockDevicePartitionList.add(blockDevicePartitionListItem);
+		return this;
+	}
+
+	 /**
+	 * 블록디바이스파티션리스트
+	 * @return blockDevicePartitionList
+	**/
+	public List<BlockDevicePartition> getBlockDevicePartitionList() {
+		return blockDevicePartitionList;
+	}
+
+	public void setBlockDevicePartitionList(List<BlockDevicePartition> blockDevicePartitionList) {
+		this.blockDevicePartitionList = blockDevicePartitionList;
+	}
+
 	public CreateServerInstancesRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -395,12 +461,15 @@ public class CreateServerInstancesRequest {
 				Objects.equals(this.networkInterfaceList, createServerInstancesRequest.networkInterfaceList) &&
 				Objects.equals(this.placementGroupNo, createServerInstancesRequest.placementGroupNo) &&
 				Objects.equals(this.isEncryptedBaseBlockStorageVolume, createServerInstancesRequest.isEncryptedBaseBlockStorageVolume) &&
+				Objects.equals(this.associateWithPublicIp, createServerInstancesRequest.associateWithPublicIp) &&
+				Objects.equals(this.raidTypeName, createServerInstancesRequest.raidTypeName) &&
+				Objects.equals(this.blockDevicePartitionList, createServerInstancesRequest.blockDevicePartitionList) &&
 				Objects.equals(this.responseFormatType, createServerInstancesRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, serverProductCode, serverImageProductCode, memberServerImageInstanceNo, serverName, serverDescription, loginKeyName, isProtectServerTermination, serverCreateCount, serverCreateStartNo, feeSystemTypeCode, initScriptNo, vpcNo, subnetNo, networkInterfaceList, placementGroupNo, isEncryptedBaseBlockStorageVolume, responseFormatType);
+		return Objects.hash(regionCode, serverProductCode, serverImageProductCode, memberServerImageInstanceNo, serverName, serverDescription, loginKeyName, isProtectServerTermination, serverCreateCount, serverCreateStartNo, feeSystemTypeCode, initScriptNo, vpcNo, subnetNo, networkInterfaceList, placementGroupNo, isEncryptedBaseBlockStorageVolume, associateWithPublicIp, raidTypeName, blockDevicePartitionList, responseFormatType);
 	}
 
 
@@ -426,6 +495,9 @@ public class CreateServerInstancesRequest {
 		sb.append("		networkInterfaceList: ").append(toIndentedString(networkInterfaceList)).append("\n");
 		sb.append("		placementGroupNo: ").append(toIndentedString(placementGroupNo)).append("\n");
 		sb.append("		isEncryptedBaseBlockStorageVolume: ").append(toIndentedString(isEncryptedBaseBlockStorageVolume)).append("\n");
+		sb.append("		associateWithPublicIp: ").append(toIndentedString(associateWithPublicIp)).append("\n");
+		sb.append("		raidTypeName: ").append(toIndentedString(raidTypeName)).append("\n");
+		sb.append("		blockDevicePartitionList: ").append(toIndentedString(blockDevicePartitionList)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

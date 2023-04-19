@@ -30,6 +30,8 @@ public class GetServerImageProductListRequest {
 
 	private List<String> platformTypeCodeList = null;
 
+	private String infraResourceDetailTypeCode = null;
+
 	private String responseFormatType = null;
 
 	public GetServerImageProductListRequest regionCode(String regionCode) {
@@ -125,6 +127,23 @@ public class GetServerImageProductListRequest {
 		this.platformTypeCodeList = platformTypeCodeList;
 	}
 
+	public GetServerImageProductListRequest infraResourceDetailTypeCode(String infraResourceDetailTypeCode) {
+		this.infraResourceDetailTypeCode = infraResourceDetailTypeCode;
+		return this;
+	}
+
+	 /**
+	 * 인프라자원상세유형코드
+	 * @return infraResourceDetailTypeCode
+	**/
+	public String getInfraResourceDetailTypeCode() {
+		return infraResourceDetailTypeCode;
+	}
+
+	public void setInfraResourceDetailTypeCode(String infraResourceDetailTypeCode) {
+		this.infraResourceDetailTypeCode = infraResourceDetailTypeCode;
+	}
+
 	public GetServerImageProductListRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -157,12 +176,13 @@ public class GetServerImageProductListRequest {
 				Objects.equals(this.exclusionProductCode, getServerImageProductListRequest.exclusionProductCode) &&
 				Objects.equals(this.productCode, getServerImageProductListRequest.productCode) &&
 				Objects.equals(this.platformTypeCodeList, getServerImageProductListRequest.platformTypeCodeList) &&
+				Objects.equals(this.infraResourceDetailTypeCode, getServerImageProductListRequest.infraResourceDetailTypeCode) &&
 				Objects.equals(this.responseFormatType, getServerImageProductListRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, blockStorageSize, exclusionProductCode, productCode, platformTypeCodeList, responseFormatType);
+		return Objects.hash(regionCode, blockStorageSize, exclusionProductCode, productCode, platformTypeCodeList, infraResourceDetailTypeCode, responseFormatType);
 	}
 
 
@@ -176,6 +196,7 @@ public class GetServerImageProductListRequest {
 		sb.append("		exclusionProductCode: ").append(toIndentedString(exclusionProductCode)).append("\n");
 		sb.append("		productCode: ").append(toIndentedString(productCode)).append("\n");
 		sb.append("		platformTypeCodeList: ").append(toIndentedString(platformTypeCodeList)).append("\n");
+		sb.append("		infraResourceDetailTypeCode: ").append(toIndentedString(infraResourceDetailTypeCode)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

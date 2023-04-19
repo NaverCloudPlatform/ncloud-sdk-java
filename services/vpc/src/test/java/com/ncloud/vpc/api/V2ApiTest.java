@@ -42,6 +42,8 @@ import com.ncloud.vpc.model.AddRouteTableSubnetRequest;
 import com.ncloud.vpc.model.AddRouteTableSubnetResponse;
 import com.ncloud.vpc.model.CreateNatGatewayInstanceRequest;
 import com.ncloud.vpc.model.CreateNatGatewayInstanceResponse;
+import com.ncloud.vpc.model.CreateNetworkAclDenyAllowGroupRequest;
+import com.ncloud.vpc.model.CreateNetworkAclDenyAllowGroupResponse;
 import com.ncloud.vpc.model.CreateNetworkAclRequest;
 import com.ncloud.vpc.model.CreateNetworkAclResponse;
 import com.ncloud.vpc.model.CreateRouteTableRequest;
@@ -54,6 +56,8 @@ import com.ncloud.vpc.model.CreateVpcRequest;
 import com.ncloud.vpc.model.CreateVpcResponse;
 import com.ncloud.vpc.model.DeleteNatGatewayInstanceRequest;
 import com.ncloud.vpc.model.DeleteNatGatewayInstanceResponse;
+import com.ncloud.vpc.model.DeleteNetworkAclDenyAllowGroupRequest;
+import com.ncloud.vpc.model.DeleteNetworkAclDenyAllowGroupResponse;
 import com.ncloud.vpc.model.DeleteNetworkAclRequest;
 import com.ncloud.vpc.model.DeleteNetworkAclResponse;
 import com.ncloud.vpc.model.DeleteRouteTableRequest;
@@ -68,6 +72,10 @@ import com.ncloud.vpc.model.GetNatGatewayInstanceDetailRequest;
 import com.ncloud.vpc.model.GetNatGatewayInstanceDetailResponse;
 import com.ncloud.vpc.model.GetNatGatewayInstanceListRequest;
 import com.ncloud.vpc.model.GetNatGatewayInstanceListResponse;
+import com.ncloud.vpc.model.GetNetworkAclDenyAllowGroupDetailRequest;
+import com.ncloud.vpc.model.GetNetworkAclDenyAllowGroupDetailResponse;
+import com.ncloud.vpc.model.GetNetworkAclDenyAllowGroupListRequest;
+import com.ncloud.vpc.model.GetNetworkAclDenyAllowGroupListResponse;
 import com.ncloud.vpc.model.GetNetworkAclDetailRequest;
 import com.ncloud.vpc.model.GetNetworkAclDetailResponse;
 import com.ncloud.vpc.model.GetNetworkAclListRequest;
@@ -104,6 +112,10 @@ import com.ncloud.vpc.model.RemoveRouteTableSubnetRequest;
 import com.ncloud.vpc.model.RemoveRouteTableSubnetResponse;
 import com.ncloud.vpc.model.SetNatGatewayDescriptionRequest;
 import com.ncloud.vpc.model.SetNatGatewayDescriptionResponse;
+import com.ncloud.vpc.model.SetNetworkAclDenyAllowGroupDescriptionRequest;
+import com.ncloud.vpc.model.SetNetworkAclDenyAllowGroupDescriptionResponse;
+import com.ncloud.vpc.model.SetNetworkAclDenyAllowGroupIpListRequest;
+import com.ncloud.vpc.model.SetNetworkAclDenyAllowGroupIpListResponse;
 import com.ncloud.vpc.model.SetNetworkAclDescriptionRequest;
 import com.ncloud.vpc.model.SetNetworkAclDescriptionResponse;
 import com.ncloud.vpc.model.SetRouteTableDescriptionRequest;
@@ -141,7 +153,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPCPeering요청수락거절
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -166,7 +178,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPCPeering요청수락거절
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -203,7 +215,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPCPeering요청수락거절
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -228,7 +240,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPCPeering요청수락거절
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -265,7 +277,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACLInboundRule추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -290,7 +302,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACLInboundRule추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -327,7 +339,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACLInboundRule추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -352,7 +364,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACLInboundRule추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -389,7 +401,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -414,7 +426,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -451,7 +463,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -476,7 +488,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -513,7 +525,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -538,7 +550,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -575,7 +587,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -600,7 +612,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -637,7 +649,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -662,7 +674,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -699,7 +711,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -724,7 +736,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -761,7 +773,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NATGateway인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -786,7 +798,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NATGateway인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -823,7 +835,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NATGateway인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -848,7 +860,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NATGateway인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -885,7 +897,131 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACL생성
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void createNetworkAclDenyAllowGroupGetTest() throws ApiException, SdkException {
+		CreateNetworkAclDenyAllowGroupRequest createNetworkAclDenyAllowGroupRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<CreateNetworkAclDenyAllowGroupResponse> response = api.createNetworkAclDenyAllowGroupGet(createNetworkAclDenyAllowGroupRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void createNetworkAclDenyAllowGroupGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.createNetworkAclDenyAllowGroupGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void createNetworkAclDenyAllowGroupPostTest() throws ApiException, SdkException {
+		CreateNetworkAclDenyAllowGroupRequest createNetworkAclDenyAllowGroupRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<CreateNetworkAclDenyAllowGroupResponse> response = api.createNetworkAclDenyAllowGroupPost(createNetworkAclDenyAllowGroupRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void createNetworkAclDenyAllowGroupPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.createNetworkAclDenyAllowGroupPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -910,7 +1046,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACL생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -947,7 +1083,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACL생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -972,7 +1108,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACL생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1009,7 +1145,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1034,7 +1170,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1071,7 +1207,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1096,7 +1232,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1133,7 +1269,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 서브넷생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1158,7 +1294,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 서브넷생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1195,7 +1331,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 서브넷생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1220,7 +1356,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 서브넷생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1257,7 +1393,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPC생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1282,7 +1418,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPC생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1319,7 +1455,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPCPeering인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1344,7 +1480,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1381,7 +1517,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPCPeering인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1406,7 +1542,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1443,7 +1579,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPC생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1468,7 +1604,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPC생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1505,7 +1641,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NATGateway인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1530,7 +1666,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NATGateway인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1567,7 +1703,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NATGateway인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1592,7 +1728,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NATGateway인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1629,7 +1765,131 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACL삭제
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteNetworkAclDenyAllowGroupGetTest() throws ApiException, SdkException {
+		DeleteNetworkAclDenyAllowGroupRequest deleteNetworkAclDenyAllowGroupRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<DeleteNetworkAclDenyAllowGroupResponse> response = api.deleteNetworkAclDenyAllowGroupGet(deleteNetworkAclDenyAllowGroupRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteNetworkAclDenyAllowGroupGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.deleteNetworkAclDenyAllowGroupGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteNetworkAclDenyAllowGroupPostTest() throws ApiException, SdkException {
+		DeleteNetworkAclDenyAllowGroupRequest deleteNetworkAclDenyAllowGroupRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<DeleteNetworkAclDenyAllowGroupResponse> response = api.deleteNetworkAclDenyAllowGroupPost(deleteNetworkAclDenyAllowGroupRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteNetworkAclDenyAllowGroupPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.deleteNetworkAclDenyAllowGroupPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1654,7 +1914,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACL삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1691,7 +1951,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACL삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1716,7 +1976,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACL삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1753,7 +2013,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1778,7 +2038,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1815,7 +2075,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1840,7 +2100,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1877,7 +2137,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 서브넷삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1902,7 +2162,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 서브넷삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1939,7 +2199,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 서브넷삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1964,7 +2224,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 서브넷삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2001,7 +2261,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPC삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2026,7 +2286,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPC삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2063,7 +2323,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPCPeering인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2088,7 +2348,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2125,7 +2385,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPCPeering인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2150,7 +2410,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2187,7 +2447,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPC삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2212,7 +2472,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPC삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2249,7 +2509,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NATGateway인스턴스상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2274,7 +2534,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NATGateway인스턴스상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2311,7 +2571,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NATGateway인스턴스상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2336,7 +2596,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NATGateway인스턴스상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2373,7 +2633,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NATGateway인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2398,7 +2658,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NATGateway인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2435,7 +2695,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NATGateway인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2460,7 +2720,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NATGateway인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2497,7 +2757,255 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACL상세조회
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNetworkAclDenyAllowGroupDetailGetTest() throws ApiException, SdkException {
+		GetNetworkAclDenyAllowGroupDetailRequest getNetworkAclDenyAllowGroupDetailRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetNetworkAclDenyAllowGroupDetailResponse> response = api.getNetworkAclDenyAllowGroupDetailGet(getNetworkAclDenyAllowGroupDetailRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNetworkAclDenyAllowGroupDetailGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getNetworkAclDenyAllowGroupDetailGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNetworkAclDenyAllowGroupDetailPostTest() throws ApiException, SdkException {
+		GetNetworkAclDenyAllowGroupDetailRequest getNetworkAclDenyAllowGroupDetailRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetNetworkAclDenyAllowGroupDetailResponse> response = api.getNetworkAclDenyAllowGroupDetailPost(getNetworkAclDenyAllowGroupDetailRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNetworkAclDenyAllowGroupDetailPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getNetworkAclDenyAllowGroupDetailPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNetworkAclDenyAllowGroupListGetTest() throws ApiException, SdkException {
+		GetNetworkAclDenyAllowGroupListRequest getNetworkAclDenyAllowGroupListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetNetworkAclDenyAllowGroupListResponse> response = api.getNetworkAclDenyAllowGroupListGet(getNetworkAclDenyAllowGroupListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNetworkAclDenyAllowGroupListGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getNetworkAclDenyAllowGroupListGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNetworkAclDenyAllowGroupListPostTest() throws ApiException, SdkException {
+		GetNetworkAclDenyAllowGroupListRequest getNetworkAclDenyAllowGroupListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetNetworkAclDenyAllowGroupListResponse> response = api.getNetworkAclDenyAllowGroupListPost(getNetworkAclDenyAllowGroupListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getNetworkAclDenyAllowGroupListPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getNetworkAclDenyAllowGroupListPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2522,7 +3030,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACL상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2559,7 +3067,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACL상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2584,7 +3092,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACL상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2621,7 +3129,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACL리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2646,7 +3154,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACL리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2683,7 +3191,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACL리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2708,7 +3216,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACL리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2745,7 +3253,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACLRule리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2770,7 +3278,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACLRule리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2807,7 +3315,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACLRule리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2832,7 +3340,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACLRule리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2869,7 +3377,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2894,7 +3402,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2931,7 +3439,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2956,7 +3464,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2993,7 +3501,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3018,7 +3526,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3055,7 +3563,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3080,7 +3588,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3117,7 +3625,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3142,7 +3650,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3179,7 +3687,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3204,7 +3712,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3241,7 +3749,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블에연관된서브넷리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3266,7 +3774,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블에연관된서브넷리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3303,7 +3811,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블에연관된서브넷리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3328,7 +3836,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블에연관된서브넷리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3365,7 +3873,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 서브넷상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3390,7 +3898,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 서브넷상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3427,7 +3935,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 서브넷상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3452,7 +3960,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 서브넷상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3489,7 +3997,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 서브넷리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3514,7 +4022,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 서브넷리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3551,7 +4059,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 서브넷리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3576,7 +4084,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 서브넷리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3613,7 +4121,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPC상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3638,7 +4146,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPC상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3675,7 +4183,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPC상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3700,7 +4208,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPC상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3737,7 +4245,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPC리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3762,7 +4270,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPC리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3799,7 +4307,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPC리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3824,7 +4332,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPC리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3861,7 +4369,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPCPeering인스턴스상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3886,7 +4394,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3923,7 +4431,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPCPeering인스턴스상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3948,7 +4456,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스상세조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -3985,7 +4493,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPCPeering인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4010,7 +4518,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4047,7 +4555,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPCPeering인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4072,7 +4580,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPCPeering인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4109,7 +4617,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACLInboundRule제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4134,7 +4642,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACLInboundRule제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4171,7 +4679,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACLInboundRule제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4196,7 +4704,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACLInboundRule제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4233,7 +4741,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4258,7 +4766,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4295,7 +4803,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4320,7 +4828,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACLOutboundRule제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4357,7 +4865,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4382,7 +4890,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4419,7 +4927,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4444,7 +4952,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4481,7 +4989,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4506,7 +5014,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4543,7 +5051,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4568,7 +5076,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블의연관서브넷제거
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4605,7 +5113,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NATGateway설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4630,7 +5138,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NATGateway설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4667,7 +5175,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * NATGateway설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4692,7 +5200,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * NATGateway설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4729,7 +5237,255 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACL설명설정
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setNetworkAclDenyAllowGroupDescriptionGetTest() throws ApiException, SdkException {
+		SetNetworkAclDenyAllowGroupDescriptionRequest setNetworkAclDenyAllowGroupDescriptionRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<SetNetworkAclDenyAllowGroupDescriptionResponse> response = api.setNetworkAclDenyAllowGroupDescriptionGet(setNetworkAclDenyAllowGroupDescriptionRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setNetworkAclDenyAllowGroupDescriptionGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.setNetworkAclDenyAllowGroupDescriptionGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setNetworkAclDenyAllowGroupDescriptionPostTest() throws ApiException, SdkException {
+		SetNetworkAclDenyAllowGroupDescriptionRequest setNetworkAclDenyAllowGroupDescriptionRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<SetNetworkAclDenyAllowGroupDescriptionResponse> response = api.setNetworkAclDenyAllowGroupDescriptionPost(setNetworkAclDenyAllowGroupDescriptionRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setNetworkAclDenyAllowGroupDescriptionPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.setNetworkAclDenyAllowGroupDescriptionPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setNetworkAclDenyAllowGroupIpListGetTest() throws ApiException, SdkException {
+		SetNetworkAclDenyAllowGroupIpListRequest setNetworkAclDenyAllowGroupIpListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<SetNetworkAclDenyAllowGroupIpListResponse> response = api.setNetworkAclDenyAllowGroupIpListGet(setNetworkAclDenyAllowGroupIpListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setNetworkAclDenyAllowGroupIpListGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.setNetworkAclDenyAllowGroupIpListGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setNetworkAclDenyAllowGroupIpListPostTest() throws ApiException, SdkException {
+		SetNetworkAclDenyAllowGroupIpListRequest setNetworkAclDenyAllowGroupIpListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<SetNetworkAclDenyAllowGroupIpListResponse> response = api.setNetworkAclDenyAllowGroupIpListPost(setNetworkAclDenyAllowGroupIpListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void setNetworkAclDenyAllowGroupIpListPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.setNetworkAclDenyAllowGroupIpListPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4754,7 +5510,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACL설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4791,7 +5547,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 네트워크ACL설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4816,7 +5572,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 네트워크ACL설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4853,7 +5609,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4878,7 +5634,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4915,7 +5671,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 라우트테이블설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4940,7 +5696,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 라우트테이블설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -4977,7 +5733,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 서브넷의네트워크ACL설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -5002,7 +5758,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 서브넷의네트워크ACL설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -5039,7 +5795,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 서브넷의네트워크ACL설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -5064,7 +5820,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 서브넷의네트워크ACL설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -5101,7 +5857,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPCPeering설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -5126,7 +5882,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPCPeering설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -5163,7 +5919,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * VPCPeering설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -5188,7 +5944,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * VPCPeering설명설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */

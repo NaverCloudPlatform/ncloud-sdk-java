@@ -8,7 +8,6 @@ Name | Type | Description | Notes
 **publicIp** | **String** | 공인IP |  [optional]
 **publicIpDescription** | **String** | 공인IP설명 |  [optional]
 **createDate** | **String** | 생성일시 |  [optional]
-**internetLineType** | [**CommonCode**](CommonCode.md) | 인터넷라인구분 |  [optional]
 **publicIpInstanceStatusName** | **String** | 공인IP인스턴스상태명 |  [optional]
 **publicIpInstanceStatus** | [**CommonCode**](CommonCode.md) | 공인IP인스턴스상태 |  [optional]
 **publicIpInstanceOperation** | [**CommonCode**](CommonCode.md) | 공인IP인스턴스OP |  [optional]

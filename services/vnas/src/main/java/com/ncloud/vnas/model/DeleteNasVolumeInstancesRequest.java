@@ -24,6 +24,8 @@ public class DeleteNasVolumeInstancesRequest {
 
 	private List<String> nasVolumeInstanceNoList = new ArrayList<String>();
 
+	private Boolean isAsync = null;
+
 	private String responseFormatType = null;
 
 	public DeleteNasVolumeInstancesRequest regionCode(String regionCode) {
@@ -65,6 +67,23 @@ public class DeleteNasVolumeInstancesRequest {
 		this.nasVolumeInstanceNoList = nasVolumeInstanceNoList;
 	}
 
+	public DeleteNasVolumeInstancesRequest isAsync(Boolean isAsync) {
+		this.isAsync = isAsync;
+		return this;
+	}
+
+	 /**
+	 * Async여부
+	 * @return isAsync
+	**/
+	public Boolean isIsAsync() {
+		return isAsync;
+	}
+
+	public void setIsAsync(Boolean isAsync) {
+		this.isAsync = isAsync;
+	}
+
 	public DeleteNasVolumeInstancesRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -94,12 +113,13 @@ public class DeleteNasVolumeInstancesRequest {
 		DeleteNasVolumeInstancesRequest deleteNasVolumeInstancesRequest = (DeleteNasVolumeInstancesRequest) o;
 		return Objects.equals(this.regionCode, deleteNasVolumeInstancesRequest.regionCode) &&
 				Objects.equals(this.nasVolumeInstanceNoList, deleteNasVolumeInstancesRequest.nasVolumeInstanceNoList) &&
+				Objects.equals(this.isAsync, deleteNasVolumeInstancesRequest.isAsync) &&
 				Objects.equals(this.responseFormatType, deleteNasVolumeInstancesRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, nasVolumeInstanceNoList, responseFormatType);
+		return Objects.hash(regionCode, nasVolumeInstanceNoList, isAsync, responseFormatType);
 	}
 
 
@@ -110,6 +130,7 @@ public class DeleteNasVolumeInstancesRequest {
 		
 		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		nasVolumeInstanceNoList: ").append(toIndentedString(nasVolumeInstanceNoList)).append("\n");
+		sb.append("		isAsync: ").append(toIndentedString(isAsync)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

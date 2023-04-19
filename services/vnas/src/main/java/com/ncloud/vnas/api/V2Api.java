@@ -24,18 +24,36 @@ import com.ncloud.vnas.model.AddNasVolumeAccessControlRequest;
 import com.ncloud.vnas.model.AddNasVolumeAccessControlResponse;
 import com.ncloud.vnas.model.ChangeNasVolumeSizeRequest;
 import com.ncloud.vnas.model.ChangeNasVolumeSizeResponse;
+import com.ncloud.vnas.model.ChangeNasVolumeSnapshotConfigurationRequest;
+import com.ncloud.vnas.model.ChangeNasVolumeSnapshotConfigurationResponse;
 import com.ncloud.vnas.model.CreateNasVolumeInstanceRequest;
 import com.ncloud.vnas.model.CreateNasVolumeInstanceResponse;
+import com.ncloud.vnas.model.CreateNasVolumeSnapshotRequest;
+import com.ncloud.vnas.model.CreateNasVolumeSnapshotResponse;
 import com.ncloud.vnas.model.DeleteNasVolumeInstancesRequest;
 import com.ncloud.vnas.model.DeleteNasVolumeInstancesResponse;
+import com.ncloud.vnas.model.DeleteNasVolumeSnapshotRequest;
+import com.ncloud.vnas.model.DeleteNasVolumeSnapshotResponse;
+import com.ncloud.vnas.model.GetNasVolumeAccessControlRuleListRequest;
+import com.ncloud.vnas.model.GetNasVolumeAccessControlRuleListResponse;
 import com.ncloud.vnas.model.GetNasVolumeInstanceDetailRequest;
 import com.ncloud.vnas.model.GetNasVolumeInstanceDetailResponse;
 import com.ncloud.vnas.model.GetNasVolumeInstanceListRequest;
 import com.ncloud.vnas.model.GetNasVolumeInstanceListResponse;
+import com.ncloud.vnas.model.GetNasVolumeInstanceRatingListRequest;
+import com.ncloud.vnas.model.GetNasVolumeInstanceRatingListResponse;
+import com.ncloud.vnas.model.GetNasVolumeSnapshotConfigurationHistoryListRequest;
+import com.ncloud.vnas.model.GetNasVolumeSnapshotConfigurationHistoryListResponse;
+import com.ncloud.vnas.model.GetNasVolumeSnapshotListRequest;
+import com.ncloud.vnas.model.GetNasVolumeSnapshotListResponse;
 import com.ncloud.vnas.model.RemoveNasVolumeAccessControlRequest;
 import com.ncloud.vnas.model.RemoveNasVolumeAccessControlResponse;
+import com.ncloud.vnas.model.RestoreNasVolumeWithSnapshotRequest;
+import com.ncloud.vnas.model.RestoreNasVolumeWithSnapshotResponse;
 import com.ncloud.vnas.model.SetNasVolumeAccessControlRequest;
 import com.ncloud.vnas.model.SetNasVolumeAccessControlResponse;
+import com.ncloud.vnas.model.SetNasVolumeReturnProtectionRequest;
+import com.ncloud.vnas.model.SetNasVolumeReturnProtectionResponse;
 
 public class V2Api {
 
@@ -53,7 +71,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어추가
+	 * 
 	 * @param addNasVolumeAccessControlRequest addNasVolumeAccessControlRequest (required)
 	 * @return AddNasVolumeAccessControlResponse
 	 * @throws ApiException if fails to make API call
@@ -93,7 +111,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어추가
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -131,7 +149,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어추가
+	 * 
 	 * @param addNasVolumeAccessControlRequest addNasVolumeAccessControlRequest (required)
 	 * @return AddNasVolumeAccessControlResponse
 	 * @throws ApiException if fails to make API call
@@ -171,7 +189,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어추가
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -209,7 +227,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨사이즈변경
+	 * 
 	 * @param changeNasVolumeSizeRequest changeNasVolumeSizeRequest (required)
 	 * @return ChangeNasVolumeSizeResponse
 	 * @throws ApiException if fails to make API call
@@ -249,7 +267,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨사이즈변경
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -287,7 +305,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨사이즈변경
+	 * 
 	 * @param changeNasVolumeSizeRequest changeNasVolumeSizeRequest (required)
 	 * @return ChangeNasVolumeSizeResponse
 	 * @throws ApiException if fails to make API call
@@ -327,7 +345,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨사이즈변경
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -365,7 +383,163 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스생성
+	 * 
+	 * @param changeNasVolumeSnapshotConfigurationRequest changeNasVolumeSnapshotConfigurationRequest (required)
+	 * @return ChangeNasVolumeSnapshotConfigurationResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeNasVolumeSnapshotConfigurationResponse> changeNasVolumeSnapshotConfigurationGet(ChangeNasVolumeSnapshotConfigurationRequest changeNasVolumeSnapshotConfigurationRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/changeNasVolumeSnapshotConfiguration";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, changeNasVolumeSnapshotConfigurationRequest, true, false);
+		return apiClient.call(apiRequest, ChangeNasVolumeSnapshotConfigurationResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeNasVolumeSnapshotConfigurationRequest changeNasVolumeSnapshotConfigurationRequest (required)
+	 * @return byte[]
+	 *	ChangeNasVolumeSnapshotConfigurationResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> changeNasVolumeSnapshotConfigurationGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/changeNasVolumeSnapshotConfiguration";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param changeNasVolumeSnapshotConfigurationRequest changeNasVolumeSnapshotConfigurationRequest (required)
+	 * @return ChangeNasVolumeSnapshotConfigurationResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeNasVolumeSnapshotConfigurationResponse> changeNasVolumeSnapshotConfigurationPost(ChangeNasVolumeSnapshotConfigurationRequest changeNasVolumeSnapshotConfigurationRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/changeNasVolumeSnapshotConfiguration";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, changeNasVolumeSnapshotConfigurationRequest, true, false);
+		return apiClient.call(apiRequest, ChangeNasVolumeSnapshotConfigurationResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeNasVolumeSnapshotConfigurationRequest changeNasVolumeSnapshotConfigurationRequest (required)
+	 * @return byte[]
+	 *	ChangeNasVolumeSnapshotConfigurationResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> changeNasVolumeSnapshotConfigurationPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/changeNasVolumeSnapshotConfiguration";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
 	 * @param createNasVolumeInstanceRequest createNasVolumeInstanceRequest (required)
 	 * @return CreateNasVolumeInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -405,7 +579,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -443,7 +617,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스생성
+	 * 
 	 * @param createNasVolumeInstanceRequest createNasVolumeInstanceRequest (required)
 	 * @return CreateNasVolumeInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -483,7 +657,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -521,7 +695,163 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스제거
+	 * 
+	 * @param createNasVolumeSnapshotRequest createNasVolumeSnapshotRequest (required)
+	 * @return CreateNasVolumeSnapshotResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<CreateNasVolumeSnapshotResponse> createNasVolumeSnapshotGet(CreateNasVolumeSnapshotRequest createNasVolumeSnapshotRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/createNasVolumeSnapshot";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, createNasVolumeSnapshotRequest, true, false);
+		return apiClient.call(apiRequest, CreateNasVolumeSnapshotResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	createNasVolumeSnapshotRequest createNasVolumeSnapshotRequest (required)
+	 * @return byte[]
+	 *	CreateNasVolumeSnapshotResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> createNasVolumeSnapshotGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/createNasVolumeSnapshot";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param createNasVolumeSnapshotRequest createNasVolumeSnapshotRequest (required)
+	 * @return CreateNasVolumeSnapshotResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<CreateNasVolumeSnapshotResponse> createNasVolumeSnapshotPost(CreateNasVolumeSnapshotRequest createNasVolumeSnapshotRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/createNasVolumeSnapshot";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, createNasVolumeSnapshotRequest, true, false);
+		return apiClient.call(apiRequest, CreateNasVolumeSnapshotResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	createNasVolumeSnapshotRequest createNasVolumeSnapshotRequest (required)
+	 * @return byte[]
+	 *	CreateNasVolumeSnapshotResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> createNasVolumeSnapshotPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/createNasVolumeSnapshot";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
 	 * @param deleteNasVolumeInstancesRequest deleteNasVolumeInstancesRequest (required)
 	 * @return DeleteNasVolumeInstancesResponse
 	 * @throws ApiException if fails to make API call
@@ -561,7 +891,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스제거
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -599,7 +929,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스제거
+	 * 
 	 * @param deleteNasVolumeInstancesRequest deleteNasVolumeInstancesRequest (required)
 	 * @return DeleteNasVolumeInstancesResponse
 	 * @throws ApiException if fails to make API call
@@ -639,7 +969,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스제거
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -677,7 +1007,319 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스상세조회
+	 * 
+	 * @param deleteNasVolumeSnapshotRequest deleteNasVolumeSnapshotRequest (required)
+	 * @return DeleteNasVolumeSnapshotResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<DeleteNasVolumeSnapshotResponse> deleteNasVolumeSnapshotGet(DeleteNasVolumeSnapshotRequest deleteNasVolumeSnapshotRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/deleteNasVolumeSnapshot";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, deleteNasVolumeSnapshotRequest, true, false);
+		return apiClient.call(apiRequest, DeleteNasVolumeSnapshotResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	deleteNasVolumeSnapshotRequest deleteNasVolumeSnapshotRequest (required)
+	 * @return byte[]
+	 *	DeleteNasVolumeSnapshotResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> deleteNasVolumeSnapshotGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/deleteNasVolumeSnapshot";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param deleteNasVolumeSnapshotRequest deleteNasVolumeSnapshotRequest (required)
+	 * @return DeleteNasVolumeSnapshotResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<DeleteNasVolumeSnapshotResponse> deleteNasVolumeSnapshotPost(DeleteNasVolumeSnapshotRequest deleteNasVolumeSnapshotRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/deleteNasVolumeSnapshot";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, deleteNasVolumeSnapshotRequest, true, false);
+		return apiClient.call(apiRequest, DeleteNasVolumeSnapshotResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	deleteNasVolumeSnapshotRequest deleteNasVolumeSnapshotRequest (required)
+	 * @return byte[]
+	 *	DeleteNasVolumeSnapshotResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> deleteNasVolumeSnapshotPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/deleteNasVolumeSnapshot";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param getNasVolumeAccessControlRuleListRequest getNasVolumeAccessControlRuleListRequest (required)
+	 * @return GetNasVolumeAccessControlRuleListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetNasVolumeAccessControlRuleListResponse> getNasVolumeAccessControlRuleListGet(GetNasVolumeAccessControlRuleListRequest getNasVolumeAccessControlRuleListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getNasVolumeAccessControlRuleList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getNasVolumeAccessControlRuleListRequest, true, false);
+		return apiClient.call(apiRequest, GetNasVolumeAccessControlRuleListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getNasVolumeAccessControlRuleListRequest getNasVolumeAccessControlRuleListRequest (required)
+	 * @return byte[]
+	 *	GetNasVolumeAccessControlRuleListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getNasVolumeAccessControlRuleListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getNasVolumeAccessControlRuleList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param getNasVolumeAccessControlRuleListRequest getNasVolumeAccessControlRuleListRequest (required)
+	 * @return GetNasVolumeAccessControlRuleListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetNasVolumeAccessControlRuleListResponse> getNasVolumeAccessControlRuleListPost(GetNasVolumeAccessControlRuleListRequest getNasVolumeAccessControlRuleListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getNasVolumeAccessControlRuleList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getNasVolumeAccessControlRuleListRequest, true, false);
+		return apiClient.call(apiRequest, GetNasVolumeAccessControlRuleListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getNasVolumeAccessControlRuleListRequest getNasVolumeAccessControlRuleListRequest (required)
+	 * @return byte[]
+	 *	GetNasVolumeAccessControlRuleListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getNasVolumeAccessControlRuleListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getNasVolumeAccessControlRuleList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
 	 * @param getNasVolumeInstanceDetailRequest getNasVolumeInstanceDetailRequest (required)
 	 * @return GetNasVolumeInstanceDetailResponse
 	 * @throws ApiException if fails to make API call
@@ -717,7 +1359,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스상세조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -755,7 +1397,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스상세조회
+	 * 
 	 * @param getNasVolumeInstanceDetailRequest getNasVolumeInstanceDetailRequest (required)
 	 * @return GetNasVolumeInstanceDetailResponse
 	 * @throws ApiException if fails to make API call
@@ -795,7 +1437,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스상세조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -833,7 +1475,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스리스트조회
+	 * 
 	 * @param getNasVolumeInstanceListRequest getNasVolumeInstanceListRequest (required)
 	 * @return GetNasVolumeInstanceListResponse
 	 * @throws ApiException if fails to make API call
@@ -873,7 +1515,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -911,7 +1553,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스리스트조회
+	 * 
 	 * @param getNasVolumeInstanceListRequest getNasVolumeInstanceListRequest (required)
 	 * @return GetNasVolumeInstanceListResponse
 	 * @throws ApiException if fails to make API call
@@ -951,7 +1593,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨인스턴스리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -989,7 +1631,475 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어삭제
+	 * 
+	 * @param getNasVolumeInstanceRatingListRequest getNasVolumeInstanceRatingListRequest (required)
+	 * @return GetNasVolumeInstanceRatingListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetNasVolumeInstanceRatingListResponse> getNasVolumeInstanceRatingListGet(GetNasVolumeInstanceRatingListRequest getNasVolumeInstanceRatingListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getNasVolumeInstanceRatingList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getNasVolumeInstanceRatingListRequest, true, false);
+		return apiClient.call(apiRequest, GetNasVolumeInstanceRatingListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getNasVolumeInstanceRatingListRequest getNasVolumeInstanceRatingListRequest (required)
+	 * @return byte[]
+	 *	GetNasVolumeInstanceRatingListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getNasVolumeInstanceRatingListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getNasVolumeInstanceRatingList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param getNasVolumeInstanceRatingListRequest getNasVolumeInstanceRatingListRequest (required)
+	 * @return GetNasVolumeInstanceRatingListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetNasVolumeInstanceRatingListResponse> getNasVolumeInstanceRatingListPost(GetNasVolumeInstanceRatingListRequest getNasVolumeInstanceRatingListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getNasVolumeInstanceRatingList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getNasVolumeInstanceRatingListRequest, true, false);
+		return apiClient.call(apiRequest, GetNasVolumeInstanceRatingListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getNasVolumeInstanceRatingListRequest getNasVolumeInstanceRatingListRequest (required)
+	 * @return byte[]
+	 *	GetNasVolumeInstanceRatingListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getNasVolumeInstanceRatingListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getNasVolumeInstanceRatingList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param getNasVolumeSnapshotConfigurationHistoryListRequest getNasVolumeSnapshotConfigurationHistoryListRequest (required)
+	 * @return GetNasVolumeSnapshotConfigurationHistoryListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetNasVolumeSnapshotConfigurationHistoryListResponse> getNasVolumeSnapshotConfigurationHistoryListGet(GetNasVolumeSnapshotConfigurationHistoryListRequest getNasVolumeSnapshotConfigurationHistoryListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getNasVolumeSnapshotConfigurationHistoryList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getNasVolumeSnapshotConfigurationHistoryListRequest, true, false);
+		return apiClient.call(apiRequest, GetNasVolumeSnapshotConfigurationHistoryListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getNasVolumeSnapshotConfigurationHistoryListRequest getNasVolumeSnapshotConfigurationHistoryListRequest (required)
+	 * @return byte[]
+	 *	GetNasVolumeSnapshotConfigurationHistoryListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getNasVolumeSnapshotConfigurationHistoryListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getNasVolumeSnapshotConfigurationHistoryList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param getNasVolumeSnapshotConfigurationHistoryListRequest getNasVolumeSnapshotConfigurationHistoryListRequest (required)
+	 * @return GetNasVolumeSnapshotConfigurationHistoryListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetNasVolumeSnapshotConfigurationHistoryListResponse> getNasVolumeSnapshotConfigurationHistoryListPost(GetNasVolumeSnapshotConfigurationHistoryListRequest getNasVolumeSnapshotConfigurationHistoryListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getNasVolumeSnapshotConfigurationHistoryList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getNasVolumeSnapshotConfigurationHistoryListRequest, true, false);
+		return apiClient.call(apiRequest, GetNasVolumeSnapshotConfigurationHistoryListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getNasVolumeSnapshotConfigurationHistoryListRequest getNasVolumeSnapshotConfigurationHistoryListRequest (required)
+	 * @return byte[]
+	 *	GetNasVolumeSnapshotConfigurationHistoryListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getNasVolumeSnapshotConfigurationHistoryListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getNasVolumeSnapshotConfigurationHistoryList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param getNasVolumeSnapshotListRequest getNasVolumeSnapshotListRequest (required)
+	 * @return GetNasVolumeSnapshotListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetNasVolumeSnapshotListResponse> getNasVolumeSnapshotListGet(GetNasVolumeSnapshotListRequest getNasVolumeSnapshotListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getNasVolumeSnapshotList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getNasVolumeSnapshotListRequest, true, false);
+		return apiClient.call(apiRequest, GetNasVolumeSnapshotListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getNasVolumeSnapshotListRequest getNasVolumeSnapshotListRequest (required)
+	 * @return byte[]
+	 *	GetNasVolumeSnapshotListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getNasVolumeSnapshotListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getNasVolumeSnapshotList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param getNasVolumeSnapshotListRequest getNasVolumeSnapshotListRequest (required)
+	 * @return GetNasVolumeSnapshotListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetNasVolumeSnapshotListResponse> getNasVolumeSnapshotListPost(GetNasVolumeSnapshotListRequest getNasVolumeSnapshotListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getNasVolumeSnapshotList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getNasVolumeSnapshotListRequest, true, false);
+		return apiClient.call(apiRequest, GetNasVolumeSnapshotListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getNasVolumeSnapshotListRequest getNasVolumeSnapshotListRequest (required)
+	 * @return byte[]
+	 *	GetNasVolumeSnapshotListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getNasVolumeSnapshotListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getNasVolumeSnapshotList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
 	 * @param removeNasVolumeAccessControlRequest removeNasVolumeAccessControlRequest (required)
 	 * @return RemoveNasVolumeAccessControlResponse
 	 * @throws ApiException if fails to make API call
@@ -1029,7 +2139,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1067,7 +2177,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어삭제
+	 * 
 	 * @param removeNasVolumeAccessControlRequest removeNasVolumeAccessControlRequest (required)
 	 * @return RemoveNasVolumeAccessControlResponse
 	 * @throws ApiException if fails to make API call
@@ -1107,7 +2217,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1145,7 +2255,163 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어설정
+	 * 
+	 * @param restoreNasVolumeWithSnapshotRequest restoreNasVolumeWithSnapshotRequest (required)
+	 * @return RestoreNasVolumeWithSnapshotResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<RestoreNasVolumeWithSnapshotResponse> restoreNasVolumeWithSnapshotGet(RestoreNasVolumeWithSnapshotRequest restoreNasVolumeWithSnapshotRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/restoreNasVolumeWithSnapshot";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, restoreNasVolumeWithSnapshotRequest, true, false);
+		return apiClient.call(apiRequest, RestoreNasVolumeWithSnapshotResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	restoreNasVolumeWithSnapshotRequest restoreNasVolumeWithSnapshotRequest (required)
+	 * @return byte[]
+	 *	RestoreNasVolumeWithSnapshotResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> restoreNasVolumeWithSnapshotGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/restoreNasVolumeWithSnapshot";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param restoreNasVolumeWithSnapshotRequest restoreNasVolumeWithSnapshotRequest (required)
+	 * @return RestoreNasVolumeWithSnapshotResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<RestoreNasVolumeWithSnapshotResponse> restoreNasVolumeWithSnapshotPost(RestoreNasVolumeWithSnapshotRequest restoreNasVolumeWithSnapshotRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/restoreNasVolumeWithSnapshot";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, restoreNasVolumeWithSnapshotRequest, true, false);
+		return apiClient.call(apiRequest, RestoreNasVolumeWithSnapshotResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	restoreNasVolumeWithSnapshotRequest restoreNasVolumeWithSnapshotRequest (required)
+	 * @return byte[]
+	 *	RestoreNasVolumeWithSnapshotResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> restoreNasVolumeWithSnapshotPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/restoreNasVolumeWithSnapshot";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
 	 * @param setNasVolumeAccessControlRequest setNasVolumeAccessControlRequest (required)
 	 * @return SetNasVolumeAccessControlResponse
 	 * @throws ApiException if fails to make API call
@@ -1185,7 +2451,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어설정
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1223,7 +2489,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어설정
+	 * 
 	 * @param setNasVolumeAccessControlRequest setNasVolumeAccessControlRequest (required)
 	 * @return SetNasVolumeAccessControlResponse
 	 * @throws ApiException if fails to make API call
@@ -1263,7 +2529,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * NAS볼륨접근제어설정
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1280,6 +2546,162 @@ public class V2Api {
 		
 		// path
 		String path = "/setNasVolumeAccessControl";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param setNasVolumeReturnProtectionRequest setNasVolumeReturnProtectionRequest (required)
+	 * @return SetNasVolumeReturnProtectionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<SetNasVolumeReturnProtectionResponse> setNasVolumeReturnProtectionGet(SetNasVolumeReturnProtectionRequest setNasVolumeReturnProtectionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/setNasVolumeReturnProtection";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, setNasVolumeReturnProtectionRequest, true, false);
+		return apiClient.call(apiRequest, SetNasVolumeReturnProtectionResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	setNasVolumeReturnProtectionRequest setNasVolumeReturnProtectionRequest (required)
+	 * @return byte[]
+	 *	SetNasVolumeReturnProtectionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> setNasVolumeReturnProtectionGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/setNasVolumeReturnProtection";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param setNasVolumeReturnProtectionRequest setNasVolumeReturnProtectionRequest (required)
+	 * @return SetNasVolumeReturnProtectionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<SetNasVolumeReturnProtectionResponse> setNasVolumeReturnProtectionPost(SetNasVolumeReturnProtectionRequest setNasVolumeReturnProtectionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/setNasVolumeReturnProtection";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, setNasVolumeReturnProtectionRequest, true, false);
+		return apiClient.call(apiRequest, SetNasVolumeReturnProtectionResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	setNasVolumeReturnProtectionRequest setNasVolumeReturnProtectionRequest (required)
+	 * @return byte[]
+	 *	SetNasVolumeReturnProtectionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> setNasVolumeReturnProtectionPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/setNasVolumeReturnProtection";
 
 		// accept
 		final String[] accepts = {

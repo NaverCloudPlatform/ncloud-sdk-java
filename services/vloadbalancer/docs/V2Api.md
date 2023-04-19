@@ -4,6 +4,8 @@ All URIs are relative to *https://ncloud.apigw.ntruss.com/vloadbalancer/v2*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
+[**addLoadBalancerListenerCertificateGet**](V2Api.md#addLoadBalancerListenerCertificateGet) | **GET** /addLoadBalancerListenerCertificate | 
+[**addLoadBalancerListenerCertificatePost**](V2Api.md#addLoadBalancerListenerCertificatePost) | **POST** /addLoadBalancerListenerCertificate | 
 [**addTargetGet**](V2Api.md#addTargetGet) | **GET** /addTarget | 
 [**addTargetPost**](V2Api.md#addTargetPost) | **POST** /addTarget | 
 [**changeLoadBalancerInstanceConfigurationGet**](V2Api.md#changeLoadBalancerInstanceConfigurationGet) | **GET** /changeLoadBalancerInstanceConfiguration | 
@@ -30,6 +32,8 @@ Method | HTTP request | Description
 [**getLoadBalancerInstanceDetailPost**](V2Api.md#getLoadBalancerInstanceDetailPost) | **POST** /getLoadBalancerInstanceDetail | 
 [**getLoadBalancerInstanceListGet**](V2Api.md#getLoadBalancerInstanceListGet) | **GET** /getLoadBalancerInstanceList | 
 [**getLoadBalancerInstanceListPost**](V2Api.md#getLoadBalancerInstanceListPost) | **POST** /getLoadBalancerInstanceList | 
+[**getLoadBalancerListenerCertificateListGet**](V2Api.md#getLoadBalancerListenerCertificateListGet) | **GET** /getLoadBalancerListenerCertificateList | 
+[**getLoadBalancerListenerCertificateListPost**](V2Api.md#getLoadBalancerListenerCertificateListPost) | **POST** /getLoadBalancerListenerCertificateList | 
 [**getLoadBalancerListenerListGet**](V2Api.md#getLoadBalancerListenerListGet) | **GET** /getLoadBalancerListenerList | 
 [**getLoadBalancerListenerListPost**](V2Api.md#getLoadBalancerListenerListPost) | **POST** /getLoadBalancerListenerList | 
 [**getLoadBalancerRuleListGet**](V2Api.md#getLoadBalancerRuleListGet) | **GET** /getLoadBalancerRuleList | 
@@ -40,6 +44,8 @@ Method | HTTP request | Description
 [**getTargetGroupListPost**](V2Api.md#getTargetGroupListPost) | **POST** /getTargetGroupList | 
 [**getTargetListGet**](V2Api.md#getTargetListGet) | **GET** /getTargetList | 
 [**getTargetListPost**](V2Api.md#getTargetListPost) | **POST** /getTargetList | 
+[**removeLoadBalancerListenerCertificateGet**](V2Api.md#removeLoadBalancerListenerCertificateGet) | **GET** /removeLoadBalancerListenerCertificate | 
+[**removeLoadBalancerListenerCertificatePost**](V2Api.md#removeLoadBalancerListenerCertificatePost) | **POST** /removeLoadBalancerListenerCertificate | 
 [**removeTargetGet**](V2Api.md#removeTargetGet) | **GET** /removeTarget | 
 [**removeTargetPost**](V2Api.md#removeTargetPost) | **POST** /removeTarget | 
 [**setLoadBalancerDescriptionGet**](V2Api.md#setLoadBalancerDescriptionGet) | **GET** /setLoadBalancerDescription | 
@@ -52,13 +58,145 @@ Method | HTTP request | Description
 [**setTargetPost**](V2Api.md#setTargetPost) | **POST** /setTarget | 
 
 
+<a name="addLoadBalancerListenerCertificateGet"></a>
+# **addLoadBalancerListenerCertificateGet**
+> AddLoadBalancerListenerCertificateResponse addLoadBalancerListenerCertificateGet(addLoadBalancerListenerCertificateRequest)
+
+
+
+로드밸런서리스너인증서추가
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vloadbalancer.ApiClient;
+// import com.ncloud.vloadbalancer.ApiResponse;
+// import com.ncloud.vloadbalancer.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vloadbalancer.marshaller.JsonMarshaller;
+// import com.ncloud.vloadbalancer.marshaller.XmlMarshaller;
+// import com.ncloud.vloadbalancer.marshaller.FormMarshaller;
+// import com.ncloud.vloadbalancer.exception.ApiException;
+// import com.ncloud.vloadbalancer.exception.SdkException;
+// import com.ncloud.vloadbalancer.model.*;
+
+// import com.ncloud.vloadbalancer.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+AddLoadBalancerListenerCertificateRequest addLoadBalancerListenerCertificateRequest = new AddLoadBalancerListenerCertificateRequest(); // AddLoadBalancerListenerCertificateRequest | addLoadBalancerListenerCertificateRequest
+try {
+	// Handler Successful response
+	ApiResponse<AddLoadBalancerListenerCertificateResponse> result = apiInstance.addLoadBalancerListenerCertificateGet(addLoadBalancerListenerCertificateRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **addLoadBalancerListenerCertificateRequest** | [**AddLoadBalancerListenerCertificateRequest**](AddLoadBalancerListenerCertificateRequest.md)| addLoadBalancerListenerCertificateRequest |
+
+### Return type
+
+[**AddLoadBalancerListenerCertificateResponse**](AddLoadBalancerListenerCertificateResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="addLoadBalancerListenerCertificatePost"></a>
+# **addLoadBalancerListenerCertificatePost**
+> AddLoadBalancerListenerCertificateResponse addLoadBalancerListenerCertificatePost(addLoadBalancerListenerCertificateRequest)
+
+
+
+로드밸런서리스너인증서추가
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vloadbalancer.ApiClient;
+// import com.ncloud.vloadbalancer.ApiResponse;
+// import com.ncloud.vloadbalancer.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vloadbalancer.marshaller.JsonMarshaller;
+// import com.ncloud.vloadbalancer.marshaller.XmlMarshaller;
+// import com.ncloud.vloadbalancer.marshaller.FormMarshaller;
+// import com.ncloud.vloadbalancer.exception.ApiException;
+// import com.ncloud.vloadbalancer.exception.SdkException;
+// import com.ncloud.vloadbalancer.model.*;
+
+// import com.ncloud.vloadbalancer.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+AddLoadBalancerListenerCertificateRequest addLoadBalancerListenerCertificateRequest = new AddLoadBalancerListenerCertificateRequest(); // AddLoadBalancerListenerCertificateRequest | addLoadBalancerListenerCertificateRequest
+try {
+	// Handler Successful response
+	ApiResponse<AddLoadBalancerListenerCertificateResponse> result = apiInstance.addLoadBalancerListenerCertificatePost(addLoadBalancerListenerCertificateRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **addLoadBalancerListenerCertificateRequest** | [**AddLoadBalancerListenerCertificateRequest**](AddLoadBalancerListenerCertificateRequest.md)| addLoadBalancerListenerCertificateRequest |
+
+### Return type
+
+[**AddLoadBalancerListenerCertificateResponse**](AddLoadBalancerListenerCertificateResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="addTargetGet"></a>
 # **addTargetGet**
 > AddTargetResponse addTargetGet(addTargetRequest)
 
 
-
-타겟추가
 
 ### Example
 ```java
@@ -125,8 +263,6 @@ Name | Type | Description  | Notes
 
 
 
-타겟추가
-
 ### Example
 ```java
 // Import classes:
@@ -191,8 +327,6 @@ Name | Type | Description  | Notes
 > ChangeLoadBalancerInstanceConfigurationResponse changeLoadBalancerInstanceConfigurationGet(changeLoadBalancerInstanceConfigurationRequest)
 
 
-
-로드밸런서인스턴스설정변경
 
 ### Example
 ```java
@@ -259,8 +393,6 @@ Name | Type | Description  | Notes
 
 
 
-로드밸런서인스턴스설정변경
-
 ### Example
 ```java
 // Import classes:
@@ -325,8 +457,6 @@ Name | Type | Description  | Notes
 > ChangeLoadBalancerListenerConfigurationResponse changeLoadBalancerListenerConfigurationGet(changeLoadBalancerListenerConfigurationRequest)
 
 
-
-로드밸런서리스너설정변경
 
 ### Example
 ```java
@@ -393,8 +523,6 @@ Name | Type | Description  | Notes
 
 
 
-로드밸런서리스너설정변경
-
 ### Example
 ```java
 // Import classes:
@@ -459,8 +587,6 @@ Name | Type | Description  | Notes
 > ChangeTargetGroupConfigurationResponse changeTargetGroupConfigurationGet(changeTargetGroupConfigurationRequest)
 
 
-
-타겟그룹설정변경
 
 ### Example
 ```java
@@ -527,8 +653,6 @@ Name | Type | Description  | Notes
 
 
 
-타겟그룹설정변경
-
 ### Example
 ```java
 // Import classes:
@@ -593,8 +717,6 @@ Name | Type | Description  | Notes
 > ChangeTargetGroupHealthCheckConfigurationResponse changeTargetGroupHealthCheckConfigurationGet(changeTargetGroupHealthCheckConfigurationRequest)
 
 
-
-타겟그룹헬스체크설정변경
 
 ### Example
 ```java
@@ -661,8 +783,6 @@ Name | Type | Description  | Notes
 
 
 
-타겟그룹헬스체크설정변경
-
 ### Example
 ```java
 // Import classes:
@@ -727,8 +847,6 @@ Name | Type | Description  | Notes
 > CreateLoadBalancerInstanceResponse createLoadBalancerInstanceGet(createLoadBalancerInstanceRequest)
 
 
-
-로드밸런서인스턴스생성
 
 ### Example
 ```java
@@ -795,8 +913,6 @@ Name | Type | Description  | Notes
 
 
 
-로드밸런서인스턴스생성
-
 ### Example
 ```java
 // Import classes:
@@ -861,8 +977,6 @@ Name | Type | Description  | Notes
 > CreateLoadBalancerListenerResponse createLoadBalancerListenerGet(createLoadBalancerListenerRequest)
 
 
-
-로드밸런서리스너생성
 
 ### Example
 ```java
@@ -929,8 +1043,6 @@ Name | Type | Description  | Notes
 
 
 
-로드밸런서리스너생성
-
 ### Example
 ```java
 // Import classes:
@@ -995,8 +1107,6 @@ Name | Type | Description  | Notes
 > CreateTargetGroupResponse createTargetGroupGet(createTargetGroupRequest)
 
 
-
-타겟그룹생성
 
 ### Example
 ```java
@@ -1063,8 +1173,6 @@ Name | Type | Description  | Notes
 
 
 
-타겟그룹생성
-
 ### Example
 ```java
 // Import classes:
@@ -1129,8 +1237,6 @@ Name | Type | Description  | Notes
 > DeleteLoadBalancerInstancesResponse deleteLoadBalancerInstancesGet(deleteLoadBalancerInstancesRequest)
 
 
-
-로드밸런서인스턴스삭제
 
 ### Example
 ```java
@@ -1197,8 +1303,6 @@ Name | Type | Description  | Notes
 
 
 
-로드밸런서인스턴스삭제
-
 ### Example
 ```java
 // Import classes:
@@ -1263,8 +1367,6 @@ Name | Type | Description  | Notes
 > DeleteLoadBalancerListenersResponse deleteLoadBalancerListenersGet(deleteLoadBalancerListenersRequest)
 
 
-
-로드밸런서리스너삭제
 
 ### Example
 ```java
@@ -1331,8 +1433,6 @@ Name | Type | Description  | Notes
 
 
 
-로드밸런서리스너삭제
-
 ### Example
 ```java
 // Import classes:
@@ -1397,8 +1497,6 @@ Name | Type | Description  | Notes
 > DeleteTargetGroupsResponse deleteTargetGroupsGet(deleteTargetGroupsRequest)
 
 
-
-타겟그룹삭제
 
 ### Example
 ```java
@@ -1465,8 +1563,6 @@ Name | Type | Description  | Notes
 
 
 
-타겟그룹삭제
-
 ### Example
 ```java
 // Import classes:
@@ -1531,8 +1627,6 @@ Name | Type | Description  | Notes
 > GetLoadBalancerInstanceDetailResponse getLoadBalancerInstanceDetailGet(getLoadBalancerInstanceDetailRequest)
 
 
-
-로드밸런서인스턴스상세조회
 
 ### Example
 ```java
@@ -1599,8 +1693,6 @@ Name | Type | Description  | Notes
 
 
 
-로드밸런서인스턴스상세조회
-
 ### Example
 ```java
 // Import classes:
@@ -1665,8 +1757,6 @@ Name | Type | Description  | Notes
 > GetLoadBalancerInstanceListResponse getLoadBalancerInstanceListGet(getLoadBalancerInstanceListRequest)
 
 
-
-로드밸런서인스턴스리스트조회
 
 ### Example
 ```java
@@ -1733,8 +1823,6 @@ Name | Type | Description  | Notes
 
 
 
-로드밸런서인스턴스리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -1794,13 +1882,145 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="getLoadBalancerListenerCertificateListGet"></a>
+# **getLoadBalancerListenerCertificateListGet**
+> GetLoadBalancerListenerCertificateListResponse getLoadBalancerListenerCertificateListGet(getLoadBalancerListenerCertificateListRequest)
+
+
+
+로드밸런서리스너인증서조회
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vloadbalancer.ApiClient;
+// import com.ncloud.vloadbalancer.ApiResponse;
+// import com.ncloud.vloadbalancer.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vloadbalancer.marshaller.JsonMarshaller;
+// import com.ncloud.vloadbalancer.marshaller.XmlMarshaller;
+// import com.ncloud.vloadbalancer.marshaller.FormMarshaller;
+// import com.ncloud.vloadbalancer.exception.ApiException;
+// import com.ncloud.vloadbalancer.exception.SdkException;
+// import com.ncloud.vloadbalancer.model.*;
+
+// import com.ncloud.vloadbalancer.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetLoadBalancerListenerCertificateListRequest getLoadBalancerListenerCertificateListRequest = new GetLoadBalancerListenerCertificateListRequest(); // GetLoadBalancerListenerCertificateListRequest | getLoadBalancerListenerCertificateListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetLoadBalancerListenerCertificateListResponse> result = apiInstance.getLoadBalancerListenerCertificateListGet(getLoadBalancerListenerCertificateListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getLoadBalancerListenerCertificateListRequest** | [**GetLoadBalancerListenerCertificateListRequest**](GetLoadBalancerListenerCertificateListRequest.md)| getLoadBalancerListenerCertificateListRequest |
+
+### Return type
+
+[**GetLoadBalancerListenerCertificateListResponse**](GetLoadBalancerListenerCertificateListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getLoadBalancerListenerCertificateListPost"></a>
+# **getLoadBalancerListenerCertificateListPost**
+> GetLoadBalancerListenerCertificateListResponse getLoadBalancerListenerCertificateListPost(getLoadBalancerListenerCertificateListRequest)
+
+
+
+로드밸런서리스너인증서조회
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vloadbalancer.ApiClient;
+// import com.ncloud.vloadbalancer.ApiResponse;
+// import com.ncloud.vloadbalancer.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vloadbalancer.marshaller.JsonMarshaller;
+// import com.ncloud.vloadbalancer.marshaller.XmlMarshaller;
+// import com.ncloud.vloadbalancer.marshaller.FormMarshaller;
+// import com.ncloud.vloadbalancer.exception.ApiException;
+// import com.ncloud.vloadbalancer.exception.SdkException;
+// import com.ncloud.vloadbalancer.model.*;
+
+// import com.ncloud.vloadbalancer.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetLoadBalancerListenerCertificateListRequest getLoadBalancerListenerCertificateListRequest = new GetLoadBalancerListenerCertificateListRequest(); // GetLoadBalancerListenerCertificateListRequest | getLoadBalancerListenerCertificateListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetLoadBalancerListenerCertificateListResponse> result = apiInstance.getLoadBalancerListenerCertificateListPost(getLoadBalancerListenerCertificateListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getLoadBalancerListenerCertificateListRequest** | [**GetLoadBalancerListenerCertificateListRequest**](GetLoadBalancerListenerCertificateListRequest.md)| getLoadBalancerListenerCertificateListRequest |
+
+### Return type
+
+[**GetLoadBalancerListenerCertificateListResponse**](GetLoadBalancerListenerCertificateListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="getLoadBalancerListenerListGet"></a>
 # **getLoadBalancerListenerListGet**
 > GetLoadBalancerListenerListResponse getLoadBalancerListenerListGet(getLoadBalancerListenerListRequest)
 
 
-
-로드밸런서리스너리스트조회
 
 ### Example
 ```java
@@ -1867,8 +2087,6 @@ Name | Type | Description  | Notes
 
 
 
-로드밸런서리스너리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -1933,8 +2151,6 @@ Name | Type | Description  | Notes
 > GetLoadBalancerRuleListResponse getLoadBalancerRuleListGet(getLoadBalancerRuleListRequest)
 
 
-
-로드밸런서룰리스트조회
 
 ### Example
 ```java
@@ -2001,8 +2217,6 @@ Name | Type | Description  | Notes
 
 
 
-로드밸런서룰리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -2067,8 +2281,6 @@ Name | Type | Description  | Notes
 > GetTargetGroupDetailResponse getTargetGroupDetailGet(getTargetGroupDetailRequest)
 
 
-
-타겟그룹상세조회
 
 ### Example
 ```java
@@ -2135,8 +2347,6 @@ Name | Type | Description  | Notes
 
 
 
-타겟그룹상세조회
-
 ### Example
 ```java
 // Import classes:
@@ -2201,8 +2411,6 @@ Name | Type | Description  | Notes
 > GetTargetGroupListResponse getTargetGroupListGet(getTargetGroupListRequest)
 
 
-
-타겟그룹리스트조회
 
 ### Example
 ```java
@@ -2269,8 +2477,6 @@ Name | Type | Description  | Notes
 
 
 
-타겟그룹리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -2335,8 +2541,6 @@ Name | Type | Description  | Notes
 > GetTargetListResponse getTargetListGet(getTargetListRequest)
 
 
-
-타겟리스트조회
 
 ### Example
 ```java
@@ -2403,8 +2607,6 @@ Name | Type | Description  | Notes
 
 
 
-타겟리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -2464,13 +2666,145 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="removeLoadBalancerListenerCertificateGet"></a>
+# **removeLoadBalancerListenerCertificateGet**
+> RemoveLoadBalancerListenerCertificateResponse removeLoadBalancerListenerCertificateGet(removeLoadBalancerListenerCertificateRequest)
+
+
+
+로드밸런서리스너인증서제거
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vloadbalancer.ApiClient;
+// import com.ncloud.vloadbalancer.ApiResponse;
+// import com.ncloud.vloadbalancer.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vloadbalancer.marshaller.JsonMarshaller;
+// import com.ncloud.vloadbalancer.marshaller.XmlMarshaller;
+// import com.ncloud.vloadbalancer.marshaller.FormMarshaller;
+// import com.ncloud.vloadbalancer.exception.ApiException;
+// import com.ncloud.vloadbalancer.exception.SdkException;
+// import com.ncloud.vloadbalancer.model.*;
+
+// import com.ncloud.vloadbalancer.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+RemoveLoadBalancerListenerCertificateRequest removeLoadBalancerListenerCertificateRequest = new RemoveLoadBalancerListenerCertificateRequest(); // RemoveLoadBalancerListenerCertificateRequest | removeLoadBalancerListenerCertificateRequest
+try {
+	// Handler Successful response
+	ApiResponse<RemoveLoadBalancerListenerCertificateResponse> result = apiInstance.removeLoadBalancerListenerCertificateGet(removeLoadBalancerListenerCertificateRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **removeLoadBalancerListenerCertificateRequest** | [**RemoveLoadBalancerListenerCertificateRequest**](RemoveLoadBalancerListenerCertificateRequest.md)| removeLoadBalancerListenerCertificateRequest |
+
+### Return type
+
+[**RemoveLoadBalancerListenerCertificateResponse**](RemoveLoadBalancerListenerCertificateResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="removeLoadBalancerListenerCertificatePost"></a>
+# **removeLoadBalancerListenerCertificatePost**
+> RemoveLoadBalancerListenerCertificateResponse removeLoadBalancerListenerCertificatePost(removeLoadBalancerListenerCertificateRequest)
+
+
+
+로드밸런서리스너인증서제거
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vloadbalancer.ApiClient;
+// import com.ncloud.vloadbalancer.ApiResponse;
+// import com.ncloud.vloadbalancer.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vloadbalancer.marshaller.JsonMarshaller;
+// import com.ncloud.vloadbalancer.marshaller.XmlMarshaller;
+// import com.ncloud.vloadbalancer.marshaller.FormMarshaller;
+// import com.ncloud.vloadbalancer.exception.ApiException;
+// import com.ncloud.vloadbalancer.exception.SdkException;
+// import com.ncloud.vloadbalancer.model.*;
+
+// import com.ncloud.vloadbalancer.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+RemoveLoadBalancerListenerCertificateRequest removeLoadBalancerListenerCertificateRequest = new RemoveLoadBalancerListenerCertificateRequest(); // RemoveLoadBalancerListenerCertificateRequest | removeLoadBalancerListenerCertificateRequest
+try {
+	// Handler Successful response
+	ApiResponse<RemoveLoadBalancerListenerCertificateResponse> result = apiInstance.removeLoadBalancerListenerCertificatePost(removeLoadBalancerListenerCertificateRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **removeLoadBalancerListenerCertificateRequest** | [**RemoveLoadBalancerListenerCertificateRequest**](RemoveLoadBalancerListenerCertificateRequest.md)| removeLoadBalancerListenerCertificateRequest |
+
+### Return type
+
+[**RemoveLoadBalancerListenerCertificateResponse**](RemoveLoadBalancerListenerCertificateResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="removeTargetGet"></a>
 # **removeTargetGet**
 > RemoveTargetResponse removeTargetGet(removeTargetRequest)
 
 
-
-타겟제거
 
 ### Example
 ```java
@@ -2537,8 +2871,6 @@ Name | Type | Description  | Notes
 
 
 
-타겟제거
-
 ### Example
 ```java
 // Import classes:
@@ -2603,8 +2935,6 @@ Name | Type | Description  | Notes
 > SetLoadBalancerDescriptionResponse setLoadBalancerDescriptionGet(setLoadBalancerDescriptionRequest)
 
 
-
-로드밸런서설명설정
 
 ### Example
 ```java
@@ -2671,8 +3001,6 @@ Name | Type | Description  | Notes
 
 
 
-로드밸런서설명설정
-
 ### Example
 ```java
 // Import classes:
@@ -2737,8 +3065,6 @@ Name | Type | Description  | Notes
 > SetLoadBalancerInstanceSubnetResponse setLoadBalancerInstanceSubnetGet(setLoadBalancerInstanceSubnetRequest)
 
 
-
-로드밸런서인스턴스서브넷설정
 
 ### Example
 ```java
@@ -2805,8 +3131,6 @@ Name | Type | Description  | Notes
 
 
 
-로드밸런서인스턴스서브넷설정
-
 ### Example
 ```java
 // Import classes:
@@ -2871,8 +3195,6 @@ Name | Type | Description  | Notes
 > SetTargetResponse setTargetGet(setTargetRequest)
 
 
-
-타겟설정
 
 ### Example
 ```java
@@ -2939,8 +3261,6 @@ Name | Type | Description  | Notes
 
 
 
-타겟그룹설명설정
-
 ### Example
 ```java
 // Import classes:
@@ -3006,8 +3326,6 @@ Name | Type | Description  | Notes
 
 
 
-타겟그룹설명설정
-
 ### Example
 ```java
 // Import classes:
@@ -3072,8 +3390,6 @@ Name | Type | Description  | Notes
 > SetTargetResponse setTargetPost(setTargetRequest)
 
 
-
-타겟설정
 
 ### Example
 ```java

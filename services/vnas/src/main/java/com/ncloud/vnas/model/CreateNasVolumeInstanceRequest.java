@@ -13,6 +13,7 @@
 package com.ncloud.vnas.model;
 
 import java.util.Objects;
+import com.ncloud.vnas.model.AccessControlRuleParameter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -38,7 +39,13 @@ public class CreateNasVolumeInstanceRequest {
 
 	private Boolean isEncryptedVolume = null;
 
+	private Boolean isReturnProtection = null;
+
 	private String nasVolumeDescription = null;
+
+	private List<AccessControlRuleParameter> accessControlRuleList = null;
+
+	private Boolean isAsync = null;
 
 	private String responseFormatType = null;
 
@@ -203,6 +210,23 @@ public class CreateNasVolumeInstanceRequest {
 		this.isEncryptedVolume = isEncryptedVolume;
 	}
 
+	public CreateNasVolumeInstanceRequest isReturnProtection(Boolean isReturnProtection) {
+		this.isReturnProtection = isReturnProtection;
+		return this;
+	}
+
+	 /**
+	 * 반납보호여부
+	 * @return isReturnProtection
+	**/
+	public Boolean isIsReturnProtection() {
+		return isReturnProtection;
+	}
+
+	public void setIsReturnProtection(Boolean isReturnProtection) {
+		this.isReturnProtection = isReturnProtection;
+	}
+
 	public CreateNasVolumeInstanceRequest nasVolumeDescription(String nasVolumeDescription) {
 		this.nasVolumeDescription = nasVolumeDescription;
 		return this;
@@ -218,6 +242,48 @@ public class CreateNasVolumeInstanceRequest {
 
 	public void setNasVolumeDescription(String nasVolumeDescription) {
 		this.nasVolumeDescription = nasVolumeDescription;
+	}
+
+	public CreateNasVolumeInstanceRequest accessControlRuleList(List<AccessControlRuleParameter> accessControlRuleList) {
+		this.accessControlRuleList = accessControlRuleList;
+		return this;
+	}
+
+	public CreateNasVolumeInstanceRequest addAccessControlRuleListItem(AccessControlRuleParameter accessControlRuleListItem) {
+		if (this.accessControlRuleList == null) {
+			this.accessControlRuleList = new ArrayList<AccessControlRuleParameter>();
+		}
+		this.accessControlRuleList.add(accessControlRuleListItem);
+		return this;
+	}
+
+	 /**
+	 * 접근제어Rule리스트
+	 * @return accessControlRuleList
+	**/
+	public List<AccessControlRuleParameter> getAccessControlRuleList() {
+		return accessControlRuleList;
+	}
+
+	public void setAccessControlRuleList(List<AccessControlRuleParameter> accessControlRuleList) {
+		this.accessControlRuleList = accessControlRuleList;
+	}
+
+	public CreateNasVolumeInstanceRequest isAsync(Boolean isAsync) {
+		this.isAsync = isAsync;
+		return this;
+	}
+
+	 /**
+	 * Async여부
+	 * @return isAsync
+	**/
+	public Boolean isIsAsync() {
+		return isAsync;
+	}
+
+	public void setIsAsync(Boolean isAsync) {
+		this.isAsync = isAsync;
 	}
 
 	public CreateNasVolumeInstanceRequest responseFormatType(String responseFormatType) {
@@ -256,13 +322,16 @@ public class CreateNasVolumeInstanceRequest {
 				Objects.equals(this.cifsUserName, createNasVolumeInstanceRequest.cifsUserName) &&
 				Objects.equals(this.cifsUserPassword, createNasVolumeInstanceRequest.cifsUserPassword) &&
 				Objects.equals(this.isEncryptedVolume, createNasVolumeInstanceRequest.isEncryptedVolume) &&
+				Objects.equals(this.isReturnProtection, createNasVolumeInstanceRequest.isReturnProtection) &&
 				Objects.equals(this.nasVolumeDescription, createNasVolumeInstanceRequest.nasVolumeDescription) &&
+				Objects.equals(this.accessControlRuleList, createNasVolumeInstanceRequest.accessControlRuleList) &&
+				Objects.equals(this.isAsync, createNasVolumeInstanceRequest.isAsync) &&
 				Objects.equals(this.responseFormatType, createNasVolumeInstanceRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, zoneCode, volumeName, volumeSize, volumeAllotmentProtocolTypeCode, serverInstanceNoList, cifsUserName, cifsUserPassword, isEncryptedVolume, nasVolumeDescription, responseFormatType);
+		return Objects.hash(regionCode, zoneCode, volumeName, volumeSize, volumeAllotmentProtocolTypeCode, serverInstanceNoList, cifsUserName, cifsUserPassword, isEncryptedVolume, isReturnProtection, nasVolumeDescription, accessControlRuleList, isAsync, responseFormatType);
 	}
 
 
@@ -280,7 +349,10 @@ public class CreateNasVolumeInstanceRequest {
 		sb.append("		cifsUserName: ").append(toIndentedString(cifsUserName)).append("\n");
 		sb.append("		cifsUserPassword: ").append(toIndentedString(cifsUserPassword)).append("\n");
 		sb.append("		isEncryptedVolume: ").append(toIndentedString(isEncryptedVolume)).append("\n");
+		sb.append("		isReturnProtection: ").append(toIndentedString(isReturnProtection)).append("\n");
 		sb.append("		nasVolumeDescription: ").append(toIndentedString(nasVolumeDescription)).append("\n");
+		sb.append("		accessControlRuleList: ").append(toIndentedString(accessControlRuleList)).append("\n");
+		sb.append("		isAsync: ").append(toIndentedString(isAsync)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

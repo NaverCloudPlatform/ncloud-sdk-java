@@ -26,6 +26,8 @@ public class CreateBlockStorageSnapshotInstanceRequest {
 
 	private String originalBlockStorageInstanceNo = null;
 
+	private String snapshotTypeCode = null;
+
 	private String responseFormatType = null;
 
 	public CreateBlockStorageSnapshotInstanceRequest regionCode(String regionCode) {
@@ -96,6 +98,23 @@ public class CreateBlockStorageSnapshotInstanceRequest {
 		this.originalBlockStorageInstanceNo = originalBlockStorageInstanceNo;
 	}
 
+	public CreateBlockStorageSnapshotInstanceRequest snapshotTypeCode(String snapshotTypeCode) {
+		this.snapshotTypeCode = snapshotTypeCode;
+		return this;
+	}
+
+	 /**
+	 * 스냅샷유형코드
+	 * @return snapshotTypeCode
+	**/
+	public String getSnapshotTypeCode() {
+		return snapshotTypeCode;
+	}
+
+	public void setSnapshotTypeCode(String snapshotTypeCode) {
+		this.snapshotTypeCode = snapshotTypeCode;
+	}
+
 	public CreateBlockStorageSnapshotInstanceRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -127,12 +146,13 @@ public class CreateBlockStorageSnapshotInstanceRequest {
 				Objects.equals(this.blockStorageSnapshotName, createBlockStorageSnapshotInstanceRequest.blockStorageSnapshotName) &&
 				Objects.equals(this.blockStorageSnapshotDescription, createBlockStorageSnapshotInstanceRequest.blockStorageSnapshotDescription) &&
 				Objects.equals(this.originalBlockStorageInstanceNo, createBlockStorageSnapshotInstanceRequest.originalBlockStorageInstanceNo) &&
+				Objects.equals(this.snapshotTypeCode, createBlockStorageSnapshotInstanceRequest.snapshotTypeCode) &&
 				Objects.equals(this.responseFormatType, createBlockStorageSnapshotInstanceRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, blockStorageSnapshotName, blockStorageSnapshotDescription, originalBlockStorageInstanceNo, responseFormatType);
+		return Objects.hash(regionCode, blockStorageSnapshotName, blockStorageSnapshotDescription, originalBlockStorageInstanceNo, snapshotTypeCode, responseFormatType);
 	}
 
 
@@ -145,6 +165,7 @@ public class CreateBlockStorageSnapshotInstanceRequest {
 		sb.append("		blockStorageSnapshotName: ").append(toIndentedString(blockStorageSnapshotName)).append("\n");
 		sb.append("		blockStorageSnapshotDescription: ").append(toIndentedString(blockStorageSnapshotDescription)).append("\n");
 		sb.append("		originalBlockStorageInstanceNo: ").append(toIndentedString(originalBlockStorageInstanceNo)).append("\n");
+		sb.append("		snapshotTypeCode: ").append(toIndentedString(snapshotTypeCode)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

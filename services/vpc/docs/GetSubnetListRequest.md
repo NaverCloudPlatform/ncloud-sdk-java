@@ -6,6 +6,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **regionCode** | **String** | REGION코드 |  [optional]
 **subnetNoList** | **List&lt;String&gt;** | 서브넷번호리스트 |  [optional]
+**subnetName** | **String** | 서브넷이름 |  [optional]
 **subnet** | **String** | 서브넷 |  [optional]
 **subnetTypeCode** | **String** | 서브넷유형코드 |  [optional]
 **usageTypeCode** | **String** | 용도유형코드 |  [optional]

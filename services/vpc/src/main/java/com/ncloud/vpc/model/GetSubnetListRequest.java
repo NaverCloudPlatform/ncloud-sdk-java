@@ -24,6 +24,8 @@ public class GetSubnetListRequest {
 
 	private List<String> subnetNoList = null;
 
+	private String subnetName = null;
+
 	private String subnet = null;
 
 	private String subnetTypeCode = null;
@@ -84,6 +86,23 @@ public class GetSubnetListRequest {
 
 	public void setSubnetNoList(List<String> subnetNoList) {
 		this.subnetNoList = subnetNoList;
+	}
+
+	public GetSubnetListRequest subnetName(String subnetName) {
+		this.subnetName = subnetName;
+		return this;
+	}
+
+	 /**
+	 * 서브넷이름
+	 * @return subnetName
+	**/
+	public String getSubnetName() {
+		return subnetName;
+	}
+
+	public void setSubnetName(String subnetName) {
+		this.subnetName = subnetName;
 	}
 
 	public GetSubnetListRequest subnet(String subnet) {
@@ -268,6 +287,7 @@ public class GetSubnetListRequest {
 		GetSubnetListRequest getSubnetListRequest = (GetSubnetListRequest) o;
 		return Objects.equals(this.regionCode, getSubnetListRequest.regionCode) &&
 				Objects.equals(this.subnetNoList, getSubnetListRequest.subnetNoList) &&
+				Objects.equals(this.subnetName, getSubnetListRequest.subnetName) &&
 				Objects.equals(this.subnet, getSubnetListRequest.subnet) &&
 				Objects.equals(this.subnetTypeCode, getSubnetListRequest.subnetTypeCode) &&
 				Objects.equals(this.usageTypeCode, getSubnetListRequest.usageTypeCode) &&
@@ -282,7 +302,7 @@ public class GetSubnetListRequest {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, subnetNoList, subnet, subnetTypeCode, usageTypeCode, networkAclNo, pageNo, pageSize, subnetStatusCode, vpcNo, zoneCode, responseFormatType);
+		return Objects.hash(regionCode, subnetNoList, subnetName, subnet, subnetTypeCode, usageTypeCode, networkAclNo, pageNo, pageSize, subnetStatusCode, vpcNo, zoneCode, responseFormatType);
 	}
 
 
@@ -293,6 +313,7 @@ public class GetSubnetListRequest {
 		
 		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		subnetNoList: ").append(toIndentedString(subnetNoList)).append("\n");
+		sb.append("		subnetName: ").append(toIndentedString(subnetName)).append("\n");
 		sb.append("		subnet: ").append(toIndentedString(subnet)).append("\n");
 		sb.append("		subnetTypeCode: ").append(toIndentedString(subnetTypeCode)).append("\n");
 		sb.append("		usageTypeCode: ").append(toIndentedString(usageTypeCode)).append("\n");

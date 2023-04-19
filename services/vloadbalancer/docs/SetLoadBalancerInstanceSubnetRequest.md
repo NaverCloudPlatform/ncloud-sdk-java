@@ -7,6 +7,7 @@ Name | Type | Description | Notes
 **regionCode** | **String** | REGION코드 |  [optional]
 **loadBalancerInstanceNo** | **String** | 로드밸런서인스턴스번호 | 
 **subnetNoList** | **List&lt;String&gt;** | 서브넷번호리스트 | 
+**loadBalancerSubnetList** | [**List&lt;LoadBalancerSubnetParameter&gt;**](LoadBalancerSubnetParameter.md) | 로드밸런서서브넷리스트 |  [optional]
 **responseFormatType** | **String** | responseFormatType {json, xml} |  [optional]
 
 

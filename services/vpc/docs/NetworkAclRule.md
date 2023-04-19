@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **ruleAction** | [**CommonCode**](CommonCode.md) | Rule액션 |  [optional]
 **createDate** | **String** | 생성일시 |  [optional]
 **ipBlock** | **String** | IP블록 |  [optional]
+**denyAllowGroupNo** | **String** | 허용차단그룹번호 |  [optional]
 **networkAclRuleType** | [**CommonCode**](CommonCode.md) | 네트워크ACLRule유형 |  [optional]
 **networkAclRuleDescription** | **String** | 네트워크ACLRule설명 |  [optional]
 

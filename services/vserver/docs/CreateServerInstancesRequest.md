@@ -21,6 +21,9 @@ Name | Type | Description | Notes
 **networkInterfaceList** | [**List&lt;NetworkInterfaceParameter&gt;**](NetworkInterfaceParameter.md) | 네트워크인터페이스리스트 | 
 **placementGroupNo** | **String** | 물리배치그룹번호 |  [optional]
 **isEncryptedBaseBlockStorageVolume** | **Boolean** | 기본블록스토리지볼륨암호화여부 |  [optional]
+**associateWithPublicIp** | **Boolean** | 서버생성시공인IP할당여부 |  [optional]
+**raidTypeName** | **String** | RAID유형이름 |  [optional]
+**blockDevicePartitionList** | [**List&lt;BlockDevicePartition&gt;**](BlockDevicePartition.md) | 블록디바이스파티션리스트 |  [optional]
 **responseFormatType** | **String** | responseFormatType {json, xml} |  [optional]
 
 

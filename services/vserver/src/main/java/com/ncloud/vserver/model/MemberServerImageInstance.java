@@ -14,6 +14,8 @@ package com.ncloud.vserver.model;
 
 import java.util.Objects;
 import com.ncloud.vserver.model.CommonCode;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * MemberServerImageInstance
@@ -40,6 +42,10 @@ public class MemberServerImageInstance {
 	private Integer memberServerImageBlockStorageTotalRows = null;
 
 	private Long memberServerImageBlockStorageTotalSize = null;
+
+	private CommonCode shareStatus = null;
+
+	private List<String> sharedLoginIdList = null;
 
 	public MemberServerImageInstance memberServerImageInstanceNo(String memberServerImageInstanceNo) {
 		this.memberServerImageInstanceNo = memberServerImageInstanceNo;
@@ -228,6 +234,48 @@ public class MemberServerImageInstance {
 		this.memberServerImageBlockStorageTotalSize = memberServerImageBlockStorageTotalSize;
 	}
 
+	public MemberServerImageInstance shareStatus(CommonCode shareStatus) {
+		this.shareStatus = shareStatus;
+		return this;
+	}
+
+	 /**
+	 * 공유상태
+	 * @return shareStatus
+	**/
+	public CommonCode getShareStatus() {
+		return shareStatus;
+	}
+
+	public void setShareStatus(CommonCode shareStatus) {
+		this.shareStatus = shareStatus;
+	}
+
+	public MemberServerImageInstance sharedLoginIdList(List<String> sharedLoginIdList) {
+		this.sharedLoginIdList = sharedLoginIdList;
+		return this;
+	}
+
+	public MemberServerImageInstance addSharedLoginIdListItem(String sharedLoginIdListItem) {
+		if (this.sharedLoginIdList == null) {
+			this.sharedLoginIdList = new ArrayList<String>();
+		}
+		this.sharedLoginIdList.add(sharedLoginIdListItem);
+		return this;
+	}
+
+	 /**
+	 * 공유받는로그인ID리스트
+	 * @return sharedLoginIdList
+	**/
+	public List<String> getSharedLoginIdList() {
+		return sharedLoginIdList;
+	}
+
+	public void setSharedLoginIdList(List<String> sharedLoginIdList) {
+		this.sharedLoginIdList = sharedLoginIdList;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -248,12 +296,14 @@ public class MemberServerImageInstance {
 				Objects.equals(this.memberServerImageInstanceStatusName, memberServerImageInstance.memberServerImageInstanceStatusName) &&
 				Objects.equals(this.createDate, memberServerImageInstance.createDate) &&
 				Objects.equals(this.memberServerImageBlockStorageTotalRows, memberServerImageInstance.memberServerImageBlockStorageTotalRows) &&
-				Objects.equals(this.memberServerImageBlockStorageTotalSize, memberServerImageInstance.memberServerImageBlockStorageTotalSize);
+				Objects.equals(this.memberServerImageBlockStorageTotalSize, memberServerImageInstance.memberServerImageBlockStorageTotalSize) &&
+				Objects.equals(this.shareStatus, memberServerImageInstance.shareStatus) &&
+				Objects.equals(this.sharedLoginIdList, memberServerImageInstance.sharedLoginIdList);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(memberServerImageInstanceNo, memberServerImageName, memberServerImageDescription, originalServerInstanceNo, originalServerImageProductCode, memberServerImageInstanceStatus, memberServerImageInstanceOperation, memberServerImageInstanceStatusName, createDate, memberServerImageBlockStorageTotalRows, memberServerImageBlockStorageTotalSize);
+		return Objects.hash(memberServerImageInstanceNo, memberServerImageName, memberServerImageDescription, originalServerInstanceNo, originalServerImageProductCode, memberServerImageInstanceStatus, memberServerImageInstanceOperation, memberServerImageInstanceStatusName, createDate, memberServerImageBlockStorageTotalRows, memberServerImageBlockStorageTotalSize, shareStatus, sharedLoginIdList);
 	}
 
 
@@ -273,6 +323,8 @@ public class MemberServerImageInstance {
 		sb.append("		createDate: ").append(toIndentedString(createDate)).append("\n");
 		sb.append("		memberServerImageBlockStorageTotalRows: ").append(toIndentedString(memberServerImageBlockStorageTotalRows)).append("\n");
 		sb.append("		memberServerImageBlockStorageTotalSize: ").append(toIndentedString(memberServerImageBlockStorageTotalSize)).append("\n");
+		sb.append("		shareStatus: ").append(toIndentedString(shareStatus)).append("\n");
+		sb.append("		sharedLoginIdList: ").append(toIndentedString(sharedLoginIdList)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

@@ -15,6 +15,11 @@ Name | Type | Description | Notes
 **createDate** | **String** | 생성일시 |  [optional]
 **natGatewayDescription** | **String** | NATGateway설명 |  [optional]
 **zoneCode** | **String** | ZONE코드 |  [optional]
+**natGatewayType** | [**CommonCode**](CommonCode.md) | NATGateay 유형 |  [optional]
+**subnetNo** | **String** | Subnet번호 |  [optional]
+**subnetName** | **String** | Subnet이름 |  [optional]
+**publicIpInstanceNo** | **String** | 공인아이피인스턴스번호 |  [optional]
+**privateIp** | **String** | 사설IP주소 |  [optional]
 
 
 
