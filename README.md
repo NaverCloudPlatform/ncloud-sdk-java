@@ -100,8 +100,8 @@ public class V2ApiExample {
 ```
 
 If credentials are not specified, the default credential provider chain is used. The default credential provider chain looks for credentials in the following order:
- 
-1. EnvironmentVariableCredentialsProvider: Use the NCLOUD_ACCESS_KEY_ID (or NCLOUD_ACCESS_KEY) and NCLOUD_SECRET_KEY (or NCLOUD_SECRET_ACCESS_KEY) environment variables. 
+
+1. EnvironmentVariableCredentialsProvider: Use the NCLOUD_ACCESS_KEY_ID (or NCLOUD_ACCESS_KEY) and NCLOUD_SECRET_KEY (or NCLOUD_SECRET_ACCESS_KEY) environment variables.
 2. NcloudCredentialsProvider: Use configuration file. The path to the configuration file is .ncloud/configure in the HOME directory.
 3. ServerRoleCredentialsProvider: Used on VPC Server instances, and delivered through the ncloud metadata api. Server Role can be set in the NCP Sub Account console.
 
@@ -112,7 +112,6 @@ If credentials are not specified, the default credential provider chain is used.
 | _Server_       | [**Server**](services/server/README.md)             |
 | _Loadbalancer_ | [**Loadbalancer**](services/loadbalancer/README.md) |
 | _Autoscaling_  | [**Autoscaling**](services/autoscaling/README.md)   |
-| _Monitoring_   | [**Monitoring**](services/monitoring/README.md)     |
 | _CDN_          | [**CDN**](services/cdn/README.md)                   |
 | _CloudDB_      | [**CloudDB**](services/clouddb/README.md)           |
 | _Server(VPC)_      | [**Server(VPC)**](services/vserver/README.md)           |
