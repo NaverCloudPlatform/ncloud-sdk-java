@@ -30,3 +30,6 @@ out/
 *.class
 *.log
 logs/
+
+# vscode
+.DS_Store

@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>cdn</artifactId>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/cdn-1.1.0.jar
+* target/cdn-1.1.1.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -111,12 +111,20 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *V2Api* | [**getCdnPlusInstanceListGet**](docs/V2Api.md#getCdnPlusInstanceListGet) | **GET** /getCdnPlusInstanceList | 
 *V2Api* | [**getCdnPlusInstanceListPost**](docs/V2Api.md#getCdnPlusInstanceListPost) | **POST** /getCdnPlusInstanceList | 
+*V2Api* | [**getCdnPlusMonitoringDataGet**](docs/V2Api.md#getCdnPlusMonitoringDataGet) | **GET** /getCdnPlusMonitoringData | 
+*V2Api* | [**getCdnPlusMonitoringDataPost**](docs/V2Api.md#getCdnPlusMonitoringDataPost) | **POST** /getCdnPlusMonitoringData | 
 *V2Api* | [**getCdnPlusPurgeHistoryListGet**](docs/V2Api.md#getCdnPlusPurgeHistoryListGet) | **GET** /getCdnPlusPurgeHistoryList | 
 *V2Api* | [**getCdnPlusPurgeHistoryListPost**](docs/V2Api.md#getCdnPlusPurgeHistoryListPost) | **POST** /getCdnPlusPurgeHistoryList | 
+*V2Api* | [**getCdnPlusUsageDataGet**](docs/V2Api.md#getCdnPlusUsageDataGet) | **GET** /getCdnPlusUsageData | 
+*V2Api* | [**getCdnPlusUsageDataPost**](docs/V2Api.md#getCdnPlusUsageDataPost) | **POST** /getCdnPlusUsageData | 
 *V2Api* | [**getGlobalCdnInstanceListGet**](docs/V2Api.md#getGlobalCdnInstanceListGet) | **GET** /getGlobalCdnInstanceList | 
 *V2Api* | [**getGlobalCdnInstanceListPost**](docs/V2Api.md#getGlobalCdnInstanceListPost) | **POST** /getGlobalCdnInstanceList | 
+*V2Api* | [**getGlobalCdnMonitoringDataGet**](docs/V2Api.md#getGlobalCdnMonitoringDataGet) | **GET** /getGlobalCdnMonitoringData | 
+*V2Api* | [**getGlobalCdnMonitoringDataPost**](docs/V2Api.md#getGlobalCdnMonitoringDataPost) | **POST** /getGlobalCdnMonitoringData | 
 *V2Api* | [**getGlobalCdnPurgeHistoryListGet**](docs/V2Api.md#getGlobalCdnPurgeHistoryListGet) | **GET** /getGlobalCdnPurgeHistoryList | 
 *V2Api* | [**getGlobalCdnPurgeHistoryListPost**](docs/V2Api.md#getGlobalCdnPurgeHistoryListPost) | **POST** /getGlobalCdnPurgeHistoryList | 
+*V2Api* | [**getGlobalCdnUsageDataGet**](docs/V2Api.md#getGlobalCdnUsageDataGet) | **GET** /getGlobalCdnUsageData | 
+*V2Api* | [**getGlobalCdnUsageDataPost**](docs/V2Api.md#getGlobalCdnUsageDataPost) | **POST** /getGlobalCdnUsageData | 
 *V2Api* | [**requestCdnPlusPurgeGet**](docs/V2Api.md#requestCdnPlusPurgeGet) | **GET** /requestCdnPlusPurge | 
 *V2Api* | [**requestCdnPlusPurgePost**](docs/V2Api.md#requestCdnPlusPurgePost) | **POST** /requestCdnPlusPurge | 
 *V2Api* | [**requestGlobalCdnPurgeGet**](docs/V2Api.md#requestGlobalCdnPurgeGet) | **GET** /requestGlobalCdnPurge | 
@@ -125,6 +133,7 @@ Class | Method | HTTP request | Description
 
 ## Documentation for Models
 
+ - [CdnPlusCustomHeader](docs/CdnPlusCustomHeader.md)
  - [CdnPlusInstance](docs/CdnPlusInstance.md)
  - [CdnPlusPurgeHistory](docs/CdnPlusPurgeHistory.md)
  - [CdnPlusRule](docs/CdnPlusRule.md)
@@ -138,6 +147,7 @@ Class | Method | HTTP request | Description
  - [GetGlobalCdnInstanceListResponse](docs/GetGlobalCdnInstanceListResponse.md)
  - [GetGlobalCdnPurgeHistoryListRequest](docs/GetGlobalCdnPurgeHistoryListRequest.md)
  - [GetGlobalCdnPurgeHistoryListResponse](docs/GetGlobalCdnPurgeHistoryListResponse.md)
+ - [GlobalCdnCustomHeader](docs/GlobalCdnCustomHeader.md)
  - [GlobalCdnInstance](docs/GlobalCdnInstance.md)
  - [GlobalCdnPurgeHistory](docs/GlobalCdnPurgeHistory.md)
  - [GlobalCdnRule](docs/GlobalCdnRule.md)

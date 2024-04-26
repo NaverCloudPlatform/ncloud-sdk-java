@@ -36,10 +36,16 @@ import com.ncloud.clouddb.model.DeleteCloudDBServerInstanceRequest;
 import com.ncloud.clouddb.model.DeleteCloudDBServerInstanceResponse;
 import com.ncloud.clouddb.model.DownloadDmsFileRequest;
 import com.ncloud.clouddb.model.DownloadDmsFileResponse;
+import com.ncloud.clouddb.model.ExportBackupToObjectStorageRequest;
+import com.ncloud.clouddb.model.ExportBackupToObjectStorageResponse;
+import com.ncloud.clouddb.model.ExportDbServerLogToObjectStorageRequest;
+import com.ncloud.clouddb.model.ExportDbServerLogToObjectStorageResponse;
 import com.ncloud.clouddb.model.FlushCloudDBInstanceRequest;
 import com.ncloud.clouddb.model.FlushCloudDBInstanceResponse;
 import com.ncloud.clouddb.model.GetBackupListRequest;
 import com.ncloud.clouddb.model.GetBackupListResponse;
+import com.ncloud.clouddb.model.GetCloudDBBackupDetailListRequest;
+import com.ncloud.clouddb.model.GetCloudDBBackupDetailListResponse;
 import com.ncloud.clouddb.model.GetCloudDBConfigGroupListRequest;
 import com.ncloud.clouddb.model.GetCloudDBConfigGroupListResponse;
 import com.ncloud.clouddb.model.GetCloudDBImageProductListRequest;
@@ -48,6 +54,8 @@ import com.ncloud.clouddb.model.GetCloudDBInstanceListRequest;
 import com.ncloud.clouddb.model.GetCloudDBInstanceListResponse;
 import com.ncloud.clouddb.model.GetCloudDBProductListRequest;
 import com.ncloud.clouddb.model.GetCloudDBProductListResponse;
+import com.ncloud.clouddb.model.GetDbServerLogListRequest;
+import com.ncloud.clouddb.model.GetDbServerLogListResponse;
 import com.ncloud.clouddb.model.GetDmsOperationRequest;
 import com.ncloud.clouddb.model.GetDmsOperationResponse;
 import com.ncloud.clouddb.model.GetObjectStorageBackupListRequest;
@@ -91,7 +99,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -116,7 +124,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -153,7 +161,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -178,7 +186,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -215,7 +223,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB서버인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -240,7 +248,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB서버인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -277,7 +285,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB서버인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -302,7 +310,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB서버인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -339,7 +347,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * DMS파일다운로드
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -364,7 +372,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * DMS파일다운로드
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -401,7 +409,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * DMS파일다운로드
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -426,7 +434,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * DMS파일다운로드
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -463,7 +471,255 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB Flush
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void exportBackupToObjectStorageGetTest() throws ApiException, SdkException {
+		ExportBackupToObjectStorageRequest exportBackupToObjectStorageRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ExportBackupToObjectStorageResponse> response = api.exportBackupToObjectStorageGet(exportBackupToObjectStorageRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void exportBackupToObjectStorageGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.exportBackupToObjectStorageGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void exportBackupToObjectStoragePostTest() throws ApiException, SdkException {
+		ExportBackupToObjectStorageRequest exportBackupToObjectStorageRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ExportBackupToObjectStorageResponse> response = api.exportBackupToObjectStoragePost(exportBackupToObjectStorageRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void exportBackupToObjectStoragePostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.exportBackupToObjectStoragePost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void exportDbServerLogToObjectStorageGetTest() throws ApiException, SdkException {
+		ExportDbServerLogToObjectStorageRequest exportDbServerLogToObjectStorageRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ExportDbServerLogToObjectStorageResponse> response = api.exportDbServerLogToObjectStorageGet(exportDbServerLogToObjectStorageRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void exportDbServerLogToObjectStorageGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.exportDbServerLogToObjectStorageGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void exportDbServerLogToObjectStoragePostTest() throws ApiException, SdkException {
+		ExportDbServerLogToObjectStorageRequest exportDbServerLogToObjectStorageRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ExportDbServerLogToObjectStorageResponse> response = api.exportDbServerLogToObjectStoragePost(exportDbServerLogToObjectStorageRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void exportDbServerLogToObjectStoragePostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.exportDbServerLogToObjectStoragePost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -488,7 +744,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB Flush
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -525,7 +781,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB Flush
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -550,7 +806,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB Flush
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -587,7 +843,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 백업리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -612,7 +868,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 백업리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -649,7 +905,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 백업리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -674,7 +930,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 백업리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -711,7 +967,131 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB설정그룹리스트조회
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getCloudDBBackupDetailListGetTest() throws ApiException, SdkException {
+		GetCloudDBBackupDetailListRequest getCloudDBBackupDetailListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetCloudDBBackupDetailListResponse> response = api.getCloudDBBackupDetailListGet(getCloudDBBackupDetailListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getCloudDBBackupDetailListGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getCloudDBBackupDetailListGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getCloudDBBackupDetailListPostTest() throws ApiException, SdkException {
+		GetCloudDBBackupDetailListRequest getCloudDBBackupDetailListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetCloudDBBackupDetailListResponse> response = api.getCloudDBBackupDetailListPost(getCloudDBBackupDetailListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getCloudDBBackupDetailListPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getCloudDBBackupDetailListPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -736,7 +1116,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB설정그룹리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -773,7 +1153,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB설정그룹리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -798,7 +1178,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB설정그룹리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -835,7 +1215,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB이미지상품리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -860,7 +1240,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB이미지상품리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -897,7 +1277,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB이미지상품리스트
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -922,7 +1302,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB이미지상품리스트
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -959,7 +1339,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -984,7 +1364,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1021,7 +1401,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1046,7 +1426,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1083,7 +1463,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB상품리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1108,7 +1488,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB상품리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1145,7 +1525,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB상품리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1170,7 +1550,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB상품리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1207,7 +1587,131 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * DMS상태조회
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getDbServerLogListGetTest() throws ApiException, SdkException {
+		GetDbServerLogListRequest getDbServerLogListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetDbServerLogListResponse> response = api.getDbServerLogListGet(getDbServerLogListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getDbServerLogListGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getDbServerLogListGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getDbServerLogListPostTest() throws ApiException, SdkException {
+		GetDbServerLogListRequest getDbServerLogListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetDbServerLogListResponse> response = api.getDbServerLogListPost(getDbServerLogListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getDbServerLogListPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getDbServerLogListPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1232,7 +1736,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * DMS상태조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1269,7 +1773,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * DMS상태조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1294,7 +1798,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * DMS상태조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1331,7 +1835,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 오브젝트스토리지백업리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1356,7 +1860,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 오브젝트스토리지백업리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1393,7 +1897,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 오브젝트스토리지백업리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1418,7 +1922,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 오브젝트스토리지백업리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1455,7 +1959,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB서버인스턴스재부팅
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1480,7 +1984,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB서버인스턴스재부팅
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1517,7 +2021,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * CloudDB서버인스턴스재부팅
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1542,7 +2046,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * CloudDB서버인스턴스재부팅
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1579,7 +2083,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * DMS데이터베이스복구
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1604,7 +2108,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * DMS데이터베이스복구
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1641,7 +2145,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * DMS데이터베이스복구
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1666,7 +2170,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * DMS데이터베이스복구
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1703,7 +2207,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * DMS트랜잭션로그복구
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1728,7 +2232,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * DMS트랜잭션로그복구
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1765,7 +2269,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * DMS트랜잭션로그복구
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1790,7 +2294,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * DMS트랜잭션로그복구
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1827,7 +2331,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 오브젝트스토리지정보설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1852,7 +2356,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 오브젝트스토리지정보설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1889,7 +2393,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 오브젝트스토리지정보설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1914,7 +2418,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 오브젝트스토리지정보설정
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1951,7 +2455,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * DMS파일업로드
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1976,7 +2480,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * DMS파일업로드
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2013,7 +2517,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * DMS파일업로드
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -2038,7 +2542,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * DMS파일업로드
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */

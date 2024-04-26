@@ -16,6 +16,8 @@ import java.util.Objects;
 import com.ncloud.loadbalancer.model.CommonCode;
 import com.ncloud.loadbalancer.model.LoadBalancedServerInstance;
 import com.ncloud.loadbalancer.model.LoadBalancerRule;
+import com.ncloud.loadbalancer.model.Region;
+import com.ncloud.loadbalancer.model.Zone;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -37,8 +39,6 @@ public class LoadBalancerInstance {
 
 	private String domainName = null;
 
-	private CommonCode internetLineType = null;
-
 	private String loadBalancerInstanceStatusName = null;
 
 	private CommonCode loadBalancerInstanceStatus = null;
@@ -56,6 +56,10 @@ public class LoadBalancerInstance {
 	private List<LoadBalancerRule> loadBalancerRuleList = null;
 
 	private List<LoadBalancedServerInstance> loadBalancedServerInstanceList = null;
+
+	private Region region = null;
+
+	private Zone zone = null;
 
 	public LoadBalancerInstance loadBalancerInstanceNo(String loadBalancerInstanceNo) {
 		this.loadBalancerInstanceNo = loadBalancerInstanceNo;
@@ -114,7 +118,7 @@ public class LoadBalancerInstance {
 	}
 
 	 /**
-	 * 로드밸런서알고리즘구분코
+	 * 로드밸런서알고리즘구분코드
 	 * @return loadBalancerAlgorithmType
 	**/
 	public CommonCode getLoadBalancerAlgorithmType() {
@@ -174,23 +178,6 @@ public class LoadBalancerInstance {
 
 	public void setDomainName(String domainName) {
 		this.domainName = domainName;
-	}
-
-	public LoadBalancerInstance internetLineType(CommonCode internetLineType) {
-		this.internetLineType = internetLineType;
-		return this;
-	}
-
-	 /**
-	 * 인터넷회선구분
-	 * @return internetLineType
-	**/
-	public CommonCode getInternetLineType() {
-		return internetLineType;
-	}
-
-	public void setInternetLineType(CommonCode internetLineType) {
-		this.internetLineType = internetLineType;
 	}
 
 	public LoadBalancerInstance loadBalancerInstanceStatusName(String loadBalancerInstanceStatusName) {
@@ -362,6 +349,40 @@ public class LoadBalancerInstance {
 		this.loadBalancedServerInstanceList = loadBalancedServerInstanceList;
 	}
 
+	public LoadBalancerInstance region(Region region) {
+		this.region = region;
+		return this;
+	}
+
+	 /**
+	 * 리전
+	 * @return region
+	**/
+	public Region getRegion() {
+		return region;
+	}
+
+	public void setRegion(Region region) {
+		this.region = region;
+	}
+
+	public LoadBalancerInstance zone(Zone zone) {
+		this.zone = zone;
+		return this;
+	}
+
+	 /**
+	 * ZONE
+	 * @return zone
+	**/
+	public Zone getZone() {
+		return zone;
+	}
+
+	public void setZone(Zone zone) {
+		this.zone = zone;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -379,7 +400,6 @@ public class LoadBalancerInstance {
 				Objects.equals(this.loadBalancerDescription, loadBalancerInstance.loadBalancerDescription) &&
 				Objects.equals(this.createDate, loadBalancerInstance.createDate) &&
 				Objects.equals(this.domainName, loadBalancerInstance.domainName) &&
-				Objects.equals(this.internetLineType, loadBalancerInstance.internetLineType) &&
 				Objects.equals(this.loadBalancerInstanceStatusName, loadBalancerInstance.loadBalancerInstanceStatusName) &&
 				Objects.equals(this.loadBalancerInstanceStatus, loadBalancerInstance.loadBalancerInstanceStatus) &&
 				Objects.equals(this.loadBalancerInstanceOperation, loadBalancerInstance.loadBalancerInstanceOperation) &&
@@ -388,12 +408,14 @@ public class LoadBalancerInstance {
 				Objects.equals(this.connectionTimeout, loadBalancerInstance.connectionTimeout) &&
 				Objects.equals(this.certificateName, loadBalancerInstance.certificateName) &&
 				Objects.equals(this.loadBalancerRuleList, loadBalancerInstance.loadBalancerRuleList) &&
-				Objects.equals(this.loadBalancedServerInstanceList, loadBalancerInstance.loadBalancedServerInstanceList);
+				Objects.equals(this.loadBalancedServerInstanceList, loadBalancerInstance.loadBalancedServerInstanceList) &&
+				Objects.equals(this.region, loadBalancerInstance.region) &&
+				Objects.equals(this.zone, loadBalancerInstance.zone);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(loadBalancerInstanceNo, virtualIp, loadBalancerName, loadBalancerAlgorithmType, loadBalancerDescription, createDate, domainName, internetLineType, loadBalancerInstanceStatusName, loadBalancerInstanceStatus, loadBalancerInstanceOperation, networkUsageType, isHttpKeepAlive, connectionTimeout, certificateName, loadBalancerRuleList, loadBalancedServerInstanceList);
+		return Objects.hash(loadBalancerInstanceNo, virtualIp, loadBalancerName, loadBalancerAlgorithmType, loadBalancerDescription, createDate, domainName, loadBalancerInstanceStatusName, loadBalancerInstanceStatus, loadBalancerInstanceOperation, networkUsageType, isHttpKeepAlive, connectionTimeout, certificateName, loadBalancerRuleList, loadBalancedServerInstanceList, region, zone);
 	}
 
 
@@ -409,7 +431,6 @@ public class LoadBalancerInstance {
 		sb.append("		loadBalancerDescription: ").append(toIndentedString(loadBalancerDescription)).append("\n");
 		sb.append("		createDate: ").append(toIndentedString(createDate)).append("\n");
 		sb.append("		domainName: ").append(toIndentedString(domainName)).append("\n");
-		sb.append("		internetLineType: ").append(toIndentedString(internetLineType)).append("\n");
 		sb.append("		loadBalancerInstanceStatusName: ").append(toIndentedString(loadBalancerInstanceStatusName)).append("\n");
 		sb.append("		loadBalancerInstanceStatus: ").append(toIndentedString(loadBalancerInstanceStatus)).append("\n");
 		sb.append("		loadBalancerInstanceOperation: ").append(toIndentedString(loadBalancerInstanceOperation)).append("\n");
@@ -419,6 +440,8 @@ public class LoadBalancerInstance {
 		sb.append("		certificateName: ").append(toIndentedString(certificateName)).append("\n");
 		sb.append("		loadBalancerRuleList: ").append(toIndentedString(loadBalancerRuleList)).append("\n");
 		sb.append("		loadBalancedServerInstanceList: ").append(toIndentedString(loadBalancedServerInstanceList)).append("\n");
+		sb.append("		region: ").append(toIndentedString(region)).append("\n");
+		sb.append("		zone: ").append(toIndentedString(zone)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

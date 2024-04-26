@@ -23,6 +23,9 @@ Name | Type | Description | Notes
 **zoneCode** | **String** | ZONE코드 |  [optional]
 **regionCode** | **String** | REGION코드 |  [optional]
 **isReturnProtection** | **Boolean** | 반납보호여부 |  [optional]
+**blockStorageVolumeType** | [**CommonCode**](CommonCode.md) | 블록스토리지볼륨타입 |  [optional]
+**hypervisorType** | [**CommonCode**](CommonCode.md) | 하이퍼바이저타입 |  [optional]
+**throughput** | **Long** | 블록스토리지 throughput |  [optional]
 
 
 

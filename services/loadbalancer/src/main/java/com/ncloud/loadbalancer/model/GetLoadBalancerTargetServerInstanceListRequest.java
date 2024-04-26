@@ -18,30 +18,11 @@ import java.util.Objects;
  * GetLoadBalancerTargetServerInstanceListRequest
  */
 public class GetLoadBalancerTargetServerInstanceListRequest {
-	private String internetLineTypeCode = null;
-
 	private String networkUsageTypeCode = null;
 
 	private String regionNo = null;
 
 	private String responseFormatType = null;
-
-	public GetLoadBalancerTargetServerInstanceListRequest internetLineTypeCode(String internetLineTypeCode) {
-		this.internetLineTypeCode = internetLineTypeCode;
-		return this;
-	}
-
-	 /**
-	 * 인터넷라인구분코드
-	 * @return internetLineTypeCode
-	**/
-	public String getInternetLineTypeCode() {
-		return internetLineTypeCode;
-	}
-
-	public void setInternetLineTypeCode(String internetLineTypeCode) {
-		this.internetLineTypeCode = internetLineTypeCode;
-	}
 
 	public GetLoadBalancerTargetServerInstanceListRequest networkUsageTypeCode(String networkUsageTypeCode) {
 		this.networkUsageTypeCode = networkUsageTypeCode;
@@ -104,15 +85,14 @@ public class GetLoadBalancerTargetServerInstanceListRequest {
 			return false;
 		}
 		GetLoadBalancerTargetServerInstanceListRequest getLoadBalancerTargetServerInstanceListRequest = (GetLoadBalancerTargetServerInstanceListRequest) o;
-		return Objects.equals(this.internetLineTypeCode, getLoadBalancerTargetServerInstanceListRequest.internetLineTypeCode) &&
-				Objects.equals(this.networkUsageTypeCode, getLoadBalancerTargetServerInstanceListRequest.networkUsageTypeCode) &&
+		return Objects.equals(this.networkUsageTypeCode, getLoadBalancerTargetServerInstanceListRequest.networkUsageTypeCode) &&
 				Objects.equals(this.regionNo, getLoadBalancerTargetServerInstanceListRequest.regionNo) &&
 				Objects.equals(this.responseFormatType, getLoadBalancerTargetServerInstanceListRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(internetLineTypeCode, networkUsageTypeCode, regionNo, responseFormatType);
+		return Objects.hash(networkUsageTypeCode, regionNo, responseFormatType);
 	}
 
 
@@ -121,7 +101,6 @@ public class GetLoadBalancerTargetServerInstanceListRequest {
 		StringBuilder sb = new StringBuilder();
 		sb.append("class GetLoadBalancerTargetServerInstanceListRequest {\n");
 		
-		sb.append("		internetLineTypeCode: ").append(toIndentedString(internetLineTypeCode)).append("\n");
 		sb.append("		networkUsageTypeCode: ").append(toIndentedString(networkUsageTypeCode)).append("\n");
 		sb.append("		regionNo: ").append(toIndentedString(regionNo)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");

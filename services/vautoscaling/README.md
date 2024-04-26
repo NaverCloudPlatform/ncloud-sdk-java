@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>vautoscaling</artifactId>
-	<version>1.0.1</version>
+	<version>1.1.0</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/vautoscaling-1.0.1.jar
+* target/vautoscaling-1.1.0.jar
 * target/lib/*.jar
 
 ## Getting Started

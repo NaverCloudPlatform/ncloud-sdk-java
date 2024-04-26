@@ -29,6 +29,8 @@ public class ChangeLoadBalancerInstanceConfigurationRequest {
 
 	private List<LoadBalancerRuleParameter> loadBalancerRuleList = new ArrayList<LoadBalancerRuleParameter>();
 
+	private List<String> zoneNoList = null;
+
 	private String responseFormatType = null;
 
 	public ChangeLoadBalancerInstanceConfigurationRequest loadBalancerInstanceNo(String loadBalancerInstanceNo) {
@@ -104,6 +106,31 @@ public class ChangeLoadBalancerInstanceConfigurationRequest {
 		this.loadBalancerRuleList = loadBalancerRuleList;
 	}
 
+	public ChangeLoadBalancerInstanceConfigurationRequest zoneNoList(List<String> zoneNoList) {
+		this.zoneNoList = zoneNoList;
+		return this;
+	}
+
+	public ChangeLoadBalancerInstanceConfigurationRequest addZoneNoListItem(String zoneNoListItem) {
+		if (this.zoneNoList == null) {
+			this.zoneNoList = new ArrayList<String>();
+		}
+		this.zoneNoList.add(zoneNoListItem);
+		return this;
+	}
+
+	 /**
+	 * ZONE번호리스트
+	 * @return zoneNoList
+	**/
+	public List<String> getZoneNoList() {
+		return zoneNoList;
+	}
+
+	public void setZoneNoList(List<String> zoneNoList) {
+		this.zoneNoList = zoneNoList;
+	}
+
 	public ChangeLoadBalancerInstanceConfigurationRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -135,12 +162,13 @@ public class ChangeLoadBalancerInstanceConfigurationRequest {
 				Objects.equals(this.loadBalancerAlgorithmTypeCode, changeLoadBalancerInstanceConfigurationRequest.loadBalancerAlgorithmTypeCode) &&
 				Objects.equals(this.loadBalancerDescription, changeLoadBalancerInstanceConfigurationRequest.loadBalancerDescription) &&
 				Objects.equals(this.loadBalancerRuleList, changeLoadBalancerInstanceConfigurationRequest.loadBalancerRuleList) &&
+				Objects.equals(this.zoneNoList, changeLoadBalancerInstanceConfigurationRequest.zoneNoList) &&
 				Objects.equals(this.responseFormatType, changeLoadBalancerInstanceConfigurationRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(loadBalancerInstanceNo, loadBalancerAlgorithmTypeCode, loadBalancerDescription, loadBalancerRuleList, responseFormatType);
+		return Objects.hash(loadBalancerInstanceNo, loadBalancerAlgorithmTypeCode, loadBalancerDescription, loadBalancerRuleList, zoneNoList, responseFormatType);
 	}
 
 
@@ -153,6 +181,7 @@ public class ChangeLoadBalancerInstanceConfigurationRequest {
 		sb.append("		loadBalancerAlgorithmTypeCode: ").append(toIndentedString(loadBalancerAlgorithmTypeCode)).append("\n");
 		sb.append("		loadBalancerDescription: ").append(toIndentedString(loadBalancerDescription)).append("\n");
 		sb.append("		loadBalancerRuleList: ").append(toIndentedString(loadBalancerRuleList)).append("\n");
+		sb.append("		zoneNoList: ").append(toIndentedString(zoneNoList)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

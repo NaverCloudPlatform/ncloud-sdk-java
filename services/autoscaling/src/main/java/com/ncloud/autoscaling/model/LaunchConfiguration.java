@@ -23,6 +23,8 @@ import java.util.List;
 public class LaunchConfiguration {
 	private String launchConfigurationName = null;
 
+	private String launchConfigurationNo = null;
+
 	private String serverImageProductCode = null;
 
 	private String serverProductCode = null;
@@ -52,6 +54,23 @@ public class LaunchConfiguration {
 
 	public void setLaunchConfigurationName(String launchConfigurationName) {
 		this.launchConfigurationName = launchConfigurationName;
+	}
+
+	public LaunchConfiguration launchConfigurationNo(String launchConfigurationNo) {
+		this.launchConfigurationNo = launchConfigurationNo;
+		return this;
+	}
+
+	 /**
+	 * 론치설정번호
+	 * @return launchConfigurationNo
+	**/
+	public String getLaunchConfigurationNo() {
+		return launchConfigurationNo;
+	}
+
+	public void setLaunchConfigurationNo(String launchConfigurationNo) {
+		this.launchConfigurationNo = launchConfigurationNo;
 	}
 
 	public LaunchConfiguration serverImageProductCode(String serverImageProductCode) {
@@ -192,6 +211,7 @@ public class LaunchConfiguration {
 		}
 		LaunchConfiguration launchConfiguration = (LaunchConfiguration) o;
 		return Objects.equals(this.launchConfigurationName, launchConfiguration.launchConfigurationName) &&
+				Objects.equals(this.launchConfigurationNo, launchConfiguration.launchConfigurationNo) &&
 				Objects.equals(this.serverImageProductCode, launchConfiguration.serverImageProductCode) &&
 				Objects.equals(this.serverProductCode, launchConfiguration.serverProductCode) &&
 				Objects.equals(this.memberServerImageNo, launchConfiguration.memberServerImageNo) &&
@@ -203,7 +223,7 @@ public class LaunchConfiguration {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(launchConfigurationName, serverImageProductCode, serverProductCode, memberServerImageNo, loginKeyName, createDate, userData, accessControlGroupList);
+		return Objects.hash(launchConfigurationName, launchConfigurationNo, serverImageProductCode, serverProductCode, memberServerImageNo, loginKeyName, createDate, userData, accessControlGroupList);
 	}
 
 
@@ -213,6 +233,7 @@ public class LaunchConfiguration {
 		sb.append("class LaunchConfiguration {\n");
 		
 		sb.append("		launchConfigurationName: ").append(toIndentedString(launchConfigurationName)).append("\n");
+		sb.append("		launchConfigurationNo: ").append(toIndentedString(launchConfigurationNo)).append("\n");
 		sb.append("		serverImageProductCode: ").append(toIndentedString(serverImageProductCode)).append("\n");
 		sb.append("		serverProductCode: ").append(toIndentedString(serverProductCode)).append("\n");
 		sb.append("		memberServerImageNo: ").append(toIndentedString(memberServerImageNo)).append("\n");

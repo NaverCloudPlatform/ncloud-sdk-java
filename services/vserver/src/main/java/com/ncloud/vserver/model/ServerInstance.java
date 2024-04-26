@@ -13,6 +13,7 @@
 package com.ncloud.vserver.model;
 
 import java.util.Objects;
+import com.ncloud.vserver.model.BlockDevicePartition;
 import com.ncloud.vserver.model.CommonCode;
 import java.util.ArrayList;
 import java.util.List;
@@ -74,6 +75,14 @@ public class ServerInstance {
 	private CommonCode baseBlockStorageDiskDetailType = null;
 
 	private String placementGroupNo = null;
+
+	private List<BlockDevicePartition> blockDevicePartitionList = null;
+
+	private CommonCode hypervisorType = null;
+
+	private String serverImageNo = null;
+
+	private String serverSpecCode = null;
 
 	public ServerInstance serverInstanceNo(String serverInstanceNo) {
 		this.serverInstanceNo = serverInstanceNo;
@@ -542,6 +551,82 @@ public class ServerInstance {
 		this.placementGroupNo = placementGroupNo;
 	}
 
+	public ServerInstance blockDevicePartitionList(List<BlockDevicePartition> blockDevicePartitionList) {
+		this.blockDevicePartitionList = blockDevicePartitionList;
+		return this;
+	}
+
+	public ServerInstance addBlockDevicePartitionListItem(BlockDevicePartition blockDevicePartitionListItem) {
+		if (this.blockDevicePartitionList == null) {
+			this.blockDevicePartitionList = new ArrayList<BlockDevicePartition>();
+		}
+		this.blockDevicePartitionList.add(blockDevicePartitionListItem);
+		return this;
+	}
+
+	 /**
+	 * 블록디바이스파티션리스트
+	 * @return blockDevicePartitionList
+	**/
+	public List<BlockDevicePartition> getBlockDevicePartitionList() {
+		return blockDevicePartitionList;
+	}
+
+	public void setBlockDevicePartitionList(List<BlockDevicePartition> blockDevicePartitionList) {
+		this.blockDevicePartitionList = blockDevicePartitionList;
+	}
+
+	public ServerInstance hypervisorType(CommonCode hypervisorType) {
+		this.hypervisorType = hypervisorType;
+		return this;
+	}
+
+	 /**
+	 * 하이퍼바이저타입
+	 * @return hypervisorType
+	**/
+	public CommonCode getHypervisorType() {
+		return hypervisorType;
+	}
+
+	public void setHypervisorType(CommonCode hypervisorType) {
+		this.hypervisorType = hypervisorType;
+	}
+
+	public ServerInstance serverImageNo(String serverImageNo) {
+		this.serverImageNo = serverImageNo;
+		return this;
+	}
+
+	 /**
+	 * 서버이미지번호
+	 * @return serverImageNo
+	**/
+	public String getServerImageNo() {
+		return serverImageNo;
+	}
+
+	public void setServerImageNo(String serverImageNo) {
+		this.serverImageNo = serverImageNo;
+	}
+
+	public ServerInstance serverSpecCode(String serverSpecCode) {
+		this.serverSpecCode = serverSpecCode;
+		return this;
+	}
+
+	 /**
+	 * 서버스펙코드
+	 * @return serverSpecCode
+	**/
+	public String getServerSpecCode() {
+		return serverSpecCode;
+	}
+
+	public void setServerSpecCode(String serverSpecCode) {
+		this.serverSpecCode = serverSpecCode;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -578,12 +663,16 @@ public class ServerInstance {
 				Objects.equals(this.serverInstanceType, serverInstance.serverInstanceType) &&
 				Objects.equals(this.baseBlockStorageDiskType, serverInstance.baseBlockStorageDiskType) &&
 				Objects.equals(this.baseBlockStorageDiskDetailType, serverInstance.baseBlockStorageDiskDetailType) &&
-				Objects.equals(this.placementGroupNo, serverInstance.placementGroupNo);
+				Objects.equals(this.placementGroupNo, serverInstance.placementGroupNo) &&
+				Objects.equals(this.blockDevicePartitionList, serverInstance.blockDevicePartitionList) &&
+				Objects.equals(this.hypervisorType, serverInstance.hypervisorType) &&
+				Objects.equals(this.serverImageNo, serverInstance.serverImageNo) &&
+				Objects.equals(this.serverSpecCode, serverInstance.serverSpecCode);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(serverInstanceNo, serverName, serverDescription, cpuCount, memorySize, platformType, loginKeyName, publicIpInstanceNo, publicIp, serverInstanceStatus, serverInstanceOperation, serverInstanceStatusName, createDate, uptime, serverImageProductCode, serverProductCode, isProtectServerTermination, zoneCode, regionCode, vpcNo, subnetNo, networkInterfaceNoList, initScriptNo, serverInstanceType, baseBlockStorageDiskType, baseBlockStorageDiskDetailType, placementGroupNo);
+		return Objects.hash(serverInstanceNo, serverName, serverDescription, cpuCount, memorySize, platformType, loginKeyName, publicIpInstanceNo, publicIp, serverInstanceStatus, serverInstanceOperation, serverInstanceStatusName, createDate, uptime, serverImageProductCode, serverProductCode, isProtectServerTermination, zoneCode, regionCode, vpcNo, subnetNo, networkInterfaceNoList, initScriptNo, serverInstanceType, baseBlockStorageDiskType, baseBlockStorageDiskDetailType, placementGroupNo, blockDevicePartitionList, hypervisorType, serverImageNo, serverSpecCode);
 	}
 
 
@@ -619,6 +708,10 @@ public class ServerInstance {
 		sb.append("		baseBlockStorageDiskType: ").append(toIndentedString(baseBlockStorageDiskType)).append("\n");
 		sb.append("		baseBlockStorageDiskDetailType: ").append(toIndentedString(baseBlockStorageDiskDetailType)).append("\n");
 		sb.append("		placementGroupNo: ").append(toIndentedString(placementGroupNo)).append("\n");
+		sb.append("		blockDevicePartitionList: ").append(toIndentedString(blockDevicePartitionList)).append("\n");
+		sb.append("		hypervisorType: ").append(toIndentedString(hypervisorType)).append("\n");
+		sb.append("		serverImageNo: ").append(toIndentedString(serverImageNo)).append("\n");
+		sb.append("		serverSpecCode: ").append(toIndentedString(serverSpecCode)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

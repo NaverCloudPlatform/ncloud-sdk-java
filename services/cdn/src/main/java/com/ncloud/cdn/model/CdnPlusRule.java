@@ -13,6 +13,7 @@
 package com.ncloud.cdn.model;
 
 import java.util.Objects;
+import com.ncloud.cdn.model.CdnPlusCustomHeader;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -71,6 +72,14 @@ public class CdnPlusRule {
 	private Boolean isAccessLogUse = null;
 
 	private String accessLogFileStorageContainerName = null;
+
+	private Boolean isRequestCustomHeaderUse = null;
+
+	private List<CdnPlusCustomHeader> requestCustomHeaderList = null;
+
+	private Boolean isResponseCustomHeaderUse = null;
+
+	private List<CdnPlusCustomHeader> responseCustomHeaderList = null;
 
 	public CdnPlusRule protocolTypeCode(String protocolTypeCode) {
 		this.protocolTypeCode = protocolTypeCode;
@@ -522,6 +531,90 @@ public class CdnPlusRule {
 		this.accessLogFileStorageContainerName = accessLogFileStorageContainerName;
 	}
 
+	public CdnPlusRule isRequestCustomHeaderUse(Boolean isRequestCustomHeaderUse) {
+		this.isRequestCustomHeaderUse = isRequestCustomHeaderUse;
+		return this;
+	}
+
+	 /**
+	 * 커스텀헤더요청사용여부
+	 * @return isRequestCustomHeaderUse
+	**/
+	public Boolean isIsRequestCustomHeaderUse() {
+		return isRequestCustomHeaderUse;
+	}
+
+	public void setIsRequestCustomHeaderUse(Boolean isRequestCustomHeaderUse) {
+		this.isRequestCustomHeaderUse = isRequestCustomHeaderUse;
+	}
+
+	public CdnPlusRule requestCustomHeaderList(List<CdnPlusCustomHeader> requestCustomHeaderList) {
+		this.requestCustomHeaderList = requestCustomHeaderList;
+		return this;
+	}
+
+	public CdnPlusRule addRequestCustomHeaderListItem(CdnPlusCustomHeader requestCustomHeaderListItem) {
+		if (this.requestCustomHeaderList == null) {
+			this.requestCustomHeaderList = new ArrayList<CdnPlusCustomHeader>();
+		}
+		this.requestCustomHeaderList.add(requestCustomHeaderListItem);
+		return this;
+	}
+
+	 /**
+	 * Get requestCustomHeaderList
+	 * @return requestCustomHeaderList
+	**/
+	public List<CdnPlusCustomHeader> getRequestCustomHeaderList() {
+		return requestCustomHeaderList;
+	}
+
+	public void setRequestCustomHeaderList(List<CdnPlusCustomHeader> requestCustomHeaderList) {
+		this.requestCustomHeaderList = requestCustomHeaderList;
+	}
+
+	public CdnPlusRule isResponseCustomHeaderUse(Boolean isResponseCustomHeaderUse) {
+		this.isResponseCustomHeaderUse = isResponseCustomHeaderUse;
+		return this;
+	}
+
+	 /**
+	 * 커스텀헤더반환사용여부
+	 * @return isResponseCustomHeaderUse
+	**/
+	public Boolean isIsResponseCustomHeaderUse() {
+		return isResponseCustomHeaderUse;
+	}
+
+	public void setIsResponseCustomHeaderUse(Boolean isResponseCustomHeaderUse) {
+		this.isResponseCustomHeaderUse = isResponseCustomHeaderUse;
+	}
+
+	public CdnPlusRule responseCustomHeaderList(List<CdnPlusCustomHeader> responseCustomHeaderList) {
+		this.responseCustomHeaderList = responseCustomHeaderList;
+		return this;
+	}
+
+	public CdnPlusRule addResponseCustomHeaderListItem(CdnPlusCustomHeader responseCustomHeaderListItem) {
+		if (this.responseCustomHeaderList == null) {
+			this.responseCustomHeaderList = new ArrayList<CdnPlusCustomHeader>();
+		}
+		this.responseCustomHeaderList.add(responseCustomHeaderListItem);
+		return this;
+	}
+
+	 /**
+	 * Get responseCustomHeaderList
+	 * @return responseCustomHeaderList
+	**/
+	public List<CdnPlusCustomHeader> getResponseCustomHeaderList() {
+		return responseCustomHeaderList;
+	}
+
+	public void setResponseCustomHeaderList(List<CdnPlusCustomHeader> responseCustomHeaderList) {
+		this.responseCustomHeaderList = responseCustomHeaderList;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -557,12 +650,16 @@ public class CdnPlusRule {
 				Objects.equals(this.isReissueSecureTokenPassword, cdnPlusRule.isReissueSecureTokenPassword) &&
 				Objects.equals(this.certificateName, cdnPlusRule.certificateName) &&
 				Objects.equals(this.isAccessLogUse, cdnPlusRule.isAccessLogUse) &&
-				Objects.equals(this.accessLogFileStorageContainerName, cdnPlusRule.accessLogFileStorageContainerName);
+				Objects.equals(this.accessLogFileStorageContainerName, cdnPlusRule.accessLogFileStorageContainerName) &&
+				Objects.equals(this.isRequestCustomHeaderUse, cdnPlusRule.isRequestCustomHeaderUse) &&
+				Objects.equals(this.requestCustomHeaderList, cdnPlusRule.requestCustomHeaderList) &&
+				Objects.equals(this.isResponseCustomHeaderUse, cdnPlusRule.isResponseCustomHeaderUse) &&
+				Objects.equals(this.responseCustomHeaderList, cdnPlusRule.responseCustomHeaderList);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(protocolTypeCode, serviceDomainTypeCode, originUrl, originPath, originHttpPort, originHttpsPort, forwardHostHeaderTypeCode, forwardHostHeader, cacheKeyHostNameTypeCode, isGzipCompressionUse, cachingOptionTypeCode, isErrorContentsResponseUse, cachingTtlTime, isQueryStringIgnoreUse, isRemoveVaryHeaderUse, isLargeFileOptimizationUse, gzipResponseTypeCode, isReferrerDomainUse, referrerDomainList, isReferrerDomainRestrictUse, isSecureTokenUse, secureTokenPassword, isReissueSecureTokenPassword, certificateName, isAccessLogUse, accessLogFileStorageContainerName);
+		return Objects.hash(protocolTypeCode, serviceDomainTypeCode, originUrl, originPath, originHttpPort, originHttpsPort, forwardHostHeaderTypeCode, forwardHostHeader, cacheKeyHostNameTypeCode, isGzipCompressionUse, cachingOptionTypeCode, isErrorContentsResponseUse, cachingTtlTime, isQueryStringIgnoreUse, isRemoveVaryHeaderUse, isLargeFileOptimizationUse, gzipResponseTypeCode, isReferrerDomainUse, referrerDomainList, isReferrerDomainRestrictUse, isSecureTokenUse, secureTokenPassword, isReissueSecureTokenPassword, certificateName, isAccessLogUse, accessLogFileStorageContainerName, isRequestCustomHeaderUse, requestCustomHeaderList, isResponseCustomHeaderUse, responseCustomHeaderList);
 	}
 
 
@@ -597,6 +694,10 @@ public class CdnPlusRule {
 		sb.append("		certificateName: ").append(toIndentedString(certificateName)).append("\n");
 		sb.append("		isAccessLogUse: ").append(toIndentedString(isAccessLogUse)).append("\n");
 		sb.append("		accessLogFileStorageContainerName: ").append(toIndentedString(accessLogFileStorageContainerName)).append("\n");
+		sb.append("		isRequestCustomHeaderUse: ").append(toIndentedString(isRequestCustomHeaderUse)).append("\n");
+		sb.append("		requestCustomHeaderList: ").append(toIndentedString(requestCustomHeaderList)).append("\n");
+		sb.append("		isResponseCustomHeaderUse: ").append(toIndentedString(isResponseCustomHeaderUse)).append("\n");
+		sb.append("		responseCustomHeaderList: ").append(toIndentedString(responseCustomHeaderList)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

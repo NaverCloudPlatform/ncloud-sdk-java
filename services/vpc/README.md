@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>vpc</artifactId>
-	<version>1.1.1</version>
+	<version>1.1.2</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/vpc-1.1.1.jar
+* target/vpc-1.1.2.jar
 * target/lib/*.jar
 
 ## Getting Started

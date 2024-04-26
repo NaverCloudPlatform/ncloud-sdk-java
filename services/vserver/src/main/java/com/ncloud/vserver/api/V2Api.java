@@ -30,6 +30,7 @@ import com.ncloud.vserver.model.AddNetworkInterfaceAccessControlGroupRequest;
 import com.ncloud.vserver.model.AddNetworkInterfaceAccessControlGroupResponse;
 import com.ncloud.vserver.model.AddPlacementGroupServerInstanceRequest;
 import com.ncloud.vserver.model.AddPlacementGroupServerInstanceResponse;
+import com.ncloud.vserver.model.AddServerImageSharingPermissionReqeuset;
 import com.ncloud.vserver.model.AssignSecondaryIpsRequest;
 import com.ncloud.vserver.model.AssignSecondaryIpsResponse;
 import com.ncloud.vserver.model.AssociatePublicIpWithServerInstanceRequest;
@@ -38,6 +39,8 @@ import com.ncloud.vserver.model.AttachBlockStorageInstanceRequest;
 import com.ncloud.vserver.model.AttachBlockStorageInstanceResponse;
 import com.ncloud.vserver.model.AttachNetworkInterfaceRequest;
 import com.ncloud.vserver.model.AttachNetworkInterfaceResponse;
+import com.ncloud.vserver.model.ChangeBlockStorageInstanceRequest;
+import com.ncloud.vserver.model.ChangeBlockStorageInstanceResponse;
 import com.ncloud.vserver.model.ChangeBlockStorageVolumeSizeRequest;
 import com.ncloud.vserver.model.ChangeBlockStorageVolumeSizeResponse;
 import com.ncloud.vserver.model.ChangeServerInstanceSpecRequest;
@@ -60,6 +63,8 @@ import com.ncloud.vserver.model.CreatePlacementGroupRequest;
 import com.ncloud.vserver.model.CreatePlacementGroupResponse;
 import com.ncloud.vserver.model.CreatePublicIpInstanceRequest;
 import com.ncloud.vserver.model.CreatePublicIpInstanceResponse;
+import com.ncloud.vserver.model.CreateServerImageFromSnapshotRequest;
+import com.ncloud.vserver.model.CreateServerImageRequest;
 import com.ncloud.vserver.model.CreateServerInstancesRequest;
 import com.ncloud.vserver.model.CreateServerInstancesResponse;
 import com.ncloud.vserver.model.DeleteAccessControlGroupRequest;
@@ -80,12 +85,16 @@ import com.ncloud.vserver.model.DeletePlacementGroupRequest;
 import com.ncloud.vserver.model.DeletePlacementGroupResponse;
 import com.ncloud.vserver.model.DeletePublicIpInstanceRequest;
 import com.ncloud.vserver.model.DeletePublicIpInstanceResponse;
+import com.ncloud.vserver.model.DeleteServerImageRequest;
 import com.ncloud.vserver.model.DetachBlockStorageInstancesRequest;
 import com.ncloud.vserver.model.DetachBlockStorageInstancesResponse;
 import com.ncloud.vserver.model.DetachNetworkInterfaceRequest;
 import com.ncloud.vserver.model.DetachNetworkInterfaceResponse;
+import com.ncloud.vserver.model.DisableFlowLogRequest;
 import com.ncloud.vserver.model.DisassociatePublicIpFromServerInstanceRequest;
 import com.ncloud.vserver.model.DisassociatePublicIpFromServerInstanceResponse;
+import com.ncloud.vserver.model.EnableFlowLogRequest;
+import com.ncloud.vserver.model.FlowLogConfigurationList;
 import com.ncloud.vserver.model.GetAccessControlGroupDetailRequest;
 import com.ncloud.vserver.model.GetAccessControlGroupDetailResponse;
 import com.ncloud.vserver.model.GetAccessControlGroupListRequest;
@@ -100,6 +109,11 @@ import com.ncloud.vserver.model.GetBlockStorageSnapshotInstanceDetailRequest;
 import com.ncloud.vserver.model.GetBlockStorageSnapshotInstanceDetailResponse;
 import com.ncloud.vserver.model.GetBlockStorageSnapshotInstanceListRequest;
 import com.ncloud.vserver.model.GetBlockStorageSnapshotInstanceListResponse;
+import com.ncloud.vserver.model.GetBlockStorageVolumeTypeListRequest;
+import com.ncloud.vserver.model.GetBlockStorageVolumeTypeListResponse;
+import com.ncloud.vserver.model.GetFlowLogConfigurationListRequest;
+import com.ncloud.vserver.model.GetHypervisorTypeListRequest;
+import com.ncloud.vserver.model.GetHypervisorTypeListResponse;
 import com.ncloud.vserver.model.GetInitScriptDetailRequest;
 import com.ncloud.vserver.model.GetInitScriptDetailResponse;
 import com.ncloud.vserver.model.GetInitScriptListRequest;
@@ -132,6 +146,8 @@ import com.ncloud.vserver.model.GetRootPasswordRequest;
 import com.ncloud.vserver.model.GetRootPasswordResponse;
 import com.ncloud.vserver.model.GetRootPasswordServerInstanceListRequest;
 import com.ncloud.vserver.model.GetRootPasswordServerInstanceListResponse;
+import com.ncloud.vserver.model.GetServerImageDetailRequest;
+import com.ncloud.vserver.model.GetServerImageListRequest;
 import com.ncloud.vserver.model.GetServerImageProductListRequest;
 import com.ncloud.vserver.model.GetServerImageProductListResponse;
 import com.ncloud.vserver.model.GetServerInstanceDetailRequest;
@@ -140,6 +156,8 @@ import com.ncloud.vserver.model.GetServerInstanceListRequest;
 import com.ncloud.vserver.model.GetServerInstanceListResponse;
 import com.ncloud.vserver.model.GetServerProductListRequest;
 import com.ncloud.vserver.model.GetServerProductListResponse;
+import com.ncloud.vserver.model.GetServerSpecDetailRequest;
+import com.ncloud.vserver.model.GetServerSpecListRequest;
 import com.ncloud.vserver.model.GetZoneListRequest;
 import com.ncloud.vserver.model.GetZoneListResponse;
 import com.ncloud.vserver.model.ImportLoginKeyRequest;
@@ -158,6 +176,7 @@ import com.ncloud.vserver.model.RemoveNetworkInterfaceAccessControlGroupRequest;
 import com.ncloud.vserver.model.RemoveNetworkInterfaceAccessControlGroupResponse;
 import com.ncloud.vserver.model.RemovePlacementGroupServerInstanceRequest;
 import com.ncloud.vserver.model.RemovePlacementGroupServerInstanceResponse;
+import com.ncloud.vserver.model.RemoveServerImageSharingPermissionRequest;
 import com.ncloud.vserver.model.SetBlockStorageReturnProtectionRequest;
 import com.ncloud.vserver.model.SetBlockStorageReturnProtectionResponse;
 import com.ncloud.vserver.model.SetMemberServerImageSharingPermissionRequest;
@@ -969,6 +988,158 @@ public class V2Api {
 
 	/**
 	 * 
+	 * 
+	 * @param addServerImageSharingPermissionRequest  (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void addServerImageSharingPermissionGet(AddServerImageSharingPermissionReqeuset addServerImageSharingPermissionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/addServerImageSharingPermission";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, addServerImageSharingPermissionRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	addServerImageSharingPermissionRequest  (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> addServerImageSharingPermissionGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/addServerImageSharingPermission";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param addServerImageSharingPermissionRequest  (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void addServerImageSharingPermissionPost(AddServerImageSharingPermissionReqeuset addServerImageSharingPermissionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/addServerImageSharingPermission";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, addServerImageSharingPermissionRequest, false, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	addServerImageSharingPermissionRequest  (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> addServerImageSharingPermissionPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/addServerImageSharingPermission";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, false, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
 	 * 보조IP할당
 	 * @param assignSecondaryIpsRequest assignSecondaryIpsRequest (required)
 	 * @return AssignSecondaryIpsResponse
@@ -1572,6 +1743,162 @@ public class V2Api {
 		
 		// path
 		String path = "/attachNetworkInterface";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지인스턴스변경
+	 * @param changeBlockStorageInstanceRequest changeBlockStorageInstanceRequest (required)
+	 * @return ChangeBlockStorageInstanceResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeBlockStorageInstanceResponse> changeBlockStorageInstanceGet(ChangeBlockStorageInstanceRequest changeBlockStorageInstanceRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/changeBlockStorageInstance";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, changeBlockStorageInstanceRequest, true, false);
+		return apiClient.call(apiRequest, ChangeBlockStorageInstanceResponse.class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지인스턴스변경
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeBlockStorageInstanceRequest changeBlockStorageInstanceRequest (required)
+	 * @return byte[]
+	 *	ChangeBlockStorageInstanceResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> changeBlockStorageInstanceGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/changeBlockStorageInstance";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지인스턴스변경
+	 * @param changeBlockStorageInstanceRequest changeBlockStorageInstanceRequest (required)
+	 * @return ChangeBlockStorageInstanceResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeBlockStorageInstanceResponse> changeBlockStorageInstancePost(ChangeBlockStorageInstanceRequest changeBlockStorageInstanceRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/changeBlockStorageInstance";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, changeBlockStorageInstanceRequest, true, false);
+		return apiClient.call(apiRequest, ChangeBlockStorageInstanceResponse.class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지인스턴스변경
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeBlockStorageInstanceRequest changeBlockStorageInstanceRequest (required)
+	 * @return byte[]
+	 *	ChangeBlockStorageInstanceResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> changeBlockStorageInstancePost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/changeBlockStorageInstance";
 
 		// accept
 		final String[] accepts = {
@@ -3309,6 +3636,310 @@ public class V2Api {
 
 	/**
 	 * 
+	 * createServerImageFromSnapshot
+	 * @param createServerImageFromSnapshotRequest createServerImageFromSnapshotRequest (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void createServerImageFromSnapshotGet(CreateServerImageFromSnapshotRequest createServerImageFromSnapshotRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/createServerImageFromSnapshot";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, createServerImageFromSnapshotRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * createServerImageFromSnapshot
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	createServerImageFromSnapshotRequest createServerImageFromSnapshotRequest (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> createServerImageFromSnapshotGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/createServerImageFromSnapshot";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * createServerImageFromSnapshot
+	 * @param createServerImageFromSnapshotRequest createServerImageFromSnapshotRequest (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void createServerImageFromSnapshotPost(CreateServerImageFromSnapshotRequest createServerImageFromSnapshotRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/createServerImageFromSnapshot";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, createServerImageFromSnapshotRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * createServerImageFromSnapshot
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	createServerImageFromSnapshotRequest createServerImageFromSnapshotRequest (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> createServerImageFromSnapshotPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/createServerImageFromSnapshot";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * createServerImage
+	 * @param createServerImageRequest createServerImageRequest (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void createServerImageGet(CreateServerImageRequest createServerImageRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/createServerImage";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, createServerImageRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * createServerImage
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	createServerImageRequest createServerImageRequest (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> createServerImageGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/createServerImage";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * createServerImage
+	 * @param createServerImageRequest createServerImageRequest (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void createServerImagePost(CreateServerImageRequest createServerImageRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/createServerImage";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, createServerImageRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * createServerImage
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	createServerImageRequest createServerImageRequest (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> createServerImagePost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/createServerImage";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
 	 * 서버인스턴스생성
 	 * @param createServerInstancesRequest createServerInstancesRequest (required)
 	 * @return CreateServerInstancesResponse
@@ -4869,6 +5500,158 @@ public class V2Api {
 
 	/**
 	 * 
+	 * deleteServerImage
+	 * @param deleteServerImageRequest deleteServerImageRequest (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void deleteServerImageGet(DeleteServerImageRequest deleteServerImageRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/deleteServerImage";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, deleteServerImageRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * deleteServerImage
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	deleteServerImageRequest deleteServerImageRequest (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> deleteServerImageGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/deleteServerImage";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * deleteServerImage
+	 * @param deleteServerImageRequest deleteServerImageRequest (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void deleteServerImagePost(DeleteServerImageRequest deleteServerImageRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/deleteServerImage";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, deleteServerImageRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * deleteServerImage
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	deleteServerImageRequest deleteServerImageRequest (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> deleteServerImagePost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/deleteServerImage";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
 	 * 블록스토리지인스턴스할당해제
 	 * @param detachBlockStorageInstancesRequest detachBlockStorageInstancesRequest (required)
 	 * @return DetachBlockStorageInstancesResponse
@@ -5181,6 +5964,162 @@ public class V2Api {
 
 	/**
 	 * 
+	 * FlowLog비활성화
+	 * @param disableFlowLogRequest disableFlowLogRequest (required)
+	 * @return FlowLogConfigurationList
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<FlowLogConfigurationList> disableFlowLogGet(DisableFlowLogRequest disableFlowLogRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/disableFlowLog";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, disableFlowLogRequest, true, false);
+		return apiClient.call(apiRequest, FlowLogConfigurationList.class);
+	}
+
+	/**
+	 * 
+	 * FlowLog비활성화
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	disableFlowLogRequest disableFlowLogRequest (required)
+	 * @return byte[]
+	 *	FlowLogConfigurationList
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> disableFlowLogGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/disableFlowLog";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * FlowLog비활성화
+	 * @param disableFlowLogRequest disableFlowLogRequest (required)
+	 * @return FlowLogConfigurationList
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<FlowLogConfigurationList> disableFlowLogPost(DisableFlowLogRequest disableFlowLogRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/disableFlowLog";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, disableFlowLogRequest, true, false);
+		return apiClient.call(apiRequest, FlowLogConfigurationList.class);
+	}
+
+	/**
+	 * 
+	 * FlowLog비활성화
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	disableFlowLogRequest disableFlowLogRequest (required)
+	 * @return byte[]
+	 *	FlowLogConfigurationList
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> disableFlowLogPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/disableFlowLog";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
 	 * 공인IP를서버인스턴스에서할당해제
 	 * @param disassociatePublicIpFromServerInstanceRequest disassociatePublicIpFromServerInstanceRequest (required)
 	 * @return DisassociatePublicIpFromServerInstanceResponse
@@ -5316,6 +6255,162 @@ public class V2Api {
 		
 		// path
 		String path = "/disassociatePublicIpFromServerInstance";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * FlowLog활성화
+	 * @param enableFlowLogRequest enableFlowLogRequest (required)
+	 * @return FlowLogConfigurationList
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<FlowLogConfigurationList> enableFlowLogGet(EnableFlowLogRequest enableFlowLogRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/enableFlowLog";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, enableFlowLogRequest, true, false);
+		return apiClient.call(apiRequest, FlowLogConfigurationList.class);
+	}
+
+	/**
+	 * 
+	 * FlowLog활성화
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	enableFlowLogRequest enableFlowLogRequest (required)
+	 * @return byte[]
+	 *	FlowLogConfigurationList
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> enableFlowLogGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/enableFlowLog";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * FlowLog활성화
+	 * @param enableFlowLogRequest enableFlowLogRequest (required)
+	 * @return FlowLogConfigurationList
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<FlowLogConfigurationList> enableFlowLogPost(EnableFlowLogRequest enableFlowLogRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/enableFlowLog";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, enableFlowLogRequest, true, false);
+		return apiClient.call(apiRequest, FlowLogConfigurationList.class);
+	}
+
+	/**
+	 * 
+	 * FlowLog활성화
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	enableFlowLogRequest enableFlowLogRequest (required)
+	 * @return byte[]
+	 *	FlowLogConfigurationList
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> enableFlowLogPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/enableFlowLog";
 
 		// accept
 		final String[] accepts = {
@@ -6408,6 +7503,474 @@ public class V2Api {
 		
 		// path
 		String path = "/getBlockStorageSnapshotInstanceList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지볼륨타입리스트 조회
+	 * @param getBlockStorageVolumeTypeListRequest  (required)
+	 * @return GetBlockStorageVolumeTypeListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetBlockStorageVolumeTypeListResponse> getBlockStorageVolumeTypeListGet(GetBlockStorageVolumeTypeListRequest getBlockStorageVolumeTypeListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getBlockStorageVolumeTypeList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getBlockStorageVolumeTypeListRequest, true, false);
+		return apiClient.call(apiRequest, GetBlockStorageVolumeTypeListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지볼륨타입리스트 조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getBlockStorageVolumeTypeListRequest  (required)
+	 * @return byte[]
+	 *	GetBlockStorageVolumeTypeListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getBlockStorageVolumeTypeListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getBlockStorageVolumeTypeList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지볼륨타입리스트 조회
+	 * @param getBlockStorageVolumeTypeListRequest  (required)
+	 * @return GetBlockStorageVolumeTypeListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetBlockStorageVolumeTypeListResponse> getBlockStorageVolumeTypeListPost(GetBlockStorageVolumeTypeListRequest getBlockStorageVolumeTypeListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getBlockStorageVolumeTypeList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getBlockStorageVolumeTypeListRequest, true, false);
+		return apiClient.call(apiRequest, GetBlockStorageVolumeTypeListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 블록스토리지볼륨타입리스트 조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getBlockStorageVolumeTypeListRequest  (required)
+	 * @return byte[]
+	 *	GetBlockStorageVolumeTypeListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getBlockStorageVolumeTypeListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getBlockStorageVolumeTypeList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * FlogLog 설정정보 조회
+	 * @param getFlowLogConfigurationListRequest getFlowLogConfigurationListRequest (required)
+	 * @return FlowLogConfigurationList
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<FlowLogConfigurationList> getFlowLogConfigurationListGet(GetFlowLogConfigurationListRequest getFlowLogConfigurationListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getFlowLogConfigurationList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getFlowLogConfigurationListRequest, true, false);
+		return apiClient.call(apiRequest, FlowLogConfigurationList.class);
+	}
+
+	/**
+	 * 
+	 * FlogLog 설정정보 조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getFlowLogConfigurationListRequest getFlowLogConfigurationListRequest (required)
+	 * @return byte[]
+	 *	FlowLogConfigurationList
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getFlowLogConfigurationListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getFlowLogConfigurationList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * FlogLog 설정정보 조회
+	 * @param getflowLogConfigurationListRequest getflowLogConfigurationListRequest (required)
+	 * @return FlowLogConfigurationList
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<FlowLogConfigurationList> getFlowLogConfigurationListPost(GetFlowLogConfigurationListRequest getflowLogConfigurationListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getFlowLogConfigurationList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getflowLogConfigurationListRequest, true, false);
+		return apiClient.call(apiRequest, FlowLogConfigurationList.class);
+	}
+
+	/**
+	 * 
+	 * FlogLog 설정정보 조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getflowLogConfigurationListRequest getflowLogConfigurationListRequest (required)
+	 * @return byte[]
+	 *	FlowLogConfigurationList
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getFlowLogConfigurationListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getFlowLogConfigurationList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 하이퍼바이저타입리스트조회
+	 * @param getHypervisorTypeListRequest  (required)
+	 * @return GetHypervisorTypeListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetHypervisorTypeListResponse> getHypervisorTypeListGet(GetHypervisorTypeListRequest getHypervisorTypeListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getHypervisorTypeList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getHypervisorTypeListRequest, true, false);
+		return apiClient.call(apiRequest, GetHypervisorTypeListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 하이퍼바이저타입리스트조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getHypervisorTypeListRequest  (required)
+	 * @return byte[]
+	 *	GetHypervisorTypeListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getHypervisorTypeListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getHypervisorTypeList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 하이퍼바이저타입리스트조회 
+	 * @param getHypervisorTypeListRequest  (required)
+	 * @return GetHypervisorTypeListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetHypervisorTypeListResponse> getHypervisorTypeListPost(GetHypervisorTypeListRequest getHypervisorTypeListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getHypervisorTypeList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getHypervisorTypeListRequest, true, false);
+		return apiClient.call(apiRequest, GetHypervisorTypeListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 하이퍼바이저타입리스트조회 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getHypervisorTypeListRequest  (required)
+	 * @return byte[]
+	 *	GetHypervisorTypeListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getHypervisorTypeListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getHypervisorTypeList";
 
 		// accept
 		final String[] accepts = {
@@ -8925,6 +10488,310 @@ public class V2Api {
 
 	/**
 	 * 
+	 * 서버이미지상세조회
+	 * @param getServerImageDetailRequest  (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void getServerImageDetailGet(GetServerImageDetailRequest getServerImageDetailRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getServerImageDetail";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getServerImageDetailRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * 서버이미지상세조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getServerImageDetailRequest  (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getServerImageDetailGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getServerImageDetail";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 서버이미지상세조회
+	 * @param getServerImageDetailRequest  (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void getServerImageDetailPost(GetServerImageDetailRequest getServerImageDetailRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getServerImageDetail";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getServerImageDetailRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * 서버이미지상세조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getServerImageDetailRequest  (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getServerImageDetailPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getServerImageDetail";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 서버이미지리스트조회
+	 * @param getServerImageListRequest  (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void getServerImageListGet(GetServerImageListRequest getServerImageListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getServerImageList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getServerImageListRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * 서버이미지리스트조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getServerImageListRequest  (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getServerImageListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getServerImageList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 서버이미지리스트조회
+	 * @param getServerImageListRequest  (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void getServerImageListPost(GetServerImageListRequest getServerImageListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getServerImageList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getServerImageListRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * 서버이미지리스트조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getServerImageListRequest  (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getServerImageListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getServerImageList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
 	 * 서버이미지상품리스트조회
 	 * @param getServerImageProductListRequest getServerImageProductListRequest (required)
 	 * @return GetServerImageProductListResponse
@@ -9528,6 +11395,310 @@ public class V2Api {
 		
 		// path
 		String path = "/getServerProductList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 서버스펙상세조회
+	 * @param getServerSpecDetailRequest  (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void getServerSpecDetailGet(GetServerSpecDetailRequest getServerSpecDetailRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getServerSpecDetail";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getServerSpecDetailRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * 서버스펙상세조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getServerSpecDetailRequest  (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getServerSpecDetailGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getServerSpecDetail";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 서버스펙상세조회
+	 * @param getServerSpecDetailRequest  (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void getServerSpecDetailPost(GetServerSpecDetailRequest getServerSpecDetailRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getServerSpecDetail";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getServerSpecDetailRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * 서버스펙상세조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getServerSpecDetailRequest  (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getServerSpecDetailPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getServerSpecDetail";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 서버스펙리스트조회
+	 * @param getServerSpecListRequest  (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void getServerSpecListGet(GetServerSpecListRequest getServerSpecListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getServerSpecList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getServerSpecListRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * 서버스펙리스트조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getServerSpecListRequest  (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getServerSpecListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getServerSpecList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 서버스펙리스트조회
+	 * @param getServerSpecListRequest  (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void getServerSpecListPost(GetServerSpecListRequest getServerSpecListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getServerSpecList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getServerSpecListRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * 서버스펙리스트조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getServerSpecListRequest  (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getServerSpecListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getServerSpecList";
 
 		// accept
 		final String[] accepts = {
@@ -10948,6 +13119,158 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param removeServerImageSharingPermissionRequest  (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void removeServerImageSharingPermissionGet(RemoveServerImageSharingPermissionRequest removeServerImageSharingPermissionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/removeServerImageSharingPermission";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, removeServerImageSharingPermissionRequest, true, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	removeServerImageSharingPermissionRequest  (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> removeServerImageSharingPermissionGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/removeServerImageSharingPermission";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param removeServerImageSharingPermissionRequest  (required)
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public void removeServerImageSharingPermissionPost(RemoveServerImageSharingPermissionRequest removeServerImageSharingPermissionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/removeServerImageSharingPermission";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, removeServerImageSharingPermissionRequest, false, false);
+		apiClient.call(apiRequest);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	removeServerImageSharingPermissionRequest  (required)
+	 * @return byte[]
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> removeServerImageSharingPermissionPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/removeServerImageSharingPermission";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, false, false);
 		return apiClient.call(apiRequest, byte[].class);
 	}
 

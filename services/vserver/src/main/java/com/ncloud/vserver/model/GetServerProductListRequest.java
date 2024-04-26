@@ -30,6 +30,8 @@ public class GetServerProductListRequest {
 
 	private String generationCode = null;
 
+	private String memberServerImageInstanceNo = null;
+
 	private String responseFormatType = null;
 
 	public GetServerProductListRequest regionCode(String regionCode) {
@@ -134,6 +136,23 @@ public class GetServerProductListRequest {
 		this.generationCode = generationCode;
 	}
 
+	public GetServerProductListRequest memberServerImageInstanceNo(String memberServerImageInstanceNo) {
+		this.memberServerImageInstanceNo = memberServerImageInstanceNo;
+		return this;
+	}
+
+	 /**
+	 * 회원서버이미지인스턴스번호
+	 * @return memberServerImageInstanceNo
+	**/
+	public String getMemberServerImageInstanceNo() {
+		return memberServerImageInstanceNo;
+	}
+
+	public void setMemberServerImageInstanceNo(String memberServerImageInstanceNo) {
+		this.memberServerImageInstanceNo = memberServerImageInstanceNo;
+	}
+
 	public GetServerProductListRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -167,12 +186,13 @@ public class GetServerProductListRequest {
 				Objects.equals(this.exclusionProductCode, getServerProductListRequest.exclusionProductCode) &&
 				Objects.equals(this.productCode, getServerProductListRequest.productCode) &&
 				Objects.equals(this.generationCode, getServerProductListRequest.generationCode) &&
+				Objects.equals(this.memberServerImageInstanceNo, getServerProductListRequest.memberServerImageInstanceNo) &&
 				Objects.equals(this.responseFormatType, getServerProductListRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, zoneCode, serverImageProductCode, exclusionProductCode, productCode, generationCode, responseFormatType);
+		return Objects.hash(regionCode, zoneCode, serverImageProductCode, exclusionProductCode, productCode, generationCode, memberServerImageInstanceNo, responseFormatType);
 	}
 
 
@@ -187,6 +207,7 @@ public class GetServerProductListRequest {
 		sb.append("		exclusionProductCode: ").append(toIndentedString(exclusionProductCode)).append("\n");
 		sb.append("		productCode: ").append(toIndentedString(productCode)).append("\n");
 		sb.append("		generationCode: ").append(toIndentedString(generationCode)).append("\n");
+		sb.append("		memberServerImageInstanceNo: ").append(toIndentedString(memberServerImageInstanceNo)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

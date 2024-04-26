@@ -20,13 +20,15 @@ import java.util.List;
  * GetLoadBalancerInstanceListRequest
  */
 public class GetLoadBalancerInstanceListRequest {
-	private List<String> loadBalancerInstanceNoList = null;
+	private String loadBalancerName = null;
 
-	private String internetLineTypeCode = null;
+	private List<String> loadBalancerInstanceNoList = null;
 
 	private String networkUsageTypeCode = null;
 
 	private String regionNo = null;
+
+	private String zoneNo = null;
 
 	private Integer pageNo = null;
 
@@ -37,6 +39,23 @@ public class GetLoadBalancerInstanceListRequest {
 	private String sortingOrder = null;
 
 	private String responseFormatType = null;
+
+	public GetLoadBalancerInstanceListRequest loadBalancerName(String loadBalancerName) {
+		this.loadBalancerName = loadBalancerName;
+		return this;
+	}
+
+	 /**
+	 * 로드밸런서명
+	 * @return loadBalancerName
+	**/
+	public String getLoadBalancerName() {
+		return loadBalancerName;
+	}
+
+	public void setLoadBalancerName(String loadBalancerName) {
+		this.loadBalancerName = loadBalancerName;
+	}
 
 	public GetLoadBalancerInstanceListRequest loadBalancerInstanceNoList(List<String> loadBalancerInstanceNoList) {
 		this.loadBalancerInstanceNoList = loadBalancerInstanceNoList;
@@ -61,23 +80,6 @@ public class GetLoadBalancerInstanceListRequest {
 
 	public void setLoadBalancerInstanceNoList(List<String> loadBalancerInstanceNoList) {
 		this.loadBalancerInstanceNoList = loadBalancerInstanceNoList;
-	}
-
-	public GetLoadBalancerInstanceListRequest internetLineTypeCode(String internetLineTypeCode) {
-		this.internetLineTypeCode = internetLineTypeCode;
-		return this;
-	}
-
-	 /**
-	 * 인터넷라인구분코드
-	 * @return internetLineTypeCode
-	**/
-	public String getInternetLineTypeCode() {
-		return internetLineTypeCode;
-	}
-
-	public void setInternetLineTypeCode(String internetLineTypeCode) {
-		this.internetLineTypeCode = internetLineTypeCode;
 	}
 
 	public GetLoadBalancerInstanceListRequest networkUsageTypeCode(String networkUsageTypeCode) {
@@ -112,6 +114,23 @@ public class GetLoadBalancerInstanceListRequest {
 
 	public void setRegionNo(String regionNo) {
 		this.regionNo = regionNo;
+	}
+
+	public GetLoadBalancerInstanceListRequest zoneNo(String zoneNo) {
+		this.zoneNo = zoneNo;
+		return this;
+	}
+
+	 /**
+	 * ZONE번호
+	 * @return zoneNo
+	**/
+	public String getZoneNo() {
+		return zoneNo;
+	}
+
+	public void setZoneNo(String zoneNo) {
+		this.zoneNo = zoneNo;
 	}
 
 	public GetLoadBalancerInstanceListRequest pageNo(Integer pageNo) {
@@ -209,10 +228,11 @@ public class GetLoadBalancerInstanceListRequest {
 			return false;
 		}
 		GetLoadBalancerInstanceListRequest getLoadBalancerInstanceListRequest = (GetLoadBalancerInstanceListRequest) o;
-		return Objects.equals(this.loadBalancerInstanceNoList, getLoadBalancerInstanceListRequest.loadBalancerInstanceNoList) &&
-				Objects.equals(this.internetLineTypeCode, getLoadBalancerInstanceListRequest.internetLineTypeCode) &&
+		return Objects.equals(this.loadBalancerName, getLoadBalancerInstanceListRequest.loadBalancerName) &&
+				Objects.equals(this.loadBalancerInstanceNoList, getLoadBalancerInstanceListRequest.loadBalancerInstanceNoList) &&
 				Objects.equals(this.networkUsageTypeCode, getLoadBalancerInstanceListRequest.networkUsageTypeCode) &&
 				Objects.equals(this.regionNo, getLoadBalancerInstanceListRequest.regionNo) &&
+				Objects.equals(this.zoneNo, getLoadBalancerInstanceListRequest.zoneNo) &&
 				Objects.equals(this.pageNo, getLoadBalancerInstanceListRequest.pageNo) &&
 				Objects.equals(this.pageSize, getLoadBalancerInstanceListRequest.pageSize) &&
 				Objects.equals(this.sortedBy, getLoadBalancerInstanceListRequest.sortedBy) &&
@@ -222,7 +242,7 @@ public class GetLoadBalancerInstanceListRequest {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(loadBalancerInstanceNoList, internetLineTypeCode, networkUsageTypeCode, regionNo, pageNo, pageSize, sortedBy, sortingOrder, responseFormatType);
+		return Objects.hash(loadBalancerName, loadBalancerInstanceNoList, networkUsageTypeCode, regionNo, zoneNo, pageNo, pageSize, sortedBy, sortingOrder, responseFormatType);
 	}
 
 
@@ -231,10 +251,11 @@ public class GetLoadBalancerInstanceListRequest {
 		StringBuilder sb = new StringBuilder();
 		sb.append("class GetLoadBalancerInstanceListRequest {\n");
 		
+		sb.append("		loadBalancerName: ").append(toIndentedString(loadBalancerName)).append("\n");
 		sb.append("		loadBalancerInstanceNoList: ").append(toIndentedString(loadBalancerInstanceNoList)).append("\n");
-		sb.append("		internetLineTypeCode: ").append(toIndentedString(internetLineTypeCode)).append("\n");
 		sb.append("		networkUsageTypeCode: ").append(toIndentedString(networkUsageTypeCode)).append("\n");
 		sb.append("		regionNo: ").append(toIndentedString(regionNo)).append("\n");
+		sb.append("		zoneNo: ").append(toIndentedString(zoneNo)).append("\n");
 		sb.append("		pageNo: ").append(toIndentedString(pageNo)).append("\n");
 		sb.append("		pageSize: ").append(toIndentedString(pageSize)).append("\n");
 		sb.append("		sortedBy: ").append(toIndentedString(sortedBy)).append("\n");

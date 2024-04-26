@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>clouddb</artifactId>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/clouddb-1.1.0.jar
+* target/clouddb-1.1.1.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -115,10 +115,16 @@ Class | Method | HTTP request | Description
 *V2Api* | [**deleteCloudDBServerInstancePost**](docs/V2Api.md#deleteCloudDBServerInstancePost) | **POST** /deleteCloudDBServerInstance | 
 *V2Api* | [**downloadDmsFileGet**](docs/V2Api.md#downloadDmsFileGet) | **GET** /downloadDmsFile | 
 *V2Api* | [**downloadDmsFilePost**](docs/V2Api.md#downloadDmsFilePost) | **POST** /downloadDmsFile | 
+*V2Api* | [**exportBackupToObjectStorageGet**](docs/V2Api.md#exportBackupToObjectStorageGet) | **GET** /exportBackupToObjectStorage | 
+*V2Api* | [**exportBackupToObjectStoragePost**](docs/V2Api.md#exportBackupToObjectStoragePost) | **POST** /exportBackupToObjectStorage | 
+*V2Api* | [**exportDbServerLogToObjectStorageGet**](docs/V2Api.md#exportDbServerLogToObjectStorageGet) | **GET** /exportDbServerLogToObjectStorage | 
+*V2Api* | [**exportDbServerLogToObjectStoragePost**](docs/V2Api.md#exportDbServerLogToObjectStoragePost) | **POST** /exportDbServerLogToObjectStorage | 
 *V2Api* | [**flushCloudDBInstanceGet**](docs/V2Api.md#flushCloudDBInstanceGet) | **GET** /flushCloudDBInstance | 
 *V2Api* | [**flushCloudDBInstancePost**](docs/V2Api.md#flushCloudDBInstancePost) | **POST** /flushCloudDBInstance | 
 *V2Api* | [**getBackupListGet**](docs/V2Api.md#getBackupListGet) | **GET** /getBackupList | 
 *V2Api* | [**getBackupListPost**](docs/V2Api.md#getBackupListPost) | **POST** /getBackupList | 
+*V2Api* | [**getCloudDBBackupDetailListGet**](docs/V2Api.md#getCloudDBBackupDetailListGet) | **GET** /getCloudDBBackupDetailList | 
+*V2Api* | [**getCloudDBBackupDetailListPost**](docs/V2Api.md#getCloudDBBackupDetailListPost) | **POST** /getCloudDBBackupDetailList | 
 *V2Api* | [**getCloudDBConfigGroupListGet**](docs/V2Api.md#getCloudDBConfigGroupListGet) | **GET** /getCloudDBConfigGroupList | 
 *V2Api* | [**getCloudDBConfigGroupListPost**](docs/V2Api.md#getCloudDBConfigGroupListPost) | **POST** /getCloudDBConfigGroupList | 
 *V2Api* | [**getCloudDBImageProductListGet**](docs/V2Api.md#getCloudDBImageProductListGet) | **GET** /getCloudDBImageProductList | 
@@ -127,6 +133,8 @@ Class | Method | HTTP request | Description
 *V2Api* | [**getCloudDBInstanceListPost**](docs/V2Api.md#getCloudDBInstanceListPost) | **POST** /getCloudDBInstanceList | 
 *V2Api* | [**getCloudDBProductListGet**](docs/V2Api.md#getCloudDBProductListGet) | **GET** /getCloudDBProductList | 
 *V2Api* | [**getCloudDBProductListPost**](docs/V2Api.md#getCloudDBProductListPost) | **POST** /getCloudDBProductList | 
+*V2Api* | [**getDbServerLogListGet**](docs/V2Api.md#getDbServerLogListGet) | **GET** /getDbServerLogList | 
+*V2Api* | [**getDbServerLogListPost**](docs/V2Api.md#getDbServerLogListPost) | **POST** /getDbServerLogList | 
 *V2Api* | [**getDmsOperationGet**](docs/V2Api.md#getDmsOperationGet) | **GET** /getDmsOperation | 
 *V2Api* | [**getDmsOperationPost**](docs/V2Api.md#getDmsOperationPost) | **POST** /getDmsOperation | 
 *V2Api* | [**getObjectStorageBackupListGet**](docs/V2Api.md#getObjectStorageBackupListGet) | **GET** /getObjectStorageBackupList | 
@@ -146,23 +154,32 @@ Class | Method | HTTP request | Description
 ## Documentation for Models
 
  - [AccessControlGroup](docs/AccessControlGroup.md)
+ - [BackupDetail](docs/BackupDetail.md)
  - [BackupFile](docs/BackupFile.md)
  - [CloudDBConfig](docs/CloudDBConfig.md)
  - [CloudDBConfigGroup](docs/CloudDBConfigGroup.md)
  - [CloudDBInstance](docs/CloudDBInstance.md)
  - [CloudDBServerInstance](docs/CloudDBServerInstance.md)
+ - [CloudDbServerLogList](docs/CloudDbServerLogList.md)
  - [CommonCode](docs/CommonCode.md)
  - [CreateCloudDBInstanceRequest](docs/CreateCloudDBInstanceRequest.md)
  - [CreateCloudDBInstanceResponse](docs/CreateCloudDBInstanceResponse.md)
+ - [DbServerLog](docs/DbServerLog.md)
  - [DeleteCloudDBServerInstanceRequest](docs/DeleteCloudDBServerInstanceRequest.md)
  - [DeleteCloudDBServerInstanceResponse](docs/DeleteCloudDBServerInstanceResponse.md)
  - [DmsFile](docs/DmsFile.md)
  - [DownloadDmsFileRequest](docs/DownloadDmsFileRequest.md)
  - [DownloadDmsFileResponse](docs/DownloadDmsFileResponse.md)
+ - [ExportBackupToObjectStorageRequest](docs/ExportBackupToObjectStorageRequest.md)
+ - [ExportBackupToObjectStorageResponse](docs/ExportBackupToObjectStorageResponse.md)
+ - [ExportDbServerLogToObjectStorageRequest](docs/ExportDbServerLogToObjectStorageRequest.md)
+ - [ExportDbServerLogToObjectStorageResponse](docs/ExportDbServerLogToObjectStorageResponse.md)
  - [FlushCloudDBInstanceRequest](docs/FlushCloudDBInstanceRequest.md)
  - [FlushCloudDBInstanceResponse](docs/FlushCloudDBInstanceResponse.md)
  - [GetBackupListRequest](docs/GetBackupListRequest.md)
  - [GetBackupListResponse](docs/GetBackupListResponse.md)
+ - [GetCloudDBBackupDetailListRequest](docs/GetCloudDBBackupDetailListRequest.md)
+ - [GetCloudDBBackupDetailListResponse](docs/GetCloudDBBackupDetailListResponse.md)
  - [GetCloudDBConfigGroupListRequest](docs/GetCloudDBConfigGroupListRequest.md)
  - [GetCloudDBConfigGroupListResponse](docs/GetCloudDBConfigGroupListResponse.md)
  - [GetCloudDBImageProductListRequest](docs/GetCloudDBImageProductListRequest.md)
@@ -171,6 +188,8 @@ Class | Method | HTTP request | Description
  - [GetCloudDBInstanceListResponse](docs/GetCloudDBInstanceListResponse.md)
  - [GetCloudDBProductListRequest](docs/GetCloudDBProductListRequest.md)
  - [GetCloudDBProductListResponse](docs/GetCloudDBProductListResponse.md)
+ - [GetDbServerLogListRequest](docs/GetDbServerLogListRequest.md)
+ - [GetDbServerLogListResponse](docs/GetDbServerLogListResponse.md)
  - [GetDmsOperationRequest](docs/GetDmsOperationRequest.md)
  - [GetDmsOperationResponse](docs/GetDmsOperationResponse.md)
  - [GetObjectStorageBackupListRequest](docs/GetObjectStorageBackupListRequest.md)

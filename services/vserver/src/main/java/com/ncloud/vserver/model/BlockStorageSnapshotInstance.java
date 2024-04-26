@@ -45,6 +45,10 @@ public class BlockStorageSnapshotInstance {
 
 	private Integer snapshotChainDepth = null;
 
+	private String hypervisorType = null;
+
+	private Boolean isBootable = null;
+
 	public BlockStorageSnapshotInstance blockStorageSnapshotInstanceNo(String blockStorageSnapshotInstanceNo) {
 		this.blockStorageSnapshotInstanceNo = blockStorageSnapshotInstanceNo;
 		return this;
@@ -266,6 +270,40 @@ public class BlockStorageSnapshotInstance {
 		this.snapshotChainDepth = snapshotChainDepth;
 	}
 
+	public BlockStorageSnapshotInstance hypervisorType(String hypervisorType) {
+		this.hypervisorType = hypervisorType;
+		return this;
+	}
+
+	 /**
+	 * 하이퍼바이저타입
+	 * @return hypervisorType
+	**/
+	public String getHypervisorType() {
+		return hypervisorType;
+	}
+
+	public void setHypervisorType(String hypervisorType) {
+		this.hypervisorType = hypervisorType;
+	}
+
+	public BlockStorageSnapshotInstance isBootable(Boolean isBootable) {
+		this.isBootable = isBootable;
+		return this;
+	}
+
+	 /**
+	 * 부팅가능 여부
+	 * @return isBootable
+	**/
+	public Boolean isIsBootable() {
+		return isBootable;
+	}
+
+	public void setIsBootable(Boolean isBootable) {
+		this.isBootable = isBootable;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -288,12 +326,14 @@ public class BlockStorageSnapshotInstance {
 				Objects.equals(this.blockStorageSnapshotDescription, blockStorageSnapshotInstance.blockStorageSnapshotDescription) &&
 				Objects.equals(this.snapshotType, blockStorageSnapshotInstance.snapshotType) &&
 				Objects.equals(this.baseSnapshotInstanceNo, blockStorageSnapshotInstance.baseSnapshotInstanceNo) &&
-				Objects.equals(this.snapshotChainDepth, blockStorageSnapshotInstance.snapshotChainDepth);
+				Objects.equals(this.snapshotChainDepth, blockStorageSnapshotInstance.snapshotChainDepth) &&
+				Objects.equals(this.hypervisorType, blockStorageSnapshotInstance.hypervisorType) &&
+				Objects.equals(this.isBootable, blockStorageSnapshotInstance.isBootable);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(blockStorageSnapshotInstanceNo, blockStorageSnapshotName, blockStorageSnapshotVolumeSize, originalBlockStorageInstanceNo, blockStorageSnapshotInstanceStatus, blockStorageSnapshotInstanceOperation, blockStorageSnapshotInstanceStatusName, createDate, isEncryptedOriginalBlockStorageVolume, blockStorageSnapshotDescription, snapshotType, baseSnapshotInstanceNo, snapshotChainDepth);
+		return Objects.hash(blockStorageSnapshotInstanceNo, blockStorageSnapshotName, blockStorageSnapshotVolumeSize, originalBlockStorageInstanceNo, blockStorageSnapshotInstanceStatus, blockStorageSnapshotInstanceOperation, blockStorageSnapshotInstanceStatusName, createDate, isEncryptedOriginalBlockStorageVolume, blockStorageSnapshotDescription, snapshotType, baseSnapshotInstanceNo, snapshotChainDepth, hypervisorType, isBootable);
 	}
 
 
@@ -315,6 +355,8 @@ public class BlockStorageSnapshotInstance {
 		sb.append("		snapshotType: ").append(toIndentedString(snapshotType)).append("\n");
 		sb.append("		baseSnapshotInstanceNo: ").append(toIndentedString(baseSnapshotInstanceNo)).append("\n");
 		sb.append("		snapshotChainDepth: ").append(toIndentedString(snapshotChainDepth)).append("\n");
+		sb.append("		hypervisorType: ").append(toIndentedString(hypervisorType)).append("\n");
+		sb.append("		isBootable: ").append(toIndentedString(isBootable)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

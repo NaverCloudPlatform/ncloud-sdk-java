@@ -30,6 +30,10 @@ Name | Type | Description | Notes
 **certificateName** | **String** | 인증서이름 |  [optional]
 **isAccessLogUse** | **Boolean** | 엑세스로그사용여부 |  [optional]
 **accessLogFileStorageContainerName** | **String** | 엑세스로그파일스토리지인스턴스이름 |  [optional]
+**isRequestCustomHeaderUse** | **Boolean** | 커스텀헤더요청사용여부 |  [optional]
+**requestCustomHeaderList** | [**List&lt;GlobalCdnCustomHeader&gt;**](GlobalCdnCustomHeader.md) |  |  [optional]
+**isResponseCustomHeaderUse** | **Boolean** | 커스텀헤더반환사용여부 |  [optional]
+**responseCustomHeaderList** | [**List&lt;GlobalCdnCustomHeader&gt;**](GlobalCdnCustomHeader.md) |  |  [optional]
 
 
 

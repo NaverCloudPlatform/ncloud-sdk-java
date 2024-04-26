@@ -26,6 +26,8 @@ public class GetBlockStorageSnapshotInstanceListRequest {
 
 	private List<String> originalBlockStorageInstanceNoList = null;
 
+	private List<String> hypervisorTypeCodeList = null;
+
 	private String blockStorageSnapshotInstanceStatusCode = null;
 
 	private Integer pageNo = null;
@@ -37,6 +39,8 @@ public class GetBlockStorageSnapshotInstanceListRequest {
 	private Boolean isEncryptedOriginalBlockStorageVolume = null;
 
 	private String blockStorageSnapshotName = null;
+
+	private Boolean isBootable = null;
 
 	private String sortedBy = null;
 
@@ -109,6 +113,31 @@ public class GetBlockStorageSnapshotInstanceListRequest {
 
 	public void setOriginalBlockStorageInstanceNoList(List<String> originalBlockStorageInstanceNoList) {
 		this.originalBlockStorageInstanceNoList = originalBlockStorageInstanceNoList;
+	}
+
+	public GetBlockStorageSnapshotInstanceListRequest hypervisorTypeCodeList(List<String> hypervisorTypeCodeList) {
+		this.hypervisorTypeCodeList = hypervisorTypeCodeList;
+		return this;
+	}
+
+	public GetBlockStorageSnapshotInstanceListRequest addHypervisorTypeCodeListItem(String hypervisorTypeCodeListItem) {
+		if (this.hypervisorTypeCodeList == null) {
+			this.hypervisorTypeCodeList = new ArrayList<String>();
+		}
+		this.hypervisorTypeCodeList.add(hypervisorTypeCodeListItem);
+		return this;
+	}
+
+	 /**
+	 * 하이퍼바이저타입코드리스트
+	 * @return hypervisorTypeCodeList
+	**/
+	public List<String> getHypervisorTypeCodeList() {
+		return hypervisorTypeCodeList;
+	}
+
+	public void setHypervisorTypeCodeList(List<String> hypervisorTypeCodeList) {
+		this.hypervisorTypeCodeList = hypervisorTypeCodeList;
 	}
 
 	public GetBlockStorageSnapshotInstanceListRequest blockStorageSnapshotInstanceStatusCode(String blockStorageSnapshotInstanceStatusCode) {
@@ -213,6 +242,23 @@ public class GetBlockStorageSnapshotInstanceListRequest {
 		this.blockStorageSnapshotName = blockStorageSnapshotName;
 	}
 
+	public GetBlockStorageSnapshotInstanceListRequest isBootable(Boolean isBootable) {
+		this.isBootable = isBootable;
+		return this;
+	}
+
+	 /**
+	 * 부팅가능 여부
+	 * @return isBootable
+	**/
+	public Boolean isIsBootable() {
+		return isBootable;
+	}
+
+	public void setIsBootable(Boolean isBootable) {
+		this.isBootable = isBootable;
+	}
+
 	public GetBlockStorageSnapshotInstanceListRequest sortedBy(String sortedBy) {
 		this.sortedBy = sortedBy;
 		return this;
@@ -277,12 +323,14 @@ public class GetBlockStorageSnapshotInstanceListRequest {
 		return Objects.equals(this.regionCode, getBlockStorageSnapshotInstanceListRequest.regionCode) &&
 				Objects.equals(this.blockStorageSnapshotInstanceNoList, getBlockStorageSnapshotInstanceListRequest.blockStorageSnapshotInstanceNoList) &&
 				Objects.equals(this.originalBlockStorageInstanceNoList, getBlockStorageSnapshotInstanceListRequest.originalBlockStorageInstanceNoList) &&
+				Objects.equals(this.hypervisorTypeCodeList, getBlockStorageSnapshotInstanceListRequest.hypervisorTypeCodeList) &&
 				Objects.equals(this.blockStorageSnapshotInstanceStatusCode, getBlockStorageSnapshotInstanceListRequest.blockStorageSnapshotInstanceStatusCode) &&
 				Objects.equals(this.pageNo, getBlockStorageSnapshotInstanceListRequest.pageNo) &&
 				Objects.equals(this.pageSize, getBlockStorageSnapshotInstanceListRequest.pageSize) &&
 				Objects.equals(this.blockStorageSnapshotVolumeSize, getBlockStorageSnapshotInstanceListRequest.blockStorageSnapshotVolumeSize) &&
 				Objects.equals(this.isEncryptedOriginalBlockStorageVolume, getBlockStorageSnapshotInstanceListRequest.isEncryptedOriginalBlockStorageVolume) &&
 				Objects.equals(this.blockStorageSnapshotName, getBlockStorageSnapshotInstanceListRequest.blockStorageSnapshotName) &&
+				Objects.equals(this.isBootable, getBlockStorageSnapshotInstanceListRequest.isBootable) &&
 				Objects.equals(this.sortedBy, getBlockStorageSnapshotInstanceListRequest.sortedBy) &&
 				Objects.equals(this.sortingOrder, getBlockStorageSnapshotInstanceListRequest.sortingOrder) &&
 				Objects.equals(this.responseFormatType, getBlockStorageSnapshotInstanceListRequest.responseFormatType);
@@ -290,7 +338,7 @@ public class GetBlockStorageSnapshotInstanceListRequest {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, blockStorageSnapshotInstanceNoList, originalBlockStorageInstanceNoList, blockStorageSnapshotInstanceStatusCode, pageNo, pageSize, blockStorageSnapshotVolumeSize, isEncryptedOriginalBlockStorageVolume, blockStorageSnapshotName, sortedBy, sortingOrder, responseFormatType);
+		return Objects.hash(regionCode, blockStorageSnapshotInstanceNoList, originalBlockStorageInstanceNoList, hypervisorTypeCodeList, blockStorageSnapshotInstanceStatusCode, pageNo, pageSize, blockStorageSnapshotVolumeSize, isEncryptedOriginalBlockStorageVolume, blockStorageSnapshotName, isBootable, sortedBy, sortingOrder, responseFormatType);
 	}
 
 
@@ -302,12 +350,14 @@ public class GetBlockStorageSnapshotInstanceListRequest {
 		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		blockStorageSnapshotInstanceNoList: ").append(toIndentedString(blockStorageSnapshotInstanceNoList)).append("\n");
 		sb.append("		originalBlockStorageInstanceNoList: ").append(toIndentedString(originalBlockStorageInstanceNoList)).append("\n");
+		sb.append("		hypervisorTypeCodeList: ").append(toIndentedString(hypervisorTypeCodeList)).append("\n");
 		sb.append("		blockStorageSnapshotInstanceStatusCode: ").append(toIndentedString(blockStorageSnapshotInstanceStatusCode)).append("\n");
 		sb.append("		pageNo: ").append(toIndentedString(pageNo)).append("\n");
 		sb.append("		pageSize: ").append(toIndentedString(pageSize)).append("\n");
 		sb.append("		blockStorageSnapshotVolumeSize: ").append(toIndentedString(blockStorageSnapshotVolumeSize)).append("\n");
 		sb.append("		isEncryptedOriginalBlockStorageVolume: ").append(toIndentedString(isEncryptedOriginalBlockStorageVolume)).append("\n");
 		sb.append("		blockStorageSnapshotName: ").append(toIndentedString(blockStorageSnapshotName)).append("\n");
+		sb.append("		isBootable: ").append(toIndentedString(isBootable)).append("\n");
 		sb.append("		sortedBy: ").append(toIndentedString(sortedBy)).append("\n");
 		sb.append("		sortingOrder: ").append(toIndentedString(sortingOrder)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");

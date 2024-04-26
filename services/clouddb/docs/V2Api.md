@@ -10,10 +10,16 @@ Method | HTTP request | Description
 [**deleteCloudDBServerInstancePost**](V2Api.md#deleteCloudDBServerInstancePost) | **POST** /deleteCloudDBServerInstance | 
 [**downloadDmsFileGet**](V2Api.md#downloadDmsFileGet) | **GET** /downloadDmsFile | 
 [**downloadDmsFilePost**](V2Api.md#downloadDmsFilePost) | **POST** /downloadDmsFile | 
+[**exportBackupToObjectStorageGet**](V2Api.md#exportBackupToObjectStorageGet) | **GET** /exportBackupToObjectStorage | 
+[**exportBackupToObjectStoragePost**](V2Api.md#exportBackupToObjectStoragePost) | **POST** /exportBackupToObjectStorage | 
+[**exportDbServerLogToObjectStorageGet**](V2Api.md#exportDbServerLogToObjectStorageGet) | **GET** /exportDbServerLogToObjectStorage | 
+[**exportDbServerLogToObjectStoragePost**](V2Api.md#exportDbServerLogToObjectStoragePost) | **POST** /exportDbServerLogToObjectStorage | 
 [**flushCloudDBInstanceGet**](V2Api.md#flushCloudDBInstanceGet) | **GET** /flushCloudDBInstance | 
 [**flushCloudDBInstancePost**](V2Api.md#flushCloudDBInstancePost) | **POST** /flushCloudDBInstance | 
 [**getBackupListGet**](V2Api.md#getBackupListGet) | **GET** /getBackupList | 
 [**getBackupListPost**](V2Api.md#getBackupListPost) | **POST** /getBackupList | 
+[**getCloudDBBackupDetailListGet**](V2Api.md#getCloudDBBackupDetailListGet) | **GET** /getCloudDBBackupDetailList | 
+[**getCloudDBBackupDetailListPost**](V2Api.md#getCloudDBBackupDetailListPost) | **POST** /getCloudDBBackupDetailList | 
 [**getCloudDBConfigGroupListGet**](V2Api.md#getCloudDBConfigGroupListGet) | **GET** /getCloudDBConfigGroupList | 
 [**getCloudDBConfigGroupListPost**](V2Api.md#getCloudDBConfigGroupListPost) | **POST** /getCloudDBConfigGroupList | 
 [**getCloudDBImageProductListGet**](V2Api.md#getCloudDBImageProductListGet) | **GET** /getCloudDBImageProductList | 
@@ -22,6 +28,8 @@ Method | HTTP request | Description
 [**getCloudDBInstanceListPost**](V2Api.md#getCloudDBInstanceListPost) | **POST** /getCloudDBInstanceList | 
 [**getCloudDBProductListGet**](V2Api.md#getCloudDBProductListGet) | **GET** /getCloudDBProductList | 
 [**getCloudDBProductListPost**](V2Api.md#getCloudDBProductListPost) | **POST** /getCloudDBProductList | 
+[**getDbServerLogListGet**](V2Api.md#getDbServerLogListGet) | **GET** /getDbServerLogList | 
+[**getDbServerLogListPost**](V2Api.md#getDbServerLogListPost) | **POST** /getDbServerLogList | 
 [**getDmsOperationGet**](V2Api.md#getDmsOperationGet) | **GET** /getDmsOperation | 
 [**getDmsOperationPost**](V2Api.md#getDmsOperationPost) | **POST** /getDmsOperation | 
 [**getObjectStorageBackupListGet**](V2Api.md#getObjectStorageBackupListGet) | **GET** /getObjectStorageBackupList | 
@@ -43,8 +51,6 @@ Method | HTTP request | Description
 > CreateCloudDBInstanceResponse createCloudDBInstanceGet(createCloudDBInstanceRequest)
 
 
-
-CloudDB인스턴스생성
 
 ### Example
 ```java
@@ -111,8 +117,6 @@ Name | Type | Description  | Notes
 
 
 
-CloudDB인스턴스생성
-
 ### Example
 ```java
 // Import classes:
@@ -177,8 +181,6 @@ Name | Type | Description  | Notes
 > DeleteCloudDBServerInstanceResponse deleteCloudDBServerInstanceGet(deleteCloudDBServerInstanceRequest)
 
 
-
-CloudDB서버인스턴스삭제
 
 ### Example
 ```java
@@ -245,8 +247,6 @@ Name | Type | Description  | Notes
 
 
 
-CloudDB서버인스턴스삭제
-
 ### Example
 ```java
 // Import classes:
@@ -311,8 +311,6 @@ Name | Type | Description  | Notes
 > DownloadDmsFileResponse downloadDmsFileGet(downloadDmsFileRequest)
 
 
-
-DMS파일다운로드
 
 ### Example
 ```java
@@ -379,8 +377,6 @@ Name | Type | Description  | Notes
 
 
 
-DMS파일다운로드
-
 ### Example
 ```java
 // Import classes:
@@ -440,13 +436,275 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="exportBackupToObjectStorageGet"></a>
+# **exportBackupToObjectStorageGet**
+> ExportBackupToObjectStorageResponse exportBackupToObjectStorageGet(exportBackupToObjectStorageRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.clouddb.ApiClient;
+// import com.ncloud.clouddb.ApiResponse;
+// import com.ncloud.clouddb.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.clouddb.marshaller.JsonMarshaller;
+// import com.ncloud.clouddb.marshaller.XmlMarshaller;
+// import com.ncloud.clouddb.marshaller.FormMarshaller;
+// import com.ncloud.clouddb.exception.ApiException;
+// import com.ncloud.clouddb.exception.SdkException;
+// import com.ncloud.clouddb.model.*;
+
+// import com.ncloud.clouddb.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ExportBackupToObjectStorageRequest exportBackupToObjectStorageRequest = new ExportBackupToObjectStorageRequest(); // ExportBackupToObjectStorageRequest | exportBackupToObjectStorageRequest
+try {
+	// Handler Successful response
+	ApiResponse<ExportBackupToObjectStorageResponse> result = apiInstance.exportBackupToObjectStorageGet(exportBackupToObjectStorageRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exportBackupToObjectStorageRequest** | [**ExportBackupToObjectStorageRequest**](ExportBackupToObjectStorageRequest.md)| exportBackupToObjectStorageRequest |
+
+### Return type
+
+[**ExportBackupToObjectStorageResponse**](ExportBackupToObjectStorageResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="exportBackupToObjectStoragePost"></a>
+# **exportBackupToObjectStoragePost**
+> ExportBackupToObjectStorageResponse exportBackupToObjectStoragePost(exportBackupToObjectStorageRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.clouddb.ApiClient;
+// import com.ncloud.clouddb.ApiResponse;
+// import com.ncloud.clouddb.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.clouddb.marshaller.JsonMarshaller;
+// import com.ncloud.clouddb.marshaller.XmlMarshaller;
+// import com.ncloud.clouddb.marshaller.FormMarshaller;
+// import com.ncloud.clouddb.exception.ApiException;
+// import com.ncloud.clouddb.exception.SdkException;
+// import com.ncloud.clouddb.model.*;
+
+// import com.ncloud.clouddb.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ExportBackupToObjectStorageRequest exportBackupToObjectStorageRequest = new ExportBackupToObjectStorageRequest(); // ExportBackupToObjectStorageRequest | exportBackupToObjectStorageRequest
+try {
+	// Handler Successful response
+	ApiResponse<ExportBackupToObjectStorageResponse> result = apiInstance.exportBackupToObjectStoragePost(exportBackupToObjectStorageRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exportBackupToObjectStorageRequest** | [**ExportBackupToObjectStorageRequest**](ExportBackupToObjectStorageRequest.md)| exportBackupToObjectStorageRequest |
+
+### Return type
+
+[**ExportBackupToObjectStorageResponse**](ExportBackupToObjectStorageResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="exportDbServerLogToObjectStorageGet"></a>
+# **exportDbServerLogToObjectStorageGet**
+> ExportDbServerLogToObjectStorageResponse exportDbServerLogToObjectStorageGet(exportDbServerLogToObjectStorageRequest)
+
+
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.clouddb.ApiClient;
+// import com.ncloud.clouddb.ApiResponse;
+// import com.ncloud.clouddb.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.clouddb.marshaller.JsonMarshaller;
+// import com.ncloud.clouddb.marshaller.XmlMarshaller;
+// import com.ncloud.clouddb.marshaller.FormMarshaller;
+// import com.ncloud.clouddb.exception.ApiException;
+// import com.ncloud.clouddb.exception.SdkException;
+// import com.ncloud.clouddb.model.*;
+
+// import com.ncloud.clouddb.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ExportDbServerLogToObjectStorageRequest exportDbServerLogToObjectStorageRequest = new ExportDbServerLogToObjectStorageRequest(); // ExportDbServerLogToObjectStorageRequest | exportDbServerLogToObjectStorageRequest
+try {
+	// Handler Successful response
+	ApiResponse<ExportDbServerLogToObjectStorageResponse> result = apiInstance.exportDbServerLogToObjectStorageGet(exportDbServerLogToObjectStorageRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exportDbServerLogToObjectStorageRequest** | [**ExportDbServerLogToObjectStorageRequest**](ExportDbServerLogToObjectStorageRequest.md)| exportDbServerLogToObjectStorageRequest |
+
+### Return type
+
+[**ExportDbServerLogToObjectStorageResponse**](ExportDbServerLogToObjectStorageResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="exportDbServerLogToObjectStoragePost"></a>
+# **exportDbServerLogToObjectStoragePost**
+> ExportDbServerLogToObjectStorageResponse exportDbServerLogToObjectStoragePost(exportDbServerLogToObjectStorageRequest)
+
+
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.clouddb.ApiClient;
+// import com.ncloud.clouddb.ApiResponse;
+// import com.ncloud.clouddb.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.clouddb.marshaller.JsonMarshaller;
+// import com.ncloud.clouddb.marshaller.XmlMarshaller;
+// import com.ncloud.clouddb.marshaller.FormMarshaller;
+// import com.ncloud.clouddb.exception.ApiException;
+// import com.ncloud.clouddb.exception.SdkException;
+// import com.ncloud.clouddb.model.*;
+
+// import com.ncloud.clouddb.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ExportDbServerLogToObjectStorageRequest exportDbServerLogToObjectStorageRequest = new ExportDbServerLogToObjectStorageRequest(); // ExportDbServerLogToObjectStorageRequest | exportDbServerLogToObjectStorageRequest
+try {
+	// Handler Successful response
+	ApiResponse<ExportDbServerLogToObjectStorageResponse> result = apiInstance.exportDbServerLogToObjectStoragePost(exportDbServerLogToObjectStorageRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **exportDbServerLogToObjectStorageRequest** | [**ExportDbServerLogToObjectStorageRequest**](ExportDbServerLogToObjectStorageRequest.md)| exportDbServerLogToObjectStorageRequest |
+
+### Return type
+
+[**ExportDbServerLogToObjectStorageResponse**](ExportDbServerLogToObjectStorageResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="flushCloudDBInstanceGet"></a>
 # **flushCloudDBInstanceGet**
 > FlushCloudDBInstanceResponse flushCloudDBInstanceGet(flushCloudDBInstanceRequest)
 
 
-
-CloudDB Flush
 
 ### Example
 ```java
@@ -513,8 +771,6 @@ Name | Type | Description  | Notes
 
 
 
-CloudDB Flush
-
 ### Example
 ```java
 // Import classes:
@@ -579,8 +835,6 @@ Name | Type | Description  | Notes
 > GetBackupListResponse getBackupListGet(getBackupListRequest)
 
 
-
-백업리스트조회
 
 ### Example
 ```java
@@ -647,8 +901,6 @@ Name | Type | Description  | Notes
 
 
 
-백업리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -708,13 +960,141 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="getCloudDBBackupDetailListGet"></a>
+# **getCloudDBBackupDetailListGet**
+> GetCloudDBBackupDetailListResponse getCloudDBBackupDetailListGet(getCloudDBBackupDetailListRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.clouddb.ApiClient;
+// import com.ncloud.clouddb.ApiResponse;
+// import com.ncloud.clouddb.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.clouddb.marshaller.JsonMarshaller;
+// import com.ncloud.clouddb.marshaller.XmlMarshaller;
+// import com.ncloud.clouddb.marshaller.FormMarshaller;
+// import com.ncloud.clouddb.exception.ApiException;
+// import com.ncloud.clouddb.exception.SdkException;
+// import com.ncloud.clouddb.model.*;
+
+// import com.ncloud.clouddb.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetCloudDBBackupDetailListRequest getCloudDBBackupDetailListRequest = new GetCloudDBBackupDetailListRequest(); // GetCloudDBBackupDetailListRequest | getCloudDBBackupDetailListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetCloudDBBackupDetailListResponse> result = apiInstance.getCloudDBBackupDetailListGet(getCloudDBBackupDetailListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getCloudDBBackupDetailListRequest** | [**GetCloudDBBackupDetailListRequest**](GetCloudDBBackupDetailListRequest.md)| getCloudDBBackupDetailListRequest |
+
+### Return type
+
+[**GetCloudDBBackupDetailListResponse**](GetCloudDBBackupDetailListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getCloudDBBackupDetailListPost"></a>
+# **getCloudDBBackupDetailListPost**
+> GetCloudDBBackupDetailListResponse getCloudDBBackupDetailListPost(getCloudDBBackupDetailListRequest)
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.clouddb.ApiClient;
+// import com.ncloud.clouddb.ApiResponse;
+// import com.ncloud.clouddb.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.clouddb.marshaller.JsonMarshaller;
+// import com.ncloud.clouddb.marshaller.XmlMarshaller;
+// import com.ncloud.clouddb.marshaller.FormMarshaller;
+// import com.ncloud.clouddb.exception.ApiException;
+// import com.ncloud.clouddb.exception.SdkException;
+// import com.ncloud.clouddb.model.*;
+
+// import com.ncloud.clouddb.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetCloudDBBackupDetailListRequest getCloudDBBackupDetailListRequest = new GetCloudDBBackupDetailListRequest(); // GetCloudDBBackupDetailListRequest | getCloudDBBackupDetailListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetCloudDBBackupDetailListResponse> result = apiInstance.getCloudDBBackupDetailListPost(getCloudDBBackupDetailListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getCloudDBBackupDetailListRequest** | [**GetCloudDBBackupDetailListRequest**](GetCloudDBBackupDetailListRequest.md)| getCloudDBBackupDetailListRequest |
+
+### Return type
+
+[**GetCloudDBBackupDetailListResponse**](GetCloudDBBackupDetailListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="getCloudDBConfigGroupListGet"></a>
 # **getCloudDBConfigGroupListGet**
 > GetCloudDBConfigGroupListResponse getCloudDBConfigGroupListGet(getCloudDBConfigGroupListRequest)
 
 
-
-CloudDB설정그룹리스트조회
 
 ### Example
 ```java
@@ -781,8 +1161,6 @@ Name | Type | Description  | Notes
 
 
 
-CloudDB설정그룹리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -847,8 +1225,6 @@ Name | Type | Description  | Notes
 > GetCloudDBImageProductListResponse getCloudDBImageProductListGet(getCloudDBImageProductListRequest)
 
 
-
-CloudDB이미지상품리스트조회
 
 ### Example
 ```java
@@ -915,8 +1291,6 @@ Name | Type | Description  | Notes
 
 
 
-CloudDB이미지상품리스트
-
 ### Example
 ```java
 // Import classes:
@@ -981,8 +1355,6 @@ Name | Type | Description  | Notes
 > GetCloudDBInstanceListResponse getCloudDBInstanceListGet(getCloudDBInstanceListRequest)
 
 
-
-CloudDB인스턴스리스트조회
 
 ### Example
 ```java
@@ -1049,8 +1421,6 @@ Name | Type | Description  | Notes
 
 
 
-CloudDB인스턴스리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -1115,8 +1485,6 @@ Name | Type | Description  | Notes
 > GetCloudDBProductListResponse getCloudDBProductListGet(getCloudDBProductListRequest)
 
 
-
-CloudDB상품리스트조회
 
 ### Example
 ```java
@@ -1183,8 +1551,6 @@ Name | Type | Description  | Notes
 
 
 
-CloudDB상품리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -1244,13 +1610,145 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="getDbServerLogListGet"></a>
+# **getDbServerLogListGet**
+> GetDbServerLogListResponse getDbServerLogListGet(getDbServerLogListRequest)
+
+
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.clouddb.ApiClient;
+// import com.ncloud.clouddb.ApiResponse;
+// import com.ncloud.clouddb.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.clouddb.marshaller.JsonMarshaller;
+// import com.ncloud.clouddb.marshaller.XmlMarshaller;
+// import com.ncloud.clouddb.marshaller.FormMarshaller;
+// import com.ncloud.clouddb.exception.ApiException;
+// import com.ncloud.clouddb.exception.SdkException;
+// import com.ncloud.clouddb.model.*;
+
+// import com.ncloud.clouddb.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetDbServerLogListRequest getDbServerLogListRequest = new GetDbServerLogListRequest(); // GetDbServerLogListRequest | getDbServerLogListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetDbServerLogListResponse> result = apiInstance.getDbServerLogListGet(getDbServerLogListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getDbServerLogListRequest** | [**GetDbServerLogListRequest**](GetDbServerLogListRequest.md)| getDbServerLogListRequest |
+
+### Return type
+
+[**GetDbServerLogListResponse**](GetDbServerLogListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getDbServerLogListPost"></a>
+# **getDbServerLogListPost**
+> GetDbServerLogListResponse getDbServerLogListPost(getDbServerLogListRequest)
+
+
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.clouddb.ApiClient;
+// import com.ncloud.clouddb.ApiResponse;
+// import com.ncloud.clouddb.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.clouddb.marshaller.JsonMarshaller;
+// import com.ncloud.clouddb.marshaller.XmlMarshaller;
+// import com.ncloud.clouddb.marshaller.FormMarshaller;
+// import com.ncloud.clouddb.exception.ApiException;
+// import com.ncloud.clouddb.exception.SdkException;
+// import com.ncloud.clouddb.model.*;
+
+// import com.ncloud.clouddb.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetDbServerLogListRequest getDbServerLogListRequest = new GetDbServerLogListRequest(); // GetDbServerLogListRequest | getDbServerLogListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetDbServerLogListResponse> result = apiInstance.getDbServerLogListPost(getDbServerLogListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getDbServerLogListRequest** | [**GetDbServerLogListRequest**](GetDbServerLogListRequest.md)| getDbServerLogListRequest |
+
+### Return type
+
+[**GetDbServerLogListResponse**](GetDbServerLogListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="getDmsOperationGet"></a>
 # **getDmsOperationGet**
 > GetDmsOperationResponse getDmsOperationGet(getDmsOperationRequest)
 
 
-
-DMS상태조회
 
 ### Example
 ```java
@@ -1317,8 +1815,6 @@ Name | Type | Description  | Notes
 
 
 
-DMS상태조회
-
 ### Example
 ```java
 // Import classes:
@@ -1383,8 +1879,6 @@ Name | Type | Description  | Notes
 > GetObjectStorageBackupListResponse getObjectStorageBackupListGet(getObjectStorageBackupListRequest)
 
 
-
-오브젝트스토리지백업리스트조회
 
 ### Example
 ```java
@@ -1451,8 +1945,6 @@ Name | Type | Description  | Notes
 
 
 
-오브젝트스토리지백업리스트조회
-
 ### Example
 ```java
 // Import classes:
@@ -1517,8 +2009,6 @@ Name | Type | Description  | Notes
 > RebootCloudDBServerInstanceResponse rebootCloudDBServerInstanceGet(rebootCloudDBServerInstanceRequest)
 
 
-
-CloudDB서버인스턴스재부팅
 
 ### Example
 ```java
@@ -1585,8 +2075,6 @@ Name | Type | Description  | Notes
 
 
 
-CloudDB서버인스턴스재부팅
-
 ### Example
 ```java
 // Import classes:
@@ -1651,8 +2139,6 @@ Name | Type | Description  | Notes
 > RestoreDmsDatabaseResponse restoreDmsDatabaseGet(restoreDmsDatabaseRequest)
 
 
-
-DMS데이터베이스복구
 
 ### Example
 ```java
@@ -1719,8 +2205,6 @@ Name | Type | Description  | Notes
 
 
 
-DMS데이터베이스복구
-
 ### Example
 ```java
 // Import classes:
@@ -1785,8 +2269,6 @@ Name | Type | Description  | Notes
 > RestoreDmsTransactionLogResponse restoreDmsTransactionLogGet(restoreDmsTransactionLogRequest)
 
 
-
-DMS트랜잭션로그복구
 
 ### Example
 ```java
@@ -1853,8 +2335,6 @@ Name | Type | Description  | Notes
 
 
 
-DMS트랜잭션로그복구
-
 ### Example
 ```java
 // Import classes:
@@ -1919,8 +2399,6 @@ Name | Type | Description  | Notes
 > SetObjectStorageInfoResponse setObjectStorageInfoGet(setObjectStorageInfoRequest)
 
 
-
-오브젝트스토리지정보설정
 
 ### Example
 ```java
@@ -1987,8 +2465,6 @@ Name | Type | Description  | Notes
 
 
 
-오브젝트스토리지정보설정
-
 ### Example
 ```java
 // Import classes:
@@ -2054,8 +2530,6 @@ Name | Type | Description  | Notes
 
 
 
-DMS파일업로드
-
 ### Example
 ```java
 // Import classes:
@@ -2120,8 +2594,6 @@ Name | Type | Description  | Notes
 > UploadDmsFileResponse uploadDmsFilePost(uploadDmsFileRequest)
 
 
-
-DMS파일업로드
 
 ### Example
 ```java

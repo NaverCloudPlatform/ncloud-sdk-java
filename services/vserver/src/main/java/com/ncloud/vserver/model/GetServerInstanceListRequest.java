@@ -46,6 +46,8 @@ public class GetServerInstanceListRequest {
 
 	private List<String> placementGroupNoList = null;
 
+	private List<String> hypervisorTypeCodeList = null;
+
 	private String responseFormatType = null;
 
 	public GetServerInstanceListRequest regionCode(String regionCode) {
@@ -285,6 +287,31 @@ public class GetServerInstanceListRequest {
 		this.placementGroupNoList = placementGroupNoList;
 	}
 
+	public GetServerInstanceListRequest hypervisorTypeCodeList(List<String> hypervisorTypeCodeList) {
+		this.hypervisorTypeCodeList = hypervisorTypeCodeList;
+		return this;
+	}
+
+	public GetServerInstanceListRequest addHypervisorTypeCodeListItem(String hypervisorTypeCodeListItem) {
+		if (this.hypervisorTypeCodeList == null) {
+			this.hypervisorTypeCodeList = new ArrayList<String>();
+		}
+		this.hypervisorTypeCodeList.add(hypervisorTypeCodeListItem);
+		return this;
+	}
+
+	 /**
+	 * 하이퍼바이저타입코드리스트
+	 * @return hypervisorTypeCodeList
+	**/
+	public List<String> getHypervisorTypeCodeList() {
+		return hypervisorTypeCodeList;
+	}
+
+	public void setHypervisorTypeCodeList(List<String> hypervisorTypeCodeList) {
+		this.hypervisorTypeCodeList = hypervisorTypeCodeList;
+	}
+
 	public GetServerInstanceListRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -325,12 +352,13 @@ public class GetServerInstanceListRequest {
 				Objects.equals(this.sortedBy, getServerInstanceListRequest.sortedBy) &&
 				Objects.equals(this.sortingOrder, getServerInstanceListRequest.sortingOrder) &&
 				Objects.equals(this.placementGroupNoList, getServerInstanceListRequest.placementGroupNoList) &&
+				Objects.equals(this.hypervisorTypeCodeList, getServerInstanceListRequest.hypervisorTypeCodeList) &&
 				Objects.equals(this.responseFormatType, getServerInstanceListRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, serverInstanceNoList, vpcNo, pageNo, pageSize, serverInstanceStatusCode, baseBlockStorageDiskTypeCode, baseBlockStorageDiskDetailTypeCode, serverName, ip, sortedBy, sortingOrder, placementGroupNoList, responseFormatType);
+		return Objects.hash(regionCode, serverInstanceNoList, vpcNo, pageNo, pageSize, serverInstanceStatusCode, baseBlockStorageDiskTypeCode, baseBlockStorageDiskDetailTypeCode, serverName, ip, sortedBy, sortingOrder, placementGroupNoList, hypervisorTypeCodeList, responseFormatType);
 	}
 
 
@@ -352,6 +380,7 @@ public class GetServerInstanceListRequest {
 		sb.append("		sortedBy: ").append(toIndentedString(sortedBy)).append("\n");
 		sb.append("		sortingOrder: ").append(toIndentedString(sortingOrder)).append("\n");
 		sb.append("		placementGroupNoList: ").append(toIndentedString(placementGroupNoList)).append("\n");
+		sb.append("		hypervisorTypeCodeList: ").append(toIndentedString(hypervisorTypeCodeList)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();
