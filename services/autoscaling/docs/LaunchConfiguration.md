@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **launchConfigurationName** | **String** | 론치설정명 |  [optional]
+**launchConfigurationNo** | **String** | 론치설정번호 |  [optional]
 **serverImageProductCode** | **String** | 서버이미지상품코드 |  [optional]
 **serverProductCode** | **String** | 서버상품코드 |  [optional]
 **memberServerImageNo** | **String** | 회원서버이미지번호 |  [optional]

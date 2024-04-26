@@ -30,6 +30,12 @@ public class LoadBalancerRuleParameter {
 
 	private String proxyProtocolUseYn = null;
 
+	private String stickySessionUseYn = null;
+
+	private String http2UseYn = null;
+
+	private String serverProtocolTypeCode = null;
+
 	public LoadBalancerRuleParameter protocolTypeCode(String protocolTypeCode) {
 		this.protocolTypeCode = protocolTypeCode;
 		return this;
@@ -132,6 +138,57 @@ public class LoadBalancerRuleParameter {
 		this.proxyProtocolUseYn = proxyProtocolUseYn;
 	}
 
+	public LoadBalancerRuleParameter stickySessionUseYn(String stickySessionUseYn) {
+		this.stickySessionUseYn = stickySessionUseYn;
+		return this;
+	}
+
+	 /**
+	 * 세션별접근사용여부
+	 * @return stickySessionUseYn
+	**/
+	public String getStickySessionUseYn() {
+		return stickySessionUseYn;
+	}
+
+	public void setStickySessionUseYn(String stickySessionUseYn) {
+		this.stickySessionUseYn = stickySessionUseYn;
+	}
+
+	public LoadBalancerRuleParameter http2UseYn(String http2UseYn) {
+		this.http2UseYn = http2UseYn;
+		return this;
+	}
+
+	 /**
+	 * HTTP/2프로토콜사용여부
+	 * @return http2UseYn
+	**/
+	public String getHttp2UseYn() {
+		return http2UseYn;
+	}
+
+	public void setHttp2UseYn(String http2UseYn) {
+		this.http2UseYn = http2UseYn;
+	}
+
+	public LoadBalancerRuleParameter serverProtocolTypeCode(String serverProtocolTypeCode) {
+		this.serverProtocolTypeCode = serverProtocolTypeCode;
+		return this;
+	}
+
+	 /**
+	 * 서버프로토콜구분코드
+	 * @return serverProtocolTypeCode
+	**/
+	public String getServerProtocolTypeCode() {
+		return serverProtocolTypeCode;
+	}
+
+	public void setServerProtocolTypeCode(String serverProtocolTypeCode) {
+		this.serverProtocolTypeCode = serverProtocolTypeCode;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -147,12 +204,15 @@ public class LoadBalancerRuleParameter {
 				Objects.equals(this.serverPort, loadBalancerRuleParameter.serverPort) &&
 				Objects.equals(this.l7HealthCheckPath, loadBalancerRuleParameter.l7HealthCheckPath) &&
 				Objects.equals(this.certificateName, loadBalancerRuleParameter.certificateName) &&
-				Objects.equals(this.proxyProtocolUseYn, loadBalancerRuleParameter.proxyProtocolUseYn);
+				Objects.equals(this.proxyProtocolUseYn, loadBalancerRuleParameter.proxyProtocolUseYn) &&
+				Objects.equals(this.stickySessionUseYn, loadBalancerRuleParameter.stickySessionUseYn) &&
+				Objects.equals(this.http2UseYn, loadBalancerRuleParameter.http2UseYn) &&
+				Objects.equals(this.serverProtocolTypeCode, loadBalancerRuleParameter.serverProtocolTypeCode);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(protocolTypeCode, loadBalancerPort, serverPort, l7HealthCheckPath, certificateName, proxyProtocolUseYn);
+		return Objects.hash(protocolTypeCode, loadBalancerPort, serverPort, l7HealthCheckPath, certificateName, proxyProtocolUseYn, stickySessionUseYn, http2UseYn, serverProtocolTypeCode);
 	}
 
 
@@ -167,6 +227,9 @@ public class LoadBalancerRuleParameter {
 		sb.append("		l7HealthCheckPath: ").append(toIndentedString(l7HealthCheckPath)).append("\n");
 		sb.append("		certificateName: ").append(toIndentedString(certificateName)).append("\n");
 		sb.append("		proxyProtocolUseYn: ").append(toIndentedString(proxyProtocolUseYn)).append("\n");
+		sb.append("		stickySessionUseYn: ").append(toIndentedString(stickySessionUseYn)).append("\n");
+		sb.append("		http2UseYn: ").append(toIndentedString(http2UseYn)).append("\n");
+		sb.append("		serverProtocolTypeCode: ").append(toIndentedString(serverProtocolTypeCode)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

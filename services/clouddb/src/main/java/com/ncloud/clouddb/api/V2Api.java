@@ -26,10 +26,16 @@ import com.ncloud.clouddb.model.DeleteCloudDBServerInstanceRequest;
 import com.ncloud.clouddb.model.DeleteCloudDBServerInstanceResponse;
 import com.ncloud.clouddb.model.DownloadDmsFileRequest;
 import com.ncloud.clouddb.model.DownloadDmsFileResponse;
+import com.ncloud.clouddb.model.ExportBackupToObjectStorageRequest;
+import com.ncloud.clouddb.model.ExportBackupToObjectStorageResponse;
+import com.ncloud.clouddb.model.ExportDbServerLogToObjectStorageRequest;
+import com.ncloud.clouddb.model.ExportDbServerLogToObjectStorageResponse;
 import com.ncloud.clouddb.model.FlushCloudDBInstanceRequest;
 import com.ncloud.clouddb.model.FlushCloudDBInstanceResponse;
 import com.ncloud.clouddb.model.GetBackupListRequest;
 import com.ncloud.clouddb.model.GetBackupListResponse;
+import com.ncloud.clouddb.model.GetCloudDBBackupDetailListRequest;
+import com.ncloud.clouddb.model.GetCloudDBBackupDetailListResponse;
 import com.ncloud.clouddb.model.GetCloudDBConfigGroupListRequest;
 import com.ncloud.clouddb.model.GetCloudDBConfigGroupListResponse;
 import com.ncloud.clouddb.model.GetCloudDBImageProductListRequest;
@@ -38,6 +44,8 @@ import com.ncloud.clouddb.model.GetCloudDBInstanceListRequest;
 import com.ncloud.clouddb.model.GetCloudDBInstanceListResponse;
 import com.ncloud.clouddb.model.GetCloudDBProductListRequest;
 import com.ncloud.clouddb.model.GetCloudDBProductListResponse;
+import com.ncloud.clouddb.model.GetDbServerLogListRequest;
+import com.ncloud.clouddb.model.GetDbServerLogListResponse;
 import com.ncloud.clouddb.model.GetDmsOperationRequest;
 import com.ncloud.clouddb.model.GetDmsOperationResponse;
 import com.ncloud.clouddb.model.GetObjectStorageBackupListRequest;
@@ -69,7 +77,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB인스턴스생성
+	 * 
 	 * @param createCloudDBInstanceRequest createCloudDBInstanceRequest (required)
 	 * @return CreateCloudDBInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -109,7 +117,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB인스턴스생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -147,7 +155,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB인스턴스생성
+	 * 
 	 * @param createCloudDBInstanceRequest createCloudDBInstanceRequest (required)
 	 * @return CreateCloudDBInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -187,7 +195,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB인스턴스생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -225,7 +233,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB서버인스턴스삭제
+	 * 
 	 * @param deleteCloudDBServerInstanceRequest deleteCloudDBServerInstanceRequest (required)
 	 * @return DeleteCloudDBServerInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -265,7 +273,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB서버인스턴스삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -303,7 +311,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB서버인스턴스삭제
+	 * 
 	 * @param deleteCloudDBServerInstanceRequest deleteCloudDBServerInstanceRequest (required)
 	 * @return DeleteCloudDBServerInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -343,7 +351,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB서버인스턴스삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -381,7 +389,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS파일다운로드
+	 * 
 	 * @param downloadDmsFileRequest downloadDmsFileRequest (required)
 	 * @return DownloadDmsFileResponse
 	 * @throws ApiException if fails to make API call
@@ -421,7 +429,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS파일다운로드
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -459,7 +467,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS파일다운로드
+	 * 
 	 * @param downloadDmsFileRequest downloadDmsFileRequest (required)
 	 * @return DownloadDmsFileResponse
 	 * @throws ApiException if fails to make API call
@@ -499,7 +507,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS파일다운로드
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -537,7 +545,319 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB Flush
+	 * 
+	 * @param exportBackupToObjectStorageRequest exportBackupToObjectStorageRequest (required)
+	 * @return ExportBackupToObjectStorageResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ExportBackupToObjectStorageResponse> exportBackupToObjectStorageGet(ExportBackupToObjectStorageRequest exportBackupToObjectStorageRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/exportBackupToObjectStorage";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, exportBackupToObjectStorageRequest, true, false);
+		return apiClient.call(apiRequest, ExportBackupToObjectStorageResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	exportBackupToObjectStorageRequest exportBackupToObjectStorageRequest (required)
+	 * @return byte[]
+	 *	ExportBackupToObjectStorageResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> exportBackupToObjectStorageGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/exportBackupToObjectStorage";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param exportBackupToObjectStorageRequest exportBackupToObjectStorageRequest (required)
+	 * @return ExportBackupToObjectStorageResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ExportBackupToObjectStorageResponse> exportBackupToObjectStoragePost(ExportBackupToObjectStorageRequest exportBackupToObjectStorageRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/exportBackupToObjectStorage";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, exportBackupToObjectStorageRequest, true, false);
+		return apiClient.call(apiRequest, ExportBackupToObjectStorageResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	exportBackupToObjectStorageRequest exportBackupToObjectStorageRequest (required)
+	 * @return byte[]
+	 *	ExportBackupToObjectStorageResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> exportBackupToObjectStoragePost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/exportBackupToObjectStorage";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param exportDbServerLogToObjectStorageRequest exportDbServerLogToObjectStorageRequest (required)
+	 * @return ExportDbServerLogToObjectStorageResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ExportDbServerLogToObjectStorageResponse> exportDbServerLogToObjectStorageGet(ExportDbServerLogToObjectStorageRequest exportDbServerLogToObjectStorageRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/exportDbServerLogToObjectStorage";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, exportDbServerLogToObjectStorageRequest, true, false);
+		return apiClient.call(apiRequest, ExportDbServerLogToObjectStorageResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	exportDbServerLogToObjectStorageRequest exportDbServerLogToObjectStorageRequest (required)
+	 * @return byte[]
+	 *	ExportDbServerLogToObjectStorageResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> exportDbServerLogToObjectStorageGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/exportDbServerLogToObjectStorage";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param exportDbServerLogToObjectStorageRequest exportDbServerLogToObjectStorageRequest (required)
+	 * @return ExportDbServerLogToObjectStorageResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ExportDbServerLogToObjectStorageResponse> exportDbServerLogToObjectStoragePost(ExportDbServerLogToObjectStorageRequest exportDbServerLogToObjectStorageRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/exportDbServerLogToObjectStorage";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, exportDbServerLogToObjectStorageRequest, true, true);
+		return apiClient.call(apiRequest, ExportDbServerLogToObjectStorageResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	exportDbServerLogToObjectStorageRequest exportDbServerLogToObjectStorageRequest (required)
+	 * @return byte[]
+	 *	ExportDbServerLogToObjectStorageResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> exportDbServerLogToObjectStoragePost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/exportDbServerLogToObjectStorage";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, true);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
 	 * @param flushCloudDBInstanceRequest flushCloudDBInstanceRequest (required)
 	 * @return FlushCloudDBInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -577,7 +897,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB Flush
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -615,7 +935,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB Flush
+	 * 
 	 * @param flushCloudDBInstanceRequest flushCloudDBInstanceRequest (required)
 	 * @return FlushCloudDBInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -655,7 +975,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB Flush
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -693,7 +1013,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 백업리스트조회
+	 * 
 	 * @param getBackupListRequest getBackupListRequest (required)
 	 * @return GetBackupListResponse
 	 * @throws ApiException if fails to make API call
@@ -733,7 +1053,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 백업리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -771,7 +1091,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 백업리스트조회
+	 * 
 	 * @param getBackupListRequest getBackupListRequest (required)
 	 * @return GetBackupListResponse
 	 * @throws ApiException if fails to make API call
@@ -811,7 +1131,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 백업리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -849,7 +1169,163 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB설정그룹리스트조회
+	 * 
+	 * @param getCloudDBBackupDetailListRequest getCloudDBBackupDetailListRequest (required)
+	 * @return GetCloudDBBackupDetailListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetCloudDBBackupDetailListResponse> getCloudDBBackupDetailListGet(GetCloudDBBackupDetailListRequest getCloudDBBackupDetailListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getCloudDBBackupDetailList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getCloudDBBackupDetailListRequest, true, false);
+		return apiClient.call(apiRequest, GetCloudDBBackupDetailListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getCloudDBBackupDetailListRequest getCloudDBBackupDetailListRequest (required)
+	 * @return byte[]
+	 *	GetCloudDBBackupDetailListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getCloudDBBackupDetailListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getCloudDBBackupDetailList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param getCloudDBBackupDetailListRequest getCloudDBBackupDetailListRequest (required)
+	 * @return GetCloudDBBackupDetailListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetCloudDBBackupDetailListResponse> getCloudDBBackupDetailListPost(GetCloudDBBackupDetailListRequest getCloudDBBackupDetailListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getCloudDBBackupDetailList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getCloudDBBackupDetailListRequest, true, false);
+		return apiClient.call(apiRequest, GetCloudDBBackupDetailListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getCloudDBBackupDetailListRequest getCloudDBBackupDetailListRequest (required)
+	 * @return byte[]
+	 *	GetCloudDBBackupDetailListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getCloudDBBackupDetailListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getCloudDBBackupDetailList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
 	 * @param getCloudDBConfigGroupListRequest getCloudDBConfigGroupListRequest (required)
 	 * @return GetCloudDBConfigGroupListResponse
 	 * @throws ApiException if fails to make API call
@@ -889,7 +1365,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB설정그룹리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -927,7 +1403,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB설정그룹리스트조회
+	 * 
 	 * @param getCloudDBConfigGroupListRequest getCloudDBConfigGroupListRequest (required)
 	 * @return GetCloudDBConfigGroupListResponse
 	 * @throws ApiException if fails to make API call
@@ -967,7 +1443,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB설정그룹리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1005,7 +1481,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB이미지상품리스트조회
+	 * 
 	 * @param getCloudDBImageProductListRequest getCloudDBImageProductListRequest (required)
 	 * @return GetCloudDBImageProductListResponse
 	 * @throws ApiException if fails to make API call
@@ -1045,7 +1521,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB이미지상품리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1083,7 +1559,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB이미지상품리스트
+	 * 
 	 * @param getCloudDBImageProductListRequest getCloudDBImageProductListRequest (required)
 	 * @return GetCloudDBImageProductListResponse
 	 * @throws ApiException if fails to make API call
@@ -1123,7 +1599,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB이미지상품리스트
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1161,7 +1637,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB인스턴스리스트조회
+	 * 
 	 * @param getCloudDBInstanceListRequest getCloudDBInstanceListRequest (required)
 	 * @return GetCloudDBInstanceListResponse
 	 * @throws ApiException if fails to make API call
@@ -1201,7 +1677,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB인스턴스리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1239,7 +1715,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB인스턴스리스트조회
+	 * 
 	 * @param getCloudDBInstanceListRequest getCloudDBInstanceListRequest (required)
 	 * @return GetCloudDBInstanceListResponse
 	 * @throws ApiException if fails to make API call
@@ -1279,7 +1755,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB인스턴스리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1317,7 +1793,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB상품리스트조회
+	 * 
 	 * @param getCloudDBProductListRequest getCloudDBProductListRequest (required)
 	 * @return GetCloudDBProductListResponse
 	 * @throws ApiException if fails to make API call
@@ -1357,7 +1833,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB상품리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1395,7 +1871,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB상품리스트조회
+	 * 
 	 * @param getCloudDBProductListRequest getCloudDBProductListRequest (required)
 	 * @return GetCloudDBProductListResponse
 	 * @throws ApiException if fails to make API call
@@ -1435,7 +1911,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB상품리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1473,7 +1949,163 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS상태조회
+	 * 
+	 * @param getDbServerLogListRequest getDbServerLogListRequest (required)
+	 * @return GetDbServerLogListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetDbServerLogListResponse> getDbServerLogListGet(GetDbServerLogListRequest getDbServerLogListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getDbServerLogList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getDbServerLogListRequest, true, false);
+		return apiClient.call(apiRequest, GetDbServerLogListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getDbServerLogListRequest getDbServerLogListRequest (required)
+	 * @return byte[]
+	 *	GetDbServerLogListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getDbServerLogListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getDbServerLogList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param getDbServerLogListRequest getDbServerLogListRequest (required)
+	 * @return GetDbServerLogListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetDbServerLogListResponse> getDbServerLogListPost(GetDbServerLogListRequest getDbServerLogListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getDbServerLogList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getDbServerLogListRequest, true, false);
+		return apiClient.call(apiRequest, GetDbServerLogListResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getDbServerLogListRequest getDbServerLogListRequest (required)
+	 * @return byte[]
+	 *	GetDbServerLogListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getDbServerLogListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getDbServerLogList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
 	 * @param getDmsOperationRequest getDmsOperationRequest (required)
 	 * @return GetDmsOperationResponse
 	 * @throws ApiException if fails to make API call
@@ -1513,7 +2145,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS상태조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1551,7 +2183,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS상태조회
+	 * 
 	 * @param getDmsOperationRequest getDmsOperationRequest (required)
 	 * @return GetDmsOperationResponse
 	 * @throws ApiException if fails to make API call
@@ -1591,7 +2223,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS상태조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1629,7 +2261,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 오브젝트스토리지백업리스트조회
+	 * 
 	 * @param getObjectStorageBackupListRequest getObjectStorageBackupListRequest (required)
 	 * @return GetObjectStorageBackupListResponse
 	 * @throws ApiException if fails to make API call
@@ -1669,7 +2301,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 오브젝트스토리지백업리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1707,7 +2339,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 오브젝트스토리지백업리스트조회
+	 * 
 	 * @param getObjectStorageBackupListRequest getObjectStorageBackupListRequest (required)
 	 * @return GetObjectStorageBackupListResponse
 	 * @throws ApiException if fails to make API call
@@ -1747,7 +2379,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 오브젝트스토리지백업리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1785,7 +2417,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB서버인스턴스재부팅
+	 * 
 	 * @param rebootCloudDBServerInstanceRequest rebootCloudDBServerInstanceRequest (required)
 	 * @return RebootCloudDBServerInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -1825,7 +2457,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB서버인스턴스재부팅
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1863,7 +2495,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB서버인스턴스재부팅
+	 * 
 	 * @param rebootCloudDBServerInstanceRequest rebootCloudDBServerInstanceRequest (required)
 	 * @return RebootCloudDBServerInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -1903,7 +2535,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * CloudDB서버인스턴스재부팅
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1941,7 +2573,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS데이터베이스복구
+	 * 
 	 * @param restoreDmsDatabaseRequest restoreDmsDatabaseRequest (required)
 	 * @return RestoreDmsDatabaseResponse
 	 * @throws ApiException if fails to make API call
@@ -1981,7 +2613,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS데이터베이스복구
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2019,7 +2651,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS데이터베이스복구
+	 * 
 	 * @param restoreDmsDatabaseRequest restoreDmsDatabaseRequest (required)
 	 * @return RestoreDmsDatabaseResponse
 	 * @throws ApiException if fails to make API call
@@ -2059,7 +2691,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS데이터베이스복구
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2097,7 +2729,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS트랜잭션로그복구
+	 * 
 	 * @param restoreDmsTransactionLogRequest restoreDmsTransactionLogRequest (required)
 	 * @return RestoreDmsTransactionLogResponse
 	 * @throws ApiException if fails to make API call
@@ -2137,7 +2769,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS트랜잭션로그복구
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2175,7 +2807,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS트랜잭션로그복구
+	 * 
 	 * @param restoreDmsTransactionLogRequest restoreDmsTransactionLogRequest (required)
 	 * @return RestoreDmsTransactionLogResponse
 	 * @throws ApiException if fails to make API call
@@ -2215,7 +2847,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS트랜잭션로그복구
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2253,7 +2885,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 오브젝트스토리지정보설정
+	 * 
 	 * @param setObjectStorageInfoRequest setObjectStorageInfoRequest (required)
 	 * @return SetObjectStorageInfoResponse
 	 * @throws ApiException if fails to make API call
@@ -2293,7 +2925,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 오브젝트스토리지정보설정
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2331,7 +2963,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 오브젝트스토리지정보설정
+	 * 
 	 * @param setObjectStorageInfoRequest setObjectStorageInfoRequest (required)
 	 * @return SetObjectStorageInfoResponse
 	 * @throws ApiException if fails to make API call
@@ -2371,7 +3003,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 오브젝트스토리지정보설정
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2409,7 +3041,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS파일업로드
+	 * 
 	 * @param uploadDmsFileRequest uploadDmsFileRequest (required)
 	 * @return UploadDmsFileResponse
 	 * @throws ApiException if fails to make API call
@@ -2449,7 +3081,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS파일업로드
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -2487,7 +3119,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS파일업로드
+	 * 
 	 * @param uploadDmsFileRequest uploadDmsFileRequest (required)
 	 * @return UploadDmsFileResponse
 	 * @throws ApiException if fails to make API call
@@ -2527,7 +3159,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * DMS파일업로드
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body

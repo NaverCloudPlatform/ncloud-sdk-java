@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>loadbalancer</artifactId>
-	<version>1.1.0</version>
+	<version>1.1.1</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/loadbalancer-1.1.0.jar
+* target/loadbalancer-1.1.1.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -87,7 +87,7 @@ public class V2ApiExample {
 		AddLoadBalancerSslCertificateRequest addLoadBalancerSslCertificateRequest = new AddLoadBalancerSslCertificateRequest(); // AddLoadBalancerSslCertificateRequest | addLoadBalancerSslCertificateRequest
 		try {
 			// Handler Successful response
-			ApiResponse<AddLoadBalancerSslCertificateResponse> result = apiInstance.addLoadBalancerSslCertificateGet(addLoadBalancerSslCertificateRequest);
+			ApiResponse<AddLoadBalancerSslCertificateResponse> result = apiInstance.addLoadBalancerSslCertificatePost(addLoadBalancerSslCertificateRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -109,8 +109,9 @@ All URIs are relative to *https://ncloud.apigw.ntruss.com/loadbalancer/v2*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*V2Api* | [**addLoadBalancerSslCertificateGet**](docs/V2Api.md#addLoadBalancerSslCertificateGet) | **GET** /addLoadBalancerSslCertificate | 
 *V2Api* | [**addLoadBalancerSslCertificatePost**](docs/V2Api.md#addLoadBalancerSslCertificatePost) | **POST** /addLoadBalancerSslCertificate | 
+*V2Api* | [**addServerInstancesToLoadBalancerGet**](docs/V2Api.md#addServerInstancesToLoadBalancerGet) | **GET** /addServerInstancesToLoadBalancer | 
+*V2Api* | [**addServerInstancesToLoadBalancerPost**](docs/V2Api.md#addServerInstancesToLoadBalancerPost) | **POST** /addServerInstancesToLoadBalancer | 
 *V2Api* | [**changeLoadBalancedServerInstancesGet**](docs/V2Api.md#changeLoadBalancedServerInstancesGet) | **GET** /changeLoadBalancedServerInstances | 
 *V2Api* | [**changeLoadBalancedServerInstancesPost**](docs/V2Api.md#changeLoadBalancedServerInstancesPost) | **POST** /changeLoadBalancedServerInstances | 
 *V2Api* | [**changeLoadBalancerInstanceConfigurationGet**](docs/V2Api.md#changeLoadBalancerInstanceConfigurationGet) | **GET** /changeLoadBalancerInstanceConfiguration | 
@@ -121,6 +122,8 @@ Class | Method | HTTP request | Description
 *V2Api* | [**deleteLoadBalancerInstancesPost**](docs/V2Api.md#deleteLoadBalancerInstancesPost) | **POST** /deleteLoadBalancerInstances | 
 *V2Api* | [**deleteLoadBalancerSslCertificateGet**](docs/V2Api.md#deleteLoadBalancerSslCertificateGet) | **GET** /deleteLoadBalancerSslCertificate | 
 *V2Api* | [**deleteLoadBalancerSslCertificatePost**](docs/V2Api.md#deleteLoadBalancerSslCertificatePost) | **POST** /deleteLoadBalancerSslCertificate | 
+*V2Api* | [**deleteServerInstancesFromLoadBalancerGet**](docs/V2Api.md#deleteServerInstancesFromLoadBalancerGet) | **GET** /deleteServerInstancesFromLoadBalancer | 
+*V2Api* | [**deleteServerInstancesFromLoadBalancerPost**](docs/V2Api.md#deleteServerInstancesFromLoadBalancerPost) | **POST** /deleteServerInstancesFromLoadBalancer | 
 *V2Api* | [**getLoadBalancedServerInstanceListGet**](docs/V2Api.md#getLoadBalancedServerInstanceListGet) | **GET** /getLoadBalancedServerInstanceList | 
 *V2Api* | [**getLoadBalancedServerInstanceListPost**](docs/V2Api.md#getLoadBalancedServerInstanceListPost) | **POST** /getLoadBalancedServerInstanceList | 
 *V2Api* | [**getLoadBalancerInstanceListGet**](docs/V2Api.md#getLoadBalancerInstanceListGet) | **GET** /getLoadBalancerInstanceList | 
@@ -136,6 +139,8 @@ Class | Method | HTTP request | Description
  - [AccessControlGroup](docs/AccessControlGroup.md)
  - [AddLoadBalancerSslCertificateRequest](docs/AddLoadBalancerSslCertificateRequest.md)
  - [AddLoadBalancerSslCertificateResponse](docs/AddLoadBalancerSslCertificateResponse.md)
+ - [AddServerInstancesToLoadBalancerRequest](docs/AddServerInstancesToLoadBalancerRequest.md)
+ - [AddServerInstancesToLoadBalancerResponse](docs/AddServerInstancesToLoadBalancerResponse.md)
  - [ChangeLoadBalancedServerInstancesRequest](docs/ChangeLoadBalancedServerInstancesRequest.md)
  - [ChangeLoadBalancedServerInstancesResponse](docs/ChangeLoadBalancedServerInstancesResponse.md)
  - [ChangeLoadBalancerInstanceConfigurationRequest](docs/ChangeLoadBalancerInstanceConfigurationRequest.md)
@@ -147,6 +152,8 @@ Class | Method | HTTP request | Description
  - [DeleteLoadBalancerInstancesResponse](docs/DeleteLoadBalancerInstancesResponse.md)
  - [DeleteLoadBalancerSslCertificateRequest](docs/DeleteLoadBalancerSslCertificateRequest.md)
  - [DeleteLoadBalancerSslCertificateResponse](docs/DeleteLoadBalancerSslCertificateResponse.md)
+ - [DeleteServerInstancesFromLoadBalancerRequest](docs/DeleteServerInstancesFromLoadBalancerRequest.md)
+ - [DeleteServerInstancesFromLoadBalancerResponse](docs/DeleteServerInstancesFromLoadBalancerResponse.md)
  - [GetLoadBalancedServerInstanceListRequest](docs/GetLoadBalancedServerInstanceListRequest.md)
  - [GetLoadBalancedServerInstanceListResponse](docs/GetLoadBalancedServerInstanceListResponse.md)
  - [GetLoadBalancerInstanceListRequest](docs/GetLoadBalancerInstanceListRequest.md)

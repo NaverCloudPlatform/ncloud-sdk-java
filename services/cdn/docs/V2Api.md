@@ -6,12 +6,20 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**getCdnPlusInstanceListGet**](V2Api.md#getCdnPlusInstanceListGet) | **GET** /getCdnPlusInstanceList | 
 [**getCdnPlusInstanceListPost**](V2Api.md#getCdnPlusInstanceListPost) | **POST** /getCdnPlusInstanceList | 
+[**getCdnPlusMonitoringDataGet**](V2Api.md#getCdnPlusMonitoringDataGet) | **GET** /getCdnPlusMonitoringData | 
+[**getCdnPlusMonitoringDataPost**](V2Api.md#getCdnPlusMonitoringDataPost) | **POST** /getCdnPlusMonitoringData | 
 [**getCdnPlusPurgeHistoryListGet**](V2Api.md#getCdnPlusPurgeHistoryListGet) | **GET** /getCdnPlusPurgeHistoryList | 
 [**getCdnPlusPurgeHistoryListPost**](V2Api.md#getCdnPlusPurgeHistoryListPost) | **POST** /getCdnPlusPurgeHistoryList | 
+[**getCdnPlusUsageDataGet**](V2Api.md#getCdnPlusUsageDataGet) | **GET** /getCdnPlusUsageData | 
+[**getCdnPlusUsageDataPost**](V2Api.md#getCdnPlusUsageDataPost) | **POST** /getCdnPlusUsageData | 
 [**getGlobalCdnInstanceListGet**](V2Api.md#getGlobalCdnInstanceListGet) | **GET** /getGlobalCdnInstanceList | 
 [**getGlobalCdnInstanceListPost**](V2Api.md#getGlobalCdnInstanceListPost) | **POST** /getGlobalCdnInstanceList | 
+[**getGlobalCdnMonitoringDataGet**](V2Api.md#getGlobalCdnMonitoringDataGet) | **GET** /getGlobalCdnMonitoringData | 
+[**getGlobalCdnMonitoringDataPost**](V2Api.md#getGlobalCdnMonitoringDataPost) | **POST** /getGlobalCdnMonitoringData | 
 [**getGlobalCdnPurgeHistoryListGet**](V2Api.md#getGlobalCdnPurgeHistoryListGet) | **GET** /getGlobalCdnPurgeHistoryList | 
 [**getGlobalCdnPurgeHistoryListPost**](V2Api.md#getGlobalCdnPurgeHistoryListPost) | **POST** /getGlobalCdnPurgeHistoryList | 
+[**getGlobalCdnUsageDataGet**](V2Api.md#getGlobalCdnUsageDataGet) | **GET** /getGlobalCdnUsageData | 
+[**getGlobalCdnUsageDataPost**](V2Api.md#getGlobalCdnUsageDataPost) | **POST** /getGlobalCdnUsageData | 
 [**requestCdnPlusPurgeGet**](V2Api.md#requestCdnPlusPurgeGet) | **GET** /requestCdnPlusPurge | 
 [**requestCdnPlusPurgePost**](V2Api.md#requestCdnPlusPurgePost) | **POST** /requestCdnPlusPurge | 
 [**requestGlobalCdnPurgeGet**](V2Api.md#requestGlobalCdnPurgeGet) | **GET** /requestGlobalCdnPurge | 
@@ -152,6 +160,132 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="getCdnPlusMonitoringDataGet"></a>
+# **getCdnPlusMonitoringDataGet**
+> getCdnPlusMonitoringDataGet()
+
+
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.cdn.ApiClient;
+// import com.ncloud.cdn.ApiResponse;
+// import com.ncloud.cdn.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.cdn.marshaller.JsonMarshaller;
+// import com.ncloud.cdn.marshaller.XmlMarshaller;
+// import com.ncloud.cdn.marshaller.FormMarshaller;
+// import com.ncloud.cdn.exception.ApiException;
+// import com.ncloud.cdn.exception.SdkException;
+// import com.ncloud.cdn.model.*;
+
+// import com.ncloud.cdn.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+try {
+	// Handler Successful response
+	apiInstance.getCdnPlusMonitoringDataGet();
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="getCdnPlusMonitoringDataPost"></a>
+# **getCdnPlusMonitoringDataPost**
+> getCdnPlusMonitoringDataPost()
+
+
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.cdn.ApiClient;
+// import com.ncloud.cdn.ApiResponse;
+// import com.ncloud.cdn.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.cdn.marshaller.JsonMarshaller;
+// import com.ncloud.cdn.marshaller.XmlMarshaller;
+// import com.ncloud.cdn.marshaller.FormMarshaller;
+// import com.ncloud.cdn.exception.ApiException;
+// import com.ncloud.cdn.exception.SdkException;
+// import com.ncloud.cdn.model.*;
+
+// import com.ncloud.cdn.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+try {
+	// Handler Successful response
+	apiInstance.getCdnPlusMonitoringDataPost();
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 <a name="getCdnPlusPurgeHistoryListGet"></a>
 # **getCdnPlusPurgeHistoryListGet**
 > GetCdnPlusPurgeHistoryListResponse getCdnPlusPurgeHistoryListGet(getCdnPlusPurgeHistoryListRequest)
@@ -284,6 +418,132 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getCdnPlusUsageDataGet"></a>
+# **getCdnPlusUsageDataGet**
+> getCdnPlusUsageDataGet()
+
+
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.cdn.ApiClient;
+// import com.ncloud.cdn.ApiResponse;
+// import com.ncloud.cdn.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.cdn.marshaller.JsonMarshaller;
+// import com.ncloud.cdn.marshaller.XmlMarshaller;
+// import com.ncloud.cdn.marshaller.FormMarshaller;
+// import com.ncloud.cdn.exception.ApiException;
+// import com.ncloud.cdn.exception.SdkException;
+// import com.ncloud.cdn.model.*;
+
+// import com.ncloud.cdn.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+try {
+	// Handler Successful response
+	apiInstance.getCdnPlusUsageDataGet();
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="getCdnPlusUsageDataPost"></a>
+# **getCdnPlusUsageDataPost**
+> getCdnPlusUsageDataPost()
+
+
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.cdn.ApiClient;
+// import com.ncloud.cdn.ApiResponse;
+// import com.ncloud.cdn.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.cdn.marshaller.JsonMarshaller;
+// import com.ncloud.cdn.marshaller.XmlMarshaller;
+// import com.ncloud.cdn.marshaller.FormMarshaller;
+// import com.ncloud.cdn.exception.ApiException;
+// import com.ncloud.cdn.exception.SdkException;
+// import com.ncloud.cdn.model.*;
+
+// import com.ncloud.cdn.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+try {
+	// Handler Successful response
+	apiInstance.getCdnPlusUsageDataPost();
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 <a name="getGlobalCdnInstanceListGet"></a>
@@ -420,6 +680,132 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="getGlobalCdnMonitoringDataGet"></a>
+# **getGlobalCdnMonitoringDataGet**
+> getGlobalCdnMonitoringDataGet()
+
+
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.cdn.ApiClient;
+// import com.ncloud.cdn.ApiResponse;
+// import com.ncloud.cdn.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.cdn.marshaller.JsonMarshaller;
+// import com.ncloud.cdn.marshaller.XmlMarshaller;
+// import com.ncloud.cdn.marshaller.FormMarshaller;
+// import com.ncloud.cdn.exception.ApiException;
+// import com.ncloud.cdn.exception.SdkException;
+// import com.ncloud.cdn.model.*;
+
+// import com.ncloud.cdn.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+try {
+	// Handler Successful response
+	apiInstance.getGlobalCdnMonitoringDataGet();
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="getGlobalCdnMonitoringDataPost"></a>
+# **getGlobalCdnMonitoringDataPost**
+> getGlobalCdnMonitoringDataPost()
+
+
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.cdn.ApiClient;
+// import com.ncloud.cdn.ApiResponse;
+// import com.ncloud.cdn.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.cdn.marshaller.JsonMarshaller;
+// import com.ncloud.cdn.marshaller.XmlMarshaller;
+// import com.ncloud.cdn.marshaller.FormMarshaller;
+// import com.ncloud.cdn.exception.ApiException;
+// import com.ncloud.cdn.exception.SdkException;
+// import com.ncloud.cdn.model.*;
+
+// import com.ncloud.cdn.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+try {
+	// Handler Successful response
+	apiInstance.getGlobalCdnMonitoringDataPost();
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
 <a name="getGlobalCdnPurgeHistoryListGet"></a>
 # **getGlobalCdnPurgeHistoryListGet**
 > GetGlobalCdnPurgeHistoryListResponse getGlobalCdnPurgeHistoryListGet(getGlobalCdnPurgeHistoryListRequest)
@@ -552,6 +938,132 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getGlobalCdnUsageDataGet"></a>
+# **getGlobalCdnUsageDataGet**
+> getGlobalCdnUsageDataGet()
+
+
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.cdn.ApiClient;
+// import com.ncloud.cdn.ApiResponse;
+// import com.ncloud.cdn.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.cdn.marshaller.JsonMarshaller;
+// import com.ncloud.cdn.marshaller.XmlMarshaller;
+// import com.ncloud.cdn.marshaller.FormMarshaller;
+// import com.ncloud.cdn.exception.ApiException;
+// import com.ncloud.cdn.exception.SdkException;
+// import com.ncloud.cdn.model.*;
+
+// import com.ncloud.cdn.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+try {
+	// Handler Successful response
+	apiInstance.getGlobalCdnUsageDataGet();
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: Not defined
+
+<a name="getGlobalCdnUsageDataPost"></a>
+# **getGlobalCdnUsageDataPost**
+> getGlobalCdnUsageDataPost()
+
+
+
+
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.cdn.ApiClient;
+// import com.ncloud.cdn.ApiResponse;
+// import com.ncloud.cdn.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.cdn.marshaller.JsonMarshaller;
+// import com.ncloud.cdn.marshaller.XmlMarshaller;
+// import com.ncloud.cdn.marshaller.FormMarshaller;
+// import com.ncloud.cdn.exception.ApiException;
+// import com.ncloud.cdn.exception.SdkException;
+// import com.ncloud.cdn.model.*;
+
+// import com.ncloud.cdn.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+try {
+	// Handler Successful response
+	apiInstance.getGlobalCdnUsageDataPost();
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+This endpoint does not need any parameter.
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
  - **Accept**: Not defined
 
 <a name="requestCdnPlusPurgeGet"></a>

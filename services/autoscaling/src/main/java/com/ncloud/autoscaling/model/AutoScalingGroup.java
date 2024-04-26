@@ -27,7 +27,11 @@ import java.util.List;
 public class AutoScalingGroup {
 	private String autoScalingGroupName = null;
 
+	private String autoScalingGroupNo = null;
+
 	private String launchConfigurationName = null;
+
+	private String launchConfigurationNo = null;
 
 	private Integer desiredCapacity = null;
 
@@ -68,6 +72,23 @@ public class AutoScalingGroup {
 		this.autoScalingGroupName = autoScalingGroupName;
 	}
 
+	public AutoScalingGroup autoScalingGroupNo(String autoScalingGroupNo) {
+		this.autoScalingGroupNo = autoScalingGroupNo;
+		return this;
+	}
+
+	 /**
+	 * 오토스케일링그룹번호
+	 * @return autoScalingGroupNo
+	**/
+	public String getAutoScalingGroupNo() {
+		return autoScalingGroupNo;
+	}
+
+	public void setAutoScalingGroupNo(String autoScalingGroupNo) {
+		this.autoScalingGroupNo = autoScalingGroupNo;
+	}
+
 	public AutoScalingGroup launchConfigurationName(String launchConfigurationName) {
 		this.launchConfigurationName = launchConfigurationName;
 		return this;
@@ -83,6 +104,23 @@ public class AutoScalingGroup {
 
 	public void setLaunchConfigurationName(String launchConfigurationName) {
 		this.launchConfigurationName = launchConfigurationName;
+	}
+
+	public AutoScalingGroup launchConfigurationNo(String launchConfigurationNo) {
+		this.launchConfigurationNo = launchConfigurationNo;
+		return this;
+	}
+
+	 /**
+	 * 론치설정번호
+	 * @return launchConfigurationNo
+	**/
+	public String getLaunchConfigurationNo() {
+		return launchConfigurationNo;
+	}
+
+	public void setLaunchConfigurationNo(String launchConfigurationNo) {
+		this.launchConfigurationNo = launchConfigurationNo;
 	}
 
 	public AutoScalingGroup desiredCapacity(Integer desiredCapacity) {
@@ -315,7 +353,9 @@ public class AutoScalingGroup {
 		}
 		AutoScalingGroup autoScalingGroup = (AutoScalingGroup) o;
 		return Objects.equals(this.autoScalingGroupName, autoScalingGroup.autoScalingGroupName) &&
+				Objects.equals(this.autoScalingGroupNo, autoScalingGroup.autoScalingGroupNo) &&
 				Objects.equals(this.launchConfigurationName, autoScalingGroup.launchConfigurationName) &&
+				Objects.equals(this.launchConfigurationNo, autoScalingGroup.launchConfigurationNo) &&
 				Objects.equals(this.desiredCapacity, autoScalingGroup.desiredCapacity) &&
 				Objects.equals(this.minSize, autoScalingGroup.minSize) &&
 				Objects.equals(this.maxSize, autoScalingGroup.maxSize) &&
@@ -331,7 +371,7 @@ public class AutoScalingGroup {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(autoScalingGroupName, launchConfigurationName, desiredCapacity, minSize, maxSize, defaultCooldown, loadBalancerInstanceSummaryList, healthCheckGracePeriod, healthCheckType, createDate, inAutoScalingGroupServerInstanceList, suspendedProcessList, zoneList);
+		return Objects.hash(autoScalingGroupName, autoScalingGroupNo, launchConfigurationName, launchConfigurationNo, desiredCapacity, minSize, maxSize, defaultCooldown, loadBalancerInstanceSummaryList, healthCheckGracePeriod, healthCheckType, createDate, inAutoScalingGroupServerInstanceList, suspendedProcessList, zoneList);
 	}
 
 
@@ -341,7 +381,9 @@ public class AutoScalingGroup {
 		sb.append("class AutoScalingGroup {\n");
 		
 		sb.append("		autoScalingGroupName: ").append(toIndentedString(autoScalingGroupName)).append("\n");
+		sb.append("		autoScalingGroupNo: ").append(toIndentedString(autoScalingGroupNo)).append("\n");
 		sb.append("		launchConfigurationName: ").append(toIndentedString(launchConfigurationName)).append("\n");
+		sb.append("		launchConfigurationNo: ").append(toIndentedString(launchConfigurationNo)).append("\n");
 		sb.append("		desiredCapacity: ").append(toIndentedString(desiredCapacity)).append("\n");
 		sb.append("		minSize: ").append(toIndentedString(minSize)).append("\n");
 		sb.append("		maxSize: ").append(toIndentedString(maxSize)).append("\n");

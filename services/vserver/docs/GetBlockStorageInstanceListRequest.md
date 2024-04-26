@@ -17,6 +17,8 @@ Name | Type | Description | Notes
 **connectionInfo** | **String** | 연결정보 |  [optional]
 **blockStorageDiskTypeCode** | **String** | 블록스토리지디스크유형코드 |  [optional]
 **blockStorageDiskDetailTypeCode** | **String** | 블록스토리지디스크상세유형코드 |  [optional]
+**blockStorageVolumeTypeCodeList** | **List&lt;String&gt;** | 블록스토리지볼륨타입코드리스트 |  [optional]
+**hypervisorTypeCodeList** | **List&lt;String&gt;** | 하이퍼바이저타입코드리스트 |  [optional]
 **responseFormatType** | **String** | responseFormatType {json, xml} |  [optional]
 
 

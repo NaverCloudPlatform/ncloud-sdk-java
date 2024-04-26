@@ -32,6 +32,8 @@ import com.ncloud.marshaller.JsonMarshaller;
 import com.ncloud.marshaller.XmlMarshaller;
 import com.ncloud.loadbalancer.model.AddLoadBalancerSslCertificateRequest;
 import com.ncloud.loadbalancer.model.AddLoadBalancerSslCertificateResponse;
+import com.ncloud.loadbalancer.model.AddServerInstancesToLoadBalancerRequest;
+import com.ncloud.loadbalancer.model.AddServerInstancesToLoadBalancerResponse;
 import com.ncloud.loadbalancer.model.ChangeLoadBalancedServerInstancesRequest;
 import com.ncloud.loadbalancer.model.ChangeLoadBalancedServerInstancesResponse;
 import com.ncloud.loadbalancer.model.ChangeLoadBalancerInstanceConfigurationRequest;
@@ -42,6 +44,8 @@ import com.ncloud.loadbalancer.model.DeleteLoadBalancerInstancesRequest;
 import com.ncloud.loadbalancer.model.DeleteLoadBalancerInstancesResponse;
 import com.ncloud.loadbalancer.model.DeleteLoadBalancerSslCertificateRequest;
 import com.ncloud.loadbalancer.model.DeleteLoadBalancerSslCertificateResponse;
+import com.ncloud.loadbalancer.model.DeleteServerInstancesFromLoadBalancerRequest;
+import com.ncloud.loadbalancer.model.DeleteServerInstancesFromLoadBalancerResponse;
 import com.ncloud.loadbalancer.model.GetLoadBalancedServerInstanceListRequest;
 import com.ncloud.loadbalancer.model.GetLoadBalancedServerInstanceListResponse;
 import com.ncloud.loadbalancer.model.GetLoadBalancerInstanceListRequest;
@@ -79,69 +83,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서SSL인증서추가
-	 * @throws ApiException if response fails
-	 * @throws SdkException if fails to make API call
-	 */
-	@Test
-	public void addLoadBalancerSslCertificateGetTest() throws ApiException, SdkException {
-		AddLoadBalancerSslCertificateRequest addLoadBalancerSslCertificateRequest = null;
-
-		try {
-			// Handler Successful response
-			ApiResponse<AddLoadBalancerSslCertificateResponse> response = api.addLoadBalancerSslCertificateGet(addLoadBalancerSslCertificateRequest);
-		} catch (ApiException e) {
-			// Handler Failed response
-			int statusCode = e.getHttpStatusCode();
-			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
-			InputStream byteStream = e.getByteStream();
-			e.printStackTrace();
-		} catch (SdkException e) {
-			// Handle exceptions that occurred before communication with the server
-			e.printStackTrace();
-		}
-	}
-
-	/**
 	 * 
-	 * 로드밸런서SSL인증서추가
-	 * @throws ApiException if response fails
-	 * @throws SdkException if fails to make API call
-	 */
-	@Test
-	public void addLoadBalancerSslCertificateGetGenericTest() throws ApiException, SdkException {
-		// path
-
-		// headers
-		Map<String, Object> httpHeaders = new HashMap<String, Object>();
-
-		// query params
-		Map<String, Object> queryParams = new HashMap<String, Object>();
-
-		// form params
-		Map<String, Object> formParams = new HashMap<String, Object>();
-
-		// body
-		byte[] requestBody = null;
-
-		try {
-			// Handler Successful response
-			ApiResponse<byte[]> response = api.addLoadBalancerSslCertificateGet(httpHeaders, queryParams, formParams, requestBody);
-		} catch (ApiException e) {
-			// Handler Failed response
-			int statusCode = e.getHttpStatusCode();
-			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
-			InputStream byteStream = e.getByteStream();
-			e.printStackTrace();
-		} catch (SdkException e) {
-			// Handle exceptions that occurred before communication with the server
-			e.printStackTrace();
-		}
-	}
-	
-	/**
-	 * 
-	 * 로드밸런서SSL인증서추가
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -166,7 +108,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서추가
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -203,7 +145,131 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서에Bind된서버인스턴스변경
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void addServerInstancesToLoadBalancerGetTest() throws ApiException, SdkException {
+		AddServerInstancesToLoadBalancerRequest addServerInstancesToLoadBalancerRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<AddServerInstancesToLoadBalancerResponse> response = api.addServerInstancesToLoadBalancerGet(addServerInstancesToLoadBalancerRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void addServerInstancesToLoadBalancerGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.addServerInstancesToLoadBalancerGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void addServerInstancesToLoadBalancerPostTest() throws ApiException, SdkException {
+		AddServerInstancesToLoadBalancerRequest addServerInstancesToLoadBalancerRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<AddServerInstancesToLoadBalancerResponse> response = api.addServerInstancesToLoadBalancerPost(addServerInstancesToLoadBalancerRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void addServerInstancesToLoadBalancerPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.addServerInstancesToLoadBalancerPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -228,7 +294,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서에Bind된서버인스턴스변경
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -265,7 +331,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서에Bind된서버인스턴스변경
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -290,7 +356,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서에Bind된서버인스턴스변경
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -327,7 +393,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서인스턴스설정변경
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -352,7 +418,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스설정변경
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -389,7 +455,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서인스턴스설정변경
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -414,7 +480,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스설정변경
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -451,7 +517,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -476,7 +542,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -513,7 +579,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -538,7 +604,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스생성
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -575,7 +641,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -600,7 +666,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -637,7 +703,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -662,7 +728,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -699,7 +765,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서SSL인증서삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -724,7 +790,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -761,7 +827,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서SSL인증서삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -786,7 +852,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서삭제
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -823,7 +889,131 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서Bind된서버인스턴스리스트조회
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteServerInstancesFromLoadBalancerGetTest() throws ApiException, SdkException {
+		DeleteServerInstancesFromLoadBalancerRequest deleteServerInstancesFromLoadBalancerRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<DeleteServerInstancesFromLoadBalancerResponse> response = api.deleteServerInstancesFromLoadBalancerGet(deleteServerInstancesFromLoadBalancerRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteServerInstancesFromLoadBalancerGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.deleteServerInstancesFromLoadBalancerGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteServerInstancesFromLoadBalancerPostTest() throws ApiException, SdkException {
+		DeleteServerInstancesFromLoadBalancerRequest deleteServerInstancesFromLoadBalancerRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<DeleteServerInstancesFromLoadBalancerResponse> response = api.deleteServerInstancesFromLoadBalancerPost(deleteServerInstancesFromLoadBalancerRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteServerInstancesFromLoadBalancerPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.deleteServerInstancesFromLoadBalancerPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -848,7 +1038,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서Bind된서버인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -885,7 +1075,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서Bind된서버인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -910,7 +1100,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서Bind된서버인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -947,7 +1137,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -972,7 +1162,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1009,7 +1199,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1034,7 +1224,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스리스트조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1071,7 +1261,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서SSL인증서조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1096,7 +1286,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1133,7 +1323,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서SSL인증서조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1158,7 +1348,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서조회
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1195,7 +1385,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서Target서버인스턴스리스트
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1220,7 +1410,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서Target서버인스턴스리스트
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1257,7 +1447,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 로드밸런서Target서버인스턴스리스트
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1282,7 +1472,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 로드밸런서Target서버인스턴스리스트
+	 * 
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */

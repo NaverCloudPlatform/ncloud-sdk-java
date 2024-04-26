@@ -31,11 +31,11 @@ public class CreateLoadBalancerInstanceRequest {
 
 	private List<String> serverInstanceNoList = null;
 
-	private String internetLineTypeCode = null;
-
 	private String networkUsageTypeCode = null;
 
 	private String regionNo = null;
+
+	private List<String> zoneNoList = null;
 
 	private String responseFormatType = null;
 
@@ -137,23 +137,6 @@ public class CreateLoadBalancerInstanceRequest {
 		this.serverInstanceNoList = serverInstanceNoList;
 	}
 
-	public CreateLoadBalancerInstanceRequest internetLineTypeCode(String internetLineTypeCode) {
-		this.internetLineTypeCode = internetLineTypeCode;
-		return this;
-	}
-
-	 /**
-	 * 인터넷라인구분코드
-	 * @return internetLineTypeCode
-	**/
-	public String getInternetLineTypeCode() {
-		return internetLineTypeCode;
-	}
-
-	public void setInternetLineTypeCode(String internetLineTypeCode) {
-		this.internetLineTypeCode = internetLineTypeCode;
-	}
-
 	public CreateLoadBalancerInstanceRequest networkUsageTypeCode(String networkUsageTypeCode) {
 		this.networkUsageTypeCode = networkUsageTypeCode;
 		return this;
@@ -188,6 +171,31 @@ public class CreateLoadBalancerInstanceRequest {
 		this.regionNo = regionNo;
 	}
 
+	public CreateLoadBalancerInstanceRequest zoneNoList(List<String> zoneNoList) {
+		this.zoneNoList = zoneNoList;
+		return this;
+	}
+
+	public CreateLoadBalancerInstanceRequest addZoneNoListItem(String zoneNoListItem) {
+		if (this.zoneNoList == null) {
+			this.zoneNoList = new ArrayList<String>();
+		}
+		this.zoneNoList.add(zoneNoListItem);
+		return this;
+	}
+
+	 /**
+	 * ZONE번호리스트
+	 * @return zoneNoList
+	**/
+	public List<String> getZoneNoList() {
+		return zoneNoList;
+	}
+
+	public void setZoneNoList(List<String> zoneNoList) {
+		this.zoneNoList = zoneNoList;
+	}
+
 	public CreateLoadBalancerInstanceRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -220,15 +228,15 @@ public class CreateLoadBalancerInstanceRequest {
 				Objects.equals(this.loadBalancerDescription, createLoadBalancerInstanceRequest.loadBalancerDescription) &&
 				Objects.equals(this.loadBalancerRuleList, createLoadBalancerInstanceRequest.loadBalancerRuleList) &&
 				Objects.equals(this.serverInstanceNoList, createLoadBalancerInstanceRequest.serverInstanceNoList) &&
-				Objects.equals(this.internetLineTypeCode, createLoadBalancerInstanceRequest.internetLineTypeCode) &&
 				Objects.equals(this.networkUsageTypeCode, createLoadBalancerInstanceRequest.networkUsageTypeCode) &&
 				Objects.equals(this.regionNo, createLoadBalancerInstanceRequest.regionNo) &&
+				Objects.equals(this.zoneNoList, createLoadBalancerInstanceRequest.zoneNoList) &&
 				Objects.equals(this.responseFormatType, createLoadBalancerInstanceRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(loadBalancerName, loadBalancerAlgorithmTypeCode, loadBalancerDescription, loadBalancerRuleList, serverInstanceNoList, internetLineTypeCode, networkUsageTypeCode, regionNo, responseFormatType);
+		return Objects.hash(loadBalancerName, loadBalancerAlgorithmTypeCode, loadBalancerDescription, loadBalancerRuleList, serverInstanceNoList, networkUsageTypeCode, regionNo, zoneNoList, responseFormatType);
 	}
 
 
@@ -242,9 +250,9 @@ public class CreateLoadBalancerInstanceRequest {
 		sb.append("		loadBalancerDescription: ").append(toIndentedString(loadBalancerDescription)).append("\n");
 		sb.append("		loadBalancerRuleList: ").append(toIndentedString(loadBalancerRuleList)).append("\n");
 		sb.append("		serverInstanceNoList: ").append(toIndentedString(serverInstanceNoList)).append("\n");
-		sb.append("		internetLineTypeCode: ").append(toIndentedString(internetLineTypeCode)).append("\n");
 		sb.append("		networkUsageTypeCode: ").append(toIndentedString(networkUsageTypeCode)).append("\n");
 		sb.append("		regionNo: ").append(toIndentedString(regionNo)).append("\n");
+		sb.append("		zoneNoList: ").append(toIndentedString(zoneNoList)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

@@ -46,6 +46,10 @@ public class GetBlockStorageInstanceListRequest {
 
 	private String blockStorageDiskDetailTypeCode = null;
 
+	private List<String> blockStorageVolumeTypeCodeList = null;
+
+	private List<String> hypervisorTypeCodeList = null;
+
 	private String responseFormatType = null;
 
 	public GetBlockStorageInstanceListRequest regionCode(String regionCode) {
@@ -285,6 +289,56 @@ public class GetBlockStorageInstanceListRequest {
 		this.blockStorageDiskDetailTypeCode = blockStorageDiskDetailTypeCode;
 	}
 
+	public GetBlockStorageInstanceListRequest blockStorageVolumeTypeCodeList(List<String> blockStorageVolumeTypeCodeList) {
+		this.blockStorageVolumeTypeCodeList = blockStorageVolumeTypeCodeList;
+		return this;
+	}
+
+	public GetBlockStorageInstanceListRequest addBlockStorageVolumeTypeCodeListItem(String blockStorageVolumeTypeCodeListItem) {
+		if (this.blockStorageVolumeTypeCodeList == null) {
+			this.blockStorageVolumeTypeCodeList = new ArrayList<String>();
+		}
+		this.blockStorageVolumeTypeCodeList.add(blockStorageVolumeTypeCodeListItem);
+		return this;
+	}
+
+	 /**
+	 * 블록스토리지볼륨타입코드리스트
+	 * @return blockStorageVolumeTypeCodeList
+	**/
+	public List<String> getBlockStorageVolumeTypeCodeList() {
+		return blockStorageVolumeTypeCodeList;
+	}
+
+	public void setBlockStorageVolumeTypeCodeList(List<String> blockStorageVolumeTypeCodeList) {
+		this.blockStorageVolumeTypeCodeList = blockStorageVolumeTypeCodeList;
+	}
+
+	public GetBlockStorageInstanceListRequest hypervisorTypeCodeList(List<String> hypervisorTypeCodeList) {
+		this.hypervisorTypeCodeList = hypervisorTypeCodeList;
+		return this;
+	}
+
+	public GetBlockStorageInstanceListRequest addHypervisorTypeCodeListItem(String hypervisorTypeCodeListItem) {
+		if (this.hypervisorTypeCodeList == null) {
+			this.hypervisorTypeCodeList = new ArrayList<String>();
+		}
+		this.hypervisorTypeCodeList.add(hypervisorTypeCodeListItem);
+		return this;
+	}
+
+	 /**
+	 * 하이퍼바이저타입코드리스트
+	 * @return hypervisorTypeCodeList
+	**/
+	public List<String> getHypervisorTypeCodeList() {
+		return hypervisorTypeCodeList;
+	}
+
+	public void setHypervisorTypeCodeList(List<String> hypervisorTypeCodeList) {
+		this.hypervisorTypeCodeList = hypervisorTypeCodeList;
+	}
+
 	public GetBlockStorageInstanceListRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -325,12 +379,14 @@ public class GetBlockStorageInstanceListRequest {
 				Objects.equals(this.connectionInfo, getBlockStorageInstanceListRequest.connectionInfo) &&
 				Objects.equals(this.blockStorageDiskTypeCode, getBlockStorageInstanceListRequest.blockStorageDiskTypeCode) &&
 				Objects.equals(this.blockStorageDiskDetailTypeCode, getBlockStorageInstanceListRequest.blockStorageDiskDetailTypeCode) &&
+				Objects.equals(this.blockStorageVolumeTypeCodeList, getBlockStorageInstanceListRequest.blockStorageVolumeTypeCodeList) &&
+				Objects.equals(this.hypervisorTypeCodeList, getBlockStorageInstanceListRequest.hypervisorTypeCodeList) &&
 				Objects.equals(this.responseFormatType, getBlockStorageInstanceListRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, serverInstanceNo, blockStorageTypeCodeList, blockStorageInstanceStatusCode, pageNo, pageSize, blockStorageSize, blockStorageInstanceNoList, blockStorageName, serverName, connectionInfo, blockStorageDiskTypeCode, blockStorageDiskDetailTypeCode, responseFormatType);
+		return Objects.hash(regionCode, serverInstanceNo, blockStorageTypeCodeList, blockStorageInstanceStatusCode, pageNo, pageSize, blockStorageSize, blockStorageInstanceNoList, blockStorageName, serverName, connectionInfo, blockStorageDiskTypeCode, blockStorageDiskDetailTypeCode, blockStorageVolumeTypeCodeList, hypervisorTypeCodeList, responseFormatType);
 	}
 
 
@@ -352,6 +408,8 @@ public class GetBlockStorageInstanceListRequest {
 		sb.append("		connectionInfo: ").append(toIndentedString(connectionInfo)).append("\n");
 		sb.append("		blockStorageDiskTypeCode: ").append(toIndentedString(blockStorageDiskTypeCode)).append("\n");
 		sb.append("		blockStorageDiskDetailTypeCode: ").append(toIndentedString(blockStorageDiskDetailTypeCode)).append("\n");
+		sb.append("		blockStorageVolumeTypeCodeList: ").append(toIndentedString(blockStorageVolumeTypeCodeList)).append("\n");
+		sb.append("		hypervisorTypeCodeList: ").append(toIndentedString(hypervisorTypeCodeList)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

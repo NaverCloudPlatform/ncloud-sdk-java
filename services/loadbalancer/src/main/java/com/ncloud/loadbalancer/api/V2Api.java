@@ -22,6 +22,8 @@ import com.ncloud.exception.ApiException;
 import com.ncloud.exception.SdkException;
 import com.ncloud.loadbalancer.model.AddLoadBalancerSslCertificateRequest;
 import com.ncloud.loadbalancer.model.AddLoadBalancerSslCertificateResponse;
+import com.ncloud.loadbalancer.model.AddServerInstancesToLoadBalancerRequest;
+import com.ncloud.loadbalancer.model.AddServerInstancesToLoadBalancerResponse;
 import com.ncloud.loadbalancer.model.ChangeLoadBalancedServerInstancesRequest;
 import com.ncloud.loadbalancer.model.ChangeLoadBalancedServerInstancesResponse;
 import com.ncloud.loadbalancer.model.ChangeLoadBalancerInstanceConfigurationRequest;
@@ -32,6 +34,8 @@ import com.ncloud.loadbalancer.model.DeleteLoadBalancerInstancesRequest;
 import com.ncloud.loadbalancer.model.DeleteLoadBalancerInstancesResponse;
 import com.ncloud.loadbalancer.model.DeleteLoadBalancerSslCertificateRequest;
 import com.ncloud.loadbalancer.model.DeleteLoadBalancerSslCertificateResponse;
+import com.ncloud.loadbalancer.model.DeleteServerInstancesFromLoadBalancerRequest;
+import com.ncloud.loadbalancer.model.DeleteServerInstancesFromLoadBalancerResponse;
 import com.ncloud.loadbalancer.model.GetLoadBalancedServerInstanceListRequest;
 import com.ncloud.loadbalancer.model.GetLoadBalancedServerInstanceListResponse;
 import com.ncloud.loadbalancer.model.GetLoadBalancerInstanceListRequest;
@@ -57,85 +61,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서추가
-	 * @param addLoadBalancerSslCertificateRequest addLoadBalancerSslCertificateRequest (required)
-	 * @return AddLoadBalancerSslCertificateResponse
-	 * @throws ApiException if fails to make API call
-	 * @throws Exception if fails to make API call
-	 */
-	public ApiResponse<AddLoadBalancerSslCertificateResponse> addLoadBalancerSslCertificateGet(AddLoadBalancerSslCertificateRequest addLoadBalancerSslCertificateRequest) throws ApiException, SdkException {
-		
-		// path
-		String path = "/addLoadBalancerSslCertificate";
-
-		// query params
-		Map<String, Object> queryParams = new HashMap<String, Object>();
-
-		// form params
-		Map<String, Object> formParams = new HashMap<String, Object>();
-
-		// headers
-		Map<String, Object> httpHeaders = new HashMap<String, Object>();
-
-		// accept
-		final String[] accepts = {
-			
-		};
-		String accept = apiClient.selectHeaderAccept(accepts);
-		httpHeaders.put("accept", accept);
-
-		// content-type
-		final String[] contentTypes = {
-			"application/x-www-form-urlencoded"
-		};
-		String contentType = apiClient.selectHeaderContentType(contentTypes);
-		httpHeaders.put("content-type", contentType);
-
-		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, addLoadBalancerSslCertificateRequest, true, false);
-		return apiClient.call(apiRequest, AddLoadBalancerSslCertificateResponse.class);
-	}
-
-	/**
 	 * 
-	 * 로드밸런서SSL인증서추가
-	 * @param httpHeaders
-	 * @param queryParams
-	 * @param body
-	 *	addLoadBalancerSslCertificateRequest addLoadBalancerSslCertificateRequest (required)
-	 * @return byte[]
-	 *	AddLoadBalancerSslCertificateResponse
-	 * @throws ApiException if fails to make API call
-	 * @throws Exception if fails to make API call
-	 */
-	public ApiResponse<byte[]> addLoadBalancerSslCertificateGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
-		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
-		queryParams = (queryParams == null) ? new HashMap() : queryParams;
-		formParams = (queryParams == null) ? new HashMap() : formParams;
-		
-		// path
-		String path = "/addLoadBalancerSslCertificate";
-
-		// accept
-		final String[] accepts = {
-			
-		};
-		String accept = apiClient.selectHeaderAccept(accepts);
-		httpHeaders.put("accept", accept);
-
-		// content-type
-		final String[] contentTypes = {
-			"application/x-www-form-urlencoded"
-		};
-		String contentType = apiClient.selectHeaderContentType(contentTypes);
-		httpHeaders.put("content-type", contentType);
-
-		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
-		return apiClient.call(apiRequest, byte[].class);
-	}
-
-	/**
-	 * 
-	 * 로드밸런서SSL인증서추가
 	 * @param addLoadBalancerSslCertificateRequest addLoadBalancerSslCertificateRequest (required)
 	 * @return AddLoadBalancerSslCertificateResponse
 	 * @throws ApiException if fails to make API call
@@ -175,7 +101,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서추가
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -213,7 +139,163 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서에Bind된서버인스턴스변경
+	 * 
+	 * @param addServerInstancesToLoadBalancerRequest addServerInstancesToLoadBalancerRequest (required)
+	 * @return AddServerInstancesToLoadBalancerResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<AddServerInstancesToLoadBalancerResponse> addServerInstancesToLoadBalancerGet(AddServerInstancesToLoadBalancerRequest addServerInstancesToLoadBalancerRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/addServerInstancesToLoadBalancer";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, addServerInstancesToLoadBalancerRequest, true, false);
+		return apiClient.call(apiRequest, AddServerInstancesToLoadBalancerResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	addServerInstancesToLoadBalancerRequest addServerInstancesToLoadBalancerRequest (required)
+	 * @return byte[]
+	 *	AddServerInstancesToLoadBalancerResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> addServerInstancesToLoadBalancerGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/addServerInstancesToLoadBalancer";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param addServerInstancesToLoadBalancerRequest addServerInstancesToLoadBalancerRequest (required)
+	 * @return AddServerInstancesToLoadBalancerResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<AddServerInstancesToLoadBalancerResponse> addServerInstancesToLoadBalancerPost(AddServerInstancesToLoadBalancerRequest addServerInstancesToLoadBalancerRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/addServerInstancesToLoadBalancer";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, addServerInstancesToLoadBalancerRequest, true, false);
+		return apiClient.call(apiRequest, AddServerInstancesToLoadBalancerResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	addServerInstancesToLoadBalancerRequest addServerInstancesToLoadBalancerRequest (required)
+	 * @return byte[]
+	 *	AddServerInstancesToLoadBalancerResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> addServerInstancesToLoadBalancerPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/addServerInstancesToLoadBalancer";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
 	 * @param changeLoadBalancedServerInstancesRequest changeLoadBalancedServerInstancesRequest (required)
 	 * @return ChangeLoadBalancedServerInstancesResponse
 	 * @throws ApiException if fails to make API call
@@ -253,7 +335,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서에Bind된서버인스턴스변경
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -291,7 +373,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서에Bind된서버인스턴스변경
+	 * 
 	 * @param changeLoadBalancedServerInstancesRequest changeLoadBalancedServerInstancesRequest (required)
 	 * @return ChangeLoadBalancedServerInstancesResponse
 	 * @throws ApiException if fails to make API call
@@ -331,7 +413,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서에Bind된서버인스턴스변경
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -369,7 +451,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스설정변경
+	 * 
 	 * @param changeLoadBalancerInstanceConfigurationRequest changeLoadBalancerInstanceConfigurationRequest (required)
 	 * @return ChangeLoadBalancerInstanceConfigurationResponse
 	 * @throws ApiException if fails to make API call
@@ -409,7 +491,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스설정변경
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -447,7 +529,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스설정변경
+	 * 
 	 * @param changeLoadBalancerInstanceConfigurationRequest changeLoadBalancerInstanceConfigurationRequest (required)
 	 * @return ChangeLoadBalancerInstanceConfigurationResponse
 	 * @throws ApiException if fails to make API call
@@ -487,7 +569,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스설정변경
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -525,7 +607,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스생성
+	 * 
 	 * @param createLoadBalancerInstanceRequest createLoadBalancerInstanceRequest (required)
 	 * @return CreateLoadBalancerInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -565,7 +647,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -603,7 +685,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스생성
+	 * 
 	 * @param createLoadBalancerInstanceRequest createLoadBalancerInstanceRequest (required)
 	 * @return CreateLoadBalancerInstanceResponse
 	 * @throws ApiException if fails to make API call
@@ -643,7 +725,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스생성
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -681,7 +763,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스삭제
+	 * 
 	 * @param deleteLoadBalancerInstancesRequest deleteLoadBalancerInstancesRequest (required)
 	 * @return DeleteLoadBalancerInstancesResponse
 	 * @throws ApiException if fails to make API call
@@ -721,7 +803,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -759,7 +841,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스삭제
+	 * 
 	 * @param deleteLoadBalancerInstancesRequest deleteLoadBalancerInstancesRequest (required)
 	 * @return DeleteLoadBalancerInstancesResponse
 	 * @throws ApiException if fails to make API call
@@ -799,7 +881,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -837,7 +919,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서삭제
+	 * 
 	 * @param deleteLoadBalancerSslCertificateRequest deleteLoadBalancerSslCertificateRequest (required)
 	 * @return DeleteLoadBalancerSslCertificateResponse
 	 * @throws ApiException if fails to make API call
@@ -877,7 +959,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -915,7 +997,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서삭제
+	 * 
 	 * @param deleteLoadBalancerSslCertificateRequest deleteLoadBalancerSslCertificateRequest (required)
 	 * @return DeleteLoadBalancerSslCertificateResponse
 	 * @throws ApiException if fails to make API call
@@ -955,7 +1037,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서삭제
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -993,7 +1075,163 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서Bind된서버인스턴스리스트조회
+	 * 
+	 * @param deleteServerInstancesFromLoadBalancerRequest deleteServerInstancesFromLoadBalancerRequest (required)
+	 * @return DeleteServerInstancesFromLoadBalancerResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<DeleteServerInstancesFromLoadBalancerResponse> deleteServerInstancesFromLoadBalancerGet(DeleteServerInstancesFromLoadBalancerRequest deleteServerInstancesFromLoadBalancerRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/deleteServerInstancesFromLoadBalancer";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, deleteServerInstancesFromLoadBalancerRequest, true, false);
+		return apiClient.call(apiRequest, DeleteServerInstancesFromLoadBalancerResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	deleteServerInstancesFromLoadBalancerRequest deleteServerInstancesFromLoadBalancerRequest (required)
+	 * @return byte[]
+	 *	DeleteServerInstancesFromLoadBalancerResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> deleteServerInstancesFromLoadBalancerGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/deleteServerInstancesFromLoadBalancer";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param deleteServerInstancesFromLoadBalancerRequest deleteServerInstancesFromLoadBalancerRequest (required)
+	 * @return DeleteServerInstancesFromLoadBalancerResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<DeleteServerInstancesFromLoadBalancerResponse> deleteServerInstancesFromLoadBalancerPost(DeleteServerInstancesFromLoadBalancerRequest deleteServerInstancesFromLoadBalancerRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/deleteServerInstancesFromLoadBalancer";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, deleteServerInstancesFromLoadBalancerRequest, true, false);
+		return apiClient.call(apiRequest, DeleteServerInstancesFromLoadBalancerResponse.class);
+	}
+
+	/**
+	 * 
+	 * 
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	deleteServerInstancesFromLoadBalancerRequest deleteServerInstancesFromLoadBalancerRequest (required)
+	 * @return byte[]
+	 *	DeleteServerInstancesFromLoadBalancerResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> deleteServerInstancesFromLoadBalancerPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/deleteServerInstancesFromLoadBalancer";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 
 	 * @param getLoadBalancedServerInstanceListRequest getLoadBalancedServerInstanceListRequest (required)
 	 * @return GetLoadBalancedServerInstanceListResponse
 	 * @throws ApiException if fails to make API call
@@ -1033,7 +1271,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서Bind된서버인스턴스리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1071,7 +1309,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서Bind된서버인스턴스리스트조회
+	 * 
 	 * @param getLoadBalancedServerInstanceListRequest getLoadBalancedServerInstanceListRequest (required)
 	 * @return GetLoadBalancedServerInstanceListResponse
 	 * @throws ApiException if fails to make API call
@@ -1111,7 +1349,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서Bind된서버인스턴스리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1149,7 +1387,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스리스트조회
+	 * 
 	 * @param getLoadBalancerInstanceListRequest getLoadBalancerInstanceListRequest (required)
 	 * @return GetLoadBalancerInstanceListResponse
 	 * @throws ApiException if fails to make API call
@@ -1189,7 +1427,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1227,7 +1465,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스리스트조회
+	 * 
 	 * @param getLoadBalancerInstanceListRequest getLoadBalancerInstanceListRequest (required)
 	 * @return GetLoadBalancerInstanceListResponse
 	 * @throws ApiException if fails to make API call
@@ -1267,7 +1505,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서인스턴스리스트조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1305,7 +1543,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서조회
+	 * 
 	 * @param getLoadBalancerSslCertificateListRequest getLoadBalancerSslCertificateListRequest (required)
 	 * @return GetLoadBalancerSslCertificateListResponse
 	 * @throws ApiException if fails to make API call
@@ -1345,7 +1583,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1383,7 +1621,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서조회
+	 * 
 	 * @param getLoadBalancerSslCertificateListRequest getLoadBalancerSslCertificateListRequest (required)
 	 * @return GetLoadBalancerSslCertificateListResponse
 	 * @throws ApiException if fails to make API call
@@ -1423,7 +1661,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서SSL인증서조회
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1461,7 +1699,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서Target서버인스턴스리스트
+	 * 
 	 * @param getLoadBalancerTargetServerInstanceListRequest getLoadBalancerTargetServerInstanceListRequest (required)
 	 * @return GetLoadBalancerTargetServerInstanceListResponse
 	 * @throws ApiException if fails to make API call
@@ -1501,7 +1739,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서Target서버인스턴스리스트
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -1539,7 +1777,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서Target서버인스턴스리스트
+	 * 
 	 * @param getLoadBalancerTargetServerInstanceListRequest getLoadBalancerTargetServerInstanceListRequest (required)
 	 * @return GetLoadBalancerTargetServerInstanceListResponse
 	 * @throws ApiException if fails to make API call
@@ -1579,7 +1817,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 로드밸런서Target서버인스턴스리스트
+	 * 
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body

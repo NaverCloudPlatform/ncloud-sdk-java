@@ -57,6 +57,12 @@ public class BlockStorageInstance {
 
 	private Boolean isReturnProtection = null;
 
+	private CommonCode blockStorageVolumeType = null;
+
+	private CommonCode hypervisorType = null;
+
+	private Long throughput = null;
+
 	public BlockStorageInstance blockStorageInstanceNo(String blockStorageInstanceNo) {
 		this.blockStorageInstanceNo = blockStorageInstanceNo;
 		return this;
@@ -380,6 +386,57 @@ public class BlockStorageInstance {
 		this.isReturnProtection = isReturnProtection;
 	}
 
+	public BlockStorageInstance blockStorageVolumeType(CommonCode blockStorageVolumeType) {
+		this.blockStorageVolumeType = blockStorageVolumeType;
+		return this;
+	}
+
+	 /**
+	 * 블록스토리지볼륨타입
+	 * @return blockStorageVolumeType
+	**/
+	public CommonCode getBlockStorageVolumeType() {
+		return blockStorageVolumeType;
+	}
+
+	public void setBlockStorageVolumeType(CommonCode blockStorageVolumeType) {
+		this.blockStorageVolumeType = blockStorageVolumeType;
+	}
+
+	public BlockStorageInstance hypervisorType(CommonCode hypervisorType) {
+		this.hypervisorType = hypervisorType;
+		return this;
+	}
+
+	 /**
+	 * 하이퍼바이저타입
+	 * @return hypervisorType
+	**/
+	public CommonCode getHypervisorType() {
+		return hypervisorType;
+	}
+
+	public void setHypervisorType(CommonCode hypervisorType) {
+		this.hypervisorType = hypervisorType;
+	}
+
+	public BlockStorageInstance throughput(Long throughput) {
+		this.throughput = throughput;
+		return this;
+	}
+
+	 /**
+	 * 블록스토리지 throughput
+	 * @return throughput
+	**/
+	public Long getThroughput() {
+		return throughput;
+	}
+
+	public void setThroughput(Long throughput) {
+		this.throughput = throughput;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -408,12 +465,15 @@ public class BlockStorageInstance {
 				Objects.equals(this.isEncryptedVolume, blockStorageInstance.isEncryptedVolume) &&
 				Objects.equals(this.zoneCode, blockStorageInstance.zoneCode) &&
 				Objects.equals(this.regionCode, blockStorageInstance.regionCode) &&
-				Objects.equals(this.isReturnProtection, blockStorageInstance.isReturnProtection);
+				Objects.equals(this.isReturnProtection, blockStorageInstance.isReturnProtection) &&
+				Objects.equals(this.blockStorageVolumeType, blockStorageInstance.blockStorageVolumeType) &&
+				Objects.equals(this.hypervisorType, blockStorageInstance.hypervisorType) &&
+				Objects.equals(this.throughput, blockStorageInstance.throughput);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(blockStorageInstanceNo, serverInstanceNo, blockStorageName, blockStorageType, blockStorageSize, deviceName, blockStorageProductCode, blockStorageInstanceStatus, blockStorageInstanceOperation, blockStorageInstanceStatusName, createDate, blockStorageDescription, blockStorageDiskType, blockStorageDiskDetailType, maxIopsThroughput, isEncryptedVolume, zoneCode, regionCode, isReturnProtection);
+		return Objects.hash(blockStorageInstanceNo, serverInstanceNo, blockStorageName, blockStorageType, blockStorageSize, deviceName, blockStorageProductCode, blockStorageInstanceStatus, blockStorageInstanceOperation, blockStorageInstanceStatusName, createDate, blockStorageDescription, blockStorageDiskType, blockStorageDiskDetailType, maxIopsThroughput, isEncryptedVolume, zoneCode, regionCode, isReturnProtection, blockStorageVolumeType, hypervisorType, throughput);
 	}
 
 
@@ -441,6 +501,9 @@ public class BlockStorageInstance {
 		sb.append("		zoneCode: ").append(toIndentedString(zoneCode)).append("\n");
 		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		isReturnProtection: ").append(toIndentedString(isReturnProtection)).append("\n");
+		sb.append("		blockStorageVolumeType: ").append(toIndentedString(blockStorageVolumeType)).append("\n");
+		sb.append("		hypervisorType: ").append(toIndentedString(hypervisorType)).append("\n");
+		sb.append("		throughput: ").append(toIndentedString(throughput)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

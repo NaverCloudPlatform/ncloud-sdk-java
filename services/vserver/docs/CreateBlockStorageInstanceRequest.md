@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **blockStorageSnapshotInstanceNo** | **String** | 블록스토리지스냅샷인스턴스번호 |  [optional]
 **zoneCode** | **String** | ZONE코드 |  [optional]
 **isReturnProtection** | **Boolean** | 반납보호여부 |  [optional]
+**blockStorageVolumeTypeCode** | **String** | 블록스토리지볼륨타입코드 |  [optional]
 **responseFormatType** | **String** | responseFormatType {json, xml} |  [optional]
 
 

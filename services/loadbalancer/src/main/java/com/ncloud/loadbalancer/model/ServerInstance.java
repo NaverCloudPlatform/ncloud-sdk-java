@@ -78,8 +78,6 @@ public class ServerInstance {
 
 	private CommonCode baseBlockStroageDiskDetailType = null;
 
-	private CommonCode internetLineType = null;
-
 	private String userData = null;
 
 	private List<AccessControlGroup> accessControlGroupList = null;
@@ -543,23 +541,6 @@ public class ServerInstance {
 		this.baseBlockStroageDiskDetailType = baseBlockStroageDiskDetailType;
 	}
 
-	public ServerInstance internetLineType(CommonCode internetLineType) {
-		this.internetLineType = internetLineType;
-		return this;
-	}
-
-	 /**
-	 * 인터넷라인구분
-	 * @return internetLineType
-	**/
-	public CommonCode getInternetLineType() {
-		return internetLineType;
-	}
-
-	public void setInternetLineType(CommonCode internetLineType) {
-		this.internetLineType = internetLineType;
-	}
-
 	public ServerInstance userData(String userData) {
 		this.userData = userData;
 		return this;
@@ -639,14 +620,13 @@ public class ServerInstance {
 				Objects.equals(this.region, serverInstance.region) &&
 				Objects.equals(this.baseBlockStorageDiskType, serverInstance.baseBlockStorageDiskType) &&
 				Objects.equals(this.baseBlockStroageDiskDetailType, serverInstance.baseBlockStroageDiskDetailType) &&
-				Objects.equals(this.internetLineType, serverInstance.internetLineType) &&
 				Objects.equals(this.userData, serverInstance.userData) &&
 				Objects.equals(this.accessControlGroupList, serverInstance.accessControlGroupList);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(serverInstanceNo, serverName, serverDescription, cpuCount, memorySize, baseBlockStorageSize, platformType, loginKeyName, isFeeChargingMonitoring, publicIp, privateIp, serverImageName, serverInstanceStatus, serverInstanceOperation, serverInstanceStatusName, createDate, uptime, serverImageProductCode, serverProductCode, isProtectServerTermination, portForwardingPublicIp, portForwardingExternalPort, portForwardingInternalPort, zone, region, baseBlockStorageDiskType, baseBlockStroageDiskDetailType, internetLineType, userData, accessControlGroupList);
+		return Objects.hash(serverInstanceNo, serverName, serverDescription, cpuCount, memorySize, baseBlockStorageSize, platformType, loginKeyName, isFeeChargingMonitoring, publicIp, privateIp, serverImageName, serverInstanceStatus, serverInstanceOperation, serverInstanceStatusName, createDate, uptime, serverImageProductCode, serverProductCode, isProtectServerTermination, portForwardingPublicIp, portForwardingExternalPort, portForwardingInternalPort, zone, region, baseBlockStorageDiskType, baseBlockStroageDiskDetailType, userData, accessControlGroupList);
 	}
 
 
@@ -682,7 +662,6 @@ public class ServerInstance {
 		sb.append("		region: ").append(toIndentedString(region)).append("\n");
 		sb.append("		baseBlockStorageDiskType: ").append(toIndentedString(baseBlockStorageDiskType)).append("\n");
 		sb.append("		baseBlockStroageDiskDetailType: ").append(toIndentedString(baseBlockStroageDiskDetailType)).append("\n");
-		sb.append("		internetLineType: ").append(toIndentedString(internetLineType)).append("\n");
 		sb.append("		userData: ").append(toIndentedString(userData)).append("\n");
 		sb.append("		accessControlGroupList: ").append(toIndentedString(accessControlGroupList)).append("\n");
 		sb.append("}");

@@ -5,7 +5,9 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **autoScalingGroupName** | **String** | 오토스케일링그룹명 |  [optional]
+**autoScalingGroupNo** | **String** | 오토스케일링그룹번호 |  [optional]
 **launchConfigurationName** | **String** | 론치설정명 |  [optional]
+**launchConfigurationNo** | **String** | 론치설정번호 |  [optional]
 **desiredCapacity** | **Integer** | 기대능력치 |  [optional]
 **minSize** | **Integer** | 최소사이즈 |  [optional]
 **maxSize** | **Integer** | 최대사이즈 |  [optional]

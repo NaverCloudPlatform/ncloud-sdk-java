@@ -17,6 +17,7 @@ Name | Type | Description | Notes
 **sortedBy** | **String** | 정렬대상 |  [optional]
 **sortingOrder** | **String** | 정렬순서 |  [optional]
 **placementGroupNoList** | **List&lt;String&gt;** | 물리배치그룹번호리스트 |  [optional]
+**hypervisorTypeCodeList** | **List&lt;String&gt;** | 하이퍼바이저타입코드리스트 |  [optional]
 **responseFormatType** | **String** | responseFormatType {json, xml} |  [optional]
 
 

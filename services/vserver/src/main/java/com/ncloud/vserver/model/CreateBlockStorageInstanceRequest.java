@@ -36,6 +36,8 @@ public class CreateBlockStorageInstanceRequest {
 
 	private Boolean isReturnProtection = null;
 
+	private String blockStorageVolumeTypeCode = null;
+
 	private String responseFormatType = null;
 
 	public CreateBlockStorageInstanceRequest regionCode(String regionCode) {
@@ -191,6 +193,23 @@ public class CreateBlockStorageInstanceRequest {
 		this.isReturnProtection = isReturnProtection;
 	}
 
+	public CreateBlockStorageInstanceRequest blockStorageVolumeTypeCode(String blockStorageVolumeTypeCode) {
+		this.blockStorageVolumeTypeCode = blockStorageVolumeTypeCode;
+		return this;
+	}
+
+	 /**
+	 * 블록스토리지볼륨타입코드
+	 * @return blockStorageVolumeTypeCode
+	**/
+	public String getBlockStorageVolumeTypeCode() {
+		return blockStorageVolumeTypeCode;
+	}
+
+	public void setBlockStorageVolumeTypeCode(String blockStorageVolumeTypeCode) {
+		this.blockStorageVolumeTypeCode = blockStorageVolumeTypeCode;
+	}
+
 	public CreateBlockStorageInstanceRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -227,12 +246,13 @@ public class CreateBlockStorageInstanceRequest {
 				Objects.equals(this.blockStorageSnapshotInstanceNo, createBlockStorageInstanceRequest.blockStorageSnapshotInstanceNo) &&
 				Objects.equals(this.zoneCode, createBlockStorageInstanceRequest.zoneCode) &&
 				Objects.equals(this.isReturnProtection, createBlockStorageInstanceRequest.isReturnProtection) &&
+				Objects.equals(this.blockStorageVolumeTypeCode, createBlockStorageInstanceRequest.blockStorageVolumeTypeCode) &&
 				Objects.equals(this.responseFormatType, createBlockStorageInstanceRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, blockStorageName, blockStorageSize, blockStorageDiskDetailTypeCode, blockStorageDescription, serverInstanceNo, blockStorageSnapshotInstanceNo, zoneCode, isReturnProtection, responseFormatType);
+		return Objects.hash(regionCode, blockStorageName, blockStorageSize, blockStorageDiskDetailTypeCode, blockStorageDescription, serverInstanceNo, blockStorageSnapshotInstanceNo, zoneCode, isReturnProtection, blockStorageVolumeTypeCode, responseFormatType);
 	}
 
 
@@ -250,6 +270,7 @@ public class CreateBlockStorageInstanceRequest {
 		sb.append("		blockStorageSnapshotInstanceNo: ").append(toIndentedString(blockStorageSnapshotInstanceNo)).append("\n");
 		sb.append("		zoneCode: ").append(toIndentedString(zoneCode)).append("\n");
 		sb.append("		isReturnProtection: ").append(toIndentedString(isReturnProtection)).append("\n");
+		sb.append("		blockStorageVolumeTypeCode: ").append(toIndentedString(blockStorageVolumeTypeCode)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

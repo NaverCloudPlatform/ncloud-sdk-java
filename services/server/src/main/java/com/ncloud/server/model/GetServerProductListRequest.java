@@ -30,6 +30,8 @@ public class GetServerProductListRequest {
 
 	private String zoneNo = null;
 
+	private String memberServerImageNo = null;
+
 	private String responseFormatType = null;
 
 	public GetServerProductListRequest exclusionProductCode(String exclusionProductCode) {
@@ -134,6 +136,23 @@ public class GetServerProductListRequest {
 		this.zoneNo = zoneNo;
 	}
 
+	public GetServerProductListRequest memberServerImageNo(String memberServerImageNo) {
+		this.memberServerImageNo = memberServerImageNo;
+		return this;
+	}
+
+	 /**
+	 * 회원서버이미지번호
+	 * @return memberServerImageNo
+	**/
+	public String getMemberServerImageNo() {
+		return memberServerImageNo;
+	}
+
+	public void setMemberServerImageNo(String memberServerImageNo) {
+		this.memberServerImageNo = memberServerImageNo;
+	}
+
 	public GetServerProductListRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -167,12 +186,13 @@ public class GetServerProductListRequest {
 				Objects.equals(this.regionNo, getServerProductListRequest.regionNo) &&
 				Objects.equals(this.serverImageProductCode, getServerProductListRequest.serverImageProductCode) &&
 				Objects.equals(this.zoneNo, getServerProductListRequest.zoneNo) &&
+				Objects.equals(this.memberServerImageNo, getServerProductListRequest.memberServerImageNo) &&
 				Objects.equals(this.responseFormatType, getServerProductListRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(exclusionProductCode, productCode, generationCode, regionNo, serverImageProductCode, zoneNo, responseFormatType);
+		return Objects.hash(exclusionProductCode, productCode, generationCode, regionNo, serverImageProductCode, zoneNo, memberServerImageNo, responseFormatType);
 	}
 
 
@@ -187,6 +207,7 @@ public class GetServerProductListRequest {
 		sb.append("		regionNo: ").append(toIndentedString(regionNo)).append("\n");
 		sb.append("		serverImageProductCode: ").append(toIndentedString(serverImageProductCode)).append("\n");
 		sb.append("		zoneNo: ").append(toIndentedString(zoneNo)).append("\n");
+		sb.append("		memberServerImageNo: ").append(toIndentedString(memberServerImageNo)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

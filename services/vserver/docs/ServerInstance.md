@@ -31,6 +31,10 @@ Name | Type | Description | Notes
 **baseBlockStorageDiskType** | [**CommonCode**](CommonCode.md) | 기본블록스토리지디스크유형 |  [optional]
 **baseBlockStorageDiskDetailType** | [**CommonCode**](CommonCode.md) | 기본블록스토리지디스크상세유형 |  [optional]
 **placementGroupNo** | **String** | 물리배치그룹번호 |  [optional]
+**blockDevicePartitionList** | [**List&lt;BlockDevicePartition&gt;**](BlockDevicePartition.md) | 블록디바이스파티션리스트 |  [optional]
+**hypervisorType** | [**CommonCode**](CommonCode.md) | 하이퍼바이저타입 |  [optional]
+**serverImageNo** | **String** | 서버이미지번호 |  [optional]
+**serverSpecCode** | **String** | 서버스펙코드 |  [optional]
 
 
 
