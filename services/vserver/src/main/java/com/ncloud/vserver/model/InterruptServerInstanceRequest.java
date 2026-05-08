@@ -18,9 +18,28 @@ import java.util.Objects;
  * InterruptServerInstanceRequest
  */
 public class InterruptServerInstanceRequest {
+	private String regionCode = null;
+
 	private String serverInstanceNo = null;
 
 	private String responseFormatType = null;
+
+	public InterruptServerInstanceRequest regionCode(String regionCode) {
+		this.regionCode = regionCode;
+		return this;
+	}
+
+	 /**
+	 * REGION코드
+	 * @return regionCode
+	**/
+	public String getRegionCode() {
+		return regionCode;
+	}
+
+	public void setRegionCode(String regionCode) {
+		this.regionCode = regionCode;
+	}
 
 	public InterruptServerInstanceRequest serverInstanceNo(String serverInstanceNo) {
 		this.serverInstanceNo = serverInstanceNo;
@@ -66,13 +85,14 @@ public class InterruptServerInstanceRequest {
 			return false;
 		}
 		InterruptServerInstanceRequest interruptServerInstanceRequest = (InterruptServerInstanceRequest) o;
-		return Objects.equals(this.serverInstanceNo, interruptServerInstanceRequest.serverInstanceNo) &&
+		return Objects.equals(this.regionCode, interruptServerInstanceRequest.regionCode) &&
+				Objects.equals(this.serverInstanceNo, interruptServerInstanceRequest.serverInstanceNo) &&
 				Objects.equals(this.responseFormatType, interruptServerInstanceRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(serverInstanceNo, responseFormatType);
+		return Objects.hash(regionCode, serverInstanceNo, responseFormatType);
 	}
 
 
@@ -81,6 +101,7 @@ public class InterruptServerInstanceRequest {
 		StringBuilder sb = new StringBuilder();
 		sb.append("class InterruptServerInstanceRequest {\n");
 		
+		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		serverInstanceNo: ").append(toIndentedString(serverInstanceNo)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");

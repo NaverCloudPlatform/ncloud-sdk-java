@@ -15,7 +15,7 @@ Name | Type | Description | Notes
 **maxVolumeSize** | **Integer** | 블록스토리지 볼륨타입 최대 volumeSize |  [optional]
 **minBaseVolumeSize** | **Integer** | 블록스토리지 볼륨타입 최소 rootVolumeSize |  [optional]
 **maxBaseVolumeSize** | **Integer** | 블록스토리지 볼륨타입 최대 rootVolumeSize |  [optional]
-**isAvailableBase** | **Boolean** | 기본스토리지 가능 여부 |  [optional]
+**isBaseStorageAvailable** | **Boolean** | 기본스토리지 가능 여부 |  [optional]
 
 
 

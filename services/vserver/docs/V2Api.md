@@ -28,6 +28,14 @@ Method | HTTP request | Description
 [**changeBlockStorageInstancePost**](V2Api.md#changeBlockStorageInstancePost) | **POST** /changeBlockStorageInstance | 
 [**changeBlockStorageVolumeSizeGet**](V2Api.md#changeBlockStorageVolumeSizeGet) | **GET** /changeBlockStorageVolumeSize | 
 [**changeBlockStorageVolumeSizePost**](V2Api.md#changeBlockStorageVolumeSizePost) | **POST** /changeBlockStorageVolumeSize | 
+[**changeFabricClusterDescriptionGet**](V2Api.md#changeFabricClusterDescriptionGet) | **GET** /changeFabricClusterDescription | 
+[**changeFabricClusterDescriptionPost**](V2Api.md#changeFabricClusterDescriptionPost) | **POST** /changeFabricClusterDescription | 
+[**changeFabricClusterNameGet**](V2Api.md#changeFabricClusterNameGet) | **GET** /changeFabricClusterName | 
+[**changeFabricClusterNamePost**](V2Api.md#changeFabricClusterNamePost) | **POST** /changeFabricClusterName | 
+[**changeFabricClusterServerInstancesGet**](V2Api.md#changeFabricClusterServerInstancesGet) | **GET** /changeFabricClusterServerInstances | 
+[**changeFabricClusterServerInstancesPost**](V2Api.md#changeFabricClusterServerInstancesPost) | **POST** /changeFabricClusterServerInstances | 
+[**changeServerInstanceNameGet**](V2Api.md#changeServerInstanceNameGet) | **GET** /changeServerInstanceName | 
+[**changeServerInstanceNamePost**](V2Api.md#changeServerInstanceNamePost) | **POST** /changeServerInstanceName | 
 [**changeServerInstanceSpecGet**](V2Api.md#changeServerInstanceSpecGet) | **GET** /changeServerInstanceSpec | 
 [**changeServerInstanceSpecPost**](V2Api.md#changeServerInstanceSpecPost) | **POST** /changeServerInstanceSpec | 
 [**createAccessControlGroupGet**](V2Api.md#createAccessControlGroupGet) | **GET** /createAccessControlGroup | 
@@ -36,6 +44,8 @@ Method | HTTP request | Description
 [**createBlockStorageInstancePost**](V2Api.md#createBlockStorageInstancePost) | **POST** /createBlockStorageInstance | 
 [**createBlockStorageSnapshotInstanceGet**](V2Api.md#createBlockStorageSnapshotInstanceGet) | **GET** /createBlockStorageSnapshotInstance | 
 [**createBlockStorageSnapshotInstancePost**](V2Api.md#createBlockStorageSnapshotInstancePost) | **POST** /createBlockStorageSnapshotInstance | 
+[**createFabricClusterGet**](V2Api.md#createFabricClusterGet) | **GET** /createFabricCluster | 
+[**createFabricClusterPost**](V2Api.md#createFabricClusterPost) | **POST** /createFabricCluster | 
 [**createInitScriptGet**](V2Api.md#createInitScriptGet) | **GET** /createInitScript | 
 [**createInitScriptPost**](V2Api.md#createInitScriptPost) | **POST** /createInitScript | 
 [**createLoginKeyGet**](V2Api.md#createLoginKeyGet) | **GET** /createLoginKey | 
@@ -60,6 +70,8 @@ Method | HTTP request | Description
 [**deleteBlockStorageInstancesPost**](V2Api.md#deleteBlockStorageInstancesPost) | **POST** /deleteBlockStorageInstances | 
 [**deleteBlockStorageSnapshotInstancesGet**](V2Api.md#deleteBlockStorageSnapshotInstancesGet) | **GET** /deleteBlockStorageSnapshotInstances | 
 [**deleteBlockStorageSnapshotInstancesPost**](V2Api.md#deleteBlockStorageSnapshotInstancesPost) | **POST** /deleteBlockStorageSnapshotInstances | 
+[**deleteFabricClusterGet**](V2Api.md#deleteFabricClusterGet) | **GET** /deleteFabricCluster | 
+[**deleteFabricClusterPost**](V2Api.md#deleteFabricClusterPost) | **POST** /deleteFabricCluster | 
 [**deleteInitScriptsGet**](V2Api.md#deleteInitScriptsGet) | **GET** /deleteInitScripts | 
 [**deleteInitScriptsPost**](V2Api.md#deleteInitScriptsPost) | **POST** /deleteInitScripts | 
 [**deleteLoginKeysGet**](V2Api.md#deleteLoginKeysGet) | **GET** /deleteLoginKeys | 
@@ -100,6 +112,12 @@ Method | HTTP request | Description
 [**getBlockStorageSnapshotInstanceListPost**](V2Api.md#getBlockStorageSnapshotInstanceListPost) | **POST** /getBlockStorageSnapshotInstanceList | 
 [**getBlockStorageVolumeTypeListGet**](V2Api.md#getBlockStorageVolumeTypeListGet) | **GET** /getBlockStorageVolumeTypeList | 
 [**getBlockStorageVolumeTypeListPost**](V2Api.md#getBlockStorageVolumeTypeListPost) | **POST** /getBlockStorageVolumeTypeList | 
+[**getFabricClusterDetailGet**](V2Api.md#getFabricClusterDetailGet) | **GET** /getFabricClusterDetail | 
+[**getFabricClusterDetailPost**](V2Api.md#getFabricClusterDetailPost) | **POST** /getFabricClusterDetail | 
+[**getFabricClusterListGet**](V2Api.md#getFabricClusterListGet) | **GET** /getFabricClusterList | 
+[**getFabricClusterListPost**](V2Api.md#getFabricClusterListPost) | **POST** /getFabricClusterList | 
+[**getFabricClusterPoolListGet**](V2Api.md#getFabricClusterPoolListGet) | **GET** /getFabricClusterPoolList | 
+[**getFabricClusterPoolListPost**](V2Api.md#getFabricClusterPoolListPost) | **POST** /getFabricClusterPoolList | 
 [**getFlowLogConfigurationListGet**](V2Api.md#getFlowLogConfigurationListGet) | **GET** /getFlowLogConfigurationList | 
 [**getFlowLogConfigurationListPost**](V2Api.md#getFlowLogConfigurationListPost) | **POST** /getFlowLogConfigurationList | 
 [**getHypervisorTypeListGet**](V2Api.md#getHypervisorTypeListGet) | **GET** /getHypervisorTypeList | 
@@ -186,6 +204,10 @@ Method | HTTP request | Description
 [**terminateServerInstancesPost**](V2Api.md#terminateServerInstancesPost) | **POST** /terminateServerInstances | 
 [**unassignSecondaryIpsGet**](V2Api.md#unassignSecondaryIpsGet) | **GET** /unassignSecondaryIps | 
 [**unassignSecondaryIpsPost**](V2Api.md#unassignSecondaryIpsPost) | **POST** /unassignSecondaryIps | 
+[**updateFabricClusterGet**](V2Api.md#updateFabricClusterGet) | **GET** /updateFabricCluster | 
+[**updateFabricClusterPost**](V2Api.md#updateFabricClusterPost) | **POST** /updateFabricCluster | 
+[**updateFabricClusterServerInstancesGet**](V2Api.md#updateFabricClusterServerInstancesGet) | **GET** /updateFabricClusterServerInstances | 
+[**updateFabricClusterServerInstancesPost**](V2Api.md#updateFabricClusterServerInstancesPost) | **POST** /updateFabricClusterServerInstances | 
 
 
 <a name="addAccessControlGroupInboundRuleGet"></a>
@@ -860,11 +882,11 @@ Name | Type | Description  | Notes
 
 <a name="addServerImageSharingPermissionGet"></a>
 # **addServerImageSharingPermissionGet**
-> addServerImageSharingPermissionGet(addServerImageSharingPermissionRequest)
+> AddServerImageSharingPermissionResponse addServerImageSharingPermissionGet(addServerImageSharingPermissionRequest)
 
 
 
-
+서버이미지공유권한추가
 
 ### Example
 ```java
@@ -890,10 +912,10 @@ ApiClient apiClient = new ApiClient.ApiClientBuilder()
 	.build();
 
 V2Api apiInstance = new V2Api(apiClient);
-AddServerImageSharingPermissionReqeuset addServerImageSharingPermissionRequest = new AddServerImageSharingPermissionReqeuset(); // AddServerImageSharingPermissionReqeuset | 
+AddServerImageSharingPermissionRequest addServerImageSharingPermissionRequest = new AddServerImageSharingPermissionRequest(); // AddServerImageSharingPermissionRequest | addServerImageSharingPermissionRequest
 try {
 	// Handler Successful response
-	apiInstance.addServerImageSharingPermissionGet(addServerImageSharingPermissionRequest);
+	ApiResponse<AddServerImageSharingPermissionResponse> result = apiInstance.addServerImageSharingPermissionGet(addServerImageSharingPermissionRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -910,11 +932,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addServerImageSharingPermissionRequest** | [**AddServerImageSharingPermissionReqeuset**](AddServerImageSharingPermissionReqeuset.md)|  |
+ **addServerImageSharingPermissionRequest** | [**AddServerImageSharingPermissionRequest**](AddServerImageSharingPermissionRequest.md)| addServerImageSharingPermissionRequest |
 
 ### Return type
 
-null (empty response body)
+[**AddServerImageSharingPermissionResponse**](AddServerImageSharingPermissionResponse.md)
 
 ### Authorization
 
@@ -922,16 +944,16 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
 <a name="addServerImageSharingPermissionPost"></a>
 # **addServerImageSharingPermissionPost**
-> addServerImageSharingPermissionPost(addServerImageSharingPermissionRequest)
+> AddServerImageSharingPermissionResponse addServerImageSharingPermissionPost(addServerImageSharingPermissionRequest)
 
 
 
-
+서버이미지공유권한추가
 
 ### Example
 ```java
@@ -957,10 +979,10 @@ ApiClient apiClient = new ApiClient.ApiClientBuilder()
 	.build();
 
 V2Api apiInstance = new V2Api(apiClient);
-AddServerImageSharingPermissionReqeuset addServerImageSharingPermissionRequest = new AddServerImageSharingPermissionReqeuset(); // AddServerImageSharingPermissionReqeuset | 
+AddServerImageSharingPermissionRequest addServerImageSharingPermissionRequest = new AddServerImageSharingPermissionRequest(); // AddServerImageSharingPermissionRequest | addServerImageSharingPermissionRequest
 try {
 	// Handler Successful response
-	apiInstance.addServerImageSharingPermissionPost(addServerImageSharingPermissionRequest);
+	ApiResponse<AddServerImageSharingPermissionResponse> result = apiInstance.addServerImageSharingPermissionPost(addServerImageSharingPermissionRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -977,11 +999,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **addServerImageSharingPermissionRequest** | [**AddServerImageSharingPermissionReqeuset**](AddServerImageSharingPermissionReqeuset.md)|  |
+ **addServerImageSharingPermissionRequest** | [**AddServerImageSharingPermissionRequest**](AddServerImageSharingPermissionRequest.md)| addServerImageSharingPermissionRequest |
 
 ### Return type
 
-null (empty response body)
+[**AddServerImageSharingPermissionResponse**](AddServerImageSharingPermissionResponse.md)
 
 ### Authorization
 
@@ -989,7 +1011,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
 <a name="assignSecondaryIpsGet"></a>
@@ -1796,6 +1818,542 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="changeFabricClusterDescriptionGet"></a>
+# **changeFabricClusterDescriptionGet**
+> ChangeFabricClusterDescriptionResponse changeFabricClusterDescriptionGet(changeFabricClusterDescriptionRequest)
+
+
+
+Fabric Cluster 설명 변경
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ChangeFabricClusterDescriptionRequest changeFabricClusterDescriptionRequest = new ChangeFabricClusterDescriptionRequest(); // ChangeFabricClusterDescriptionRequest | changeFabricClusterDescriptionRequest
+try {
+	// Handler Successful response
+	ApiResponse<ChangeFabricClusterDescriptionResponse> result = apiInstance.changeFabricClusterDescriptionGet(changeFabricClusterDescriptionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeFabricClusterDescriptionRequest** | [**ChangeFabricClusterDescriptionRequest**](ChangeFabricClusterDescriptionRequest.md)| changeFabricClusterDescriptionRequest |
+
+### Return type
+
+[**ChangeFabricClusterDescriptionResponse**](ChangeFabricClusterDescriptionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="changeFabricClusterDescriptionPost"></a>
+# **changeFabricClusterDescriptionPost**
+> ChangeFabricClusterDescriptionResponse changeFabricClusterDescriptionPost(changeFabricClusterDescriptionRequest)
+
+
+
+Fabric Cluster 설명 변경
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ChangeFabricClusterDescriptionRequest changeFabricClusterDescriptionRequest = new ChangeFabricClusterDescriptionRequest(); // ChangeFabricClusterDescriptionRequest | changeFabricClusterDescriptionRequest
+try {
+	// Handler Successful response
+	ApiResponse<ChangeFabricClusterDescriptionResponse> result = apiInstance.changeFabricClusterDescriptionPost(changeFabricClusterDescriptionRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeFabricClusterDescriptionRequest** | [**ChangeFabricClusterDescriptionRequest**](ChangeFabricClusterDescriptionRequest.md)| changeFabricClusterDescriptionRequest |
+
+### Return type
+
+[**ChangeFabricClusterDescriptionResponse**](ChangeFabricClusterDescriptionResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="changeFabricClusterNameGet"></a>
+# **changeFabricClusterNameGet**
+> ChangeFabricClusterNameResponse changeFabricClusterNameGet(changeFabricClusterNameRequest)
+
+
+
+Fabric Cluster 이름 변경
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ChangeFabricClusterNameRequest changeFabricClusterNameRequest = new ChangeFabricClusterNameRequest(); // ChangeFabricClusterNameRequest | changeFabricClusterNameRequest
+try {
+	// Handler Successful response
+	ApiResponse<ChangeFabricClusterNameResponse> result = apiInstance.changeFabricClusterNameGet(changeFabricClusterNameRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeFabricClusterNameRequest** | [**ChangeFabricClusterNameRequest**](ChangeFabricClusterNameRequest.md)| changeFabricClusterNameRequest |
+
+### Return type
+
+[**ChangeFabricClusterNameResponse**](ChangeFabricClusterNameResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="changeFabricClusterNamePost"></a>
+# **changeFabricClusterNamePost**
+> ChangeFabricClusterNameResponse changeFabricClusterNamePost(changeFabricClusterNameRequest)
+
+
+
+Fabric Cluster 이름 변경
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ChangeFabricClusterNameRequest changeFabricClusterNameRequest = new ChangeFabricClusterNameRequest(); // ChangeFabricClusterNameRequest | changeFabricClusterNameRequest
+try {
+	// Handler Successful response
+	ApiResponse<ChangeFabricClusterNameResponse> result = apiInstance.changeFabricClusterNamePost(changeFabricClusterNameRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeFabricClusterNameRequest** | [**ChangeFabricClusterNameRequest**](ChangeFabricClusterNameRequest.md)| changeFabricClusterNameRequest |
+
+### Return type
+
+[**ChangeFabricClusterNameResponse**](ChangeFabricClusterNameResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="changeFabricClusterServerInstancesGet"></a>
+# **changeFabricClusterServerInstancesGet**
+> ChangeFabricClusterServerInstancesResponse changeFabricClusterServerInstancesGet(changeFabricClusterServerInstancesRequest)
+
+
+
+Fabric Cluster 클러스터 모드 서버 인스턴스 목록 변경
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ChangeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest = new ChangeFabricClusterServerInstancesRequest(); // ChangeFabricClusterServerInstancesRequest | changeFabricClusterServerInstancesRequest
+try {
+	// Handler Successful response
+	ApiResponse<ChangeFabricClusterServerInstancesResponse> result = apiInstance.changeFabricClusterServerInstancesGet(changeFabricClusterServerInstancesRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeFabricClusterServerInstancesRequest** | [**ChangeFabricClusterServerInstancesRequest**](ChangeFabricClusterServerInstancesRequest.md)| changeFabricClusterServerInstancesRequest |
+
+### Return type
+
+[**ChangeFabricClusterServerInstancesResponse**](ChangeFabricClusterServerInstancesResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="changeFabricClusterServerInstancesPost"></a>
+# **changeFabricClusterServerInstancesPost**
+> ChangeFabricClusterServerInstancesResponse changeFabricClusterServerInstancesPost(changeFabricClusterServerInstancesRequest)
+
+
+
+Fabric Cluster 클러스터 모드 서버 인스턴스 목록 변경
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ChangeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest = new ChangeFabricClusterServerInstancesRequest(); // ChangeFabricClusterServerInstancesRequest | changeFabricClusterServerInstancesRequest
+try {
+	// Handler Successful response
+	ApiResponse<ChangeFabricClusterServerInstancesResponse> result = apiInstance.changeFabricClusterServerInstancesPost(changeFabricClusterServerInstancesRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeFabricClusterServerInstancesRequest** | [**ChangeFabricClusterServerInstancesRequest**](ChangeFabricClusterServerInstancesRequest.md)| changeFabricClusterServerInstancesRequest |
+
+### Return type
+
+[**ChangeFabricClusterServerInstancesResponse**](ChangeFabricClusterServerInstancesResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="changeServerInstanceNameGet"></a>
+# **changeServerInstanceNameGet**
+> ChangeServerInstanceNameResponse changeServerInstanceNameGet(changeServerInstanceNameRequest)
+
+
+
+서버인스턴스이름변경
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ChangeServerInstanceNameRequest changeServerInstanceNameRequest = new ChangeServerInstanceNameRequest(); // ChangeServerInstanceNameRequest | changeServerInstanceNameRequest
+try {
+	// Handler Successful response
+	ApiResponse<ChangeServerInstanceNameResponse> result = apiInstance.changeServerInstanceNameGet(changeServerInstanceNameRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeServerInstanceNameRequest** | [**ChangeServerInstanceNameRequest**](ChangeServerInstanceNameRequest.md)| changeServerInstanceNameRequest |
+
+### Return type
+
+[**ChangeServerInstanceNameResponse**](ChangeServerInstanceNameResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="changeServerInstanceNamePost"></a>
+# **changeServerInstanceNamePost**
+> ChangeServerInstanceNameResponse changeServerInstanceNamePost(changeServerInstanceNameRequest)
+
+
+
+서버인스턴스이름변경
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ChangeServerInstanceNameRequest changeServerInstanceNameRequest = new ChangeServerInstanceNameRequest(); // ChangeServerInstanceNameRequest | changeServerInstanceNameRequest
+try {
+	// Handler Successful response
+	ApiResponse<ChangeServerInstanceNameResponse> result = apiInstance.changeServerInstanceNamePost(changeServerInstanceNameRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeServerInstanceNameRequest** | [**ChangeServerInstanceNameRequest**](ChangeServerInstanceNameRequest.md)| changeServerInstanceNameRequest |
+
+### Return type
+
+[**ChangeServerInstanceNameResponse**](ChangeServerInstanceNameResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="changeServerInstanceSpecGet"></a>
 # **changeServerInstanceSpecGet**
 > ChangeServerInstanceSpecResponse changeServerInstanceSpecGet(changeServerInstanceSpecRequest)
@@ -2322,6 +2880,140 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**CreateBlockStorageSnapshotInstanceResponse**](CreateBlockStorageSnapshotInstanceResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="createFabricClusterGet"></a>
+# **createFabricClusterGet**
+> CreateFabricClusterResponse createFabricClusterGet(createFabricClusterRequest)
+
+
+
+Fabric Cluster 생성
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+CreateFabricClusterRequest createFabricClusterRequest = new CreateFabricClusterRequest(); // CreateFabricClusterRequest | createFabricClusterRequest
+try {
+	// Handler Successful response
+	ApiResponse<CreateFabricClusterResponse> result = apiInstance.createFabricClusterGet(createFabricClusterRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createFabricClusterRequest** | [**CreateFabricClusterRequest**](CreateFabricClusterRequest.md)| createFabricClusterRequest |
+
+### Return type
+
+[**CreateFabricClusterResponse**](CreateFabricClusterResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="createFabricClusterPost"></a>
+# **createFabricClusterPost**
+> CreateFabricClusterResponse createFabricClusterPost(createFabricClusterRequest)
+
+
+
+Fabric Cluster 생성
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+CreateFabricClusterRequest createFabricClusterRequest = new CreateFabricClusterRequest(); // CreateFabricClusterRequest | createFabricClusterRequest
+try {
+	// Handler Successful response
+	ApiResponse<CreateFabricClusterResponse> result = apiInstance.createFabricClusterPost(createFabricClusterRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createFabricClusterRequest** | [**CreateFabricClusterRequest**](CreateFabricClusterRequest.md)| createFabricClusterRequest |
+
+### Return type
+
+[**CreateFabricClusterResponse**](CreateFabricClusterResponse.md)
 
 ### Authorization
 
@@ -3138,7 +3830,7 @@ Name | Type | Description  | Notes
 
 <a name="createServerImageFromSnapshotGet"></a>
 # **createServerImageFromSnapshotGet**
-> createServerImageFromSnapshotGet(createServerImageFromSnapshotRequest)
+> CreateServerImageFromSnapshotResponse createServerImageFromSnapshotGet(createServerImageFromSnapshotRequest)
 
 
 
@@ -3171,7 +3863,7 @@ V2Api apiInstance = new V2Api(apiClient);
 CreateServerImageFromSnapshotRequest createServerImageFromSnapshotRequest = new CreateServerImageFromSnapshotRequest(); // CreateServerImageFromSnapshotRequest | createServerImageFromSnapshotRequest
 try {
 	// Handler Successful response
-	apiInstance.createServerImageFromSnapshotGet(createServerImageFromSnapshotRequest);
+	ApiResponse<CreateServerImageFromSnapshotResponse> result = apiInstance.createServerImageFromSnapshotGet(createServerImageFromSnapshotRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -3192,7 +3884,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**CreateServerImageFromSnapshotResponse**](CreateServerImageFromSnapshotResponse.md)
 
 ### Authorization
 
@@ -3205,7 +3897,7 @@ null (empty response body)
 
 <a name="createServerImageFromSnapshotPost"></a>
 # **createServerImageFromSnapshotPost**
-> createServerImageFromSnapshotPost(createServerImageFromSnapshotRequest)
+> CreateServerImageFromSnapshotResponse createServerImageFromSnapshotPost(createServerImageFromSnapshotRequest)
 
 
 
@@ -3238,7 +3930,7 @@ V2Api apiInstance = new V2Api(apiClient);
 CreateServerImageFromSnapshotRequest createServerImageFromSnapshotRequest = new CreateServerImageFromSnapshotRequest(); // CreateServerImageFromSnapshotRequest | createServerImageFromSnapshotRequest
 try {
 	// Handler Successful response
-	apiInstance.createServerImageFromSnapshotPost(createServerImageFromSnapshotRequest);
+	ApiResponse<CreateServerImageFromSnapshotResponse> result = apiInstance.createServerImageFromSnapshotPost(createServerImageFromSnapshotRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -3259,7 +3951,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**CreateServerImageFromSnapshotResponse**](CreateServerImageFromSnapshotResponse.md)
 
 ### Authorization
 
@@ -3272,7 +3964,7 @@ null (empty response body)
 
 <a name="createServerImageGet"></a>
 # **createServerImageGet**
-> createServerImageGet(createServerImageRequest)
+> CreateServerImageResponse createServerImageGet(createServerImageRequest)
 
 
 
@@ -3305,7 +3997,7 @@ V2Api apiInstance = new V2Api(apiClient);
 CreateServerImageRequest createServerImageRequest = new CreateServerImageRequest(); // CreateServerImageRequest | createServerImageRequest
 try {
 	// Handler Successful response
-	apiInstance.createServerImageGet(createServerImageRequest);
+	ApiResponse<CreateServerImageResponse> result = apiInstance.createServerImageGet(createServerImageRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -3326,7 +4018,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**CreateServerImageResponse**](CreateServerImageResponse.md)
 
 ### Authorization
 
@@ -3339,7 +4031,7 @@ null (empty response body)
 
 <a name="createServerImagePost"></a>
 # **createServerImagePost**
-> createServerImagePost(createServerImageRequest)
+> CreateServerImageResponse createServerImagePost(createServerImageRequest)
 
 
 
@@ -3372,7 +4064,7 @@ V2Api apiInstance = new V2Api(apiClient);
 CreateServerImageRequest createServerImageRequest = new CreateServerImageRequest(); // CreateServerImageRequest | createServerImageRequest
 try {
 	// Handler Successful response
-	apiInstance.createServerImagePost(createServerImageRequest);
+	ApiResponse<CreateServerImageResponse> result = apiInstance.createServerImagePost(createServerImageRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -3393,7 +4085,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**CreateServerImageResponse**](CreateServerImageResponse.md)
 
 ### Authorization
 
@@ -3930,6 +4622,140 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**DeleteBlockStorageSnapshotInstancesResponse**](DeleteBlockStorageSnapshotInstancesResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="deleteFabricClusterGet"></a>
+# **deleteFabricClusterGet**
+> DeleteFabricClusterResponse deleteFabricClusterGet(deleteFabricClusterRequest)
+
+
+
+Fabric Cluster 삭제
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+DeleteFabricClusterRequest deleteFabricClusterRequest = new DeleteFabricClusterRequest(); // DeleteFabricClusterRequest | deleteFabricClusterRequest
+try {
+	// Handler Successful response
+	ApiResponse<DeleteFabricClusterResponse> result = apiInstance.deleteFabricClusterGet(deleteFabricClusterRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteFabricClusterRequest** | [**DeleteFabricClusterRequest**](DeleteFabricClusterRequest.md)| deleteFabricClusterRequest |
+
+### Return type
+
+[**DeleteFabricClusterResponse**](DeleteFabricClusterResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="deleteFabricClusterPost"></a>
+# **deleteFabricClusterPost**
+> DeleteFabricClusterResponse deleteFabricClusterPost(deleteFabricClusterRequest)
+
+
+
+Fabric Cluster 삭제
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+DeleteFabricClusterRequest deleteFabricClusterRequest = new DeleteFabricClusterRequest(); // DeleteFabricClusterRequest | deleteFabricClusterRequest
+try {
+	// Handler Successful response
+	ApiResponse<DeleteFabricClusterResponse> result = apiInstance.deleteFabricClusterPost(deleteFabricClusterRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **deleteFabricClusterRequest** | [**DeleteFabricClusterRequest**](DeleteFabricClusterRequest.md)| deleteFabricClusterRequest |
+
+### Return type
+
+[**DeleteFabricClusterResponse**](DeleteFabricClusterResponse.md)
 
 ### Authorization
 
@@ -4746,7 +5572,7 @@ Name | Type | Description  | Notes
 
 <a name="deleteServerImageGet"></a>
 # **deleteServerImageGet**
-> deleteServerImageGet(deleteServerImageRequest)
+> DeleteServerImageResponse deleteServerImageGet(deleteServerImageRequest)
 
 
 
@@ -4779,7 +5605,7 @@ V2Api apiInstance = new V2Api(apiClient);
 DeleteServerImageRequest deleteServerImageRequest = new DeleteServerImageRequest(); // DeleteServerImageRequest | deleteServerImageRequest
 try {
 	// Handler Successful response
-	apiInstance.deleteServerImageGet(deleteServerImageRequest);
+	ApiResponse<DeleteServerImageResponse> result = apiInstance.deleteServerImageGet(deleteServerImageRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -4800,7 +5626,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**DeleteServerImageResponse**](DeleteServerImageResponse.md)
 
 ### Authorization
 
@@ -4813,7 +5639,7 @@ null (empty response body)
 
 <a name="deleteServerImagePost"></a>
 # **deleteServerImagePost**
-> deleteServerImagePost(deleteServerImageRequest)
+> DeleteServerImageResponse deleteServerImagePost(deleteServerImageRequest)
 
 
 
@@ -4846,7 +5672,7 @@ V2Api apiInstance = new V2Api(apiClient);
 DeleteServerImageRequest deleteServerImageRequest = new DeleteServerImageRequest(); // DeleteServerImageRequest | deleteServerImageRequest
 try {
 	// Handler Successful response
-	apiInstance.deleteServerImagePost(deleteServerImageRequest);
+	ApiResponse<DeleteServerImageResponse> result = apiInstance.deleteServerImagePost(deleteServerImageRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -4867,7 +5693,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**DeleteServerImageResponse**](DeleteServerImageResponse.md)
 
 ### Authorization
 
@@ -6620,6 +7446,408 @@ Name | Type | Description  | Notes
  - **Content-Type**: application/x-www-form-urlencoded
  - **Accept**: Not defined
 
+<a name="getFabricClusterDetailGet"></a>
+# **getFabricClusterDetailGet**
+> GetFabricClusterDetailResponse getFabricClusterDetailGet(getFabricClusterDetailRequest)
+
+
+
+Fabric Cluster 상세 조회
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetFabricClusterDetailRequest getFabricClusterDetailRequest = new GetFabricClusterDetailRequest(); // GetFabricClusterDetailRequest | getFabricClusterDetailRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetFabricClusterDetailResponse> result = apiInstance.getFabricClusterDetailGet(getFabricClusterDetailRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getFabricClusterDetailRequest** | [**GetFabricClusterDetailRequest**](GetFabricClusterDetailRequest.md)| getFabricClusterDetailRequest |
+
+### Return type
+
+[**GetFabricClusterDetailResponse**](GetFabricClusterDetailResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getFabricClusterDetailPost"></a>
+# **getFabricClusterDetailPost**
+> GetFabricClusterDetailResponse getFabricClusterDetailPost(getFabricClusterDetailRequest)
+
+
+
+Fabric Cluster 상세 조회
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetFabricClusterDetailRequest getFabricClusterDetailRequest = new GetFabricClusterDetailRequest(); // GetFabricClusterDetailRequest | getFabricClusterDetailRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetFabricClusterDetailResponse> result = apiInstance.getFabricClusterDetailPost(getFabricClusterDetailRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getFabricClusterDetailRequest** | [**GetFabricClusterDetailRequest**](GetFabricClusterDetailRequest.md)| getFabricClusterDetailRequest |
+
+### Return type
+
+[**GetFabricClusterDetailResponse**](GetFabricClusterDetailResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getFabricClusterListGet"></a>
+# **getFabricClusterListGet**
+> GetFabricClusterListResponse getFabricClusterListGet(getFabricClusterListRequest)
+
+
+
+Fabric Cluster 리스트조회
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetFabricClusterListRequest getFabricClusterListRequest = new GetFabricClusterListRequest(); // GetFabricClusterListRequest | getFabricClusterListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetFabricClusterListResponse> result = apiInstance.getFabricClusterListGet(getFabricClusterListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getFabricClusterListRequest** | [**GetFabricClusterListRequest**](GetFabricClusterListRequest.md)| getFabricClusterListRequest |
+
+### Return type
+
+[**GetFabricClusterListResponse**](GetFabricClusterListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getFabricClusterListPost"></a>
+# **getFabricClusterListPost**
+> GetFabricClusterListResponse getFabricClusterListPost(getFabricClusterListRequest)
+
+
+
+Fabric Cluster 리스트조회
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetFabricClusterListRequest getFabricClusterListRequest = new GetFabricClusterListRequest(); // GetFabricClusterListRequest | getFabricClusterListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetFabricClusterListResponse> result = apiInstance.getFabricClusterListPost(getFabricClusterListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getFabricClusterListRequest** | [**GetFabricClusterListRequest**](GetFabricClusterListRequest.md)| getFabricClusterListRequest |
+
+### Return type
+
+[**GetFabricClusterListResponse**](GetFabricClusterListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getFabricClusterPoolListGet"></a>
+# **getFabricClusterPoolListGet**
+> GetFabricClusterPoolListResponse getFabricClusterPoolListGet(getFabricClusterPoolListRequest)
+
+
+
+FabricClusterPool 리스트조회
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetFabricClusterPoolListRequest getFabricClusterPoolListRequest = new GetFabricClusterPoolListRequest(); // GetFabricClusterPoolListRequest | getFabricClusterPoolListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetFabricClusterPoolListResponse> result = apiInstance.getFabricClusterPoolListGet(getFabricClusterPoolListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getFabricClusterPoolListRequest** | [**GetFabricClusterPoolListRequest**](GetFabricClusterPoolListRequest.md)| getFabricClusterPoolListRequest |
+
+### Return type
+
+[**GetFabricClusterPoolListResponse**](GetFabricClusterPoolListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="getFabricClusterPoolListPost"></a>
+# **getFabricClusterPoolListPost**
+> GetFabricClusterPoolListResponse getFabricClusterPoolListPost(getFabricClusterPoolListRequest)
+
+
+
+FabricClusterPool 리스트조회
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+GetFabricClusterPoolListRequest getFabricClusterPoolListRequest = new GetFabricClusterPoolListRequest(); // GetFabricClusterPoolListRequest | getFabricClusterPoolListRequest
+try {
+	// Handler Successful response
+	ApiResponse<GetFabricClusterPoolListResponse> result = apiInstance.getFabricClusterPoolListPost(getFabricClusterPoolListRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **getFabricClusterPoolListRequest** | [**GetFabricClusterPoolListRequest**](GetFabricClusterPoolListRequest.md)| getFabricClusterPoolListRequest |
+
+### Return type
+
+[**GetFabricClusterPoolListResponse**](GetFabricClusterPoolListResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
 <a name="getFlowLogConfigurationListGet"></a>
 # **getFlowLogConfigurationListGet**
 > FlowLogConfigurationList getFlowLogConfigurationListGet(getFlowLogConfigurationListRequest)
@@ -6827,7 +8055,7 @@ Name | Type | Description  | Notes
 
 
 
-하이퍼바이저타입리스트조회 
+하이퍼바이저타입리스트조회
 
 ### Example
 ```java
@@ -9034,7 +10262,7 @@ Name | Type | Description  | Notes
 
 <a name="getServerImageDetailGet"></a>
 # **getServerImageDetailGet**
-> getServerImageDetailGet(getServerImageDetailRequest)
+> GetServerImageDetailResponse getServerImageDetailGet(getServerImageDetailRequest)
 
 
 
@@ -9067,7 +10295,7 @@ V2Api apiInstance = new V2Api(apiClient);
 GetServerImageDetailRequest getServerImageDetailRequest = new GetServerImageDetailRequest(); // GetServerImageDetailRequest | 
 try {
 	// Handler Successful response
-	apiInstance.getServerImageDetailGet(getServerImageDetailRequest);
+	ApiResponse<GetServerImageDetailResponse> result = apiInstance.getServerImageDetailGet(getServerImageDetailRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -9088,7 +10316,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**GetServerImageDetailResponse**](GetServerImageDetailResponse.md)
 
 ### Authorization
 
@@ -9101,7 +10329,7 @@ null (empty response body)
 
 <a name="getServerImageDetailPost"></a>
 # **getServerImageDetailPost**
-> getServerImageDetailPost(getServerImageDetailRequest)
+> GetServerImageDetailResponse getServerImageDetailPost(getServerImageDetailRequest)
 
 
 
@@ -9134,7 +10362,7 @@ V2Api apiInstance = new V2Api(apiClient);
 GetServerImageDetailRequest getServerImageDetailRequest = new GetServerImageDetailRequest(); // GetServerImageDetailRequest | 
 try {
 	// Handler Successful response
-	apiInstance.getServerImageDetailPost(getServerImageDetailRequest);
+	ApiResponse<GetServerImageDetailResponse> result = apiInstance.getServerImageDetailPost(getServerImageDetailRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -9155,7 +10383,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**GetServerImageDetailResponse**](GetServerImageDetailResponse.md)
 
 ### Authorization
 
@@ -9168,7 +10396,7 @@ null (empty response body)
 
 <a name="getServerImageListGet"></a>
 # **getServerImageListGet**
-> getServerImageListGet(getServerImageListRequest)
+> GetServerImageListResponse getServerImageListGet(getServerImageListRequest)
 
 
 
@@ -9201,7 +10429,7 @@ V2Api apiInstance = new V2Api(apiClient);
 GetServerImageListRequest getServerImageListRequest = new GetServerImageListRequest(); // GetServerImageListRequest | 
 try {
 	// Handler Successful response
-	apiInstance.getServerImageListGet(getServerImageListRequest);
+	ApiResponse<GetServerImageListResponse> result = apiInstance.getServerImageListGet(getServerImageListRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -9222,7 +10450,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**GetServerImageListResponse**](GetServerImageListResponse.md)
 
 ### Authorization
 
@@ -9235,7 +10463,7 @@ null (empty response body)
 
 <a name="getServerImageListPost"></a>
 # **getServerImageListPost**
-> getServerImageListPost(getServerImageListRequest)
+> GetServerImageListResponse getServerImageListPost(getServerImageListRequest)
 
 
 
@@ -9268,7 +10496,7 @@ V2Api apiInstance = new V2Api(apiClient);
 GetServerImageListRequest getServerImageListRequest = new GetServerImageListRequest(); // GetServerImageListRequest | 
 try {
 	// Handler Successful response
-	apiInstance.getServerImageListPost(getServerImageListRequest);
+	ApiResponse<GetServerImageListResponse> result = apiInstance.getServerImageListPost(getServerImageListRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -9289,7 +10517,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**GetServerImageListResponse**](GetServerImageListResponse.md)
 
 ### Authorization
 
@@ -9838,7 +11066,7 @@ Name | Type | Description  | Notes
 
 <a name="getServerSpecDetailGet"></a>
 # **getServerSpecDetailGet**
-> getServerSpecDetailGet(getServerSpecDetailRequest)
+> GetServerSpecDetailResponse getServerSpecDetailGet(getServerSpecDetailRequest)
 
 
 
@@ -9871,7 +11099,7 @@ V2Api apiInstance = new V2Api(apiClient);
 GetServerSpecDetailRequest getServerSpecDetailRequest = new GetServerSpecDetailRequest(); // GetServerSpecDetailRequest | 
 try {
 	// Handler Successful response
-	apiInstance.getServerSpecDetailGet(getServerSpecDetailRequest);
+	ApiResponse<GetServerSpecDetailResponse> result = apiInstance.getServerSpecDetailGet(getServerSpecDetailRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -9892,7 +11120,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**GetServerSpecDetailResponse**](GetServerSpecDetailResponse.md)
 
 ### Authorization
 
@@ -9905,7 +11133,7 @@ null (empty response body)
 
 <a name="getServerSpecDetailPost"></a>
 # **getServerSpecDetailPost**
-> getServerSpecDetailPost(getServerSpecDetailRequest)
+> GetServerSpecDetailResponse getServerSpecDetailPost(getServerSpecDetailRequest)
 
 
 
@@ -9938,7 +11166,7 @@ V2Api apiInstance = new V2Api(apiClient);
 GetServerSpecDetailRequest getServerSpecDetailRequest = new GetServerSpecDetailRequest(); // GetServerSpecDetailRequest | 
 try {
 	// Handler Successful response
-	apiInstance.getServerSpecDetailPost(getServerSpecDetailRequest);
+	ApiResponse<GetServerSpecDetailResponse> result = apiInstance.getServerSpecDetailPost(getServerSpecDetailRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -9959,7 +11187,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**GetServerSpecDetailResponse**](GetServerSpecDetailResponse.md)
 
 ### Authorization
 
@@ -9972,7 +11200,7 @@ null (empty response body)
 
 <a name="getServerSpecListGet"></a>
 # **getServerSpecListGet**
-> getServerSpecListGet(getServerSpecListRequest)
+> GetServerSpecListResponse getServerSpecListGet(getServerSpecListRequest)
 
 
 
@@ -10005,7 +11233,7 @@ V2Api apiInstance = new V2Api(apiClient);
 GetServerSpecListRequest getServerSpecListRequest = new GetServerSpecListRequest(); // GetServerSpecListRequest | 
 try {
 	// Handler Successful response
-	apiInstance.getServerSpecListGet(getServerSpecListRequest);
+	ApiResponse<GetServerSpecListResponse> result = apiInstance.getServerSpecListGet(getServerSpecListRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -10026,7 +11254,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**GetServerSpecListResponse**](GetServerSpecListResponse.md)
 
 ### Authorization
 
@@ -10039,7 +11267,7 @@ null (empty response body)
 
 <a name="getServerSpecListPost"></a>
 # **getServerSpecListPost**
-> getServerSpecListPost(getServerSpecListRequest)
+> GetServerSpecListResponse getServerSpecListPost(getServerSpecListRequest)
 
 
 
@@ -10072,7 +11300,7 @@ V2Api apiInstance = new V2Api(apiClient);
 GetServerSpecListRequest getServerSpecListRequest = new GetServerSpecListRequest(); // GetServerSpecListRequest | 
 try {
 	// Handler Successful response
-	apiInstance.getServerSpecListPost(getServerSpecListRequest);
+	ApiResponse<GetServerSpecListResponse> result = apiInstance.getServerSpecListPost(getServerSpecListRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -10093,7 +11321,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-null (empty response body)
+[**GetServerSpecListResponse**](GetServerSpecListResponse.md)
 
 ### Authorization
 
@@ -11312,11 +12540,11 @@ Name | Type | Description  | Notes
 
 <a name="removeServerImageSharingPermissionGet"></a>
 # **removeServerImageSharingPermissionGet**
-> removeServerImageSharingPermissionGet(removeServerImageSharingPermissionRequest)
+> RemoveServerImageSharingPermissionResponse removeServerImageSharingPermissionGet(removeServerImageSharingPermissionRequest)
 
 
 
-
+서버이미지공유권한제거
 
 ### Example
 ```java
@@ -11342,10 +12570,10 @@ ApiClient apiClient = new ApiClient.ApiClientBuilder()
 	.build();
 
 V2Api apiInstance = new V2Api(apiClient);
-RemoveServerImageSharingPermissionRequest removeServerImageSharingPermissionRequest = new RemoveServerImageSharingPermissionRequest(); // RemoveServerImageSharingPermissionRequest | 
+RemoveServerImageSharingPermissionRequest removeServerImageSharingPermissionRequest = new RemoveServerImageSharingPermissionRequest(); // RemoveServerImageSharingPermissionRequest | removeServerImageSharingPermissionRequest
 try {
 	// Handler Successful response
-	apiInstance.removeServerImageSharingPermissionGet(removeServerImageSharingPermissionRequest);
+	ApiResponse<RemoveServerImageSharingPermissionResponse> result = apiInstance.removeServerImageSharingPermissionGet(removeServerImageSharingPermissionRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -11362,11 +12590,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **removeServerImageSharingPermissionRequest** | [**RemoveServerImageSharingPermissionRequest**](RemoveServerImageSharingPermissionRequest.md)|  |
+ **removeServerImageSharingPermissionRequest** | [**RemoveServerImageSharingPermissionRequest**](RemoveServerImageSharingPermissionRequest.md)| removeServerImageSharingPermissionRequest |
 
 ### Return type
 
-null (empty response body)
+[**RemoveServerImageSharingPermissionResponse**](RemoveServerImageSharingPermissionResponse.md)
 
 ### Authorization
 
@@ -11379,11 +12607,11 @@ null (empty response body)
 
 <a name="removeServerImageSharingPermissionPost"></a>
 # **removeServerImageSharingPermissionPost**
-> removeServerImageSharingPermissionPost(removeServerImageSharingPermissionRequest)
+> RemoveServerImageSharingPermissionResponse removeServerImageSharingPermissionPost(removeServerImageSharingPermissionRequest)
 
 
 
-
+서버이미지공유권한제거
 
 ### Example
 ```java
@@ -11409,10 +12637,10 @@ ApiClient apiClient = new ApiClient.ApiClientBuilder()
 	.build();
 
 V2Api apiInstance = new V2Api(apiClient);
-RemoveServerImageSharingPermissionRequest removeServerImageSharingPermissionRequest = new RemoveServerImageSharingPermissionRequest(); // RemoveServerImageSharingPermissionRequest | 
+RemoveServerImageSharingPermissionRequest removeServerImageSharingPermissionRequest = new RemoveServerImageSharingPermissionRequest(); // RemoveServerImageSharingPermissionRequest | removeServerImageSharingPermissionRequest
 try {
 	// Handler Successful response
-	apiInstance.removeServerImageSharingPermissionPost(removeServerImageSharingPermissionRequest);
+	ApiResponse<RemoveServerImageSharingPermissionResponse> result = apiInstance.removeServerImageSharingPermissionPost(removeServerImageSharingPermissionRequest);
 } catch (ApiException e) {
 	// Handler Failed response
 	int statusCode = e.getHttpStatusCode();
@@ -11429,11 +12657,11 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **removeServerImageSharingPermissionRequest** | [**RemoveServerImageSharingPermissionRequest**](RemoveServerImageSharingPermissionRequest.md)|  |
+ **removeServerImageSharingPermissionRequest** | [**RemoveServerImageSharingPermissionRequest**](RemoveServerImageSharingPermissionRequest.md)| removeServerImageSharingPermissionRequest |
 
 ### Return type
 
-null (empty response body)
+[**RemoveServerImageSharingPermissionResponse**](RemoveServerImageSharingPermissionResponse.md)
 
 ### Authorization
 
@@ -12372,6 +13600,274 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**UnassignSecondaryIpsResponse**](UnassignSecondaryIpsResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="updateFabricClusterGet"></a>
+# **updateFabricClusterGet**
+> UpdateFabricClusterResponse updateFabricClusterGet(updateFabricClusterRequest)
+
+
+
+Fabric Cluster 수정
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+UpdateFabricClusterRequest updateFabricClusterRequest = new UpdateFabricClusterRequest(); // UpdateFabricClusterRequest | updateFabricClusterRequest
+try {
+	// Handler Successful response
+	ApiResponse<UpdateFabricClusterResponse> result = apiInstance.updateFabricClusterGet(updateFabricClusterRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateFabricClusterRequest** | [**UpdateFabricClusterRequest**](UpdateFabricClusterRequest.md)| updateFabricClusterRequest |
+
+### Return type
+
+[**UpdateFabricClusterResponse**](UpdateFabricClusterResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="updateFabricClusterPost"></a>
+# **updateFabricClusterPost**
+> UpdateFabricClusterResponse updateFabricClusterPost(updateFabricClusterRequest)
+
+
+
+Fabric Cluster 수정
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+UpdateFabricClusterRequest updateFabricClusterRequest = new UpdateFabricClusterRequest(); // UpdateFabricClusterRequest | updateFabricClusterRequest
+try {
+	// Handler Successful response
+	ApiResponse<UpdateFabricClusterResponse> result = apiInstance.updateFabricClusterPost(updateFabricClusterRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **updateFabricClusterRequest** | [**UpdateFabricClusterRequest**](UpdateFabricClusterRequest.md)| updateFabricClusterRequest |
+
+### Return type
+
+[**UpdateFabricClusterResponse**](UpdateFabricClusterResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="updateFabricClusterServerInstancesGet"></a>
+# **updateFabricClusterServerInstancesGet**
+> ChangeFabricClusterServerInstancesResponse updateFabricClusterServerInstancesGet(changeFabricClusterServerInstancesRequest)
+
+
+
+Fabric Cluster 클러스터 모드 서버 인스턴스 목록 업데이트
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ChangeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest = new ChangeFabricClusterServerInstancesRequest(); // ChangeFabricClusterServerInstancesRequest | changeFabricClusterServerInstancesRequest
+try {
+	// Handler Successful response
+	ApiResponse<ChangeFabricClusterServerInstancesResponse> result = apiInstance.updateFabricClusterServerInstancesGet(changeFabricClusterServerInstancesRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeFabricClusterServerInstancesRequest** | [**ChangeFabricClusterServerInstancesRequest**](ChangeFabricClusterServerInstancesRequest.md)| changeFabricClusterServerInstancesRequest |
+
+### Return type
+
+[**ChangeFabricClusterServerInstancesResponse**](ChangeFabricClusterServerInstancesResponse.md)
+
+### Authorization
+
+[x-ncp-iam](../README.md#x-ncp-iam)
+
+### HTTP request headers
+
+ - **Content-Type**: application/x-www-form-urlencoded
+ - **Accept**: Not defined
+
+<a name="updateFabricClusterServerInstancesPost"></a>
+# **updateFabricClusterServerInstancesPost**
+> ChangeFabricClusterServerInstancesResponse updateFabricClusterServerInstancesPost(changeFabricClusterServerInstancesRequest)
+
+
+
+Fabric Cluster 클러스터 모드 서버 인스턴스 목록 업데이트
+
+### Example
+```java
+// Import classes:
+// import com.ncloud.vserver.ApiClient;
+// import com.ncloud.vserver.ApiResponse;
+// import com.ncloud.vserver.auth.PropertiesFileCredentialsProvider;
+// import com.ncloud.vserver.marshaller.JsonMarshaller;
+// import com.ncloud.vserver.marshaller.XmlMarshaller;
+// import com.ncloud.vserver.marshaller.FormMarshaller;
+// import com.ncloud.vserver.exception.ApiException;
+// import com.ncloud.vserver.exception.SdkException;
+// import com.ncloud.vserver.model.*;
+
+// import com.ncloud.vserver.api.V2Api;
+
+ApiClient apiClient = new ApiClient.ApiClientBuilder()
+	.addMarshaller(JsonMarshaller.getInstance())
+	.addMarshaller(XmlMarshaller.getInstance())
+	.addMarshaller(FormMarshaller.getInstance())
+	.setCredentials(new PropertiesFileCredentialsProvider("your-credentials-properties-file").getCredentials())
+	.setLogging(true)
+	.build();
+
+V2Api apiInstance = new V2Api(apiClient);
+ChangeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest = new ChangeFabricClusterServerInstancesRequest(); // ChangeFabricClusterServerInstancesRequest | changeFabricClusterServerInstancesRequest
+try {
+	// Handler Successful response
+	ApiResponse<ChangeFabricClusterServerInstancesResponse> result = apiInstance.updateFabricClusterServerInstancesPost(changeFabricClusterServerInstancesRequest);
+} catch (ApiException e) {
+	// Handler Failed response
+	int statusCode = e.getHttpStatusCode();
+	Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+	InputStream byteStream = e.getByteStream();
+	e.printStackTrace();
+} catch (SdkException e) {
+	// Handle exceptions that occurred before communication with the server
+	e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **changeFabricClusterServerInstancesRequest** | [**ChangeFabricClusterServerInstancesRequest**](ChangeFabricClusterServerInstancesRequest.md)| changeFabricClusterServerInstancesRequest |
+
+### Return type
+
+[**ChangeFabricClusterServerInstancesResponse**](ChangeFabricClusterServerInstancesResponse.md)
 
 ### Authorization
 

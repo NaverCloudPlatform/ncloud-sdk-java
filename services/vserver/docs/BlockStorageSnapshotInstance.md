@@ -17,8 +17,9 @@ Name | Type | Description | Notes
 **snapshotType** | [**CommonCode**](CommonCode.md) | 스냅샷유형 |  [optional]
 **baseSnapshotInstanceNo** | **String** | 베이스스냅샷인스턴스번호 |  [optional]
 **snapshotChainDepth** | **Integer** | 스냅샷일련Depth |  [optional]
-**hypervisorType** | **String** | 하이퍼바이저타입 |  [optional]
+**hypervisorType** | [**CommonCode**](CommonCode.md) | 하이퍼바이저타입 |  [optional]
 **isBootable** | **Boolean** | 부팅가능 여부 |  [optional]
+**blockStorageVolumeType** | [**CommonCode**](CommonCode.md) | 원본블록스토리지볼륨타입 |  [optional]
 
 
 

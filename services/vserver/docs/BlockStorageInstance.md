@@ -26,6 +26,8 @@ Name | Type | Description | Notes
 **blockStorageVolumeType** | [**CommonCode**](CommonCode.md) | 블록스토리지볼륨타입 |  [optional]
 **hypervisorType** | [**CommonCode**](CommonCode.md) | 하이퍼바이저타입 |  [optional]
 **throughput** | **Long** | 블록스토리지 throughput |  [optional]
+**iops** | **Long** | 블록스토리지 IOPS |  [optional]
+**blockStorageSnapshotInstanceNo** | **Long** | 블록스토리지스냅샷인스턴스번호 |  [optional]
 
 
 

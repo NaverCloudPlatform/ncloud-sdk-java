@@ -76,6 +76,10 @@ public class ServerInstance {
 
 	private String placementGroupNo = null;
 
+	private String placementGroupName = null;
+
+	private String memberServerImageInstanceNo = null;
+
 	private List<BlockDevicePartition> blockDevicePartitionList = null;
 
 	private CommonCode hypervisorType = null;
@@ -83,6 +87,20 @@ public class ServerInstance {
 	private String serverImageNo = null;
 
 	private String serverSpecCode = null;
+
+	private String fabricClusterPoolNo = null;
+
+	private String fabricClusterPoolName = null;
+
+	private String fabricClusterMode = null;
+
+	private String fabricClusterNo = null;
+
+	private String fabricClusterName = null;
+
+	private Boolean isPreInstallGpuDriver = null;
+
+	private List<String> eventList = null;
 
 	public ServerInstance serverInstanceNo(String serverInstanceNo) {
 		this.serverInstanceNo = serverInstanceNo;
@@ -551,6 +569,40 @@ public class ServerInstance {
 		this.placementGroupNo = placementGroupNo;
 	}
 
+	public ServerInstance placementGroupName(String placementGroupName) {
+		this.placementGroupName = placementGroupName;
+		return this;
+	}
+
+	 /**
+	 * 물리배치그룹이름
+	 * @return placementGroupName
+	**/
+	public String getPlacementGroupName() {
+		return placementGroupName;
+	}
+
+	public void setPlacementGroupName(String placementGroupName) {
+		this.placementGroupName = placementGroupName;
+	}
+
+	public ServerInstance memberServerImageInstanceNo(String memberServerImageInstanceNo) {
+		this.memberServerImageInstanceNo = memberServerImageInstanceNo;
+		return this;
+	}
+
+	 /**
+	 * 회원서버이미지인스턴스번호
+	 * @return memberServerImageInstanceNo
+	**/
+	public String getMemberServerImageInstanceNo() {
+		return memberServerImageInstanceNo;
+	}
+
+	public void setMemberServerImageInstanceNo(String memberServerImageInstanceNo) {
+		this.memberServerImageInstanceNo = memberServerImageInstanceNo;
+	}
+
 	public ServerInstance blockDevicePartitionList(List<BlockDevicePartition> blockDevicePartitionList) {
 		this.blockDevicePartitionList = blockDevicePartitionList;
 		return this;
@@ -627,6 +679,133 @@ public class ServerInstance {
 		this.serverSpecCode = serverSpecCode;
 	}
 
+	public ServerInstance fabricClusterPoolNo(String fabricClusterPoolNo) {
+		this.fabricClusterPoolNo = fabricClusterPoolNo;
+		return this;
+	}
+
+	 /**
+	 * FabricClusterPool번호
+	 * @return fabricClusterPoolNo
+	**/
+	public String getFabricClusterPoolNo() {
+		return fabricClusterPoolNo;
+	}
+
+	public void setFabricClusterPoolNo(String fabricClusterPoolNo) {
+		this.fabricClusterPoolNo = fabricClusterPoolNo;
+	}
+
+	public ServerInstance fabricClusterPoolName(String fabricClusterPoolName) {
+		this.fabricClusterPoolName = fabricClusterPoolName;
+		return this;
+	}
+
+	 /**
+	 * FabricClusterPool이름
+	 * @return fabricClusterPoolName
+	**/
+	public String getFabricClusterPoolName() {
+		return fabricClusterPoolName;
+	}
+
+	public void setFabricClusterPoolName(String fabricClusterPoolName) {
+		this.fabricClusterPoolName = fabricClusterPoolName;
+	}
+
+	public ServerInstance fabricClusterMode(String fabricClusterMode) {
+		this.fabricClusterMode = fabricClusterMode;
+		return this;
+	}
+
+	 /**
+	 * FabricCluster모드
+	 * @return fabricClusterMode
+	**/
+	public String getFabricClusterMode() {
+		return fabricClusterMode;
+	}
+
+	public void setFabricClusterMode(String fabricClusterMode) {
+		this.fabricClusterMode = fabricClusterMode;
+	}
+
+	public ServerInstance fabricClusterNo(String fabricClusterNo) {
+		this.fabricClusterNo = fabricClusterNo;
+		return this;
+	}
+
+	 /**
+	 * FabricCluster번호
+	 * @return fabricClusterNo
+	**/
+	public String getFabricClusterNo() {
+		return fabricClusterNo;
+	}
+
+	public void setFabricClusterNo(String fabricClusterNo) {
+		this.fabricClusterNo = fabricClusterNo;
+	}
+
+	public ServerInstance fabricClusterName(String fabricClusterName) {
+		this.fabricClusterName = fabricClusterName;
+		return this;
+	}
+
+	 /**
+	 * FabricCluster이름
+	 * @return fabricClusterName
+	**/
+	public String getFabricClusterName() {
+		return fabricClusterName;
+	}
+
+	public void setFabricClusterName(String fabricClusterName) {
+		this.fabricClusterName = fabricClusterName;
+	}
+
+	public ServerInstance isPreInstallGpuDriver(Boolean isPreInstallGpuDriver) {
+		this.isPreInstallGpuDriver = isPreInstallGpuDriver;
+		return this;
+	}
+
+	 /**
+	 * GPUDriver사전설치여부
+	 * @return isPreInstallGpuDriver
+	**/
+	public Boolean isIsPreInstallGpuDriver() {
+		return isPreInstallGpuDriver;
+	}
+
+	public void setIsPreInstallGpuDriver(Boolean isPreInstallGpuDriver) {
+		this.isPreInstallGpuDriver = isPreInstallGpuDriver;
+	}
+
+	public ServerInstance eventList(List<String> eventList) {
+		this.eventList = eventList;
+		return this;
+	}
+
+	public ServerInstance addEventListItem(String eventListItem) {
+		if (this.eventList == null) {
+			this.eventList = new ArrayList<String>();
+		}
+		this.eventList.add(eventListItem);
+		return this;
+	}
+
+	 /**
+	 * 이벤트리스트
+	 * @return eventList
+	**/
+	public List<String> getEventList() {
+		return eventList;
+	}
+
+	public void setEventList(List<String> eventList) {
+		this.eventList = eventList;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -664,15 +843,24 @@ public class ServerInstance {
 				Objects.equals(this.baseBlockStorageDiskType, serverInstance.baseBlockStorageDiskType) &&
 				Objects.equals(this.baseBlockStorageDiskDetailType, serverInstance.baseBlockStorageDiskDetailType) &&
 				Objects.equals(this.placementGroupNo, serverInstance.placementGroupNo) &&
+				Objects.equals(this.placementGroupName, serverInstance.placementGroupName) &&
+				Objects.equals(this.memberServerImageInstanceNo, serverInstance.memberServerImageInstanceNo) &&
 				Objects.equals(this.blockDevicePartitionList, serverInstance.blockDevicePartitionList) &&
 				Objects.equals(this.hypervisorType, serverInstance.hypervisorType) &&
 				Objects.equals(this.serverImageNo, serverInstance.serverImageNo) &&
-				Objects.equals(this.serverSpecCode, serverInstance.serverSpecCode);
+				Objects.equals(this.serverSpecCode, serverInstance.serverSpecCode) &&
+				Objects.equals(this.fabricClusterPoolNo, serverInstance.fabricClusterPoolNo) &&
+				Objects.equals(this.fabricClusterPoolName, serverInstance.fabricClusterPoolName) &&
+				Objects.equals(this.fabricClusterMode, serverInstance.fabricClusterMode) &&
+				Objects.equals(this.fabricClusterNo, serverInstance.fabricClusterNo) &&
+				Objects.equals(this.fabricClusterName, serverInstance.fabricClusterName) &&
+				Objects.equals(this.isPreInstallGpuDriver, serverInstance.isPreInstallGpuDriver) &&
+				Objects.equals(this.eventList, serverInstance.eventList);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(serverInstanceNo, serverName, serverDescription, cpuCount, memorySize, platformType, loginKeyName, publicIpInstanceNo, publicIp, serverInstanceStatus, serverInstanceOperation, serverInstanceStatusName, createDate, uptime, serverImageProductCode, serverProductCode, isProtectServerTermination, zoneCode, regionCode, vpcNo, subnetNo, networkInterfaceNoList, initScriptNo, serverInstanceType, baseBlockStorageDiskType, baseBlockStorageDiskDetailType, placementGroupNo, blockDevicePartitionList, hypervisorType, serverImageNo, serverSpecCode);
+		return Objects.hash(serverInstanceNo, serverName, serverDescription, cpuCount, memorySize, platformType, loginKeyName, publicIpInstanceNo, publicIp, serverInstanceStatus, serverInstanceOperation, serverInstanceStatusName, createDate, uptime, serverImageProductCode, serverProductCode, isProtectServerTermination, zoneCode, regionCode, vpcNo, subnetNo, networkInterfaceNoList, initScriptNo, serverInstanceType, baseBlockStorageDiskType, baseBlockStorageDiskDetailType, placementGroupNo, placementGroupName, memberServerImageInstanceNo, blockDevicePartitionList, hypervisorType, serverImageNo, serverSpecCode, fabricClusterPoolNo, fabricClusterPoolName, fabricClusterMode, fabricClusterNo, fabricClusterName, isPreInstallGpuDriver, eventList);
 	}
 
 
@@ -708,10 +896,19 @@ public class ServerInstance {
 		sb.append("		baseBlockStorageDiskType: ").append(toIndentedString(baseBlockStorageDiskType)).append("\n");
 		sb.append("		baseBlockStorageDiskDetailType: ").append(toIndentedString(baseBlockStorageDiskDetailType)).append("\n");
 		sb.append("		placementGroupNo: ").append(toIndentedString(placementGroupNo)).append("\n");
+		sb.append("		placementGroupName: ").append(toIndentedString(placementGroupName)).append("\n");
+		sb.append("		memberServerImageInstanceNo: ").append(toIndentedString(memberServerImageInstanceNo)).append("\n");
 		sb.append("		blockDevicePartitionList: ").append(toIndentedString(blockDevicePartitionList)).append("\n");
 		sb.append("		hypervisorType: ").append(toIndentedString(hypervisorType)).append("\n");
 		sb.append("		serverImageNo: ").append(toIndentedString(serverImageNo)).append("\n");
 		sb.append("		serverSpecCode: ").append(toIndentedString(serverSpecCode)).append("\n");
+		sb.append("		fabricClusterPoolNo: ").append(toIndentedString(fabricClusterPoolNo)).append("\n");
+		sb.append("		fabricClusterPoolName: ").append(toIndentedString(fabricClusterPoolName)).append("\n");
+		sb.append("		fabricClusterMode: ").append(toIndentedString(fabricClusterMode)).append("\n");
+		sb.append("		fabricClusterNo: ").append(toIndentedString(fabricClusterNo)).append("\n");
+		sb.append("		fabricClusterName: ").append(toIndentedString(fabricClusterName)).append("\n");
+		sb.append("		isPreInstallGpuDriver: ").append(toIndentedString(isPreInstallGpuDriver)).append("\n");
+		sb.append("		eventList: ").append(toIndentedString(eventList)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

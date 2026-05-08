@@ -17,9 +17,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * AddServerImageSharingPermissionReqeuset
+ * AddServerImageSharingPermissionRequest
  */
-public class AddServerImageSharingPermissionReqeuset {
+public class AddServerImageSharingPermissionRequest {
 	private String regionCode = null;
 
 	private String serverImageNo = null;
@@ -28,7 +28,7 @@ public class AddServerImageSharingPermissionReqeuset {
 
 	private String responseFormatType = null;
 
-	public AddServerImageSharingPermissionReqeuset regionCode(String regionCode) {
+	public AddServerImageSharingPermissionRequest regionCode(String regionCode) {
 		this.regionCode = regionCode;
 		return this;
 	}
@@ -45,13 +45,13 @@ public class AddServerImageSharingPermissionReqeuset {
 		this.regionCode = regionCode;
 	}
 
-	public AddServerImageSharingPermissionReqeuset serverImageNo(String serverImageNo) {
+	public AddServerImageSharingPermissionRequest serverImageNo(String serverImageNo) {
 		this.serverImageNo = serverImageNo;
 		return this;
 	}
 
 	 /**
-	 * 회원서버이미지인스턴스번호
+	 * 서버이미지번호
 	 * @return serverImageNo
 	**/
 	public String getServerImageNo() {
@@ -62,12 +62,12 @@ public class AddServerImageSharingPermissionReqeuset {
 		this.serverImageNo = serverImageNo;
 	}
 
-	public AddServerImageSharingPermissionReqeuset targetLoginIdList(List<String> targetLoginIdList) {
+	public AddServerImageSharingPermissionRequest targetLoginIdList(List<String> targetLoginIdList) {
 		this.targetLoginIdList = targetLoginIdList;
 		return this;
 	}
 
-	public AddServerImageSharingPermissionReqeuset addTargetLoginIdListItem(String targetLoginIdListItem) {
+	public AddServerImageSharingPermissionRequest addTargetLoginIdListItem(String targetLoginIdListItem) {
 		this.targetLoginIdList.add(targetLoginIdListItem);
 		return this;
 	}
@@ -84,7 +84,7 @@ public class AddServerImageSharingPermissionReqeuset {
 		this.targetLoginIdList = targetLoginIdList;
 	}
 
-	public AddServerImageSharingPermissionReqeuset responseFormatType(String responseFormatType) {
+	public AddServerImageSharingPermissionRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
 	}
@@ -110,11 +110,11 @@ public class AddServerImageSharingPermissionReqeuset {
 		if (o == null || getClass() != o.getClass()) {
 			return false;
 		}
-		AddServerImageSharingPermissionReqeuset addServerImageSharingPermissionReqeuset = (AddServerImageSharingPermissionReqeuset) o;
-		return Objects.equals(this.regionCode, addServerImageSharingPermissionReqeuset.regionCode) &&
-				Objects.equals(this.serverImageNo, addServerImageSharingPermissionReqeuset.serverImageNo) &&
-				Objects.equals(this.targetLoginIdList, addServerImageSharingPermissionReqeuset.targetLoginIdList) &&
-				Objects.equals(this.responseFormatType, addServerImageSharingPermissionReqeuset.responseFormatType);
+		AddServerImageSharingPermissionRequest addServerImageSharingPermissionRequest = (AddServerImageSharingPermissionRequest) o;
+		return Objects.equals(this.regionCode, addServerImageSharingPermissionRequest.regionCode) &&
+				Objects.equals(this.serverImageNo, addServerImageSharingPermissionRequest.serverImageNo) &&
+				Objects.equals(this.targetLoginIdList, addServerImageSharingPermissionRequest.targetLoginIdList) &&
+				Objects.equals(this.responseFormatType, addServerImageSharingPermissionRequest.responseFormatType);
 	}
 
 	@Override
@@ -126,7 +126,7 @@ public class AddServerImageSharingPermissionReqeuset {
 	@Override
 	public String toString() {
 		StringBuilder sb = new StringBuilder();
-		sb.append("class AddServerImageSharingPermissionReqeuset {\n");
+		sb.append("class AddServerImageSharingPermissionRequest {\n");
 		
 		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		serverImageNo: ").append(toIndentedString(serverImageNo)).append("\n");

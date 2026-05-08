@@ -43,7 +43,7 @@ public class BlockStorageVolumeType {
 
 	private Integer maxBaseVolumeSize = null;
 
-	private Boolean isAvailableBase = null;
+	private Boolean isBaseStorageAvailable = null;
 
 	public BlockStorageVolumeType zoneCodeList(List<String> zoneCodeList) {
 		this.zoneCodeList = zoneCodeList;
@@ -240,21 +240,21 @@ public class BlockStorageVolumeType {
 		this.maxBaseVolumeSize = maxBaseVolumeSize;
 	}
 
-	public BlockStorageVolumeType isAvailableBase(Boolean isAvailableBase) {
-		this.isAvailableBase = isAvailableBase;
+	public BlockStorageVolumeType isBaseStorageAvailable(Boolean isBaseStorageAvailable) {
+		this.isBaseStorageAvailable = isBaseStorageAvailable;
 		return this;
 	}
 
 	 /**
 	 * 기본스토리지 가능 여부
-	 * @return isAvailableBase
+	 * @return isBaseStorageAvailable
 	**/
-	public Boolean isIsAvailableBase() {
-		return isAvailableBase;
+	public Boolean isIsBaseStorageAvailable() {
+		return isBaseStorageAvailable;
 	}
 
-	public void setIsAvailableBase(Boolean isAvailableBase) {
-		this.isAvailableBase = isAvailableBase;
+	public void setIsBaseStorageAvailable(Boolean isBaseStorageAvailable) {
+		this.isBaseStorageAvailable = isBaseStorageAvailable;
 	}
 
 
@@ -278,12 +278,12 @@ public class BlockStorageVolumeType {
 				Objects.equals(this.maxVolumeSize, blockStorageVolumeType.maxVolumeSize) &&
 				Objects.equals(this.minBaseVolumeSize, blockStorageVolumeType.minBaseVolumeSize) &&
 				Objects.equals(this.maxBaseVolumeSize, blockStorageVolumeType.maxBaseVolumeSize) &&
-				Objects.equals(this.isAvailableBase, blockStorageVolumeType.isAvailableBase);
+				Objects.equals(this.isBaseStorageAvailable, blockStorageVolumeType.isBaseStorageAvailable);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(zoneCodeList, blockStorageVolumeType, hypervisorType, minThroughput, maxThroughput, minIops, maxIops, minVolumeSize, maxVolumeSize, minBaseVolumeSize, maxBaseVolumeSize, isAvailableBase);
+		return Objects.hash(zoneCodeList, blockStorageVolumeType, hypervisorType, minThroughput, maxThroughput, minIops, maxIops, minVolumeSize, maxVolumeSize, minBaseVolumeSize, maxBaseVolumeSize, isBaseStorageAvailable);
 	}
 
 
@@ -303,7 +303,7 @@ public class BlockStorageVolumeType {
 		sb.append("		maxVolumeSize: ").append(toIndentedString(maxVolumeSize)).append("\n");
 		sb.append("		minBaseVolumeSize: ").append(toIndentedString(minBaseVolumeSize)).append("\n");
 		sb.append("		maxBaseVolumeSize: ").append(toIndentedString(maxBaseVolumeSize)).append("\n");
-		sb.append("		isAvailableBase: ").append(toIndentedString(isAvailableBase)).append("\n");
+		sb.append("		isBaseStorageAvailable: ").append(toIndentedString(isBaseStorageAvailable)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

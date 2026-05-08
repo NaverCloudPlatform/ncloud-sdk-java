@@ -49,6 +49,8 @@ public class NetworkInterface {
 
 	private List<String> secondaryIpList = null;
 
+	private Boolean enableFlowLog = null;
+
 	public NetworkInterface networkInterfaceNo(String networkInterfaceNo) {
 		this.networkInterfaceNo = networkInterfaceNo;
 		return this;
@@ -303,6 +305,23 @@ public class NetworkInterface {
 		this.secondaryIpList = secondaryIpList;
 	}
 
+	public NetworkInterface enableFlowLog(Boolean enableFlowLog) {
+		this.enableFlowLog = enableFlowLog;
+		return this;
+	}
+
+	 /**
+	 * FlowLog활성화여부
+	 * @return enableFlowLog
+	**/
+	public Boolean isEnableFlowLog() {
+		return enableFlowLog;
+	}
+
+	public void setEnableFlowLog(Boolean enableFlowLog) {
+		this.enableFlowLog = enableFlowLog;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -326,12 +345,13 @@ public class NetworkInterface {
 				Objects.equals(this.macAddress, networkInterface.macAddress) &&
 				Objects.equals(this.accessControlGroupNoList, networkInterface.accessControlGroupNoList) &&
 				Objects.equals(this.networkInterfaceDescription, networkInterface.networkInterfaceDescription) &&
-				Objects.equals(this.secondaryIpList, networkInterface.secondaryIpList);
+				Objects.equals(this.secondaryIpList, networkInterface.secondaryIpList) &&
+				Objects.equals(this.enableFlowLog, networkInterface.enableFlowLog);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(networkInterfaceNo, networkInterfaceName, subnetNo, deleteOnTermination, isDefault, deviceName, networkInterfaceStatus, instanceType, instanceNo, ip, macAddress, accessControlGroupNoList, networkInterfaceDescription, secondaryIpList);
+		return Objects.hash(networkInterfaceNo, networkInterfaceName, subnetNo, deleteOnTermination, isDefault, deviceName, networkInterfaceStatus, instanceType, instanceNo, ip, macAddress, accessControlGroupNoList, networkInterfaceDescription, secondaryIpList, enableFlowLog);
 	}
 
 
@@ -354,6 +374,7 @@ public class NetworkInterface {
 		sb.append("		accessControlGroupNoList: ").append(toIndentedString(accessControlGroupNoList)).append("\n");
 		sb.append("		networkInterfaceDescription: ").append(toIndentedString(networkInterfaceDescription)).append("\n");
 		sb.append("		secondaryIpList: ").append(toIndentedString(secondaryIpList)).append("\n");
+		sb.append("		enableFlowLog: ").append(toIndentedString(enableFlowLog)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

@@ -18,6 +18,8 @@ import java.util.Objects;
  * GetLoginKeyListRequest
  */
 public class GetLoginKeyListRequest {
+	private String regionCode = null;
+
 	private String keyName = null;
 
 	private Integer pageNo = null;
@@ -25,6 +27,23 @@ public class GetLoginKeyListRequest {
 	private Integer pageSize = null;
 
 	private String responseFormatType = null;
+
+	public GetLoginKeyListRequest regionCode(String regionCode) {
+		this.regionCode = regionCode;
+		return this;
+	}
+
+	 /**
+	 * REGION코드
+	 * @return regionCode
+	**/
+	public String getRegionCode() {
+		return regionCode;
+	}
+
+	public void setRegionCode(String regionCode) {
+		this.regionCode = regionCode;
+	}
 
 	public GetLoginKeyListRequest keyName(String keyName) {
 		this.keyName = keyName;
@@ -104,7 +123,8 @@ public class GetLoginKeyListRequest {
 			return false;
 		}
 		GetLoginKeyListRequest getLoginKeyListRequest = (GetLoginKeyListRequest) o;
-		return Objects.equals(this.keyName, getLoginKeyListRequest.keyName) &&
+		return Objects.equals(this.regionCode, getLoginKeyListRequest.regionCode) &&
+				Objects.equals(this.keyName, getLoginKeyListRequest.keyName) &&
 				Objects.equals(this.pageNo, getLoginKeyListRequest.pageNo) &&
 				Objects.equals(this.pageSize, getLoginKeyListRequest.pageSize) &&
 				Objects.equals(this.responseFormatType, getLoginKeyListRequest.responseFormatType);
@@ -112,7 +132,7 @@ public class GetLoginKeyListRequest {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(keyName, pageNo, pageSize, responseFormatType);
+		return Objects.hash(regionCode, keyName, pageNo, pageSize, responseFormatType);
 	}
 
 
@@ -121,6 +141,7 @@ public class GetLoginKeyListRequest {
 		StringBuilder sb = new StringBuilder();
 		sb.append("class GetLoginKeyListRequest {\n");
 		
+		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		keyName: ").append(toIndentedString(keyName)).append("\n");
 		sb.append("		pageNo: ").append(toIndentedString(pageNo)).append("\n");
 		sb.append("		pageSize: ").append(toIndentedString(pageSize)).append("\n");

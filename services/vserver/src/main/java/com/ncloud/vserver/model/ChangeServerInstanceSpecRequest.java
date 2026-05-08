@@ -22,6 +22,8 @@ public class ChangeServerInstanceSpecRequest {
 
 	private String serverInstanceNo = null;
 
+	private String serverSpecCode = null;
+
 	private String serverProductCode = null;
 
 	private String responseFormatType = null;
@@ -58,6 +60,23 @@ public class ChangeServerInstanceSpecRequest {
 
 	public void setServerInstanceNo(String serverInstanceNo) {
 		this.serverInstanceNo = serverInstanceNo;
+	}
+
+	public ChangeServerInstanceSpecRequest serverSpecCode(String serverSpecCode) {
+		this.serverSpecCode = serverSpecCode;
+		return this;
+	}
+
+	 /**
+	 * 서버스펙코드
+	 * @return serverSpecCode
+	**/
+	public String getServerSpecCode() {
+		return serverSpecCode;
+	}
+
+	public void setServerSpecCode(String serverSpecCode) {
+		this.serverSpecCode = serverSpecCode;
 	}
 
 	public ChangeServerInstanceSpecRequest serverProductCode(String serverProductCode) {
@@ -106,13 +125,14 @@ public class ChangeServerInstanceSpecRequest {
 		ChangeServerInstanceSpecRequest changeServerInstanceSpecRequest = (ChangeServerInstanceSpecRequest) o;
 		return Objects.equals(this.regionCode, changeServerInstanceSpecRequest.regionCode) &&
 				Objects.equals(this.serverInstanceNo, changeServerInstanceSpecRequest.serverInstanceNo) &&
+				Objects.equals(this.serverSpecCode, changeServerInstanceSpecRequest.serverSpecCode) &&
 				Objects.equals(this.serverProductCode, changeServerInstanceSpecRequest.serverProductCode) &&
 				Objects.equals(this.responseFormatType, changeServerInstanceSpecRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, serverInstanceNo, serverProductCode, responseFormatType);
+		return Objects.hash(regionCode, serverInstanceNo, serverSpecCode, serverProductCode, responseFormatType);
 	}
 
 
@@ -123,6 +143,7 @@ public class ChangeServerInstanceSpecRequest {
 		
 		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		serverInstanceNo: ").append(toIndentedString(serverInstanceNo)).append("\n");
+		sb.append("		serverSpecCode: ").append(toIndentedString(serverSpecCode)).append("\n");
 		sb.append("		serverProductCode: ").append(toIndentedString(serverProductCode)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");

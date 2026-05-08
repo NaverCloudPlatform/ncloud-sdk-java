@@ -22,6 +22,8 @@ import java.util.List;
 public class GetBlockStorageInstanceListRequest {
 	private String regionCode = null;
 
+	private String zoneCode = null;
+
 	private String serverInstanceNo = null;
 
 	private List<String> blockStorageTypeCodeList = null;
@@ -67,6 +69,23 @@ public class GetBlockStorageInstanceListRequest {
 
 	public void setRegionCode(String regionCode) {
 		this.regionCode = regionCode;
+	}
+
+	public GetBlockStorageInstanceListRequest zoneCode(String zoneCode) {
+		this.zoneCode = zoneCode;
+		return this;
+	}
+
+	 /**
+	 * ZONE코드
+	 * @return zoneCode
+	**/
+	public String getZoneCode() {
+		return zoneCode;
+	}
+
+	public void setZoneCode(String zoneCode) {
+		this.zoneCode = zoneCode;
 	}
 
 	public GetBlockStorageInstanceListRequest serverInstanceNo(String serverInstanceNo) {
@@ -367,6 +386,7 @@ public class GetBlockStorageInstanceListRequest {
 		}
 		GetBlockStorageInstanceListRequest getBlockStorageInstanceListRequest = (GetBlockStorageInstanceListRequest) o;
 		return Objects.equals(this.regionCode, getBlockStorageInstanceListRequest.regionCode) &&
+				Objects.equals(this.zoneCode, getBlockStorageInstanceListRequest.zoneCode) &&
 				Objects.equals(this.serverInstanceNo, getBlockStorageInstanceListRequest.serverInstanceNo) &&
 				Objects.equals(this.blockStorageTypeCodeList, getBlockStorageInstanceListRequest.blockStorageTypeCodeList) &&
 				Objects.equals(this.blockStorageInstanceStatusCode, getBlockStorageInstanceListRequest.blockStorageInstanceStatusCode) &&
@@ -386,7 +406,7 @@ public class GetBlockStorageInstanceListRequest {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, serverInstanceNo, blockStorageTypeCodeList, blockStorageInstanceStatusCode, pageNo, pageSize, blockStorageSize, blockStorageInstanceNoList, blockStorageName, serverName, connectionInfo, blockStorageDiskTypeCode, blockStorageDiskDetailTypeCode, blockStorageVolumeTypeCodeList, hypervisorTypeCodeList, responseFormatType);
+		return Objects.hash(regionCode, zoneCode, serverInstanceNo, blockStorageTypeCodeList, blockStorageInstanceStatusCode, pageNo, pageSize, blockStorageSize, blockStorageInstanceNoList, blockStorageName, serverName, connectionInfo, blockStorageDiskTypeCode, blockStorageDiskDetailTypeCode, blockStorageVolumeTypeCodeList, hypervisorTypeCodeList, responseFormatType);
 	}
 
 
@@ -396,6 +416,7 @@ public class GetBlockStorageInstanceListRequest {
 		sb.append("class GetBlockStorageInstanceListRequest {\n");
 		
 		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
+		sb.append("		zoneCode: ").append(toIndentedString(zoneCode)).append("\n");
 		sb.append("		serverInstanceNo: ").append(toIndentedString(serverInstanceNo)).append("\n");
 		sb.append("		blockStorageTypeCodeList: ").append(toIndentedString(blockStorageTypeCodeList)).append("\n");
 		sb.append("		blockStorageInstanceStatusCode: ").append(toIndentedString(blockStorageInstanceStatusCode)).append("\n");

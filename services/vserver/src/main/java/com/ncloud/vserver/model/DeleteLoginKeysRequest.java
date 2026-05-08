@@ -20,9 +20,28 @@ import java.util.List;
  * DeleteLoginKeysRequest
  */
 public class DeleteLoginKeysRequest {
+	private String regionCode = null;
+
 	private List<String> keyNameList = new ArrayList<String>();
 
 	private String responseFormatType = null;
+
+	public DeleteLoginKeysRequest regionCode(String regionCode) {
+		this.regionCode = regionCode;
+		return this;
+	}
+
+	 /**
+	 * REGION코드
+	 * @return regionCode
+	**/
+	public String getRegionCode() {
+		return regionCode;
+	}
+
+	public void setRegionCode(String regionCode) {
+		this.regionCode = regionCode;
+	}
 
 	public DeleteLoginKeysRequest keyNameList(List<String> keyNameList) {
 		this.keyNameList = keyNameList;
@@ -73,13 +92,14 @@ public class DeleteLoginKeysRequest {
 			return false;
 		}
 		DeleteLoginKeysRequest deleteLoginKeysRequest = (DeleteLoginKeysRequest) o;
-		return Objects.equals(this.keyNameList, deleteLoginKeysRequest.keyNameList) &&
+		return Objects.equals(this.regionCode, deleteLoginKeysRequest.regionCode) &&
+				Objects.equals(this.keyNameList, deleteLoginKeysRequest.keyNameList) &&
 				Objects.equals(this.responseFormatType, deleteLoginKeysRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(keyNameList, responseFormatType);
+		return Objects.hash(regionCode, keyNameList, responseFormatType);
 	}
 
 
@@ -88,6 +108,7 @@ public class DeleteLoginKeysRequest {
 		StringBuilder sb = new StringBuilder();
 		sb.append("class DeleteLoginKeysRequest {\n");
 		
+		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		keyNameList: ").append(toIndentedString(keyNameList)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");

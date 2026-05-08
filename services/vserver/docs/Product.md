@@ -19,6 +19,7 @@ Name | Type | Description | Notes
 **dbKindCode** | **String** | DB유형코드 |  [optional]
 **addBlockStorageSize** | **Long** | 추가블록스토리지사이즈 |  [optional]
 **generationCode** | **String** | 세대코드 |  [optional]
+**osMemorySize** | **Long** | OS메모리사이즈 |  [optional]
 
 
 

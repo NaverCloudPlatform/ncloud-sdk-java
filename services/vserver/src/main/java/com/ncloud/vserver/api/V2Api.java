@@ -30,7 +30,8 @@ import com.ncloud.vserver.model.AddNetworkInterfaceAccessControlGroupRequest;
 import com.ncloud.vserver.model.AddNetworkInterfaceAccessControlGroupResponse;
 import com.ncloud.vserver.model.AddPlacementGroupServerInstanceRequest;
 import com.ncloud.vserver.model.AddPlacementGroupServerInstanceResponse;
-import com.ncloud.vserver.model.AddServerImageSharingPermissionReqeuset;
+import com.ncloud.vserver.model.AddServerImageSharingPermissionRequest;
+import com.ncloud.vserver.model.AddServerImageSharingPermissionResponse;
 import com.ncloud.vserver.model.AssignSecondaryIpsRequest;
 import com.ncloud.vserver.model.AssignSecondaryIpsResponse;
 import com.ncloud.vserver.model.AssociatePublicIpWithServerInstanceRequest;
@@ -43,6 +44,14 @@ import com.ncloud.vserver.model.ChangeBlockStorageInstanceRequest;
 import com.ncloud.vserver.model.ChangeBlockStorageInstanceResponse;
 import com.ncloud.vserver.model.ChangeBlockStorageVolumeSizeRequest;
 import com.ncloud.vserver.model.ChangeBlockStorageVolumeSizeResponse;
+import com.ncloud.vserver.model.ChangeFabricClusterDescriptionRequest;
+import com.ncloud.vserver.model.ChangeFabricClusterDescriptionResponse;
+import com.ncloud.vserver.model.ChangeFabricClusterNameRequest;
+import com.ncloud.vserver.model.ChangeFabricClusterNameResponse;
+import com.ncloud.vserver.model.ChangeFabricClusterServerInstancesRequest;
+import com.ncloud.vserver.model.ChangeFabricClusterServerInstancesResponse;
+import com.ncloud.vserver.model.ChangeServerInstanceNameRequest;
+import com.ncloud.vserver.model.ChangeServerInstanceNameResponse;
 import com.ncloud.vserver.model.ChangeServerInstanceSpecRequest;
 import com.ncloud.vserver.model.ChangeServerInstanceSpecResponse;
 import com.ncloud.vserver.model.CreateAccessControlGroupRequest;
@@ -51,6 +60,8 @@ import com.ncloud.vserver.model.CreateBlockStorageInstanceRequest;
 import com.ncloud.vserver.model.CreateBlockStorageInstanceResponse;
 import com.ncloud.vserver.model.CreateBlockStorageSnapshotInstanceRequest;
 import com.ncloud.vserver.model.CreateBlockStorageSnapshotInstanceResponse;
+import com.ncloud.vserver.model.CreateFabricClusterRequest;
+import com.ncloud.vserver.model.CreateFabricClusterResponse;
 import com.ncloud.vserver.model.CreateInitScriptRequest;
 import com.ncloud.vserver.model.CreateInitScriptResponse;
 import com.ncloud.vserver.model.CreateLoginKeyRequest;
@@ -64,7 +75,9 @@ import com.ncloud.vserver.model.CreatePlacementGroupResponse;
 import com.ncloud.vserver.model.CreatePublicIpInstanceRequest;
 import com.ncloud.vserver.model.CreatePublicIpInstanceResponse;
 import com.ncloud.vserver.model.CreateServerImageFromSnapshotRequest;
+import com.ncloud.vserver.model.CreateServerImageFromSnapshotResponse;
 import com.ncloud.vserver.model.CreateServerImageRequest;
+import com.ncloud.vserver.model.CreateServerImageResponse;
 import com.ncloud.vserver.model.CreateServerInstancesRequest;
 import com.ncloud.vserver.model.CreateServerInstancesResponse;
 import com.ncloud.vserver.model.DeleteAccessControlGroupRequest;
@@ -73,6 +86,8 @@ import com.ncloud.vserver.model.DeleteBlockStorageInstancesRequest;
 import com.ncloud.vserver.model.DeleteBlockStorageInstancesResponse;
 import com.ncloud.vserver.model.DeleteBlockStorageSnapshotInstancesRequest;
 import com.ncloud.vserver.model.DeleteBlockStorageSnapshotInstancesResponse;
+import com.ncloud.vserver.model.DeleteFabricClusterRequest;
+import com.ncloud.vserver.model.DeleteFabricClusterResponse;
 import com.ncloud.vserver.model.DeleteInitScriptsRequest;
 import com.ncloud.vserver.model.DeleteInitScriptsResponse;
 import com.ncloud.vserver.model.DeleteLoginKeysRequest;
@@ -86,6 +101,7 @@ import com.ncloud.vserver.model.DeletePlacementGroupResponse;
 import com.ncloud.vserver.model.DeletePublicIpInstanceRequest;
 import com.ncloud.vserver.model.DeletePublicIpInstanceResponse;
 import com.ncloud.vserver.model.DeleteServerImageRequest;
+import com.ncloud.vserver.model.DeleteServerImageResponse;
 import com.ncloud.vserver.model.DetachBlockStorageInstancesRequest;
 import com.ncloud.vserver.model.DetachBlockStorageInstancesResponse;
 import com.ncloud.vserver.model.DetachNetworkInterfaceRequest;
@@ -111,6 +127,12 @@ import com.ncloud.vserver.model.GetBlockStorageSnapshotInstanceListRequest;
 import com.ncloud.vserver.model.GetBlockStorageSnapshotInstanceListResponse;
 import com.ncloud.vserver.model.GetBlockStorageVolumeTypeListRequest;
 import com.ncloud.vserver.model.GetBlockStorageVolumeTypeListResponse;
+import com.ncloud.vserver.model.GetFabricClusterDetailRequest;
+import com.ncloud.vserver.model.GetFabricClusterDetailResponse;
+import com.ncloud.vserver.model.GetFabricClusterListRequest;
+import com.ncloud.vserver.model.GetFabricClusterListResponse;
+import com.ncloud.vserver.model.GetFabricClusterPoolListRequest;
+import com.ncloud.vserver.model.GetFabricClusterPoolListResponse;
 import com.ncloud.vserver.model.GetFlowLogConfigurationListRequest;
 import com.ncloud.vserver.model.GetHypervisorTypeListRequest;
 import com.ncloud.vserver.model.GetHypervisorTypeListResponse;
@@ -147,7 +169,9 @@ import com.ncloud.vserver.model.GetRootPasswordResponse;
 import com.ncloud.vserver.model.GetRootPasswordServerInstanceListRequest;
 import com.ncloud.vserver.model.GetRootPasswordServerInstanceListResponse;
 import com.ncloud.vserver.model.GetServerImageDetailRequest;
+import com.ncloud.vserver.model.GetServerImageDetailResponse;
 import com.ncloud.vserver.model.GetServerImageListRequest;
+import com.ncloud.vserver.model.GetServerImageListResponse;
 import com.ncloud.vserver.model.GetServerImageProductListRequest;
 import com.ncloud.vserver.model.GetServerImageProductListResponse;
 import com.ncloud.vserver.model.GetServerInstanceDetailRequest;
@@ -157,7 +181,9 @@ import com.ncloud.vserver.model.GetServerInstanceListResponse;
 import com.ncloud.vserver.model.GetServerProductListRequest;
 import com.ncloud.vserver.model.GetServerProductListResponse;
 import com.ncloud.vserver.model.GetServerSpecDetailRequest;
+import com.ncloud.vserver.model.GetServerSpecDetailResponse;
 import com.ncloud.vserver.model.GetServerSpecListRequest;
+import com.ncloud.vserver.model.GetServerSpecListResponse;
 import com.ncloud.vserver.model.GetZoneListRequest;
 import com.ncloud.vserver.model.GetZoneListResponse;
 import com.ncloud.vserver.model.ImportLoginKeyRequest;
@@ -177,6 +203,7 @@ import com.ncloud.vserver.model.RemoveNetworkInterfaceAccessControlGroupResponse
 import com.ncloud.vserver.model.RemovePlacementGroupServerInstanceRequest;
 import com.ncloud.vserver.model.RemovePlacementGroupServerInstanceResponse;
 import com.ncloud.vserver.model.RemoveServerImageSharingPermissionRequest;
+import com.ncloud.vserver.model.RemoveServerImageSharingPermissionResponse;
 import com.ncloud.vserver.model.SetBlockStorageReturnProtectionRequest;
 import com.ncloud.vserver.model.SetBlockStorageReturnProtectionResponse;
 import com.ncloud.vserver.model.SetMemberServerImageSharingPermissionRequest;
@@ -191,6 +218,8 @@ import com.ncloud.vserver.model.TerminateServerInstancesRequest;
 import com.ncloud.vserver.model.TerminateServerInstancesResponse;
 import com.ncloud.vserver.model.UnassignSecondaryIpsRequest;
 import com.ncloud.vserver.model.UnassignSecondaryIpsResponse;
+import com.ncloud.vserver.model.UpdateFabricClusterRequest;
+import com.ncloud.vserver.model.UpdateFabricClusterResponse;
 
 public class V2Api {
 
@@ -988,12 +1017,13 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 
-	 * @param addServerImageSharingPermissionRequest  (required)
+	 * 서버이미지공유권한추가
+	 * @param addServerImageSharingPermissionRequest addServerImageSharingPermissionRequest (required)
+	 * @return AddServerImageSharingPermissionResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void addServerImageSharingPermissionGet(AddServerImageSharingPermissionReqeuset addServerImageSharingPermissionRequest) throws ApiException, SdkException {
+	public ApiResponse<AddServerImageSharingPermissionResponse> addServerImageSharingPermissionGet(AddServerImageSharingPermissionRequest addServerImageSharingPermissionRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/addServerImageSharingPermission";
@@ -1016,23 +1046,24 @@ public class V2Api {
 
 		// content-type
 		final String[] contentTypes = {
-			
+			"application/x-www-form-urlencoded"
 		};
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, addServerImageSharingPermissionRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, AddServerImageSharingPermissionResponse.class);
 	}
 
 	/**
 	 * 
-	 * 
+	 * 서버이미지공유권한추가
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
-	 *	addServerImageSharingPermissionRequest  (required)
+	 *	addServerImageSharingPermissionRequest addServerImageSharingPermissionRequest (required)
 	 * @return byte[]
+	 *	AddServerImageSharingPermissionResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -1053,7 +1084,7 @@ public class V2Api {
 
 		// content-type
 		final String[] contentTypes = {
-			
+			"application/x-www-form-urlencoded"
 		};
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
@@ -1064,12 +1095,13 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 
-	 * @param addServerImageSharingPermissionRequest  (required)
+	 * 서버이미지공유권한추가
+	 * @param addServerImageSharingPermissionRequest addServerImageSharingPermissionRequest (required)
+	 * @return AddServerImageSharingPermissionResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void addServerImageSharingPermissionPost(AddServerImageSharingPermissionReqeuset addServerImageSharingPermissionRequest) throws ApiException, SdkException {
+	public ApiResponse<AddServerImageSharingPermissionResponse> addServerImageSharingPermissionPost(AddServerImageSharingPermissionRequest addServerImageSharingPermissionRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/addServerImageSharingPermission";
@@ -1092,23 +1124,24 @@ public class V2Api {
 
 		// content-type
 		final String[] contentTypes = {
-			
+			"application/x-www-form-urlencoded"
 		};
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
-		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, addServerImageSharingPermissionRequest, false, false);
-		apiClient.call(apiRequest);
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, addServerImageSharingPermissionRequest, true, false);
+		return apiClient.call(apiRequest, AddServerImageSharingPermissionResponse.class);
 	}
 
 	/**
 	 * 
-	 * 
+	 * 서버이미지공유권한추가
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
-	 *	addServerImageSharingPermissionRequest  (required)
+	 *	addServerImageSharingPermissionRequest addServerImageSharingPermissionRequest (required)
 	 * @return byte[]
+	 *	AddServerImageSharingPermissionResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -1129,12 +1162,12 @@ public class V2Api {
 
 		// content-type
 		final String[] contentTypes = {
-			
+			"application/x-www-form-urlencoded"
 		};
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
-		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, false, false);
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
 		return apiClient.call(apiRequest, byte[].class);
 	}
 
@@ -2076,6 +2109,630 @@ public class V2Api {
 
 	/**
 	 * 
+	 * Fabric Cluster 설명 변경
+	 * @param changeFabricClusterDescriptionRequest changeFabricClusterDescriptionRequest (required)
+	 * @return ChangeFabricClusterDescriptionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeFabricClusterDescriptionResponse> changeFabricClusterDescriptionGet(ChangeFabricClusterDescriptionRequest changeFabricClusterDescriptionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/changeFabricClusterDescription";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, changeFabricClusterDescriptionRequest, true, false);
+		return apiClient.call(apiRequest, ChangeFabricClusterDescriptionResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 설명 변경
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeFabricClusterDescriptionRequest changeFabricClusterDescriptionRequest (required)
+	 * @return byte[]
+	 *	ChangeFabricClusterDescriptionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> changeFabricClusterDescriptionGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/changeFabricClusterDescription";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 설명 변경
+	 * @param changeFabricClusterDescriptionRequest changeFabricClusterDescriptionRequest (required)
+	 * @return ChangeFabricClusterDescriptionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeFabricClusterDescriptionResponse> changeFabricClusterDescriptionPost(ChangeFabricClusterDescriptionRequest changeFabricClusterDescriptionRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/changeFabricClusterDescription";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, changeFabricClusterDescriptionRequest, true, false);
+		return apiClient.call(apiRequest, ChangeFabricClusterDescriptionResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 설명 변경
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeFabricClusterDescriptionRequest changeFabricClusterDescriptionRequest (required)
+	 * @return byte[]
+	 *	ChangeFabricClusterDescriptionResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> changeFabricClusterDescriptionPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/changeFabricClusterDescription";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 이름 변경
+	 * @param changeFabricClusterNameRequest changeFabricClusterNameRequest (required)
+	 * @return ChangeFabricClusterNameResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeFabricClusterNameResponse> changeFabricClusterNameGet(ChangeFabricClusterNameRequest changeFabricClusterNameRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/changeFabricClusterName";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, changeFabricClusterNameRequest, true, false);
+		return apiClient.call(apiRequest, ChangeFabricClusterNameResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 이름 변경
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeFabricClusterNameRequest changeFabricClusterNameRequest (required)
+	 * @return byte[]
+	 *	ChangeFabricClusterNameResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> changeFabricClusterNameGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/changeFabricClusterName";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 이름 변경
+	 * @param changeFabricClusterNameRequest changeFabricClusterNameRequest (required)
+	 * @return ChangeFabricClusterNameResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeFabricClusterNameResponse> changeFabricClusterNamePost(ChangeFabricClusterNameRequest changeFabricClusterNameRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/changeFabricClusterName";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, changeFabricClusterNameRequest, true, false);
+		return apiClient.call(apiRequest, ChangeFabricClusterNameResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 이름 변경
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeFabricClusterNameRequest changeFabricClusterNameRequest (required)
+	 * @return byte[]
+	 *	ChangeFabricClusterNameResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> changeFabricClusterNamePost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/changeFabricClusterName";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 변경
+	 * @param changeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest (required)
+	 * @return ChangeFabricClusterServerInstancesResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeFabricClusterServerInstancesResponse> changeFabricClusterServerInstancesGet(ChangeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/changeFabricClusterServerInstances";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, changeFabricClusterServerInstancesRequest, true, false);
+		return apiClient.call(apiRequest, ChangeFabricClusterServerInstancesResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 변경
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest (required)
+	 * @return byte[]
+	 *	ChangeFabricClusterServerInstancesResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> changeFabricClusterServerInstancesGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/changeFabricClusterServerInstances";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 변경
+	 * @param changeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest (required)
+	 * @return ChangeFabricClusterServerInstancesResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeFabricClusterServerInstancesResponse> changeFabricClusterServerInstancesPost(ChangeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/changeFabricClusterServerInstances";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, changeFabricClusterServerInstancesRequest, true, false);
+		return apiClient.call(apiRequest, ChangeFabricClusterServerInstancesResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 변경
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest (required)
+	 * @return byte[]
+	 *	ChangeFabricClusterServerInstancesResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> changeFabricClusterServerInstancesPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/changeFabricClusterServerInstances";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 서버인스턴스이름변경
+	 * @param changeServerInstanceNameRequest changeServerInstanceNameRequest (required)
+	 * @return ChangeServerInstanceNameResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeServerInstanceNameResponse> changeServerInstanceNameGet(ChangeServerInstanceNameRequest changeServerInstanceNameRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/changeServerInstanceName";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, changeServerInstanceNameRequest, true, false);
+		return apiClient.call(apiRequest, ChangeServerInstanceNameResponse.class);
+	}
+
+	/**
+	 * 
+	 * 서버인스턴스이름변경
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeServerInstanceNameRequest changeServerInstanceNameRequest (required)
+	 * @return byte[]
+	 *	ChangeServerInstanceNameResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> changeServerInstanceNameGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/changeServerInstanceName";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * 서버인스턴스이름변경
+	 * @param changeServerInstanceNameRequest changeServerInstanceNameRequest (required)
+	 * @return ChangeServerInstanceNameResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeServerInstanceNameResponse> changeServerInstanceNamePost(ChangeServerInstanceNameRequest changeServerInstanceNameRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/changeServerInstanceName";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, changeServerInstanceNameRequest, true, false);
+		return apiClient.call(apiRequest, ChangeServerInstanceNameResponse.class);
+	}
+
+	/**
+	 * 
+	 * 서버인스턴스이름변경
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeServerInstanceNameRequest changeServerInstanceNameRequest (required)
+	 * @return byte[]
+	 *	ChangeServerInstanceNameResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> changeServerInstanceNamePost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/changeServerInstanceName";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
 	 * 서버인스턴스스펙변경
 	 * @param changeServerInstanceSpecRequest changeServerInstanceSpecRequest (required)
 	 * @return ChangeServerInstanceSpecResponse
@@ -2679,6 +3336,162 @@ public class V2Api {
 		
 		// path
 		String path = "/createBlockStorageSnapshotInstance";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 생성
+	 * @param createFabricClusterRequest createFabricClusterRequest (required)
+	 * @return CreateFabricClusterResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<CreateFabricClusterResponse> createFabricClusterGet(CreateFabricClusterRequest createFabricClusterRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/createFabricCluster";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, createFabricClusterRequest, true, false);
+		return apiClient.call(apiRequest, CreateFabricClusterResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 생성
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	createFabricClusterRequest createFabricClusterRequest (required)
+	 * @return byte[]
+	 *	CreateFabricClusterResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> createFabricClusterGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/createFabricCluster";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 생성
+	 * @param createFabricClusterRequest createFabricClusterRequest (required)
+	 * @return CreateFabricClusterResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<CreateFabricClusterResponse> createFabricClusterPost(CreateFabricClusterRequest createFabricClusterRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/createFabricCluster";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, createFabricClusterRequest, true, false);
+		return apiClient.call(apiRequest, CreateFabricClusterResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 생성
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	createFabricClusterRequest createFabricClusterRequest (required)
+	 * @return byte[]
+	 *	CreateFabricClusterResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> createFabricClusterPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/createFabricCluster";
 
 		// accept
 		final String[] accepts = {
@@ -3638,10 +4451,11 @@ public class V2Api {
 	 * 
 	 * createServerImageFromSnapshot
 	 * @param createServerImageFromSnapshotRequest createServerImageFromSnapshotRequest (required)
+	 * @return CreateServerImageFromSnapshotResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void createServerImageFromSnapshotGet(CreateServerImageFromSnapshotRequest createServerImageFromSnapshotRequest) throws ApiException, SdkException {
+	public ApiResponse<CreateServerImageFromSnapshotResponse> createServerImageFromSnapshotGet(CreateServerImageFromSnapshotRequest createServerImageFromSnapshotRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/createServerImageFromSnapshot";
@@ -3670,7 +4484,7 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, createServerImageFromSnapshotRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, CreateServerImageFromSnapshotResponse.class);
 	}
 
 	/**
@@ -3681,6 +4495,7 @@ public class V2Api {
 	 * @param body
 	 *	createServerImageFromSnapshotRequest createServerImageFromSnapshotRequest (required)
 	 * @return byte[]
+	 *	CreateServerImageFromSnapshotResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -3714,10 +4529,11 @@ public class V2Api {
 	 * 
 	 * createServerImageFromSnapshot
 	 * @param createServerImageFromSnapshotRequest createServerImageFromSnapshotRequest (required)
+	 * @return CreateServerImageFromSnapshotResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void createServerImageFromSnapshotPost(CreateServerImageFromSnapshotRequest createServerImageFromSnapshotRequest) throws ApiException, SdkException {
+	public ApiResponse<CreateServerImageFromSnapshotResponse> createServerImageFromSnapshotPost(CreateServerImageFromSnapshotRequest createServerImageFromSnapshotRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/createServerImageFromSnapshot";
@@ -3746,7 +4562,7 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, createServerImageFromSnapshotRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, CreateServerImageFromSnapshotResponse.class);
 	}
 
 	/**
@@ -3757,6 +4573,7 @@ public class V2Api {
 	 * @param body
 	 *	createServerImageFromSnapshotRequest createServerImageFromSnapshotRequest (required)
 	 * @return byte[]
+	 *	CreateServerImageFromSnapshotResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -3790,10 +4607,11 @@ public class V2Api {
 	 * 
 	 * createServerImage
 	 * @param createServerImageRequest createServerImageRequest (required)
+	 * @return CreateServerImageResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void createServerImageGet(CreateServerImageRequest createServerImageRequest) throws ApiException, SdkException {
+	public ApiResponse<CreateServerImageResponse> createServerImageGet(CreateServerImageRequest createServerImageRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/createServerImage";
@@ -3822,7 +4640,7 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, createServerImageRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, CreateServerImageResponse.class);
 	}
 
 	/**
@@ -3833,6 +4651,7 @@ public class V2Api {
 	 * @param body
 	 *	createServerImageRequest createServerImageRequest (required)
 	 * @return byte[]
+	 *	CreateServerImageResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -3866,10 +4685,11 @@ public class V2Api {
 	 * 
 	 * createServerImage
 	 * @param createServerImageRequest createServerImageRequest (required)
+	 * @return CreateServerImageResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void createServerImagePost(CreateServerImageRequest createServerImageRequest) throws ApiException, SdkException {
+	public ApiResponse<CreateServerImageResponse> createServerImagePost(CreateServerImageRequest createServerImageRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/createServerImage";
@@ -3898,7 +4718,7 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, createServerImageRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, CreateServerImageResponse.class);
 	}
 
 	/**
@@ -3909,6 +4729,7 @@ public class V2Api {
 	 * @param body
 	 *	createServerImageRequest createServerImageRequest (required)
 	 * @return byte[]
+	 *	CreateServerImageResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -4543,6 +5364,162 @@ public class V2Api {
 		
 		// path
 		String path = "/deleteBlockStorageSnapshotInstances";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 삭제
+	 * @param deleteFabricClusterRequest deleteFabricClusterRequest (required)
+	 * @return DeleteFabricClusterResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<DeleteFabricClusterResponse> deleteFabricClusterGet(DeleteFabricClusterRequest deleteFabricClusterRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/deleteFabricCluster";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, deleteFabricClusterRequest, true, false);
+		return apiClient.call(apiRequest, DeleteFabricClusterResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 삭제
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	deleteFabricClusterRequest deleteFabricClusterRequest (required)
+	 * @return byte[]
+	 *	DeleteFabricClusterResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> deleteFabricClusterGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/deleteFabricCluster";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 삭제
+	 * @param deleteFabricClusterRequest deleteFabricClusterRequest (required)
+	 * @return DeleteFabricClusterResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<DeleteFabricClusterResponse> deleteFabricClusterPost(DeleteFabricClusterRequest deleteFabricClusterRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/deleteFabricCluster";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, deleteFabricClusterRequest, true, false);
+		return apiClient.call(apiRequest, DeleteFabricClusterResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 삭제
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	deleteFabricClusterRequest deleteFabricClusterRequest (required)
+	 * @return byte[]
+	 *	DeleteFabricClusterResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> deleteFabricClusterPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/deleteFabricCluster";
 
 		// accept
 		final String[] accepts = {
@@ -5502,10 +6479,11 @@ public class V2Api {
 	 * 
 	 * deleteServerImage
 	 * @param deleteServerImageRequest deleteServerImageRequest (required)
+	 * @return DeleteServerImageResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void deleteServerImageGet(DeleteServerImageRequest deleteServerImageRequest) throws ApiException, SdkException {
+	public ApiResponse<DeleteServerImageResponse> deleteServerImageGet(DeleteServerImageRequest deleteServerImageRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/deleteServerImage";
@@ -5534,7 +6512,7 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, deleteServerImageRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, DeleteServerImageResponse.class);
 	}
 
 	/**
@@ -5545,6 +6523,7 @@ public class V2Api {
 	 * @param body
 	 *	deleteServerImageRequest deleteServerImageRequest (required)
 	 * @return byte[]
+	 *	DeleteServerImageResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -5578,10 +6557,11 @@ public class V2Api {
 	 * 
 	 * deleteServerImage
 	 * @param deleteServerImageRequest deleteServerImageRequest (required)
+	 * @return DeleteServerImageResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void deleteServerImagePost(DeleteServerImageRequest deleteServerImageRequest) throws ApiException, SdkException {
+	public ApiResponse<DeleteServerImageResponse> deleteServerImagePost(DeleteServerImageRequest deleteServerImageRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/deleteServerImage";
@@ -5610,7 +6590,7 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, deleteServerImageRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, DeleteServerImageResponse.class);
 	}
 
 	/**
@@ -5621,6 +6601,7 @@ public class V2Api {
 	 * @param body
 	 *	deleteServerImageRequest deleteServerImageRequest (required)
 	 * @return byte[]
+	 *	DeleteServerImageResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -7680,6 +8661,474 @@ public class V2Api {
 
 	/**
 	 * 
+	 * Fabric Cluster 상세 조회
+	 * @param getFabricClusterDetailRequest getFabricClusterDetailRequest (required)
+	 * @return GetFabricClusterDetailResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetFabricClusterDetailResponse> getFabricClusterDetailGet(GetFabricClusterDetailRequest getFabricClusterDetailRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getFabricClusterDetail";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getFabricClusterDetailRequest, true, false);
+		return apiClient.call(apiRequest, GetFabricClusterDetailResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 상세 조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getFabricClusterDetailRequest getFabricClusterDetailRequest (required)
+	 * @return byte[]
+	 *	GetFabricClusterDetailResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getFabricClusterDetailGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getFabricClusterDetail";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 상세 조회
+	 * @param getFabricClusterDetailRequest getFabricClusterDetailRequest (required)
+	 * @return GetFabricClusterDetailResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetFabricClusterDetailResponse> getFabricClusterDetailPost(GetFabricClusterDetailRequest getFabricClusterDetailRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getFabricClusterDetail";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getFabricClusterDetailRequest, true, false);
+		return apiClient.call(apiRequest, GetFabricClusterDetailResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 상세 조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getFabricClusterDetailRequest getFabricClusterDetailRequest (required)
+	 * @return byte[]
+	 *	GetFabricClusterDetailResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getFabricClusterDetailPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getFabricClusterDetail";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 리스트조회
+	 * @param getFabricClusterListRequest getFabricClusterListRequest (required)
+	 * @return GetFabricClusterListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetFabricClusterListResponse> getFabricClusterListGet(GetFabricClusterListRequest getFabricClusterListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getFabricClusterList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getFabricClusterListRequest, true, false);
+		return apiClient.call(apiRequest, GetFabricClusterListResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 리스트조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getFabricClusterListRequest getFabricClusterListRequest (required)
+	 * @return byte[]
+	 *	GetFabricClusterListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getFabricClusterListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getFabricClusterList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 리스트조회
+	 * @param getFabricClusterListRequest getFabricClusterListRequest (required)
+	 * @return GetFabricClusterListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetFabricClusterListResponse> getFabricClusterListPost(GetFabricClusterListRequest getFabricClusterListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getFabricClusterList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getFabricClusterListRequest, true, false);
+		return apiClient.call(apiRequest, GetFabricClusterListResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 리스트조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getFabricClusterListRequest getFabricClusterListRequest (required)
+	 * @return byte[]
+	 *	GetFabricClusterListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getFabricClusterListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getFabricClusterList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * FabricClusterPool 리스트조회
+	 * @param getFabricClusterPoolListRequest getFabricClusterPoolListRequest (required)
+	 * @return GetFabricClusterPoolListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetFabricClusterPoolListResponse> getFabricClusterPoolListGet(GetFabricClusterPoolListRequest getFabricClusterPoolListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getFabricClusterPoolList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getFabricClusterPoolListRequest, true, false);
+		return apiClient.call(apiRequest, GetFabricClusterPoolListResponse.class);
+	}
+
+	/**
+	 * 
+	 * FabricClusterPool 리스트조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getFabricClusterPoolListRequest getFabricClusterPoolListRequest (required)
+	 * @return byte[]
+	 *	GetFabricClusterPoolListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getFabricClusterPoolListGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getFabricClusterPoolList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * FabricClusterPool 리스트조회
+	 * @param getFabricClusterPoolListRequest getFabricClusterPoolListRequest (required)
+	 * @return GetFabricClusterPoolListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<GetFabricClusterPoolListResponse> getFabricClusterPoolListPost(GetFabricClusterPoolListRequest getFabricClusterPoolListRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/getFabricClusterPoolList";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getFabricClusterPoolListRequest, true, false);
+		return apiClient.call(apiRequest, GetFabricClusterPoolListResponse.class);
+	}
+
+	/**
+	 * 
+	 * FabricClusterPool 리스트조회
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	getFabricClusterPoolListRequest getFabricClusterPoolListRequest (required)
+	 * @return byte[]
+	 *	GetFabricClusterPoolListResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> getFabricClusterPoolListPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/getFabricClusterPoolList";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
 	 * FlogLog 설정정보 조회
 	 * @param getFlowLogConfigurationListRequest getFlowLogConfigurationListRequest (required)
 	 * @return FlowLogConfigurationList
@@ -7914,7 +9363,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 하이퍼바이저타입리스트조회 
+	 * 하이퍼바이저타입리스트조회
 	 * @param getHypervisorTypeListRequest  (required)
 	 * @return GetHypervisorTypeListResponse
 	 * @throws ApiException if fails to make API call
@@ -7954,7 +9403,7 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 하이퍼바이저타입리스트조회 
+	 * 하이퍼바이저타입리스트조회
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
@@ -10490,10 +11939,11 @@ public class V2Api {
 	 * 
 	 * 서버이미지상세조회
 	 * @param getServerImageDetailRequest  (required)
+	 * @return GetServerImageDetailResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void getServerImageDetailGet(GetServerImageDetailRequest getServerImageDetailRequest) throws ApiException, SdkException {
+	public ApiResponse<GetServerImageDetailResponse> getServerImageDetailGet(GetServerImageDetailRequest getServerImageDetailRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/getServerImageDetail";
@@ -10522,7 +11972,7 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getServerImageDetailRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, GetServerImageDetailResponse.class);
 	}
 
 	/**
@@ -10533,6 +11983,7 @@ public class V2Api {
 	 * @param body
 	 *	getServerImageDetailRequest  (required)
 	 * @return byte[]
+	 *	GetServerImageDetailResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -10566,10 +12017,11 @@ public class V2Api {
 	 * 
 	 * 서버이미지상세조회
 	 * @param getServerImageDetailRequest  (required)
+	 * @return GetServerImageDetailResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void getServerImageDetailPost(GetServerImageDetailRequest getServerImageDetailRequest) throws ApiException, SdkException {
+	public ApiResponse<GetServerImageDetailResponse> getServerImageDetailPost(GetServerImageDetailRequest getServerImageDetailRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/getServerImageDetail";
@@ -10598,7 +12050,7 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getServerImageDetailRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, GetServerImageDetailResponse.class);
 	}
 
 	/**
@@ -10609,6 +12061,7 @@ public class V2Api {
 	 * @param body
 	 *	getServerImageDetailRequest  (required)
 	 * @return byte[]
+	 *	GetServerImageDetailResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -10642,10 +12095,11 @@ public class V2Api {
 	 * 
 	 * 서버이미지리스트조회
 	 * @param getServerImageListRequest  (required)
+	 * @return GetServerImageListResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void getServerImageListGet(GetServerImageListRequest getServerImageListRequest) throws ApiException, SdkException {
+	public ApiResponse<GetServerImageListResponse> getServerImageListGet(GetServerImageListRequest getServerImageListRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/getServerImageList";
@@ -10674,7 +12128,7 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getServerImageListRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, GetServerImageListResponse.class);
 	}
 
 	/**
@@ -10685,6 +12139,7 @@ public class V2Api {
 	 * @param body
 	 *	getServerImageListRequest  (required)
 	 * @return byte[]
+	 *	GetServerImageListResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -10718,10 +12173,11 @@ public class V2Api {
 	 * 
 	 * 서버이미지리스트조회
 	 * @param getServerImageListRequest  (required)
+	 * @return GetServerImageListResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void getServerImageListPost(GetServerImageListRequest getServerImageListRequest) throws ApiException, SdkException {
+	public ApiResponse<GetServerImageListResponse> getServerImageListPost(GetServerImageListRequest getServerImageListRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/getServerImageList";
@@ -10750,7 +12206,7 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getServerImageListRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, GetServerImageListResponse.class);
 	}
 
 	/**
@@ -10761,6 +12217,7 @@ public class V2Api {
 	 * @param body
 	 *	getServerImageListRequest  (required)
 	 * @return byte[]
+	 *	GetServerImageListResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -11418,10 +12875,11 @@ public class V2Api {
 	 * 
 	 * 서버스펙상세조회
 	 * @param getServerSpecDetailRequest  (required)
+	 * @return GetServerSpecDetailResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void getServerSpecDetailGet(GetServerSpecDetailRequest getServerSpecDetailRequest) throws ApiException, SdkException {
+	public ApiResponse<GetServerSpecDetailResponse> getServerSpecDetailGet(GetServerSpecDetailRequest getServerSpecDetailRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/getServerSpecDetail";
@@ -11450,7 +12908,7 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getServerSpecDetailRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, GetServerSpecDetailResponse.class);
 	}
 
 	/**
@@ -11461,6 +12919,7 @@ public class V2Api {
 	 * @param body
 	 *	getServerSpecDetailRequest  (required)
 	 * @return byte[]
+	 *	GetServerSpecDetailResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -11494,10 +12953,11 @@ public class V2Api {
 	 * 
 	 * 서버스펙상세조회
 	 * @param getServerSpecDetailRequest  (required)
+	 * @return GetServerSpecDetailResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void getServerSpecDetailPost(GetServerSpecDetailRequest getServerSpecDetailRequest) throws ApiException, SdkException {
+	public ApiResponse<GetServerSpecDetailResponse> getServerSpecDetailPost(GetServerSpecDetailRequest getServerSpecDetailRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/getServerSpecDetail";
@@ -11526,7 +12986,7 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getServerSpecDetailRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, GetServerSpecDetailResponse.class);
 	}
 
 	/**
@@ -11537,6 +12997,7 @@ public class V2Api {
 	 * @param body
 	 *	getServerSpecDetailRequest  (required)
 	 * @return byte[]
+	 *	GetServerSpecDetailResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -11570,10 +13031,11 @@ public class V2Api {
 	 * 
 	 * 서버스펙리스트조회
 	 * @param getServerSpecListRequest  (required)
+	 * @return GetServerSpecListResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void getServerSpecListGet(GetServerSpecListRequest getServerSpecListRequest) throws ApiException, SdkException {
+	public ApiResponse<GetServerSpecListResponse> getServerSpecListGet(GetServerSpecListRequest getServerSpecListRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/getServerSpecList";
@@ -11602,7 +13064,7 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, getServerSpecListRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, GetServerSpecListResponse.class);
 	}
 
 	/**
@@ -11613,6 +13075,7 @@ public class V2Api {
 	 * @param body
 	 *	getServerSpecListRequest  (required)
 	 * @return byte[]
+	 *	GetServerSpecListResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -11646,10 +13109,11 @@ public class V2Api {
 	 * 
 	 * 서버스펙리스트조회
 	 * @param getServerSpecListRequest  (required)
+	 * @return GetServerSpecListResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void getServerSpecListPost(GetServerSpecListRequest getServerSpecListRequest) throws ApiException, SdkException {
+	public ApiResponse<GetServerSpecListResponse> getServerSpecListPost(GetServerSpecListRequest getServerSpecListRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/getServerSpecList";
@@ -11678,7 +13142,7 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, getServerSpecListRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, GetServerSpecListResponse.class);
 	}
 
 	/**
@@ -11689,6 +13153,7 @@ public class V2Api {
 	 * @param body
 	 *	getServerSpecListRequest  (required)
 	 * @return byte[]
+	 *	GetServerSpecListResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -13124,12 +14589,13 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 
-	 * @param removeServerImageSharingPermissionRequest  (required)
+	 * 서버이미지공유권한제거
+	 * @param removeServerImageSharingPermissionRequest removeServerImageSharingPermissionRequest (required)
+	 * @return RemoveServerImageSharingPermissionResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void removeServerImageSharingPermissionGet(RemoveServerImageSharingPermissionRequest removeServerImageSharingPermissionRequest) throws ApiException, SdkException {
+	public ApiResponse<RemoveServerImageSharingPermissionResponse> removeServerImageSharingPermissionGet(RemoveServerImageSharingPermissionRequest removeServerImageSharingPermissionRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/removeServerImageSharingPermission";
@@ -13158,17 +14624,18 @@ public class V2Api {
 		httpHeaders.put("content-type", contentType);
 
 		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, removeServerImageSharingPermissionRequest, true, false);
-		apiClient.call(apiRequest);
+		return apiClient.call(apiRequest, RemoveServerImageSharingPermissionResponse.class);
 	}
 
 	/**
 	 * 
-	 * 
+	 * 서버이미지공유권한제거
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
-	 *	removeServerImageSharingPermissionRequest  (required)
+	 *	removeServerImageSharingPermissionRequest removeServerImageSharingPermissionRequest (required)
 	 * @return byte[]
+	 *	RemoveServerImageSharingPermissionResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -13200,12 +14667,13 @@ public class V2Api {
 
 	/**
 	 * 
-	 * 
-	 * @param removeServerImageSharingPermissionRequest  (required)
+	 * 서버이미지공유권한제거
+	 * @param removeServerImageSharingPermissionRequest removeServerImageSharingPermissionRequest (required)
+	 * @return RemoveServerImageSharingPermissionResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
-	public void removeServerImageSharingPermissionPost(RemoveServerImageSharingPermissionRequest removeServerImageSharingPermissionRequest) throws ApiException, SdkException {
+	public ApiResponse<RemoveServerImageSharingPermissionResponse> removeServerImageSharingPermissionPost(RemoveServerImageSharingPermissionRequest removeServerImageSharingPermissionRequest) throws ApiException, SdkException {
 		
 		// path
 		String path = "/removeServerImageSharingPermission";
@@ -13233,18 +14701,19 @@ public class V2Api {
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
-		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, removeServerImageSharingPermissionRequest, false, false);
-		apiClient.call(apiRequest);
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, removeServerImageSharingPermissionRequest, true, false);
+		return apiClient.call(apiRequest, RemoveServerImageSharingPermissionResponse.class);
 	}
 
 	/**
 	 * 
-	 * 
+	 * 서버이미지공유권한제거
 	 * @param httpHeaders
 	 * @param queryParams
 	 * @param body
-	 *	removeServerImageSharingPermissionRequest  (required)
+	 *	removeServerImageSharingPermissionRequest removeServerImageSharingPermissionRequest (required)
 	 * @return byte[]
+	 *	RemoveServerImageSharingPermissionResponse
 	 * @throws ApiException if fails to make API call
 	 * @throws Exception if fails to make API call
 	 */
@@ -13270,7 +14739,7 @@ public class V2Api {
 		String contentType = apiClient.selectHeaderContentType(contentTypes);
 		httpHeaders.put("content-type", contentType);
 
-		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, false, false);
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
 		return apiClient.call(apiRequest, byte[].class);
 	}
 
@@ -14347,6 +15816,318 @@ public class V2Api {
 		
 		// path
 		String path = "/unassignSecondaryIps";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 수정
+	 * @param updateFabricClusterRequest updateFabricClusterRequest (required)
+	 * @return UpdateFabricClusterResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<UpdateFabricClusterResponse> updateFabricClusterGet(UpdateFabricClusterRequest updateFabricClusterRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/updateFabricCluster";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, updateFabricClusterRequest, true, false);
+		return apiClient.call(apiRequest, UpdateFabricClusterResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 수정
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	updateFabricClusterRequest updateFabricClusterRequest (required)
+	 * @return byte[]
+	 *	UpdateFabricClusterResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> updateFabricClusterGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/updateFabricCluster";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 수정
+	 * @param updateFabricClusterRequest updateFabricClusterRequest (required)
+	 * @return UpdateFabricClusterResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<UpdateFabricClusterResponse> updateFabricClusterPost(UpdateFabricClusterRequest updateFabricClusterRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/updateFabricCluster";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, updateFabricClusterRequest, true, false);
+		return apiClient.call(apiRequest, UpdateFabricClusterResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 수정
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	updateFabricClusterRequest updateFabricClusterRequest (required)
+	 * @return byte[]
+	 *	UpdateFabricClusterResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> updateFabricClusterPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/updateFabricCluster";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 업데이트
+	 * @param changeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest (required)
+	 * @return ChangeFabricClusterServerInstancesResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeFabricClusterServerInstancesResponse> updateFabricClusterServerInstancesGet(ChangeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/updateFabricClusterServerInstances";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, changeFabricClusterServerInstancesRequest, true, false);
+		return apiClient.call(apiRequest, ChangeFabricClusterServerInstancesResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 업데이트
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest (required)
+	 * @return byte[]
+	 *	ChangeFabricClusterServerInstancesResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> updateFabricClusterServerInstancesGet(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/updateFabricClusterServerInstances";
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "GET", path, queryParams, formParams, httpHeaders, body, true, false);
+		return apiClient.call(apiRequest, byte[].class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 업데이트
+	 * @param changeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest (required)
+	 * @return ChangeFabricClusterServerInstancesResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<ChangeFabricClusterServerInstancesResponse> updateFabricClusterServerInstancesPost(ChangeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest) throws ApiException, SdkException {
+		
+		// path
+		String path = "/updateFabricClusterServerInstances";
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// accept
+		final String[] accepts = {
+			
+		};
+		String accept = apiClient.selectHeaderAccept(accepts);
+		httpHeaders.put("accept", accept);
+
+		// content-type
+		final String[] contentTypes = {
+			"application/x-www-form-urlencoded"
+		};
+		String contentType = apiClient.selectHeaderContentType(contentTypes);
+		httpHeaders.put("content-type", contentType);
+
+		ApiRequest apiRequest = new ApiRequest(this.basePath, "POST", path, queryParams, formParams, httpHeaders, changeFabricClusterServerInstancesRequest, true, false);
+		return apiClient.call(apiRequest, ChangeFabricClusterServerInstancesResponse.class);
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 업데이트
+	 * @param httpHeaders
+	 * @param queryParams
+	 * @param body
+	 *	changeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest (required)
+	 * @return byte[]
+	 *	ChangeFabricClusterServerInstancesResponse
+	 * @throws ApiException if fails to make API call
+	 * @throws Exception if fails to make API call
+	 */
+	public ApiResponse<byte[]> updateFabricClusterServerInstancesPost(Map<String, Object> httpHeaders, Map<String, Object> queryParams, Map<String, Object> formParams, byte[] body) throws ApiException, SdkException {
+		httpHeaders = (httpHeaders == null) ? new HashMap() : httpHeaders;
+		queryParams = (queryParams == null) ? new HashMap() : queryParams;
+		formParams = (queryParams == null) ? new HashMap() : formParams;
+		
+		// path
+		String path = "/updateFabricClusterServerInstances";
 
 		// accept
 		final String[] accepts = {

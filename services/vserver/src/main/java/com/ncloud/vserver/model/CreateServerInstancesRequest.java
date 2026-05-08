@@ -14,6 +14,7 @@ package com.ncloud.vserver.model;
 
 import java.util.Objects;
 import com.ncloud.vserver.model.BlockDevicePartition;
+import com.ncloud.vserver.model.BlockStorageMappingParameter;
 import com.ncloud.vserver.model.NetworkInterfaceParameter;
 import java.util.ArrayList;
 import java.util.List;
@@ -61,6 +62,16 @@ public class CreateServerInstancesRequest {
 	private String raidTypeName = null;
 
 	private List<BlockDevicePartition> blockDevicePartitionList = null;
+
+	private String serverImageNo = null;
+
+	private String serverSpecCode = null;
+
+	private List<BlockStorageMappingParameter> blockStorageMappingList = null;
+
+	private String fabricClusterPoolNo = null;
+
+	private Boolean isPreInstallGpuDriver = null;
 
 	private String responseFormatType = null;
 
@@ -417,6 +428,99 @@ public class CreateServerInstancesRequest {
 		this.blockDevicePartitionList = blockDevicePartitionList;
 	}
 
+	public CreateServerInstancesRequest serverImageNo(String serverImageNo) {
+		this.serverImageNo = serverImageNo;
+		return this;
+	}
+
+	 /**
+	 * 서버이미지번호
+	 * @return serverImageNo
+	**/
+	public String getServerImageNo() {
+		return serverImageNo;
+	}
+
+	public void setServerImageNo(String serverImageNo) {
+		this.serverImageNo = serverImageNo;
+	}
+
+	public CreateServerInstancesRequest serverSpecCode(String serverSpecCode) {
+		this.serverSpecCode = serverSpecCode;
+		return this;
+	}
+
+	 /**
+	 * 서버스펙코드
+	 * @return serverSpecCode
+	**/
+	public String getServerSpecCode() {
+		return serverSpecCode;
+	}
+
+	public void setServerSpecCode(String serverSpecCode) {
+		this.serverSpecCode = serverSpecCode;
+	}
+
+	public CreateServerInstancesRequest blockStorageMappingList(List<BlockStorageMappingParameter> blockStorageMappingList) {
+		this.blockStorageMappingList = blockStorageMappingList;
+		return this;
+	}
+
+	public CreateServerInstancesRequest addBlockStorageMappingListItem(BlockStorageMappingParameter blockStorageMappingListItem) {
+		if (this.blockStorageMappingList == null) {
+			this.blockStorageMappingList = new ArrayList<BlockStorageMappingParameter>();
+		}
+		this.blockStorageMappingList.add(blockStorageMappingListItem);
+		return this;
+	}
+
+	 /**
+	 * 블록스토리지맵핑리스트
+	 * @return blockStorageMappingList
+	**/
+	public List<BlockStorageMappingParameter> getBlockStorageMappingList() {
+		return blockStorageMappingList;
+	}
+
+	public void setBlockStorageMappingList(List<BlockStorageMappingParameter> blockStorageMappingList) {
+		this.blockStorageMappingList = blockStorageMappingList;
+	}
+
+	public CreateServerInstancesRequest fabricClusterPoolNo(String fabricClusterPoolNo) {
+		this.fabricClusterPoolNo = fabricClusterPoolNo;
+		return this;
+	}
+
+	 /**
+	 * FabricClusterPool번호
+	 * @return fabricClusterPoolNo
+	**/
+	public String getFabricClusterPoolNo() {
+		return fabricClusterPoolNo;
+	}
+
+	public void setFabricClusterPoolNo(String fabricClusterPoolNo) {
+		this.fabricClusterPoolNo = fabricClusterPoolNo;
+	}
+
+	public CreateServerInstancesRequest isPreInstallGpuDriver(Boolean isPreInstallGpuDriver) {
+		this.isPreInstallGpuDriver = isPreInstallGpuDriver;
+		return this;
+	}
+
+	 /**
+	 * GPUDriver사전설치여부
+	 * @return isPreInstallGpuDriver
+	**/
+	public Boolean isIsPreInstallGpuDriver() {
+		return isPreInstallGpuDriver;
+	}
+
+	public void setIsPreInstallGpuDriver(Boolean isPreInstallGpuDriver) {
+		this.isPreInstallGpuDriver = isPreInstallGpuDriver;
+	}
+
 	public CreateServerInstancesRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -464,12 +568,17 @@ public class CreateServerInstancesRequest {
 				Objects.equals(this.associateWithPublicIp, createServerInstancesRequest.associateWithPublicIp) &&
 				Objects.equals(this.raidTypeName, createServerInstancesRequest.raidTypeName) &&
 				Objects.equals(this.blockDevicePartitionList, createServerInstancesRequest.blockDevicePartitionList) &&
+				Objects.equals(this.serverImageNo, createServerInstancesRequest.serverImageNo) &&
+				Objects.equals(this.serverSpecCode, createServerInstancesRequest.serverSpecCode) &&
+				Objects.equals(this.blockStorageMappingList, createServerInstancesRequest.blockStorageMappingList) &&
+				Objects.equals(this.fabricClusterPoolNo, createServerInstancesRequest.fabricClusterPoolNo) &&
+				Objects.equals(this.isPreInstallGpuDriver, createServerInstancesRequest.isPreInstallGpuDriver) &&
 				Objects.equals(this.responseFormatType, createServerInstancesRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, serverProductCode, serverImageProductCode, memberServerImageInstanceNo, serverName, serverDescription, loginKeyName, isProtectServerTermination, serverCreateCount, serverCreateStartNo, feeSystemTypeCode, initScriptNo, vpcNo, subnetNo, networkInterfaceList, placementGroupNo, isEncryptedBaseBlockStorageVolume, associateWithPublicIp, raidTypeName, blockDevicePartitionList, responseFormatType);
+		return Objects.hash(regionCode, serverProductCode, serverImageProductCode, memberServerImageInstanceNo, serverName, serverDescription, loginKeyName, isProtectServerTermination, serverCreateCount, serverCreateStartNo, feeSystemTypeCode, initScriptNo, vpcNo, subnetNo, networkInterfaceList, placementGroupNo, isEncryptedBaseBlockStorageVolume, associateWithPublicIp, raidTypeName, blockDevicePartitionList, serverImageNo, serverSpecCode, blockStorageMappingList, fabricClusterPoolNo, isPreInstallGpuDriver, responseFormatType);
 	}
 
 
@@ -498,6 +607,11 @@ public class CreateServerInstancesRequest {
 		sb.append("		associateWithPublicIp: ").append(toIndentedString(associateWithPublicIp)).append("\n");
 		sb.append("		raidTypeName: ").append(toIndentedString(raidTypeName)).append("\n");
 		sb.append("		blockDevicePartitionList: ").append(toIndentedString(blockDevicePartitionList)).append("\n");
+		sb.append("		serverImageNo: ").append(toIndentedString(serverImageNo)).append("\n");
+		sb.append("		serverSpecCode: ").append(toIndentedString(serverSpecCode)).append("\n");
+		sb.append("		blockStorageMappingList: ").append(toIndentedString(blockStorageMappingList)).append("\n");
+		sb.append("		fabricClusterPoolNo: ").append(toIndentedString(fabricClusterPoolNo)).append("\n");
+		sb.append("		isPreInstallGpuDriver: ").append(toIndentedString(isPreInstallGpuDriver)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

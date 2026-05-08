@@ -24,7 +24,7 @@ public class DeleteServerImageRequest {
 
 	private String responseFormatType = null;
 
-	private List<String> serverImageNoList = null;
+	private List<String> serverImageNoList = new ArrayList<String>();
 
 	public DeleteServerImageRequest regionCode(String regionCode) {
 		this.regionCode = regionCode;
@@ -66,9 +66,6 @@ public class DeleteServerImageRequest {
 	}
 
 	public DeleteServerImageRequest addServerImageNoListItem(String serverImageNoListItem) {
-		if (this.serverImageNoList == null) {
-			this.serverImageNoList = new ArrayList<String>();
-		}
 		this.serverImageNoList.add(serverImageNoListItem);
 		return this;
 	}

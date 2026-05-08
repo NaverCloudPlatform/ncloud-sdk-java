@@ -63,6 +63,10 @@ public class BlockStorageInstance {
 
 	private Long throughput = null;
 
+	private Long iops = null;
+
+	private Long blockStorageSnapshotInstanceNo = null;
+
 	public BlockStorageInstance blockStorageInstanceNo(String blockStorageInstanceNo) {
 		this.blockStorageInstanceNo = blockStorageInstanceNo;
 		return this;
@@ -437,6 +441,40 @@ public class BlockStorageInstance {
 		this.throughput = throughput;
 	}
 
+	public BlockStorageInstance iops(Long iops) {
+		this.iops = iops;
+		return this;
+	}
+
+	 /**
+	 * 블록스토리지 IOPS
+	 * @return iops
+	**/
+	public Long getIops() {
+		return iops;
+	}
+
+	public void setIops(Long iops) {
+		this.iops = iops;
+	}
+
+	public BlockStorageInstance blockStorageSnapshotInstanceNo(Long blockStorageSnapshotInstanceNo) {
+		this.blockStorageSnapshotInstanceNo = blockStorageSnapshotInstanceNo;
+		return this;
+	}
+
+	 /**
+	 * 블록스토리지스냅샷인스턴스번호
+	 * @return blockStorageSnapshotInstanceNo
+	**/
+	public Long getBlockStorageSnapshotInstanceNo() {
+		return blockStorageSnapshotInstanceNo;
+	}
+
+	public void setBlockStorageSnapshotInstanceNo(Long blockStorageSnapshotInstanceNo) {
+		this.blockStorageSnapshotInstanceNo = blockStorageSnapshotInstanceNo;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -468,12 +506,14 @@ public class BlockStorageInstance {
 				Objects.equals(this.isReturnProtection, blockStorageInstance.isReturnProtection) &&
 				Objects.equals(this.blockStorageVolumeType, blockStorageInstance.blockStorageVolumeType) &&
 				Objects.equals(this.hypervisorType, blockStorageInstance.hypervisorType) &&
-				Objects.equals(this.throughput, blockStorageInstance.throughput);
+				Objects.equals(this.throughput, blockStorageInstance.throughput) &&
+				Objects.equals(this.iops, blockStorageInstance.iops) &&
+				Objects.equals(this.blockStorageSnapshotInstanceNo, blockStorageInstance.blockStorageSnapshotInstanceNo);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(blockStorageInstanceNo, serverInstanceNo, blockStorageName, blockStorageType, blockStorageSize, deviceName, blockStorageProductCode, blockStorageInstanceStatus, blockStorageInstanceOperation, blockStorageInstanceStatusName, createDate, blockStorageDescription, blockStorageDiskType, blockStorageDiskDetailType, maxIopsThroughput, isEncryptedVolume, zoneCode, regionCode, isReturnProtection, blockStorageVolumeType, hypervisorType, throughput);
+		return Objects.hash(blockStorageInstanceNo, serverInstanceNo, blockStorageName, blockStorageType, blockStorageSize, deviceName, blockStorageProductCode, blockStorageInstanceStatus, blockStorageInstanceOperation, blockStorageInstanceStatusName, createDate, blockStorageDescription, blockStorageDiskType, blockStorageDiskDetailType, maxIopsThroughput, isEncryptedVolume, zoneCode, regionCode, isReturnProtection, blockStorageVolumeType, hypervisorType, throughput, iops, blockStorageSnapshotInstanceNo);
 	}
 
 
@@ -504,6 +544,8 @@ public class BlockStorageInstance {
 		sb.append("		blockStorageVolumeType: ").append(toIndentedString(blockStorageVolumeType)).append("\n");
 		sb.append("		hypervisorType: ").append(toIndentedString(hypervisorType)).append("\n");
 		sb.append("		throughput: ").append(toIndentedString(throughput)).append("\n");
+		sb.append("		iops: ").append(toIndentedString(iops)).append("\n");
+		sb.append("		blockStorageSnapshotInstanceNo: ").append(toIndentedString(blockStorageSnapshotInstanceNo)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

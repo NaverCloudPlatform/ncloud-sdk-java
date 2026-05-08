@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **regionCode** | **String** | REGION코드 |  [optional]
+**zoneCode** | **String** | ZONE코드 |  [optional]
 **serverInstanceNo** | **String** | 서버인스턴스번호 |  [optional]
 **blockStorageTypeCodeList** | **List&lt;String&gt;** | 블록스토리지유형코드리스트 |  [optional]
 **blockStorageInstanceStatusCode** | **String** | 블록스토리지인스턴스상태코드 |  [optional]

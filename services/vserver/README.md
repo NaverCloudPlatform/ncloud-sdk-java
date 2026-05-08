@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
 	<groupId>com.ncloud</groupId>
 	<artifactId>vserver</artifactId>
-	<version>1.1.2</version>
+	<version>1.1.3</version>
 	<scope>compile</scope>
 </dependency>
 ```
@@ -41,7 +41,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/vserver-1.1.2.jar
+* target/vserver-1.1.3.jar
 * target/lib/*.jar
 
 ## Getting Started
@@ -133,6 +133,14 @@ Class | Method | HTTP request | Description
 *V2Api* | [**changeBlockStorageInstancePost**](docs/V2Api.md#changeBlockStorageInstancePost) | **POST** /changeBlockStorageInstance | 
 *V2Api* | [**changeBlockStorageVolumeSizeGet**](docs/V2Api.md#changeBlockStorageVolumeSizeGet) | **GET** /changeBlockStorageVolumeSize | 
 *V2Api* | [**changeBlockStorageVolumeSizePost**](docs/V2Api.md#changeBlockStorageVolumeSizePost) | **POST** /changeBlockStorageVolumeSize | 
+*V2Api* | [**changeFabricClusterDescriptionGet**](docs/V2Api.md#changeFabricClusterDescriptionGet) | **GET** /changeFabricClusterDescription | 
+*V2Api* | [**changeFabricClusterDescriptionPost**](docs/V2Api.md#changeFabricClusterDescriptionPost) | **POST** /changeFabricClusterDescription | 
+*V2Api* | [**changeFabricClusterNameGet**](docs/V2Api.md#changeFabricClusterNameGet) | **GET** /changeFabricClusterName | 
+*V2Api* | [**changeFabricClusterNamePost**](docs/V2Api.md#changeFabricClusterNamePost) | **POST** /changeFabricClusterName | 
+*V2Api* | [**changeFabricClusterServerInstancesGet**](docs/V2Api.md#changeFabricClusterServerInstancesGet) | **GET** /changeFabricClusterServerInstances | 
+*V2Api* | [**changeFabricClusterServerInstancesPost**](docs/V2Api.md#changeFabricClusterServerInstancesPost) | **POST** /changeFabricClusterServerInstances | 
+*V2Api* | [**changeServerInstanceNameGet**](docs/V2Api.md#changeServerInstanceNameGet) | **GET** /changeServerInstanceName | 
+*V2Api* | [**changeServerInstanceNamePost**](docs/V2Api.md#changeServerInstanceNamePost) | **POST** /changeServerInstanceName | 
 *V2Api* | [**changeServerInstanceSpecGet**](docs/V2Api.md#changeServerInstanceSpecGet) | **GET** /changeServerInstanceSpec | 
 *V2Api* | [**changeServerInstanceSpecPost**](docs/V2Api.md#changeServerInstanceSpecPost) | **POST** /changeServerInstanceSpec | 
 *V2Api* | [**createAccessControlGroupGet**](docs/V2Api.md#createAccessControlGroupGet) | **GET** /createAccessControlGroup | 
@@ -141,6 +149,8 @@ Class | Method | HTTP request | Description
 *V2Api* | [**createBlockStorageInstancePost**](docs/V2Api.md#createBlockStorageInstancePost) | **POST** /createBlockStorageInstance | 
 *V2Api* | [**createBlockStorageSnapshotInstanceGet**](docs/V2Api.md#createBlockStorageSnapshotInstanceGet) | **GET** /createBlockStorageSnapshotInstance | 
 *V2Api* | [**createBlockStorageSnapshotInstancePost**](docs/V2Api.md#createBlockStorageSnapshotInstancePost) | **POST** /createBlockStorageSnapshotInstance | 
+*V2Api* | [**createFabricClusterGet**](docs/V2Api.md#createFabricClusterGet) | **GET** /createFabricCluster | 
+*V2Api* | [**createFabricClusterPost**](docs/V2Api.md#createFabricClusterPost) | **POST** /createFabricCluster | 
 *V2Api* | [**createInitScriptGet**](docs/V2Api.md#createInitScriptGet) | **GET** /createInitScript | 
 *V2Api* | [**createInitScriptPost**](docs/V2Api.md#createInitScriptPost) | **POST** /createInitScript | 
 *V2Api* | [**createLoginKeyGet**](docs/V2Api.md#createLoginKeyGet) | **GET** /createLoginKey | 
@@ -165,6 +175,8 @@ Class | Method | HTTP request | Description
 *V2Api* | [**deleteBlockStorageInstancesPost**](docs/V2Api.md#deleteBlockStorageInstancesPost) | **POST** /deleteBlockStorageInstances | 
 *V2Api* | [**deleteBlockStorageSnapshotInstancesGet**](docs/V2Api.md#deleteBlockStorageSnapshotInstancesGet) | **GET** /deleteBlockStorageSnapshotInstances | 
 *V2Api* | [**deleteBlockStorageSnapshotInstancesPost**](docs/V2Api.md#deleteBlockStorageSnapshotInstancesPost) | **POST** /deleteBlockStorageSnapshotInstances | 
+*V2Api* | [**deleteFabricClusterGet**](docs/V2Api.md#deleteFabricClusterGet) | **GET** /deleteFabricCluster | 
+*V2Api* | [**deleteFabricClusterPost**](docs/V2Api.md#deleteFabricClusterPost) | **POST** /deleteFabricCluster | 
 *V2Api* | [**deleteInitScriptsGet**](docs/V2Api.md#deleteInitScriptsGet) | **GET** /deleteInitScripts | 
 *V2Api* | [**deleteInitScriptsPost**](docs/V2Api.md#deleteInitScriptsPost) | **POST** /deleteInitScripts | 
 *V2Api* | [**deleteLoginKeysGet**](docs/V2Api.md#deleteLoginKeysGet) | **GET** /deleteLoginKeys | 
@@ -205,6 +217,12 @@ Class | Method | HTTP request | Description
 *V2Api* | [**getBlockStorageSnapshotInstanceListPost**](docs/V2Api.md#getBlockStorageSnapshotInstanceListPost) | **POST** /getBlockStorageSnapshotInstanceList | 
 *V2Api* | [**getBlockStorageVolumeTypeListGet**](docs/V2Api.md#getBlockStorageVolumeTypeListGet) | **GET** /getBlockStorageVolumeTypeList | 
 *V2Api* | [**getBlockStorageVolumeTypeListPost**](docs/V2Api.md#getBlockStorageVolumeTypeListPost) | **POST** /getBlockStorageVolumeTypeList | 
+*V2Api* | [**getFabricClusterDetailGet**](docs/V2Api.md#getFabricClusterDetailGet) | **GET** /getFabricClusterDetail | 
+*V2Api* | [**getFabricClusterDetailPost**](docs/V2Api.md#getFabricClusterDetailPost) | **POST** /getFabricClusterDetail | 
+*V2Api* | [**getFabricClusterListGet**](docs/V2Api.md#getFabricClusterListGet) | **GET** /getFabricClusterList | 
+*V2Api* | [**getFabricClusterListPost**](docs/V2Api.md#getFabricClusterListPost) | **POST** /getFabricClusterList | 
+*V2Api* | [**getFabricClusterPoolListGet**](docs/V2Api.md#getFabricClusterPoolListGet) | **GET** /getFabricClusterPoolList | 
+*V2Api* | [**getFabricClusterPoolListPost**](docs/V2Api.md#getFabricClusterPoolListPost) | **POST** /getFabricClusterPoolList | 
 *V2Api* | [**getFlowLogConfigurationListGet**](docs/V2Api.md#getFlowLogConfigurationListGet) | **GET** /getFlowLogConfigurationList | 
 *V2Api* | [**getFlowLogConfigurationListPost**](docs/V2Api.md#getFlowLogConfigurationListPost) | **POST** /getFlowLogConfigurationList | 
 *V2Api* | [**getHypervisorTypeListGet**](docs/V2Api.md#getHypervisorTypeListGet) | **GET** /getHypervisorTypeList | 
@@ -291,6 +309,10 @@ Class | Method | HTTP request | Description
 *V2Api* | [**terminateServerInstancesPost**](docs/V2Api.md#terminateServerInstancesPost) | **POST** /terminateServerInstances | 
 *V2Api* | [**unassignSecondaryIpsGet**](docs/V2Api.md#unassignSecondaryIpsGet) | **GET** /unassignSecondaryIps | 
 *V2Api* | [**unassignSecondaryIpsPost**](docs/V2Api.md#unassignSecondaryIpsPost) | **POST** /unassignSecondaryIps | 
+*V2Api* | [**updateFabricClusterGet**](docs/V2Api.md#updateFabricClusterGet) | **GET** /updateFabricCluster | 
+*V2Api* | [**updateFabricClusterPost**](docs/V2Api.md#updateFabricClusterPost) | **POST** /updateFabricCluster | 
+*V2Api* | [**updateFabricClusterServerInstancesGet**](docs/V2Api.md#updateFabricClusterServerInstancesGet) | **GET** /updateFabricClusterServerInstances | 
+*V2Api* | [**updateFabricClusterServerInstancesPost**](docs/V2Api.md#updateFabricClusterServerInstancesPost) | **POST** /updateFabricClusterServerInstances | 
 
 
 ## Documentation for Models
@@ -308,7 +330,8 @@ Class | Method | HTTP request | Description
  - [AddNetworkInterfaceAccessControlGroupResponse](docs/AddNetworkInterfaceAccessControlGroupResponse.md)
  - [AddPlacementGroupServerInstanceRequest](docs/AddPlacementGroupServerInstanceRequest.md)
  - [AddPlacementGroupServerInstanceResponse](docs/AddPlacementGroupServerInstanceResponse.md)
- - [AddServerImageSharingPermissionReqeuset](docs/AddServerImageSharingPermissionReqeuset.md)
+ - [AddServerImageSharingPermissionRequest](docs/AddServerImageSharingPermissionRequest.md)
+ - [AddServerImageSharingPermissionResponse](docs/AddServerImageSharingPermissionResponse.md)
  - [AssignSecondaryIpsRequest](docs/AssignSecondaryIpsRequest.md)
  - [AssignSecondaryIpsResponse](docs/AssignSecondaryIpsResponse.md)
  - [AssociatePublicIpWithServerInstanceRequest](docs/AssociatePublicIpWithServerInstanceRequest.md)
@@ -320,12 +343,22 @@ Class | Method | HTTP request | Description
  - [BlockDevicePartition](docs/BlockDevicePartition.md)
  - [BlockStorage](docs/BlockStorage.md)
  - [BlockStorageInstance](docs/BlockStorageInstance.md)
+ - [BlockStorageMapping](docs/BlockStorageMapping.md)
+ - [BlockStorageMappingParameter](docs/BlockStorageMappingParameter.md)
  - [BlockStorageSnapshotInstance](docs/BlockStorageSnapshotInstance.md)
  - [BlockStorageVolumeType](docs/BlockStorageVolumeType.md)
  - [ChangeBlockStorageInstanceRequest](docs/ChangeBlockStorageInstanceRequest.md)
  - [ChangeBlockStorageInstanceResponse](docs/ChangeBlockStorageInstanceResponse.md)
  - [ChangeBlockStorageVolumeSizeRequest](docs/ChangeBlockStorageVolumeSizeRequest.md)
  - [ChangeBlockStorageVolumeSizeResponse](docs/ChangeBlockStorageVolumeSizeResponse.md)
+ - [ChangeFabricClusterDescriptionRequest](docs/ChangeFabricClusterDescriptionRequest.md)
+ - [ChangeFabricClusterDescriptionResponse](docs/ChangeFabricClusterDescriptionResponse.md)
+ - [ChangeFabricClusterNameRequest](docs/ChangeFabricClusterNameRequest.md)
+ - [ChangeFabricClusterNameResponse](docs/ChangeFabricClusterNameResponse.md)
+ - [ChangeFabricClusterServerInstancesRequest](docs/ChangeFabricClusterServerInstancesRequest.md)
+ - [ChangeFabricClusterServerInstancesResponse](docs/ChangeFabricClusterServerInstancesResponse.md)
+ - [ChangeServerInstanceNameRequest](docs/ChangeServerInstanceNameRequest.md)
+ - [ChangeServerInstanceNameResponse](docs/ChangeServerInstanceNameResponse.md)
  - [ChangeServerInstanceSpecRequest](docs/ChangeServerInstanceSpecRequest.md)
  - [ChangeServerInstanceSpecResponse](docs/ChangeServerInstanceSpecResponse.md)
  - [CommonCode](docs/CommonCode.md)
@@ -335,6 +368,8 @@ Class | Method | HTTP request | Description
  - [CreateBlockStorageInstanceResponse](docs/CreateBlockStorageInstanceResponse.md)
  - [CreateBlockStorageSnapshotInstanceRequest](docs/CreateBlockStorageSnapshotInstanceRequest.md)
  - [CreateBlockStorageSnapshotInstanceResponse](docs/CreateBlockStorageSnapshotInstanceResponse.md)
+ - [CreateFabricClusterRequest](docs/CreateFabricClusterRequest.md)
+ - [CreateFabricClusterResponse](docs/CreateFabricClusterResponse.md)
  - [CreateInitScriptRequest](docs/CreateInitScriptRequest.md)
  - [CreateInitScriptResponse](docs/CreateInitScriptResponse.md)
  - [CreateLoginKeyRequest](docs/CreateLoginKeyRequest.md)
@@ -348,7 +383,9 @@ Class | Method | HTTP request | Description
  - [CreatePublicIpInstanceRequest](docs/CreatePublicIpInstanceRequest.md)
  - [CreatePublicIpInstanceResponse](docs/CreatePublicIpInstanceResponse.md)
  - [CreateServerImageFromSnapshotRequest](docs/CreateServerImageFromSnapshotRequest.md)
+ - [CreateServerImageFromSnapshotResponse](docs/CreateServerImageFromSnapshotResponse.md)
  - [CreateServerImageRequest](docs/CreateServerImageRequest.md)
+ - [CreateServerImageResponse](docs/CreateServerImageResponse.md)
  - [CreateServerInstancesRequest](docs/CreateServerInstancesRequest.md)
  - [CreateServerInstancesResponse](docs/CreateServerInstancesResponse.md)
  - [DeleteAccessControlGroupRequest](docs/DeleteAccessControlGroupRequest.md)
@@ -357,6 +394,8 @@ Class | Method | HTTP request | Description
  - [DeleteBlockStorageInstancesResponse](docs/DeleteBlockStorageInstancesResponse.md)
  - [DeleteBlockStorageSnapshotInstancesRequest](docs/DeleteBlockStorageSnapshotInstancesRequest.md)
  - [DeleteBlockStorageSnapshotInstancesResponse](docs/DeleteBlockStorageSnapshotInstancesResponse.md)
+ - [DeleteFabricClusterRequest](docs/DeleteFabricClusterRequest.md)
+ - [DeleteFabricClusterResponse](docs/DeleteFabricClusterResponse.md)
  - [DeleteInitScriptsRequest](docs/DeleteInitScriptsRequest.md)
  - [DeleteInitScriptsResponse](docs/DeleteInitScriptsResponse.md)
  - [DeleteLoginKeysRequest](docs/DeleteLoginKeysRequest.md)
@@ -370,6 +409,7 @@ Class | Method | HTTP request | Description
  - [DeletePublicIpInstanceRequest](docs/DeletePublicIpInstanceRequest.md)
  - [DeletePublicIpInstanceResponse](docs/DeletePublicIpInstanceResponse.md)
  - [DeleteServerImageRequest](docs/DeleteServerImageRequest.md)
+ - [DeleteServerImageResponse](docs/DeleteServerImageResponse.md)
  - [DetachBlockStorageInstancesRequest](docs/DetachBlockStorageInstancesRequest.md)
  - [DetachBlockStorageInstancesResponse](docs/DetachBlockStorageInstancesResponse.md)
  - [DetachNetworkInterfaceRequest](docs/DetachNetworkInterfaceRequest.md)
@@ -378,6 +418,9 @@ Class | Method | HTTP request | Description
  - [DisassociatePublicIpFromServerInstanceRequest](docs/DisassociatePublicIpFromServerInstanceRequest.md)
  - [DisassociatePublicIpFromServerInstanceResponse](docs/DisassociatePublicIpFromServerInstanceResponse.md)
  - [EnableFlowLogRequest](docs/EnableFlowLogRequest.md)
+ - [FabricCluster](docs/FabricCluster.md)
+ - [FabricClusterPool](docs/FabricClusterPool.md)
+ - [FabricClusterServerInstance](docs/FabricClusterServerInstance.md)
  - [FlowLogConfiguration](docs/FlowLogConfiguration.md)
  - [FlowLogConfigurationList](docs/FlowLogConfigurationList.md)
  - [GetAccessControlGroupDetailRequest](docs/GetAccessControlGroupDetailRequest.md)
@@ -396,6 +439,12 @@ Class | Method | HTTP request | Description
  - [GetBlockStorageSnapshotInstanceListResponse](docs/GetBlockStorageSnapshotInstanceListResponse.md)
  - [GetBlockStorageVolumeTypeListRequest](docs/GetBlockStorageVolumeTypeListRequest.md)
  - [GetBlockStorageVolumeTypeListResponse](docs/GetBlockStorageVolumeTypeListResponse.md)
+ - [GetFabricClusterDetailRequest](docs/GetFabricClusterDetailRequest.md)
+ - [GetFabricClusterDetailResponse](docs/GetFabricClusterDetailResponse.md)
+ - [GetFabricClusterListRequest](docs/GetFabricClusterListRequest.md)
+ - [GetFabricClusterListResponse](docs/GetFabricClusterListResponse.md)
+ - [GetFabricClusterPoolListRequest](docs/GetFabricClusterPoolListRequest.md)
+ - [GetFabricClusterPoolListResponse](docs/GetFabricClusterPoolListResponse.md)
  - [GetFlowLogConfigurationListRequest](docs/GetFlowLogConfigurationListRequest.md)
  - [GetHypervisorTypeListRequest](docs/GetHypervisorTypeListRequest.md)
  - [GetHypervisorTypeListResponse](docs/GetHypervisorTypeListResponse.md)
@@ -432,7 +481,9 @@ Class | Method | HTTP request | Description
  - [GetRootPasswordServerInstanceListRequest](docs/GetRootPasswordServerInstanceListRequest.md)
  - [GetRootPasswordServerInstanceListResponse](docs/GetRootPasswordServerInstanceListResponse.md)
  - [GetServerImageDetailRequest](docs/GetServerImageDetailRequest.md)
+ - [GetServerImageDetailResponse](docs/GetServerImageDetailResponse.md)
  - [GetServerImageListRequest](docs/GetServerImageListRequest.md)
+ - [GetServerImageListResponse](docs/GetServerImageListResponse.md)
  - [GetServerImageProductListRequest](docs/GetServerImageProductListRequest.md)
  - [GetServerImageProductListResponse](docs/GetServerImageProductListResponse.md)
  - [GetServerInstanceDetailRequest](docs/GetServerInstanceDetailRequest.md)
@@ -442,7 +493,9 @@ Class | Method | HTTP request | Description
  - [GetServerProductListRequest](docs/GetServerProductListRequest.md)
  - [GetServerProductListResponse](docs/GetServerProductListResponse.md)
  - [GetServerSpecDetailRequest](docs/GetServerSpecDetailRequest.md)
+ - [GetServerSpecDetailResponse](docs/GetServerSpecDetailResponse.md)
  - [GetServerSpecListRequest](docs/GetServerSpecListRequest.md)
+ - [GetServerSpecListResponse](docs/GetServerSpecListResponse.md)
  - [GetZoneListRequest](docs/GetZoneListRequest.md)
  - [GetZoneListResponse](docs/GetZoneListResponse.md)
  - [ImportLoginKeyRequest](docs/ImportLoginKeyRequest.md)
@@ -473,9 +526,12 @@ Class | Method | HTTP request | Description
  - [RemovePlacementGroupServerInstanceRequest](docs/RemovePlacementGroupServerInstanceRequest.md)
  - [RemovePlacementGroupServerInstanceResponse](docs/RemovePlacementGroupServerInstanceResponse.md)
  - [RemoveServerImageSharingPermissionRequest](docs/RemoveServerImageSharingPermissionRequest.md)
+ - [RemoveServerImageSharingPermissionResponse](docs/RemoveServerImageSharingPermissionResponse.md)
  - [RootPasswordServerInstance](docs/RootPasswordServerInstance.md)
  - [RootPasswordServerInstanceParameter](docs/RootPasswordServerInstanceParameter.md)
+ - [ServerImage](docs/ServerImage.md)
  - [ServerInstance](docs/ServerInstance.md)
+ - [ServerSpec](docs/ServerSpec.md)
  - [SetBlockStorageReturnProtectionRequest](docs/SetBlockStorageReturnProtectionRequest.md)
  - [SetBlockStorageReturnProtectionResponse](docs/SetBlockStorageReturnProtectionResponse.md)
  - [SetMemberServerImageSharingPermissionRequest](docs/SetMemberServerImageSharingPermissionRequest.md)
@@ -490,6 +546,8 @@ Class | Method | HTTP request | Description
  - [TerminateServerInstancesResponse](docs/TerminateServerInstancesResponse.md)
  - [UnassignSecondaryIpsRequest](docs/UnassignSecondaryIpsRequest.md)
  - [UnassignSecondaryIpsResponse](docs/UnassignSecondaryIpsResponse.md)
+ - [UpdateFabricClusterRequest](docs/UpdateFabricClusterRequest.md)
+ - [UpdateFabricClusterResponse](docs/UpdateFabricClusterResponse.md)
  - [Zone](docs/Zone.md)
 
 

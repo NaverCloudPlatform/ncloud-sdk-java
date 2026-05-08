@@ -18,11 +18,30 @@ import java.util.Objects;
  * ImportLoginKeyRequest
  */
 public class ImportLoginKeyRequest {
+	private String regionCode = null;
+
 	private String keyName = null;
 
 	private String publicKey = null;
 
 	private String responseFormatType = null;
+
+	public ImportLoginKeyRequest regionCode(String regionCode) {
+		this.regionCode = regionCode;
+		return this;
+	}
+
+	 /**
+	 * REGION코드
+	 * @return regionCode
+	**/
+	public String getRegionCode() {
+		return regionCode;
+	}
+
+	public void setRegionCode(String regionCode) {
+		this.regionCode = regionCode;
+	}
 
 	public ImportLoginKeyRequest keyName(String keyName) {
 		this.keyName = keyName;
@@ -85,14 +104,15 @@ public class ImportLoginKeyRequest {
 			return false;
 		}
 		ImportLoginKeyRequest importLoginKeyRequest = (ImportLoginKeyRequest) o;
-		return Objects.equals(this.keyName, importLoginKeyRequest.keyName) &&
+		return Objects.equals(this.regionCode, importLoginKeyRequest.regionCode) &&
+				Objects.equals(this.keyName, importLoginKeyRequest.keyName) &&
 				Objects.equals(this.publicKey, importLoginKeyRequest.publicKey) &&
 				Objects.equals(this.responseFormatType, importLoginKeyRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(keyName, publicKey, responseFormatType);
+		return Objects.hash(regionCode, keyName, publicKey, responseFormatType);
 	}
 
 
@@ -101,6 +121,7 @@ public class ImportLoginKeyRequest {
 		StringBuilder sb = new StringBuilder();
 		sb.append("class ImportLoginKeyRequest {\n");
 		
+		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		keyName: ").append(toIndentedString(keyName)).append("\n");
 		sb.append("		publicKey: ").append(toIndentedString(publicKey)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");

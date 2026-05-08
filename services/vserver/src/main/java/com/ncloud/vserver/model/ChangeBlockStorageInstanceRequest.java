@@ -24,10 +24,6 @@ public class ChangeBlockStorageInstanceRequest {
 
 	private Integer blockStorageSize = null;
 
-	private Integer iops = null;
-
-	private Integer throughput = null;
-
 	private String responseFormatType = null;
 
 	public ChangeBlockStorageInstanceRequest regionCode(String regionCode) {
@@ -81,40 +77,6 @@ public class ChangeBlockStorageInstanceRequest {
 		this.blockStorageSize = blockStorageSize;
 	}
 
-	public ChangeBlockStorageInstanceRequest iops(Integer iops) {
-		this.iops = iops;
-		return this;
-	}
-
-	 /**
-	 * iops
-	 * @return iops
-	**/
-	public Integer getIops() {
-		return iops;
-	}
-
-	public void setIops(Integer iops) {
-		this.iops = iops;
-	}
-
-	public ChangeBlockStorageInstanceRequest throughput(Integer throughput) {
-		this.throughput = throughput;
-		return this;
-	}
-
-	 /**
-	 * throughput
-	 * @return throughput
-	**/
-	public Integer getThroughput() {
-		return throughput;
-	}
-
-	public void setThroughput(Integer throughput) {
-		this.throughput = throughput;
-	}
-
 	public ChangeBlockStorageInstanceRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -145,14 +107,12 @@ public class ChangeBlockStorageInstanceRequest {
 		return Objects.equals(this.regionCode, changeBlockStorageInstanceRequest.regionCode) &&
 				Objects.equals(this.blockStorageInstanceNo, changeBlockStorageInstanceRequest.blockStorageInstanceNo) &&
 				Objects.equals(this.blockStorageSize, changeBlockStorageInstanceRequest.blockStorageSize) &&
-				Objects.equals(this.iops, changeBlockStorageInstanceRequest.iops) &&
-				Objects.equals(this.throughput, changeBlockStorageInstanceRequest.throughput) &&
 				Objects.equals(this.responseFormatType, changeBlockStorageInstanceRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, blockStorageInstanceNo, blockStorageSize, iops, throughput, responseFormatType);
+		return Objects.hash(regionCode, blockStorageInstanceNo, blockStorageSize, responseFormatType);
 	}
 
 
@@ -164,8 +124,6 @@ public class ChangeBlockStorageInstanceRequest {
 		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		blockStorageInstanceNo: ").append(toIndentedString(blockStorageInstanceNo)).append("\n");
 		sb.append("		blockStorageSize: ").append(toIndentedString(blockStorageSize)).append("\n");
-		sb.append("		iops: ").append(toIndentedString(iops)).append("\n");
-		sb.append("		throughput: ").append(toIndentedString(throughput)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

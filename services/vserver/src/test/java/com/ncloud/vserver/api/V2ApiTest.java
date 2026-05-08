@@ -40,7 +40,8 @@ import com.ncloud.vserver.model.AddNetworkInterfaceAccessControlGroupRequest;
 import com.ncloud.vserver.model.AddNetworkInterfaceAccessControlGroupResponse;
 import com.ncloud.vserver.model.AddPlacementGroupServerInstanceRequest;
 import com.ncloud.vserver.model.AddPlacementGroupServerInstanceResponse;
-import com.ncloud.vserver.model.AddServerImageSharingPermissionReqeuset;
+import com.ncloud.vserver.model.AddServerImageSharingPermissionRequest;
+import com.ncloud.vserver.model.AddServerImageSharingPermissionResponse;
 import com.ncloud.vserver.model.AssignSecondaryIpsRequest;
 import com.ncloud.vserver.model.AssignSecondaryIpsResponse;
 import com.ncloud.vserver.model.AssociatePublicIpWithServerInstanceRequest;
@@ -53,6 +54,14 @@ import com.ncloud.vserver.model.ChangeBlockStorageInstanceRequest;
 import com.ncloud.vserver.model.ChangeBlockStorageInstanceResponse;
 import com.ncloud.vserver.model.ChangeBlockStorageVolumeSizeRequest;
 import com.ncloud.vserver.model.ChangeBlockStorageVolumeSizeResponse;
+import com.ncloud.vserver.model.ChangeFabricClusterDescriptionRequest;
+import com.ncloud.vserver.model.ChangeFabricClusterDescriptionResponse;
+import com.ncloud.vserver.model.ChangeFabricClusterNameRequest;
+import com.ncloud.vserver.model.ChangeFabricClusterNameResponse;
+import com.ncloud.vserver.model.ChangeFabricClusterServerInstancesRequest;
+import com.ncloud.vserver.model.ChangeFabricClusterServerInstancesResponse;
+import com.ncloud.vserver.model.ChangeServerInstanceNameRequest;
+import com.ncloud.vserver.model.ChangeServerInstanceNameResponse;
 import com.ncloud.vserver.model.ChangeServerInstanceSpecRequest;
 import com.ncloud.vserver.model.ChangeServerInstanceSpecResponse;
 import com.ncloud.vserver.model.CreateAccessControlGroupRequest;
@@ -61,6 +70,8 @@ import com.ncloud.vserver.model.CreateBlockStorageInstanceRequest;
 import com.ncloud.vserver.model.CreateBlockStorageInstanceResponse;
 import com.ncloud.vserver.model.CreateBlockStorageSnapshotInstanceRequest;
 import com.ncloud.vserver.model.CreateBlockStorageSnapshotInstanceResponse;
+import com.ncloud.vserver.model.CreateFabricClusterRequest;
+import com.ncloud.vserver.model.CreateFabricClusterResponse;
 import com.ncloud.vserver.model.CreateInitScriptRequest;
 import com.ncloud.vserver.model.CreateInitScriptResponse;
 import com.ncloud.vserver.model.CreateLoginKeyRequest;
@@ -74,7 +85,9 @@ import com.ncloud.vserver.model.CreatePlacementGroupResponse;
 import com.ncloud.vserver.model.CreatePublicIpInstanceRequest;
 import com.ncloud.vserver.model.CreatePublicIpInstanceResponse;
 import com.ncloud.vserver.model.CreateServerImageFromSnapshotRequest;
+import com.ncloud.vserver.model.CreateServerImageFromSnapshotResponse;
 import com.ncloud.vserver.model.CreateServerImageRequest;
+import com.ncloud.vserver.model.CreateServerImageResponse;
 import com.ncloud.vserver.model.CreateServerInstancesRequest;
 import com.ncloud.vserver.model.CreateServerInstancesResponse;
 import com.ncloud.vserver.model.DeleteAccessControlGroupRequest;
@@ -83,6 +96,8 @@ import com.ncloud.vserver.model.DeleteBlockStorageInstancesRequest;
 import com.ncloud.vserver.model.DeleteBlockStorageInstancesResponse;
 import com.ncloud.vserver.model.DeleteBlockStorageSnapshotInstancesRequest;
 import com.ncloud.vserver.model.DeleteBlockStorageSnapshotInstancesResponse;
+import com.ncloud.vserver.model.DeleteFabricClusterRequest;
+import com.ncloud.vserver.model.DeleteFabricClusterResponse;
 import com.ncloud.vserver.model.DeleteInitScriptsRequest;
 import com.ncloud.vserver.model.DeleteInitScriptsResponse;
 import com.ncloud.vserver.model.DeleteLoginKeysRequest;
@@ -96,6 +111,7 @@ import com.ncloud.vserver.model.DeletePlacementGroupResponse;
 import com.ncloud.vserver.model.DeletePublicIpInstanceRequest;
 import com.ncloud.vserver.model.DeletePublicIpInstanceResponse;
 import com.ncloud.vserver.model.DeleteServerImageRequest;
+import com.ncloud.vserver.model.DeleteServerImageResponse;
 import com.ncloud.vserver.model.DetachBlockStorageInstancesRequest;
 import com.ncloud.vserver.model.DetachBlockStorageInstancesResponse;
 import com.ncloud.vserver.model.DetachNetworkInterfaceRequest;
@@ -121,6 +137,12 @@ import com.ncloud.vserver.model.GetBlockStorageSnapshotInstanceListRequest;
 import com.ncloud.vserver.model.GetBlockStorageSnapshotInstanceListResponse;
 import com.ncloud.vserver.model.GetBlockStorageVolumeTypeListRequest;
 import com.ncloud.vserver.model.GetBlockStorageVolumeTypeListResponse;
+import com.ncloud.vserver.model.GetFabricClusterDetailRequest;
+import com.ncloud.vserver.model.GetFabricClusterDetailResponse;
+import com.ncloud.vserver.model.GetFabricClusterListRequest;
+import com.ncloud.vserver.model.GetFabricClusterListResponse;
+import com.ncloud.vserver.model.GetFabricClusterPoolListRequest;
+import com.ncloud.vserver.model.GetFabricClusterPoolListResponse;
 import com.ncloud.vserver.model.GetFlowLogConfigurationListRequest;
 import com.ncloud.vserver.model.GetHypervisorTypeListRequest;
 import com.ncloud.vserver.model.GetHypervisorTypeListResponse;
@@ -157,7 +179,9 @@ import com.ncloud.vserver.model.GetRootPasswordResponse;
 import com.ncloud.vserver.model.GetRootPasswordServerInstanceListRequest;
 import com.ncloud.vserver.model.GetRootPasswordServerInstanceListResponse;
 import com.ncloud.vserver.model.GetServerImageDetailRequest;
+import com.ncloud.vserver.model.GetServerImageDetailResponse;
 import com.ncloud.vserver.model.GetServerImageListRequest;
+import com.ncloud.vserver.model.GetServerImageListResponse;
 import com.ncloud.vserver.model.GetServerImageProductListRequest;
 import com.ncloud.vserver.model.GetServerImageProductListResponse;
 import com.ncloud.vserver.model.GetServerInstanceDetailRequest;
@@ -167,7 +191,9 @@ import com.ncloud.vserver.model.GetServerInstanceListResponse;
 import com.ncloud.vserver.model.GetServerProductListRequest;
 import com.ncloud.vserver.model.GetServerProductListResponse;
 import com.ncloud.vserver.model.GetServerSpecDetailRequest;
+import com.ncloud.vserver.model.GetServerSpecDetailResponse;
 import com.ncloud.vserver.model.GetServerSpecListRequest;
+import com.ncloud.vserver.model.GetServerSpecListResponse;
 import com.ncloud.vserver.model.GetZoneListRequest;
 import com.ncloud.vserver.model.GetZoneListResponse;
 import com.ncloud.vserver.model.ImportLoginKeyRequest;
@@ -187,6 +213,7 @@ import com.ncloud.vserver.model.RemoveNetworkInterfaceAccessControlGroupResponse
 import com.ncloud.vserver.model.RemovePlacementGroupServerInstanceRequest;
 import com.ncloud.vserver.model.RemovePlacementGroupServerInstanceResponse;
 import com.ncloud.vserver.model.RemoveServerImageSharingPermissionRequest;
+import com.ncloud.vserver.model.RemoveServerImageSharingPermissionResponse;
 import com.ncloud.vserver.model.SetBlockStorageReturnProtectionRequest;
 import com.ncloud.vserver.model.SetBlockStorageReturnProtectionResponse;
 import com.ncloud.vserver.model.SetMemberServerImageSharingPermissionRequest;
@@ -201,6 +228,8 @@ import com.ncloud.vserver.model.TerminateServerInstancesRequest;
 import com.ncloud.vserver.model.TerminateServerInstancesResponse;
 import com.ncloud.vserver.model.UnassignSecondaryIpsRequest;
 import com.ncloud.vserver.model.UnassignSecondaryIpsResponse;
+import com.ncloud.vserver.model.UpdateFabricClusterRequest;
+import com.ncloud.vserver.model.UpdateFabricClusterResponse;
 
 /**
  * API tests for V2Api
@@ -850,17 +879,17 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 
+	 * 서버이미지공유권한추가
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
 	@Test
 	public void addServerImageSharingPermissionGetTest() throws ApiException, SdkException {
-		AddServerImageSharingPermissionReqeuset addServerImageSharingPermissionRequest = null;
+		AddServerImageSharingPermissionRequest addServerImageSharingPermissionRequest = null;
 
 		try {
 			// Handler Successful response
-			api.addServerImageSharingPermissionGet(addServerImageSharingPermissionRequest);
+			ApiResponse<AddServerImageSharingPermissionResponse> response = api.addServerImageSharingPermissionGet(addServerImageSharingPermissionRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -875,7 +904,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 
+	 * 서버이미지공유권한추가
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -912,17 +941,17 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 
+	 * 서버이미지공유권한추가
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
 	@Test
 	public void addServerImageSharingPermissionPostTest() throws ApiException, SdkException {
-		AddServerImageSharingPermissionReqeuset addServerImageSharingPermissionRequest = null;
+		AddServerImageSharingPermissionRequest addServerImageSharingPermissionRequest = null;
 
 		try {
 			// Handler Successful response
-			api.addServerImageSharingPermissionPost(addServerImageSharingPermissionRequest);
+			ApiResponse<AddServerImageSharingPermissionResponse> response = api.addServerImageSharingPermissionPost(addServerImageSharingPermissionRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -937,7 +966,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 
+	 * 서버이미지공유권한추가
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -1718,6 +1747,502 @@ public class V2ApiTest {
 	
 	/**
 	 * 
+	 * Fabric Cluster 설명 변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeFabricClusterDescriptionGetTest() throws ApiException, SdkException {
+		ChangeFabricClusterDescriptionRequest changeFabricClusterDescriptionRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ChangeFabricClusterDescriptionResponse> response = api.changeFabricClusterDescriptionGet(changeFabricClusterDescriptionRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 설명 변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeFabricClusterDescriptionGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.changeFabricClusterDescriptionGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 설명 변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeFabricClusterDescriptionPostTest() throws ApiException, SdkException {
+		ChangeFabricClusterDescriptionRequest changeFabricClusterDescriptionRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ChangeFabricClusterDescriptionResponse> response = api.changeFabricClusterDescriptionPost(changeFabricClusterDescriptionRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 설명 변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeFabricClusterDescriptionPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.changeFabricClusterDescriptionPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 이름 변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeFabricClusterNameGetTest() throws ApiException, SdkException {
+		ChangeFabricClusterNameRequest changeFabricClusterNameRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ChangeFabricClusterNameResponse> response = api.changeFabricClusterNameGet(changeFabricClusterNameRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 이름 변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeFabricClusterNameGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.changeFabricClusterNameGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 이름 변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeFabricClusterNamePostTest() throws ApiException, SdkException {
+		ChangeFabricClusterNameRequest changeFabricClusterNameRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ChangeFabricClusterNameResponse> response = api.changeFabricClusterNamePost(changeFabricClusterNameRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 이름 변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeFabricClusterNamePostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.changeFabricClusterNamePost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeFabricClusterServerInstancesGetTest() throws ApiException, SdkException {
+		ChangeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ChangeFabricClusterServerInstancesResponse> response = api.changeFabricClusterServerInstancesGet(changeFabricClusterServerInstancesRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeFabricClusterServerInstancesGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.changeFabricClusterServerInstancesGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeFabricClusterServerInstancesPostTest() throws ApiException, SdkException {
+		ChangeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ChangeFabricClusterServerInstancesResponse> response = api.changeFabricClusterServerInstancesPost(changeFabricClusterServerInstancesRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeFabricClusterServerInstancesPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.changeFabricClusterServerInstancesPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 서버인스턴스이름변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeServerInstanceNameGetTest() throws ApiException, SdkException {
+		ChangeServerInstanceNameRequest changeServerInstanceNameRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ChangeServerInstanceNameResponse> response = api.changeServerInstanceNameGet(changeServerInstanceNameRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 서버인스턴스이름변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeServerInstanceNameGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.changeServerInstanceNameGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * 서버인스턴스이름변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeServerInstanceNamePostTest() throws ApiException, SdkException {
+		ChangeServerInstanceNameRequest changeServerInstanceNameRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ChangeServerInstanceNameResponse> response = api.changeServerInstanceNamePost(changeServerInstanceNameRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * 서버인스턴스이름변경
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void changeServerInstanceNamePostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.changeServerInstanceNamePost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
 	 * 서버인스턴스스펙변경
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
@@ -2200,6 +2725,130 @@ public class V2ApiTest {
 		try {
 			// Handler Successful response
 			ApiResponse<byte[]> response = api.createBlockStorageSnapshotInstancePost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 생성
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void createFabricClusterGetTest() throws ApiException, SdkException {
+		CreateFabricClusterRequest createFabricClusterRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<CreateFabricClusterResponse> response = api.createFabricClusterGet(createFabricClusterRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 생성
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void createFabricClusterGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.createFabricClusterGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 생성
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void createFabricClusterPostTest() throws ApiException, SdkException {
+		CreateFabricClusterRequest createFabricClusterRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<CreateFabricClusterResponse> response = api.createFabricClusterPost(createFabricClusterRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 생성
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void createFabricClusterPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.createFabricClusterPost(httpHeaders, queryParams, formParams, requestBody);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -2968,7 +3617,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.createServerImageFromSnapshotGet(createServerImageFromSnapshotRequest);
+			ApiResponse<CreateServerImageFromSnapshotResponse> response = api.createServerImageFromSnapshotGet(createServerImageFromSnapshotRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -3030,7 +3679,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.createServerImageFromSnapshotPost(createServerImageFromSnapshotRequest);
+			ApiResponse<CreateServerImageFromSnapshotResponse> response = api.createServerImageFromSnapshotPost(createServerImageFromSnapshotRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -3092,7 +3741,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.createServerImageGet(createServerImageRequest);
+			ApiResponse<CreateServerImageResponse> response = api.createServerImageGet(createServerImageRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -3154,7 +3803,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.createServerImagePost(createServerImageRequest);
+			ApiResponse<CreateServerImageResponse> response = api.createServerImagePost(createServerImageRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -3688,6 +4337,130 @@ public class V2ApiTest {
 		try {
 			// Handler Successful response
 			ApiResponse<byte[]> response = api.deleteBlockStorageSnapshotInstancesPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 삭제
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteFabricClusterGetTest() throws ApiException, SdkException {
+		DeleteFabricClusterRequest deleteFabricClusterRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<DeleteFabricClusterResponse> response = api.deleteFabricClusterGet(deleteFabricClusterRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 삭제
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteFabricClusterGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.deleteFabricClusterGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 삭제
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteFabricClusterPostTest() throws ApiException, SdkException {
+		DeleteFabricClusterRequest deleteFabricClusterRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<DeleteFabricClusterResponse> response = api.deleteFabricClusterPost(deleteFabricClusterRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 삭제
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void deleteFabricClusterPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.deleteFabricClusterPost(httpHeaders, queryParams, formParams, requestBody);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -4456,7 +5229,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.deleteServerImageGet(deleteServerImageRequest);
+			ApiResponse<DeleteServerImageResponse> response = api.deleteServerImageGet(deleteServerImageRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -4518,7 +5291,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.deleteServerImagePost(deleteServerImageRequest);
+			ApiResponse<DeleteServerImageResponse> response = api.deleteServerImagePost(deleteServerImageRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -6182,6 +6955,378 @@ public class V2ApiTest {
 	
 	/**
 	 * 
+	 * Fabric Cluster 상세 조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getFabricClusterDetailGetTest() throws ApiException, SdkException {
+		GetFabricClusterDetailRequest getFabricClusterDetailRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetFabricClusterDetailResponse> response = api.getFabricClusterDetailGet(getFabricClusterDetailRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 상세 조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getFabricClusterDetailGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getFabricClusterDetailGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 상세 조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getFabricClusterDetailPostTest() throws ApiException, SdkException {
+		GetFabricClusterDetailRequest getFabricClusterDetailRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetFabricClusterDetailResponse> response = api.getFabricClusterDetailPost(getFabricClusterDetailRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 상세 조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getFabricClusterDetailPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getFabricClusterDetailPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 리스트조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getFabricClusterListGetTest() throws ApiException, SdkException {
+		GetFabricClusterListRequest getFabricClusterListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetFabricClusterListResponse> response = api.getFabricClusterListGet(getFabricClusterListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 리스트조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getFabricClusterListGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getFabricClusterListGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 리스트조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getFabricClusterListPostTest() throws ApiException, SdkException {
+		GetFabricClusterListRequest getFabricClusterListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetFabricClusterListResponse> response = api.getFabricClusterListPost(getFabricClusterListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 리스트조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getFabricClusterListPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getFabricClusterListPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * FabricClusterPool 리스트조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getFabricClusterPoolListGetTest() throws ApiException, SdkException {
+		GetFabricClusterPoolListRequest getFabricClusterPoolListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetFabricClusterPoolListResponse> response = api.getFabricClusterPoolListGet(getFabricClusterPoolListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * FabricClusterPool 리스트조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getFabricClusterPoolListGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getFabricClusterPoolListGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * FabricClusterPool 리스트조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getFabricClusterPoolListPostTest() throws ApiException, SdkException {
+		GetFabricClusterPoolListRequest getFabricClusterPoolListRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<GetFabricClusterPoolListResponse> response = api.getFabricClusterPoolListPost(getFabricClusterPoolListRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * FabricClusterPool 리스트조회
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void getFabricClusterPoolListPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.getFabricClusterPoolListPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
 	 * FlogLog 설정정보 조회
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
@@ -6368,7 +7513,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 하이퍼바이저타입리스트조회 
+	 * 하이퍼바이저타입리스트조회
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -6393,7 +7538,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 하이퍼바이저타입리스트조회 
+	 * 하이퍼바이저타입리스트조회
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -8424,7 +9569,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.getServerImageDetailGet(getServerImageDetailRequest);
+			ApiResponse<GetServerImageDetailResponse> response = api.getServerImageDetailGet(getServerImageDetailRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -8486,7 +9631,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.getServerImageDetailPost(getServerImageDetailRequest);
+			ApiResponse<GetServerImageDetailResponse> response = api.getServerImageDetailPost(getServerImageDetailRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -8548,7 +9693,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.getServerImageListGet(getServerImageListRequest);
+			ApiResponse<GetServerImageListResponse> response = api.getServerImageListGet(getServerImageListRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -8610,7 +9755,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.getServerImageListPost(getServerImageListRequest);
+			ApiResponse<GetServerImageListResponse> response = api.getServerImageListPost(getServerImageListRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -9168,7 +10313,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.getServerSpecDetailGet(getServerSpecDetailRequest);
+			ApiResponse<GetServerSpecDetailResponse> response = api.getServerSpecDetailGet(getServerSpecDetailRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -9230,7 +10375,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.getServerSpecDetailPost(getServerSpecDetailRequest);
+			ApiResponse<GetServerSpecDetailResponse> response = api.getServerSpecDetailPost(getServerSpecDetailRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -9292,7 +10437,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.getServerSpecListGet(getServerSpecListRequest);
+			ApiResponse<GetServerSpecListResponse> response = api.getServerSpecListGet(getServerSpecListRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -9354,7 +10499,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.getServerSpecListPost(getServerSpecListRequest);
+			ApiResponse<GetServerSpecListResponse> response = api.getServerSpecListPost(getServerSpecListRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -10522,7 +11667,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 
+	 * 서버이미지공유권한제거
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -10532,7 +11677,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.removeServerImageSharingPermissionGet(removeServerImageSharingPermissionRequest);
+			ApiResponse<RemoveServerImageSharingPermissionResponse> response = api.removeServerImageSharingPermissionGet(removeServerImageSharingPermissionRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -10547,7 +11692,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 
+	 * 서버이미지공유권한제거
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -10584,7 +11729,7 @@ public class V2ApiTest {
 	
 	/**
 	 * 
-	 * 
+	 * 서버이미지공유권한제거
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -10594,7 +11739,7 @@ public class V2ApiTest {
 
 		try {
 			// Handler Successful response
-			api.removeServerImageSharingPermissionPost(removeServerImageSharingPermissionRequest);
+			ApiResponse<RemoveServerImageSharingPermissionResponse> response = api.removeServerImageSharingPermissionPost(removeServerImageSharingPermissionRequest);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();
@@ -10609,7 +11754,7 @@ public class V2ApiTest {
 
 	/**
 	 * 
-	 * 
+	 * 서버이미지공유권한제거
 	 * @throws ApiException if response fails
 	 * @throws SdkException if fails to make API call
 	 */
@@ -11500,6 +12645,254 @@ public class V2ApiTest {
 		try {
 			// Handler Successful response
 			ApiResponse<byte[]> response = api.unassignSecondaryIpsPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 수정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void updateFabricClusterGetTest() throws ApiException, SdkException {
+		UpdateFabricClusterRequest updateFabricClusterRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<UpdateFabricClusterResponse> response = api.updateFabricClusterGet(updateFabricClusterRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 수정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void updateFabricClusterGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.updateFabricClusterGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 수정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void updateFabricClusterPostTest() throws ApiException, SdkException {
+		UpdateFabricClusterRequest updateFabricClusterRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<UpdateFabricClusterResponse> response = api.updateFabricClusterPost(updateFabricClusterRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 수정
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void updateFabricClusterPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.updateFabricClusterPost(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 업데이트
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void updateFabricClusterServerInstancesGetTest() throws ApiException, SdkException {
+		ChangeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ChangeFabricClusterServerInstancesResponse> response = api.updateFabricClusterServerInstancesGet(changeFabricClusterServerInstancesRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 업데이트
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void updateFabricClusterServerInstancesGetGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.updateFabricClusterServerInstancesGet(httpHeaders, queryParams, formParams, requestBody);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+	
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 업데이트
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void updateFabricClusterServerInstancesPostTest() throws ApiException, SdkException {
+		ChangeFabricClusterServerInstancesRequest changeFabricClusterServerInstancesRequest = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<ChangeFabricClusterServerInstancesResponse> response = api.updateFabricClusterServerInstancesPost(changeFabricClusterServerInstancesRequest);
+		} catch (ApiException e) {
+			// Handler Failed response
+			int statusCode = e.getHttpStatusCode();
+			Map<String, List<String>> responseHeaders = e.getHttpHeaders();
+			InputStream byteStream = e.getByteStream();
+			e.printStackTrace();
+		} catch (SdkException e) {
+			// Handle exceptions that occurred before communication with the server
+			e.printStackTrace();
+		}
+	}
+
+	/**
+	 * 
+	 * Fabric Cluster 클러스터 모드 서버 인스턴스 목록 업데이트
+	 * @throws ApiException if response fails
+	 * @throws SdkException if fails to make API call
+	 */
+	@Test
+	public void updateFabricClusterServerInstancesPostGenericTest() throws ApiException, SdkException {
+		// path
+
+		// headers
+		Map<String, Object> httpHeaders = new HashMap<String, Object>();
+
+		// query params
+		Map<String, Object> queryParams = new HashMap<String, Object>();
+
+		// form params
+		Map<String, Object> formParams = new HashMap<String, Object>();
+
+		// body
+		byte[] requestBody = null;
+
+		try {
+			// Handler Successful response
+			ApiResponse<byte[]> response = api.updateFabricClusterServerInstancesPost(httpHeaders, queryParams, formParams, requestBody);
 		} catch (ApiException e) {
 			// Handler Failed response
 			int statusCode = e.getHttpStatusCode();

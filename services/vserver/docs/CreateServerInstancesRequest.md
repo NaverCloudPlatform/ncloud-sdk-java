@@ -24,6 +24,11 @@ Name | Type | Description | Notes
 **associateWithPublicIp** | **Boolean** | 서버생성시공인IP할당여부 |  [optional]
 **raidTypeName** | **String** | RAID유형이름 |  [optional]
 **blockDevicePartitionList** | [**List&lt;BlockDevicePartition&gt;**](BlockDevicePartition.md) | 블록디바이스파티션리스트 |  [optional]
+**serverImageNo** | **String** | 서버이미지번호 |  [optional]
+**serverSpecCode** | **String** | 서버스펙코드 |  [optional]
+**blockStorageMappingList** | [**List&lt;BlockStorageMappingParameter&gt;**](BlockStorageMappingParameter.md) | 블록스토리지맵핑리스트 |  [optional]
+**fabricClusterPoolNo** | **String** | FabricClusterPool번호 |  [optional]
+**isPreInstallGpuDriver** | **Boolean** | GPUDriver사전설치여부 |  [optional]
 **responseFormatType** | **String** | responseFormatType {json, xml} |  [optional]
 
 

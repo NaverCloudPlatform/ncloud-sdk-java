@@ -49,6 +49,8 @@ public class Product {
 
 	private String generationCode = null;
 
+	private Long osMemorySize = null;
+
 	public Product productCode(String productCode) {
 		this.productCode = productCode;
 		return this;
@@ -304,6 +306,23 @@ public class Product {
 		this.generationCode = generationCode;
 	}
 
+	public Product osMemorySize(Long osMemorySize) {
+		this.osMemorySize = osMemorySize;
+		return this;
+	}
+
+	 /**
+	 * OS메모리사이즈
+	 * @return osMemorySize
+	**/
+	public Long getOsMemorySize() {
+		return osMemorySize;
+	}
+
+	public void setOsMemorySize(Long osMemorySize) {
+		this.osMemorySize = osMemorySize;
+	}
+
 
 	@Override
 	public boolean equals(java.lang.Object o) {
@@ -328,12 +347,13 @@ public class Product {
 				Objects.equals(this.diskType, product.diskType) &&
 				Objects.equals(this.dbKindCode, product.dbKindCode) &&
 				Objects.equals(this.addBlockStorageSize, product.addBlockStorageSize) &&
-				Objects.equals(this.generationCode, product.generationCode);
+				Objects.equals(this.generationCode, product.generationCode) &&
+				Objects.equals(this.osMemorySize, product.osMemorySize);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(productCode, productName, productType, productDescription, infraResourceType, infraResourceDetailType, cpuCount, memorySize, baseBlockStorageSize, platformType, osInformation, diskType, dbKindCode, addBlockStorageSize, generationCode);
+		return Objects.hash(productCode, productName, productType, productDescription, infraResourceType, infraResourceDetailType, cpuCount, memorySize, baseBlockStorageSize, platformType, osInformation, diskType, dbKindCode, addBlockStorageSize, generationCode, osMemorySize);
 	}
 
 
@@ -357,6 +377,7 @@ public class Product {
 		sb.append("		dbKindCode: ").append(toIndentedString(dbKindCode)).append("\n");
 		sb.append("		addBlockStorageSize: ").append(toIndentedString(addBlockStorageSize)).append("\n");
 		sb.append("		generationCode: ").append(toIndentedString(generationCode)).append("\n");
+		sb.append("		osMemorySize: ").append(toIndentedString(osMemorySize)).append("\n");
 		sb.append("}");
 		return sb.toString();
 	}

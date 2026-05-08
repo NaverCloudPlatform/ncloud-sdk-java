@@ -18,9 +18,28 @@ import java.util.Objects;
  * CreateLoginKeyRequest
  */
 public class CreateLoginKeyRequest {
+	private String regionCode = null;
+
 	private String keyName = null;
 
 	private String responseFormatType = null;
+
+	public CreateLoginKeyRequest regionCode(String regionCode) {
+		this.regionCode = regionCode;
+		return this;
+	}
+
+	 /**
+	 * REGION코드
+	 * @return regionCode
+	**/
+	public String getRegionCode() {
+		return regionCode;
+	}
+
+	public void setRegionCode(String regionCode) {
+		this.regionCode = regionCode;
+	}
 
 	public CreateLoginKeyRequest keyName(String keyName) {
 		this.keyName = keyName;
@@ -66,13 +85,14 @@ public class CreateLoginKeyRequest {
 			return false;
 		}
 		CreateLoginKeyRequest createLoginKeyRequest = (CreateLoginKeyRequest) o;
-		return Objects.equals(this.keyName, createLoginKeyRequest.keyName) &&
+		return Objects.equals(this.regionCode, createLoginKeyRequest.regionCode) &&
+				Objects.equals(this.keyName, createLoginKeyRequest.keyName) &&
 				Objects.equals(this.responseFormatType, createLoginKeyRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(keyName, responseFormatType);
+		return Objects.hash(regionCode, keyName, responseFormatType);
 	}
 
 
@@ -81,6 +101,7 @@ public class CreateLoginKeyRequest {
 		StringBuilder sb = new StringBuilder();
 		sb.append("class CreateLoginKeyRequest {\n");
 		
+		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		keyName: ").append(toIndentedString(keyName)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");

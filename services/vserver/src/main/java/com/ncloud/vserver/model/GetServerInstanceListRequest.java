@@ -48,6 +48,12 @@ public class GetServerInstanceListRequest {
 
 	private List<String> hypervisorTypeCodeList = null;
 
+	private String fabricClusterPoolNo = null;
+
+	private String fabricClusterNo = null;
+
+	private String fabricClusterMode = null;
+
 	private String responseFormatType = null;
 
 	public GetServerInstanceListRequest regionCode(String regionCode) {
@@ -312,6 +318,57 @@ public class GetServerInstanceListRequest {
 		this.hypervisorTypeCodeList = hypervisorTypeCodeList;
 	}
 
+	public GetServerInstanceListRequest fabricClusterPoolNo(String fabricClusterPoolNo) {
+		this.fabricClusterPoolNo = fabricClusterPoolNo;
+		return this;
+	}
+
+	 /**
+	 * Fabric Cluster Pool 번호
+	 * @return fabricClusterPoolNo
+	**/
+	public String getFabricClusterPoolNo() {
+		return fabricClusterPoolNo;
+	}
+
+	public void setFabricClusterPoolNo(String fabricClusterPoolNo) {
+		this.fabricClusterPoolNo = fabricClusterPoolNo;
+	}
+
+	public GetServerInstanceListRequest fabricClusterNo(String fabricClusterNo) {
+		this.fabricClusterNo = fabricClusterNo;
+		return this;
+	}
+
+	 /**
+	 * Fabric Cluster 번호
+	 * @return fabricClusterNo
+	**/
+	public String getFabricClusterNo() {
+		return fabricClusterNo;
+	}
+
+	public void setFabricClusterNo(String fabricClusterNo) {
+		this.fabricClusterNo = fabricClusterNo;
+	}
+
+	public GetServerInstanceListRequest fabricClusterMode(String fabricClusterMode) {
+		this.fabricClusterMode = fabricClusterMode;
+		return this;
+	}
+
+	 /**
+	 * Fabric Cluster 모드
+	 * @return fabricClusterMode
+	**/
+	public String getFabricClusterMode() {
+		return fabricClusterMode;
+	}
+
+	public void setFabricClusterMode(String fabricClusterMode) {
+		this.fabricClusterMode = fabricClusterMode;
+	}
+
 	public GetServerInstanceListRequest responseFormatType(String responseFormatType) {
 		this.responseFormatType = responseFormatType;
 		return this;
@@ -353,12 +410,15 @@ public class GetServerInstanceListRequest {
 				Objects.equals(this.sortingOrder, getServerInstanceListRequest.sortingOrder) &&
 				Objects.equals(this.placementGroupNoList, getServerInstanceListRequest.placementGroupNoList) &&
 				Objects.equals(this.hypervisorTypeCodeList, getServerInstanceListRequest.hypervisorTypeCodeList) &&
+				Objects.equals(this.fabricClusterPoolNo, getServerInstanceListRequest.fabricClusterPoolNo) &&
+				Objects.equals(this.fabricClusterNo, getServerInstanceListRequest.fabricClusterNo) &&
+				Objects.equals(this.fabricClusterMode, getServerInstanceListRequest.fabricClusterMode) &&
 				Objects.equals(this.responseFormatType, getServerInstanceListRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, serverInstanceNoList, vpcNo, pageNo, pageSize, serverInstanceStatusCode, baseBlockStorageDiskTypeCode, baseBlockStorageDiskDetailTypeCode, serverName, ip, sortedBy, sortingOrder, placementGroupNoList, hypervisorTypeCodeList, responseFormatType);
+		return Objects.hash(regionCode, serverInstanceNoList, vpcNo, pageNo, pageSize, serverInstanceStatusCode, baseBlockStorageDiskTypeCode, baseBlockStorageDiskDetailTypeCode, serverName, ip, sortedBy, sortingOrder, placementGroupNoList, hypervisorTypeCodeList, fabricClusterPoolNo, fabricClusterNo, fabricClusterMode, responseFormatType);
 	}
 
 
@@ -381,6 +441,9 @@ public class GetServerInstanceListRequest {
 		sb.append("		sortingOrder: ").append(toIndentedString(sortingOrder)).append("\n");
 		sb.append("		placementGroupNoList: ").append(toIndentedString(placementGroupNoList)).append("\n");
 		sb.append("		hypervisorTypeCodeList: ").append(toIndentedString(hypervisorTypeCodeList)).append("\n");
+		sb.append("		fabricClusterPoolNo: ").append(toIndentedString(fabricClusterPoolNo)).append("\n");
+		sb.append("		fabricClusterNo: ").append(toIndentedString(fabricClusterNo)).append("\n");
+		sb.append("		fabricClusterMode: ").append(toIndentedString(fabricClusterMode)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
 		return sb.toString();

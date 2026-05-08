@@ -24,7 +24,7 @@ public class GetBlockStorageVolumeTypeListRequest {
 
 	private String zoneCode = null;
 
-	private Boolean isAvailableBase = null;
+	private Boolean isBaseStorageAvailable = null;
 
 	private String serverSpecCode = null;
 
@@ -68,21 +68,21 @@ public class GetBlockStorageVolumeTypeListRequest {
 		this.zoneCode = zoneCode;
 	}
 
-	public GetBlockStorageVolumeTypeListRequest isAvailableBase(Boolean isAvailableBase) {
-		this.isAvailableBase = isAvailableBase;
+	public GetBlockStorageVolumeTypeListRequest isBaseStorageAvailable(Boolean isBaseStorageAvailable) {
+		this.isBaseStorageAvailable = isBaseStorageAvailable;
 		return this;
 	}
 
 	 /**
 	 * 기본스토리지 가능 여부
-	 * @return isAvailableBase
+	 * @return isBaseStorageAvailable
 	**/
-	public Boolean isIsAvailableBase() {
-		return isAvailableBase;
+	public Boolean isIsBaseStorageAvailable() {
+		return isBaseStorageAvailable;
 	}
 
-	public void setIsAvailableBase(Boolean isAvailableBase) {
-		this.isAvailableBase = isAvailableBase;
+	public void setIsBaseStorageAvailable(Boolean isBaseStorageAvailable) {
+		this.isBaseStorageAvailable = isBaseStorageAvailable;
 	}
 
 	public GetBlockStorageVolumeTypeListRequest serverSpecCode(String serverSpecCode) {
@@ -181,7 +181,7 @@ public class GetBlockStorageVolumeTypeListRequest {
 		GetBlockStorageVolumeTypeListRequest getBlockStorageVolumeTypeListRequest = (GetBlockStorageVolumeTypeListRequest) o;
 		return Objects.equals(this.regionCode, getBlockStorageVolumeTypeListRequest.regionCode) &&
 				Objects.equals(this.zoneCode, getBlockStorageVolumeTypeListRequest.zoneCode) &&
-				Objects.equals(this.isAvailableBase, getBlockStorageVolumeTypeListRequest.isAvailableBase) &&
+				Objects.equals(this.isBaseStorageAvailable, getBlockStorageVolumeTypeListRequest.isBaseStorageAvailable) &&
 				Objects.equals(this.serverSpecCode, getBlockStorageVolumeTypeListRequest.serverSpecCode) &&
 				Objects.equals(this.blockStorageVolumeTypeCodeList, getBlockStorageVolumeTypeListRequest.blockStorageVolumeTypeCodeList) &&
 				Objects.equals(this.hypervisorTypeCodeList, getBlockStorageVolumeTypeListRequest.hypervisorTypeCodeList) &&
@@ -190,7 +190,7 @@ public class GetBlockStorageVolumeTypeListRequest {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, zoneCode, isAvailableBase, serverSpecCode, blockStorageVolumeTypeCodeList, hypervisorTypeCodeList, responseFormatType);
+		return Objects.hash(regionCode, zoneCode, isBaseStorageAvailable, serverSpecCode, blockStorageVolumeTypeCodeList, hypervisorTypeCodeList, responseFormatType);
 	}
 
 
@@ -201,7 +201,7 @@ public class GetBlockStorageVolumeTypeListRequest {
 		
 		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		zoneCode: ").append(toIndentedString(zoneCode)).append("\n");
-		sb.append("		isAvailableBase: ").append(toIndentedString(isAvailableBase)).append("\n");
+		sb.append("		isBaseStorageAvailable: ").append(toIndentedString(isBaseStorageAvailable)).append("\n");
 		sb.append("		serverSpecCode: ").append(toIndentedString(serverSpecCode)).append("\n");
 		sb.append("		blockStorageVolumeTypeCodeList: ").append(toIndentedString(blockStorageVolumeTypeCodeList)).append("\n");
 		sb.append("		hypervisorTypeCodeList: ").append(toIndentedString(hypervisorTypeCodeList)).append("\n");

@@ -18,6 +18,9 @@ Name | Type | Description | Notes
 **sortingOrder** | **String** | 정렬순서 |  [optional]
 **placementGroupNoList** | **List&lt;String&gt;** | 물리배치그룹번호리스트 |  [optional]
 **hypervisorTypeCodeList** | **List&lt;String&gt;** | 하이퍼바이저타입코드리스트 |  [optional]
+**fabricClusterPoolNo** | **String** | Fabric Cluster Pool 번호 |  [optional]
+**fabricClusterNo** | **String** | Fabric Cluster 번호 |  [optional]
+**fabricClusterMode** | **String** | Fabric Cluster 모드 |  [optional]
 **responseFormatType** | **String** | responseFormatType {json, xml} |  [optional]
 
 

@@ -28,11 +28,13 @@ public class GetServerImageListRequest {
 
 	private List<String> serverImageNoList = null;
 
-	private List<String> hypervisorCodeList = null;
+	private List<String> hypervisorTypeCodeList = null;
 
 	private List<String> serverImageTypeCodeList = null;
 
 	private List<String> osTypeCodeList = null;
+
+	private List<String> platformCategoryCodeList = null;
 
 	private Integer pageNo = null;
 
@@ -120,29 +122,29 @@ public class GetServerImageListRequest {
 		this.serverImageNoList = serverImageNoList;
 	}
 
-	public GetServerImageListRequest hypervisorCodeList(List<String> hypervisorCodeList) {
-		this.hypervisorCodeList = hypervisorCodeList;
+	public GetServerImageListRequest hypervisorTypeCodeList(List<String> hypervisorTypeCodeList) {
+		this.hypervisorTypeCodeList = hypervisorTypeCodeList;
 		return this;
 	}
 
-	public GetServerImageListRequest addHypervisorCodeListItem(String hypervisorCodeListItem) {
-		if (this.hypervisorCodeList == null) {
-			this.hypervisorCodeList = new ArrayList<String>();
+	public GetServerImageListRequest addHypervisorTypeCodeListItem(String hypervisorTypeCodeListItem) {
+		if (this.hypervisorTypeCodeList == null) {
+			this.hypervisorTypeCodeList = new ArrayList<String>();
 		}
-		this.hypervisorCodeList.add(hypervisorCodeListItem);
+		this.hypervisorTypeCodeList.add(hypervisorTypeCodeListItem);
 		return this;
 	}
 
 	 /**
 	 * 하이퍼바이저유형코드리스트
-	 * @return hypervisorCodeList
+	 * @return hypervisorTypeCodeList
 	**/
-	public List<String> getHypervisorCodeList() {
-		return hypervisorCodeList;
+	public List<String> getHypervisorTypeCodeList() {
+		return hypervisorTypeCodeList;
 	}
 
-	public void setHypervisorCodeList(List<String> hypervisorCodeList) {
-		this.hypervisorCodeList = hypervisorCodeList;
+	public void setHypervisorTypeCodeList(List<String> hypervisorTypeCodeList) {
+		this.hypervisorTypeCodeList = hypervisorTypeCodeList;
 	}
 
 	public GetServerImageListRequest serverImageTypeCodeList(List<String> serverImageTypeCodeList) {
@@ -193,6 +195,31 @@ public class GetServerImageListRequest {
 
 	public void setOsTypeCodeList(List<String> osTypeCodeList) {
 		this.osTypeCodeList = osTypeCodeList;
+	}
+
+	public GetServerImageListRequest platformCategoryCodeList(List<String> platformCategoryCodeList) {
+		this.platformCategoryCodeList = platformCategoryCodeList;
+		return this;
+	}
+
+	public GetServerImageListRequest addPlatformCategoryCodeListItem(String platformCategoryCodeListItem) {
+		if (this.platformCategoryCodeList == null) {
+			this.platformCategoryCodeList = new ArrayList<String>();
+		}
+		this.platformCategoryCodeList.add(platformCategoryCodeListItem);
+		return this;
+	}
+
+	 /**
+	 * 플랫폼카테고리코드리스트
+	 * @return platformCategoryCodeList
+	**/
+	public List<String> getPlatformCategoryCodeList() {
+		return platformCategoryCodeList;
+	}
+
+	public void setPlatformCategoryCodeList(List<String> platformCategoryCodeList) {
+		this.platformCategoryCodeList = platformCategoryCodeList;
 	}
 
 	public GetServerImageListRequest pageNo(Integer pageNo) {
@@ -294,9 +321,10 @@ public class GetServerImageListRequest {
 				Objects.equals(this.serverImageName, getServerImageListRequest.serverImageName) &&
 				Objects.equals(this.serverImageStatusCode, getServerImageListRequest.serverImageStatusCode) &&
 				Objects.equals(this.serverImageNoList, getServerImageListRequest.serverImageNoList) &&
-				Objects.equals(this.hypervisorCodeList, getServerImageListRequest.hypervisorCodeList) &&
+				Objects.equals(this.hypervisorTypeCodeList, getServerImageListRequest.hypervisorTypeCodeList) &&
 				Objects.equals(this.serverImageTypeCodeList, getServerImageListRequest.serverImageTypeCodeList) &&
 				Objects.equals(this.osTypeCodeList, getServerImageListRequest.osTypeCodeList) &&
+				Objects.equals(this.platformCategoryCodeList, getServerImageListRequest.platformCategoryCodeList) &&
 				Objects.equals(this.pageNo, getServerImageListRequest.pageNo) &&
 				Objects.equals(this.pageSize, getServerImageListRequest.pageSize) &&
 				Objects.equals(this.sortedBy, getServerImageListRequest.sortedBy) &&
@@ -306,7 +334,7 @@ public class GetServerImageListRequest {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(regionCode, serverImageName, serverImageStatusCode, serverImageNoList, hypervisorCodeList, serverImageTypeCodeList, osTypeCodeList, pageNo, pageSize, sortedBy, sortingOrder, responseFormatType);
+		return Objects.hash(regionCode, serverImageName, serverImageStatusCode, serverImageNoList, hypervisorTypeCodeList, serverImageTypeCodeList, osTypeCodeList, platformCategoryCodeList, pageNo, pageSize, sortedBy, sortingOrder, responseFormatType);
 	}
 
 
@@ -319,9 +347,10 @@ public class GetServerImageListRequest {
 		sb.append("		serverImageName: ").append(toIndentedString(serverImageName)).append("\n");
 		sb.append("		serverImageStatusCode: ").append(toIndentedString(serverImageStatusCode)).append("\n");
 		sb.append("		serverImageNoList: ").append(toIndentedString(serverImageNoList)).append("\n");
-		sb.append("		hypervisorCodeList: ").append(toIndentedString(hypervisorCodeList)).append("\n");
+		sb.append("		hypervisorTypeCodeList: ").append(toIndentedString(hypervisorTypeCodeList)).append("\n");
 		sb.append("		serverImageTypeCodeList: ").append(toIndentedString(serverImageTypeCodeList)).append("\n");
 		sb.append("		osTypeCodeList: ").append(toIndentedString(osTypeCodeList)).append("\n");
+		sb.append("		platformCategoryCodeList: ").append(toIndentedString(platformCategoryCodeList)).append("\n");
 		sb.append("		pageNo: ").append(toIndentedString(pageNo)).append("\n");
 		sb.append("		pageSize: ").append(toIndentedString(pageSize)).append("\n");
 		sb.append("		sortedBy: ").append(toIndentedString(sortedBy)).append("\n");

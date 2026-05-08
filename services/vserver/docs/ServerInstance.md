@@ -31,10 +31,19 @@ Name | Type | Description | Notes
 **baseBlockStorageDiskType** | [**CommonCode**](CommonCode.md) | 기본블록스토리지디스크유형 |  [optional]
 **baseBlockStorageDiskDetailType** | [**CommonCode**](CommonCode.md) | 기본블록스토리지디스크상세유형 |  [optional]
 **placementGroupNo** | **String** | 물리배치그룹번호 |  [optional]
+**placementGroupName** | **String** | 물리배치그룹이름 |  [optional]
+**memberServerImageInstanceNo** | **String** | 회원서버이미지인스턴스번호 |  [optional]
 **blockDevicePartitionList** | [**List&lt;BlockDevicePartition&gt;**](BlockDevicePartition.md) | 블록디바이스파티션리스트 |  [optional]
 **hypervisorType** | [**CommonCode**](CommonCode.md) | 하이퍼바이저타입 |  [optional]
 **serverImageNo** | **String** | 서버이미지번호 |  [optional]
 **serverSpecCode** | **String** | 서버스펙코드 |  [optional]
+**fabricClusterPoolNo** | **String** | FabricClusterPool번호 |  [optional]
+**fabricClusterPoolName** | **String** | FabricClusterPool이름 |  [optional]
+**fabricClusterMode** | **String** | FabricCluster모드 |  [optional]
+**fabricClusterNo** | **String** | FabricCluster번호 |  [optional]
+**fabricClusterName** | **String** | FabricCluster이름 |  [optional]
+**isPreInstallGpuDriver** | **Boolean** | GPUDriver사전설치여부 |  [optional]
+**eventList** | **List&lt;String&gt;** | 이벤트리스트 |  [optional]
 
 
 

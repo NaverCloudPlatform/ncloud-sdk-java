@@ -18,6 +18,7 @@ Name | Type | Description | Notes
 **accessControlGroupNoList** | **List&lt;String&gt;** | ACG번호리스트 |  [optional]
 **networkInterfaceDescription** | **String** | 네트워크인터페이스설명 |  [optional]
 **secondaryIpList** | **List&lt;String&gt;** | 보조IP리스트 |  [optional]
+**enableFlowLog** | **Boolean** | FlowLog활성화여부 |  [optional]
 
 
 

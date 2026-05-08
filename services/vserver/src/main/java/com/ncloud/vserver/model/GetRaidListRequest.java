@@ -18,9 +18,28 @@ import java.util.Objects;
  * GetRaidListRequest
  */
 public class GetRaidListRequest {
+	private String regionCode = null;
+
 	private String productTypeCode = null;
 
 	private String responseFormatType = null;
+
+	public GetRaidListRequest regionCode(String regionCode) {
+		this.regionCode = regionCode;
+		return this;
+	}
+
+	 /**
+	 * REGION코드
+	 * @return regionCode
+	**/
+	public String getRegionCode() {
+		return regionCode;
+	}
+
+	public void setRegionCode(String regionCode) {
+		this.regionCode = regionCode;
+	}
 
 	public GetRaidListRequest productTypeCode(String productTypeCode) {
 		this.productTypeCode = productTypeCode;
@@ -66,13 +85,14 @@ public class GetRaidListRequest {
 			return false;
 		}
 		GetRaidListRequest getRaidListRequest = (GetRaidListRequest) o;
-		return Objects.equals(this.productTypeCode, getRaidListRequest.productTypeCode) &&
+		return Objects.equals(this.regionCode, getRaidListRequest.regionCode) &&
+				Objects.equals(this.productTypeCode, getRaidListRequest.productTypeCode) &&
 				Objects.equals(this.responseFormatType, getRaidListRequest.responseFormatType);
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(productTypeCode, responseFormatType);
+		return Objects.hash(regionCode, productTypeCode, responseFormatType);
 	}
 
 
@@ -81,6 +101,7 @@ public class GetRaidListRequest {
 		StringBuilder sb = new StringBuilder();
 		sb.append("class GetRaidListRequest {\n");
 		
+		sb.append("		regionCode: ").append(toIndentedString(regionCode)).append("\n");
 		sb.append("		productTypeCode: ").append(toIndentedString(productTypeCode)).append("\n");
 		sb.append("		responseFormatType: ").append(toIndentedString(responseFormatType)).append("\n");
 		sb.append("}");
